@@ -28,6 +28,12 @@
     
     --block-gap: 64px;          /* Vertical gap between elements inside sections */
     --card-gap: 28px;           /* Grid/Flex card gaps */
+
+    /* Typography Tokens */
+    --font-size-h1: 48px;
+    --font-size-h2: 32px;
+    --font-size-h3: 28px;
+    --font-size-h4: 24px;
 }
 
 /* Reset and base styles */
@@ -220,7 +226,7 @@ button, .btn {
 
 .hero-title {
     font-family: var(--font-serif);
-    font-size: 48px;
+    font-size: var(--font-size-h1);
     line-height: 1.15;
     font-weight: 400;
     color: var(--color-text-main);
@@ -520,7 +526,7 @@ button, .btn {
 
 .methodology-title {
     font-family: var(--font-serif);
-    font-size: 42px; /* Margins / size update */
+    font-size: var(--font-size-h2);
     line-height: 1.2;
     font-weight: 400;
     color: var(--color-text-main);
@@ -592,7 +598,7 @@ button, .btn {
 
 .methodology-features-title {
     font-family: var(--font-serif);
-    font-size: 28px;
+    font-size: var(--font-size-h3);
     line-height: 1.3;
     font-weight: 400;
     color: var(--color-text-main);
@@ -710,7 +716,7 @@ button, .btn {
 
 .eq-test-title {
     font-family: var(--font-serif);
-    font-size: 32px;
+    font-size: var(--font-size-h2);
     line-height: 1.3;
     font-weight: 400;
     color: var(--color-text-main);
@@ -753,7 +759,7 @@ button, .btn {
 
 .selector-title {
     font-family: var(--font-serif);
-    font-size: 32px;
+    font-size: var(--font-size-h2);
     font-weight: 400;
     color: var(--color-text-main);
     margin-bottom: 0;
@@ -808,7 +814,7 @@ button, .btn {
 
 .selector-item-title {
     font-family: var(--font-serif);
-    font-size: 28px;
+    font-size: var(--font-size-h3);
     font-weight: 400;
     color: var(--color-text-main);
     margin: 0 0 12px 0;
@@ -1073,7 +1079,7 @@ button, .btn {
 
 .courses-title-main {
     font-family: var(--font-serif);
-    font-size: 32px;
+    font-size: var(--font-size-h2);
     font-weight: 400;
     color: var(--color-text-main);
     margin: 0;
@@ -1301,7 +1307,7 @@ button, .btn {
 
 .book-details-wrapper .lib-title {
     font-family: var(--font-serif);
-    font-size: 26px; /* Reduced font size to fit 400px height */
+    font-size: var(--font-size-h3);
     font-weight: 500;
     color: #222222;
     line-height: 1.25;
@@ -1728,7 +1734,7 @@ button, .btn {
 }
 
 .lib-title {
-    font-size: 28px;
+    font-size: var(--font-size-h3);
     font-weight: 500;
     color: var(--color-text-main);
     line-height: 1.25;
@@ -2183,7 +2189,7 @@ button, .btn {
 
 .testimonials-title {
     font-family: var(--font-serif);
-    font-size: 32px;
+    font-size: var(--font-size-h2);
     font-weight: 400;
     margin-bottom: 0;
     line-height: 1.3;
@@ -2425,7 +2431,7 @@ button, .btn {
 
 .video-title {
     font-family: var(--font-serif);
-    font-size: 26px;
+    font-size: var(--font-size-h3);
     line-height: 1.35;
     font-weight: 400;
     color: var(--color-text-main);
@@ -2717,7 +2723,7 @@ button, .btn {
 
 .not-alone-title {
     font-family: var(--font-serif);
-    font-size: 36px;
+    font-size: var(--font-size-h2);
     line-height: 1.3;
     font-weight: 400;
     color: var(--color-text-main);
@@ -2794,7 +2800,7 @@ button, .btn {
 
 .blog-title {
     font-family: var(--font-serif);
-    font-size: 32px;
+    font-size: var(--font-size-h2);
     font-weight: 400;
     margin-bottom: 0;
 }
@@ -3073,7 +3079,7 @@ button, .btn {
 
 .about-title {
     font-family: var(--font-serif);
-    font-size: 36px;
+    font-size: var(--font-size-h2);
     font-weight: 400;
     color: var(--color-text-main);
     line-height: 1.25;
@@ -3203,7 +3209,7 @@ button, .btn {
 
 .contact-title {
     font-family: var(--font-serif);
-    font-size: 36px;
+    font-size: var(--font-size-h2);
     font-weight: 400;
     color: var(--color-text-main);
     line-height: 1.25;
@@ -3588,7 +3594,7 @@ button, .btn {
 
 .webinar-cover-title {
     font-family: var(--font-sans);
-    font-size: 30px;
+    font-size: var(--font-size-h3);
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -4047,7 +4053,7 @@ button, .btn {
 
 .program-card-right .program-title {
     font-family: var(--font-serif);
-    font-size: 24px;
+    font-size: var(--font-size-h4);
     font-weight: 500;
     color: #4C224C;
     line-height: 1.15;
