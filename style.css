@@ -6,14 +6,23 @@
     --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
     
     --color-bg: #FBF7F6;
-    --color-rose: #B06E72;
-    --color-rose-dark: #8F5558;
-    --color-rose-light: #F8EFEA;
-    --color-text-main: #333333;
-    --color-text-muted: #666666;
     --color-border: #EFE8E2;
     --color-white: #FFFFFF;
-    --color-accent-gold: #C5A880;
+
+    /* Semantic Text Colors */
+    --color-text-main: #333333;       /* Primary text & titles */
+    --color-text-muted: #666666;      /* Secondary descriptions & subtitles */
+    --color-text-light: #999999;      /* Weakest captions, locks, copyrights, placeholders */
+
+    /* Accent Colors (Semantic roles) */
+    --color-accent-text: #52236A;     /* Text accents, labels, highlights, text links */
+    --color-accent-text-hover: #3D1652; /* Hover variant of text accent */
+
+    --color-accent-ui: #4C224C;       /* UI elements: buttons, active tabs, icons, borders */
+    --color-accent-ui-hover: #381838; /* Hover variant of UI elements */
+    --color-accent-light: #F5EBEF;    /* Soft lavender/pink background accent */
+
+    --color-accent-gold: #C5A880;     /* Premium Gold accent (preservation) */
 
     /* Spacing Grid Tokens */
     --container-x: 80px;
@@ -77,7 +86,7 @@ button, .btn {
 
 /* Buttons */
 .btn-primary {
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-ui);
     color: var(--color-white);
     padding: 14px 28px;
     border-radius: 4px;
@@ -88,13 +97,13 @@ button, .btn {
 }
 
 .btn-primary:hover {
-    background-color: var(--color-rose-dark);
+    background-color: var(--color-accent-ui-hover);
 }
 
 .btn-secondary {
     background-color: transparent;
     color: var(--color-text-main);
-    border: 1px solid var(--color-rose);
+    border: 1px solid var(--color-accent-ui);
     padding: 14px 28px;
     border-radius: 4px;
     font-size: 14px;
@@ -104,7 +113,7 @@ button, .btn {
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-rose-light);
+    background-color: var(--color-accent-light);
 }
 
 .text-link {
@@ -112,7 +121,7 @@ button, .btn {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -140,10 +149,7 @@ button, .btn {
     border-bottom: 1px solid var(--color-border);
     position: relative;
     z-index: 10;
-    /* Local variable overrides for the purple accent color scheme */
-    --color-rose: #4C224C;        /* Deep purple */
-    --color-rose-dark: #381838;   /* Dark purple */
-    --color-rose-light: #F5EBEF;  /* Soft lavender-pink */
+
 }
 
 .header .logo {
@@ -168,7 +174,7 @@ button, .btn {
 }
 
 .header .nav a:hover {
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 .header .btn {
@@ -184,10 +190,7 @@ button, .btn {
     background: url('images/hero_img.jpg') no-repeat center;
     background-size: cover;
     position: relative;
-    /* Local variable overrides for the purple accent color scheme */
-    --color-rose: #4C224C;        /* Deep purple */
-    --color-rose-dark: #381838;   /* Dark purple */
-    --color-rose-light: #F5EBEF;  /* Soft lavender-pink */
+
 }
 
 .hero-left {
@@ -210,7 +213,7 @@ button, .btn {
 .hero-divider {
     width: 40px;
     height: 1px;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     margin-bottom: 24px;
 }
 
@@ -219,7 +222,7 @@ button, .btn {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.15em;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     text-transform: uppercase;
     margin-bottom: 16px;
 }
@@ -235,7 +238,7 @@ button, .btn {
 
 .hero-title span {
     font-style: italic;
-    color: var(--color-rose-dark);
+    color: var(--color-accent-text-hover);
 }
 
 .hero-subtitle {
@@ -258,12 +261,12 @@ button, .btn {
 }
 
 .hero-buttons .btn-secondary {
-    color: var(--color-rose);
-    border: 1px solid var(--color-rose);
+    color: var(--color-accent-ui);
+    border: 1px solid var(--color-accent-ui);
 }
 
 .hero-buttons .btn-secondary:hover {
-    background-color: var(--color-rose-light);
+    background-color: var(--color-accent-light);
 }
 
 .hero-socials {
@@ -276,17 +279,17 @@ button, .btn {
     width: 36px;
     height: 36px;
     border-radius: 8px; /* updated from 4px to match design */
-    background-color: var(--color-rose-light); /* light background */
+    background-color: var(--color-accent-light); /* light background */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-rose); /* purple icon */
+    color: var(--color-accent-text); /* purple icon */
     font-size: 16px;
     transition: all 0.3s ease;
 }
 
 .hero-socials a:hover {
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-ui);
     color: var(--color-white);
     transform: translateY(-2px);
 }
@@ -313,7 +316,7 @@ button, .btn {
     content: "“";
     font-family: var(--font-serif);
     font-size: 64px;
-    color: var(--color-rose-light); /* light pink quote mark */
+    color: var(--color-accent-light); /* light pink quote mark */
     position: absolute;
     top: -50px;
     left: 20px; /* align quote mark with the padded text */
@@ -338,7 +341,7 @@ button, .btn {
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.05em;
-    color: var(--color-rose-light); /* light author label */
+    color: var(--color-accent-light); /* light author label */
     margin-top: 12px;
     text-transform: uppercase;
 }
@@ -393,12 +396,12 @@ button, .btn {
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 0.08em;
-    color: #222222;
+    color: var(--color-text-main);
 }
 
 .brand-desc {
     font-size: 10px;
-    color: #555555;
+    color: var(--color-text-muted);
     font-weight: 500;
 }
 
@@ -438,7 +441,7 @@ button, .btn {
 
 .banner-stat-text {
     font-size: 10px;
-    color: #555555;
+    color: var(--color-text-muted);
     font-weight: 600;
 }
 
@@ -472,10 +475,7 @@ button, .btn {
     display: flex;
     flex-direction: column;
     gap: var(--block-gap);
-    /* Local variable overrides for the purple accent color scheme */
-    --color-rose: #52236A;        /* Fuchsia accent color */
-    --color-rose-dark: #3D1652;   /* Dark purple for hovers */
-    --color-rose-light: #F5EBEF;  /* Soft lavender-pink background */
+
 }
 
 /* Upper Composition: Photo + Text */
@@ -535,13 +535,13 @@ button, .btn {
 
 .methodology-title .highlight-italic {
     font-style: italic;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 .methodology-divider-line {
     width: 40px;
     height: 1px;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     margin-top: -4px;
 }
 
@@ -572,7 +572,7 @@ button, .btn {
     font-family: var(--font-serif);
     font-size: 22px; /* Margins / size update */
     line-height: 1.4;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     font-weight: 500;
     margin: 6px 0 0 0;
 }
@@ -607,7 +607,7 @@ button, .btn {
 
 .methodology-features-title .highlight-italic {
     font-style: italic;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 .methodology-features-subtitle {
@@ -642,7 +642,7 @@ button, .btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 .feature-title {
@@ -667,10 +667,7 @@ button, .btn {
 .eq-test-section {
     padding: calc(var(--section-y-sm) / 2) var(--container-x);
     background-color: var(--color-bg);
-    /* Local variable overrides for the fuchsia accent color scheme */
-    --color-rose: #52236A;
-    --color-rose-dark: #3D1652;
-    --color-rose-light: #F5EBEF;
+
 }
 
 .eq-test-card {
@@ -709,7 +706,7 @@ button, .btn {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.15em;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     text-transform: uppercase;
     margin-bottom: var(--header-label-gap);
 }
@@ -734,10 +731,7 @@ button, .btn {
 .step-selector {
     padding: calc(var(--section-y-md) / 2) var(--container-x) calc(var(--section-y-lg) / 2) var(--container-x);
     background-color: var(--color-bg);
-    /* Local variable overrides for the fuchsia accent color scheme */
-    --color-rose: #52236A;
-    --color-rose-dark: #3D1652;
-    --color-rose-light: #F5EBEF;
+
 }
 
 .selector-header {
@@ -753,7 +747,7 @@ button, .btn {
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     margin-bottom: var(--header-label-gap);
 }
 
@@ -808,7 +802,7 @@ button, .btn {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     margin-bottom: 4px;
 }
 
@@ -839,7 +833,7 @@ button, .btn {
 }
 
 .selector-check-item i {
-    color: var(--color-rose);
+    color: var(--color-accent-ui); /* keep this as fuchsia or main purple? wait, selector icon is check icon, so var(--color-accent-ui) or text */
     font-size: 16px;
     margin-top: 2px;
 }
@@ -852,7 +846,7 @@ button, .btn {
 }
 
 .btn-selector-primary {
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-ui);
     color: var(--color-white);
     padding: 14px 28px;
     border-radius: 12px;
@@ -866,7 +860,7 @@ button, .btn {
 }
 
 .btn-selector-primary:hover {
-    background-color: var(--color-rose-dark);
+    background-color: var(--color-accent-ui-hover);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(82, 35, 106, 0.25);
 }
@@ -876,7 +870,7 @@ button, .btn {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.08em;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     text-transform: uppercase;
     text-decoration: none;
     display: inline-flex;
@@ -886,7 +880,7 @@ button, .btn {
 }
 
 .btn-selector-link:hover {
-    color: var(--color-rose-dark);
+    color: var(--color-accent-text-hover);
     transform: translateX(4px);
 }
 
@@ -939,8 +933,8 @@ button, .btn {
 
 .play-overlay:hover .play-overlay-circle {
     transform: scale(1.1);
-    background-color: var(--color-rose);
-    border-color: var(--color-rose);
+    background-color: var(--color-accent-text);
+    border-color: var(--color-accent-text);
 }
 
 .play-overlay-text {
@@ -972,7 +966,7 @@ button, .btn {
     font-family: var(--font-serif);
     font-size: 16px;
     font-style: italic;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     text-align: center;
     display: flex;
     align-items: center;
@@ -984,7 +978,7 @@ button, .btn {
 .separator-text::after {
     content: "♦";
     font-size: 10px;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     opacity: 0.5;
 }
 
@@ -1030,11 +1024,11 @@ button, .btn {
 
 /* Specific styles for Mentor 28 card overlay */
 .row-mentor .overlay-title {
-    color: var(--color-rose); /* Fuchsia */
+    color: var(--color-accent-text); /* Fuchsia */
 }
 
 .row-mentor .overlay-badge {
-    color: var(--color-rose); /* Fuchsia */
+    color: var(--color-accent-text); /* Fuchsia */
 }
 
 .row-mentor .overlay-desc {
@@ -1058,9 +1052,7 @@ button, .btn {
 .courses {
     padding: calc(var(--section-y-lg) / 2) var(--container-x) calc(var(--section-y-md) / 2) var(--container-x);
     background-color: var(--color-bg);
-    --color-rose: #4C224C;
-    --color-rose-dark: #381838;
-    --color-rose-light: #F5EBEF;
+
 }
 
 .courses-header {
@@ -1073,7 +1065,7 @@ button, .btn {
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     margin-bottom: var(--header-label-gap);
 }
 
@@ -1309,7 +1301,7 @@ button, .btn {
     font-family: var(--font-serif);
     font-size: var(--font-size-h3);
     font-weight: 500;
-    color: #222222;
+    color: var(--color-text-main);
     line-height: 1.25;
     margin-bottom: 0;
 }
@@ -1323,7 +1315,7 @@ button, .btn {
 
 /* Quote box with purple styling and georgia quote marks */
 .book-details-wrapper .lib-quote-box {
-    background-color: var(--color-rose-light);
+    background-color: var(--color-accent-light);
     border-radius: 12px;
     padding: 16px 20px 16px 44px; /* Compact padding */
     position: relative;
@@ -1429,7 +1421,7 @@ button, .btn {
 
 .lib-preview-card:hover {
     transform: translateY(-4px);
-    background-color: var(--color-rose-light);
+    background-color: var(--color-accent-light);
     border-color: rgba(76, 34, 76, 0.12);
     box-shadow: 0 10px 25px rgba(143, 85, 88, 0.06);
 }
@@ -1471,7 +1463,7 @@ button, .btn {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     margin-bottom: 6px;
     display: flex;
     align-items: center;
@@ -1503,7 +1495,7 @@ button, .btn {
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -1528,7 +1520,7 @@ button, .btn {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     color: var(--color-white);
     display: flex;
     align-items: center;
@@ -1552,7 +1544,7 @@ button, .btn {
 
 .mini-progress {
     height: 100%;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     border-radius: 1.5px;
 }
 
@@ -1617,7 +1609,7 @@ button, .btn {
     height: 72px;
     border-radius: 50%;
     background-color: var(--color-white);
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1629,7 +1621,7 @@ button, .btn {
 
 .lib-video-thumbnail:hover .play-icon {
     transform: scale(1.1);
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     color: var(--color-white);
 }
 
@@ -1637,7 +1629,7 @@ button, .btn {
     position: absolute;
     top: 16px;
     left: 16px;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     color: var(--color-white);
     font-size: 9px;
     font-weight: 700;
@@ -1729,7 +1721,7 @@ button, .btn {
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     margin-bottom: 12px;
 }
 
@@ -1749,7 +1741,7 @@ button, .btn {
 }
 
 .lib-quote-box {
-    background-color: var(--color-rose-light);
+    background-color: var(--color-accent-light);
     border-radius: 12px;
     padding: 16px 20px 16px 44px;
     position: relative;
@@ -1763,7 +1755,7 @@ button, .btn {
     top: 12px;
     left: 16px;
     font-size: 32px;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     opacity: 0.85;
     font-family: Georgia, serif;
     line-height: 1;
@@ -1800,7 +1792,7 @@ button, .btn {
     text-transform: uppercase;
     border-radius: 12px; /* Border radius 12px */
     border: none;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     color: var(--color-white);
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1808,7 +1800,7 @@ button, .btn {
 }
 
 .btn-lib-action:hover {
-    background-color: var(--color-rose-dark);
+    background-color: var(--color-accent-text-hover);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(143, 85, 88, 0.25);
     border-radius: 12px;
@@ -1829,9 +1821,9 @@ button, .btn {
 }
 
 .btn-lib-outline:hover {
-    background-color: var(--color-rose-light);
-    border-color: var(--color-rose);
-    color: var(--color-rose);
+    background-color: var(--color-accent-light);
+    border-color: var(--color-accent-text);
+    color: var(--color-accent-text);
     transform: translateY(-2px);
     border-radius: 12px;
 }
@@ -1878,7 +1870,7 @@ button, .btn {
 
 .sidebar-item-icon {
     font-size: 18px;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     width: 24px;
     text-align: center;
     transition: transform 0.3s ease;
@@ -1902,7 +1894,7 @@ button, .btn {
 }
 
 .sidebar-list li:hover .item-title {
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 .item-desc {
@@ -1918,7 +1910,7 @@ button, .btn {
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     text-decoration: none;
     margin-top: auto;
     transition: gap 0.3s ease;
@@ -1926,7 +1918,7 @@ button, .btn {
 
 .sidebar-link:hover {
     gap: 12px;
-    color: var(--color-rose-dark);
+    color: var(--color-accent-text-hover);
 }
 
 /* Audio Player Controls */
@@ -1974,14 +1966,14 @@ button, .btn {
 
 .timeline-progress {
     height: 100%;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     border-radius: 2px;
 }
 
 .timeline-pin {
     width: 10px;
     height: 10px;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -2016,21 +2008,21 @@ button, .btn {
 }
 
 .player-btn:hover {
-    color: var(--color-rose);
-    background-color: var(--color-rose-light);
+    color: var(--color-accent-text);
+    background-color: var(--color-accent-light);
 }
 
 .btn-play-large {
     width: 48px;
     height: 48px;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     color: var(--color-white);
     font-size: 18px;
     box-shadow: 0 4px 10px rgba(176, 110, 114, 0.2);
 }
 
 .btn-play-large:hover {
-    background-color: var(--color-rose-dark);
+    background-color: var(--color-accent-text-hover);
     color: var(--color-white);
     transform: scale(1.05);
 }
@@ -2062,7 +2054,7 @@ button, .btn {
 }
 
 .player-volume:hover .volume-progress {
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
 }
 
 .courses-grid::after {
@@ -2122,7 +2114,7 @@ button, .btn {
     font-family: var(--font-serif);
     font-size: 26px;
     font-weight: 400;
-    color: var(--color-rose-dark);
+    color: var(--color-accent-text-hover);
     margin-bottom: 12px;
     line-height: 1.2;
 }
@@ -2136,7 +2128,7 @@ button, .btn {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-rose-dark);
+    color: var(--color-accent-text-hover);
     margin-bottom: 12px;
     line-height: 1.4;
 }
@@ -2162,10 +2154,7 @@ button, .btn {
 .testimonials {
     padding: calc(var(--section-y-md) / 2) var(--container-x) calc(var(--section-y-lg) / 2) var(--container-x);
     background-color: var(--color-bg);
-    /* Local variable overrides for the purple accent color scheme */
-    --color-rose: #4C224C;        /* Deep purple */
-    --color-rose-dark: #381838;   /* Dark purple */
-    --color-rose-light: #F5EBEF;  /* Soft lavender-pink */
+
 }
 
 .section-label,
@@ -2197,7 +2186,7 @@ button, .btn {
 
 .testimonials-title-highlight {
     font-style: italic;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 .testimonials-desc {
@@ -2227,19 +2216,19 @@ button, .btn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 1px solid var(--color-rose);
+    border: 1px solid var(--color-accent-ui);
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-rose);
+    color: var(--color-accent-ui);
     font-size: 18px;
     background-color: var(--color-white);
     transition: all 0.3s ease;
 }
 
 .stat-item:hover .stat-circle-icon {
-    background-color: var(--color-rose-light);
+    background-color: var(--color-accent-light);
     transform: translateY(-2px);
 }
 
@@ -2252,7 +2241,7 @@ button, .btn {
     font-family: var(--font-serif);
     font-size: 28px;
     font-weight: 500;
-    color: var(--color-rose-dark);
+    color: var(--color-accent-text-hover);
     line-height: 1.1;
     margin-bottom: 2px;
 }
@@ -2332,7 +2321,7 @@ button, .btn {
 .slider-card-content .quote-divider {
     width: 30px;
     height: 1px;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     margin-bottom: 8px;
 }
 
@@ -2353,7 +2342,7 @@ button, .btn {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     border: 1px solid rgba(76, 34, 76, 0.25); /* Purple badge border */
     padding: 4px 10px;
     border-radius: 4px; /* Updated to 4px for better design consistency */
@@ -2365,7 +2354,7 @@ button, .btn {
     border-radius: 50%;
     border: 1px solid rgba(76, 34, 76, 0.15); /* Purple arrow border */
     background-color: var(--color-white);
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2376,8 +2365,8 @@ button, .btn {
 }
 
 .slider-arrow:hover {
-    background-color: var(--color-rose-light);
-    border-color: var(--color-rose);
+    background-color: var(--color-accent-light);
+    border-color: var(--color-accent-text);
 }
 
 .slider-dots {
@@ -2397,7 +2386,7 @@ button, .btn {
 }
 
 .slider-dots .dot.active {
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
 }
 
 /* Video Testimonials Premium Card */
@@ -2425,7 +2414,7 @@ button, .btn {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     margin-bottom: 16px;
 }
 
@@ -2443,10 +2432,10 @@ button, .btn {
     align-items: center;
     gap: 12px;
     padding: 12px 20px;
-    border: 1px solid var(--color-rose);
+    border: 1px solid var(--color-accent-ui);
     border-radius: 12px; /* Updated to match 12px standard outline radius */
     background-color: transparent;
-    color: var(--color-rose-dark);
+    color: var(--color-accent-text-hover);
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -2456,15 +2445,15 @@ button, .btn {
 }
 
 .btn-video-more:hover {
-    background-color: var(--color-rose-light); /* Hover background matching the purple theme */
-    color: var(--color-rose);
+    background-color: var(--color-accent-light); /* Hover background matching the purple theme */
+    color: var(--color-accent-text);
 }
 
 .btn-video-more .play-icon-circle {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     color: var(--color-white);
     display: flex;
     align-items: center;
@@ -2579,7 +2568,7 @@ button, .btn {
 
 /* Brand Typography & SVG colors */
 .logos-grid-item {
-    color: #6d6765;
+    color: var(--color-text-light);
 }
 
 .logo-text.forbes {
@@ -2658,7 +2647,7 @@ button, .btn {
     font-size: 22px;
     font-weight: 500;
     letter-spacing: -0.02em;
-    color: #a39c9a;
+    color: var(--color-text-light);
 }
 
 .logo-text.esquire {
@@ -2674,8 +2663,7 @@ button, .btn {
 .not-alone {
     padding: calc(var(--section-y-sm) / 2) var(--container-x);
     background-color: var(--color-bg);
-    --color-rose: #52236A;        /* Fuchsia accent */
-    --color-rose-dark: #3D1652;   /* Dark fuchsia */
+
 }
 
 .not-alone-card {
@@ -2717,7 +2705,7 @@ button, .btn {
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     margin-bottom: var(--header-label-gap);
 }
 
@@ -2732,7 +2720,7 @@ button, .btn {
 
 .not-alone-title span {
     font-style: italic;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 .not-alone-title::after {
@@ -2740,7 +2728,7 @@ button, .btn {
     display: block;
     width: 60px;
     height: 2px;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-ui);
     margin-top: 16px;
 }
 
@@ -2753,7 +2741,7 @@ button, .btn {
 }
 
 .btn-club {
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     color: var(--color-white);
     padding: 14px 32px;
     border-radius: 12px;
@@ -2765,12 +2753,12 @@ button, .btn {
 }
 
 .btn-club:hover {
-    background-color: var(--color-rose-dark);
+    background-color: var(--color-accent-text-hover);
 }
 
 .not-alone-footnote {
     font-size: 10px;
-    color: #9c9290;
+    color: var(--color-text-light);
     display: flex;
     align-items: center;
     gap: 6px;
@@ -2780,7 +2768,7 @@ button, .btn {
 .not-alone-footnote .lock-icon {
     width: 12px;
     height: 12px;
-    color: #9c9290;
+    color: var(--color-text-light);
 }
 
 
@@ -2788,9 +2776,6 @@ button, .btn {
 .blog {
     padding: calc(var(--section-y-lg) / 2) var(--container-x) calc(var(--section-y-md) / 2) var(--container-x);
     background-color: var(--color-bg);
-    --color-rose: #52236A;        /* Fuchsia accent */
-    --color-rose-dark: #3D1652;   /* Dark fuchsia */
-    --color-rose-light: #F5EBEF;  /* Light fuchsia / lavender-pink */
 }
 
 .blog-header {
@@ -2807,7 +2792,7 @@ button, .btn {
 
 .blog-title span {
     font-style: italic;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 .blog-subtitle {
@@ -2841,7 +2826,7 @@ button, .btn {
 }
 
 .blog-tab-link.active {
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 .blog-tab-link.active::after {
@@ -2851,7 +2836,7 @@ button, .btn {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
 }
 
 /* Big article card (Open Style) */
@@ -2889,7 +2874,7 @@ button, .btn {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     margin-bottom: 16px;
 }
 
@@ -2904,7 +2889,7 @@ button, .btn {
 
 .blog-large-title span {
     font-style: italic;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 .blog-large-desc {
@@ -2917,7 +2902,7 @@ button, .btn {
 .blog-read-link {
     font-size: 12px;
     font-weight: 600;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -2997,10 +2982,10 @@ button, .btn {
     align-items: center;
     gap: 12px;
     padding: 14px 32px;
-    border: 1px solid var(--color-rose);
+    border: 1px solid var(--color-accent-ui);
     border-radius: 12px;
     background-color: transparent;
-    color: var(--color-rose-dark);
+    color: var(--color-accent-text-hover);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -3008,7 +2993,7 @@ button, .btn {
 }
 
 .btn-blog-more:hover {
-    background-color: var(--color-rose-light);
+    background-color: var(--color-accent-light);
 }
 
 .btn-blog-more .arrow-svg {
@@ -3021,8 +3006,7 @@ button, .btn {
     padding: calc(var(--section-y-md) / 2) var(--container-x) calc(var(--section-y-lg) / 2) var(--container-x);
     background-color: var(--color-bg);
     border-top: 1px solid var(--color-border);
-    --color-rose: #52236A;        /* Fuchsia accent */
-    --color-rose-dark: #3D1652;   /* Dark fuchsia */
+
 }
 
 .about-card {
@@ -3073,7 +3057,7 @@ button, .btn {
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     margin-bottom: var(--header-label-gap);
 }
 
@@ -3086,13 +3070,13 @@ button, .btn {
 }
 
 .about-title-name {
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 .about-divider-short {
     width: 40px;
     height: 1px;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-ui);
     margin: 20px 0;
 }
 
@@ -3153,9 +3137,9 @@ button, .btn {
     justify-content: center;
     width: 32px;
     height: 32px;
-    border: 1px solid var(--color-rose);
+    border: 1px solid var(--color-accent-ui);
     border-radius: 50%;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     font-size: 13px;
     flex-shrink: 0;
 }
@@ -3181,8 +3165,7 @@ button, .btn {
     display: flex;
     flex-direction: column;
     gap: var(--block-gap);
-    --color-rose: #52236A;        /* Fuchsia accent */
-    --color-rose-dark: #3D1652;   /* Dark fuchsia */
+
 }
 
 .contact-grid {
@@ -3203,7 +3186,7 @@ button, .btn {
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-rose);
+    color: var(--color-accent-text);
     margin-bottom: var(--header-label-gap);
 }
 
@@ -3216,13 +3199,13 @@ button, .btn {
 }
 
 .contact-title-accent {
-    color: var(--color-rose-dark);
+    color: var(--color-accent-text-hover);
 }
 
 .contact-divider-short {
     width: 40px;
     height: 1px;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-ui);
     margin: 20px 0;
 }
 
@@ -3251,7 +3234,7 @@ button, .btn {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3283,7 +3266,7 @@ button, .btn {
 }
 
 .contact-info-value:hover {
-    color: var(--color-rose);
+    color: var(--color-accent-text);
 }
 
 /* Contact Form Card styling */
@@ -3331,13 +3314,13 @@ button, .btn {
 
 .contact-form-card .form-group input::placeholder,
 .contact-form-card .form-group textarea::placeholder {
-    color: #A69692;
+    color: var(--color-text-light);
 }
 
 .contact-form-card .form-group input:focus,
 .contact-form-card .form-group textarea:focus {
     outline: none;
-    border-color: var(--color-rose);
+    border-color: var(--color-accent-ui);
     background-color: var(--color-white);
     box-shadow: 0 0 0 3px rgba(82, 35, 106, 0.08);
 }
@@ -3354,7 +3337,7 @@ button, .btn {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.05em;
-    background-color: var(--color-rose);
+    background-color: var(--color-accent-text);
     color: var(--color-white);
     border: none;
     border-radius: 12px;
@@ -3363,7 +3346,7 @@ button, .btn {
 }
 
 .contact-form-card .btn-submit:hover {
-    background-color: var(--color-rose-dark);
+    background-color: var(--color-accent-text-hover);
 }
 
 .contact-form-safe {
@@ -3692,7 +3675,7 @@ button, .btn {
     font-family: var(--font-serif);
     font-size: 26px;
     font-weight: 500;
-    color: #222222;
+    color: var(--color-text-main);
     line-height: 1.25;
     margin-bottom: 0;
     margin-top: 0;
@@ -3935,7 +3918,7 @@ button, .btn {
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: var(--color-rose-light);
+    background-color: var(--color-accent-light);
     border-radius: 12px;
     padding: 20px 24px;
     margin-top: 12px;
@@ -4181,7 +4164,7 @@ button, .btn {
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: var(--color-rose-light);
+    background-color: var(--color-accent-light);
     border-radius: 12px;
     padding: 20px 24px;
     margin-top: 12px;
@@ -4287,7 +4270,7 @@ button, .btn {
     font-family: var(--font-serif);
     font-size: 26px;
     font-weight: 500;
-    color: #222222;
+    color: var(--color-text-main);
     line-height: 1.25;
     margin-bottom: 0;
     margin-top: 0;
@@ -4321,7 +4304,7 @@ button, .btn {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: var(--color-rose-light);
+    background-color: var(--color-accent-light);
     color: #4C224C;
     display: flex;
     align-items: center;
