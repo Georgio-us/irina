@@ -25,10 +25,10 @@
     --color-accent-gold: #C5A880;     /* Premium Gold accent (preservation) */
 
     /* Spacing Grid Tokens */
-    --container-x: 80px;
-    --section-y-lg: 96px;       /* Major sections vertical padding */
-    --section-y-md: 80px;       /* Standard sections vertical padding */
-    --section-y-sm: 56px;       /* Connector/transition sections vertical padding */
+    --container-x: clamp(20px, 5vw, 80px);
+    --section-y-lg: clamp(56px, 8vw, 96px);       /* Major sections vertical padding */
+    --section-y-md: clamp(48px, 6vw, 80px);       /* Standard sections vertical padding */
+    --section-y-sm: clamp(40px, 5vw, 56px);       /* Connector/transition sections vertical padding */
     
     /* Heading Gaps */
     --header-label-gap: 10px;   /* Gap between subtitle label and title */
@@ -60,14 +60,15 @@ body {
     overflow-x: auto;
 }
 
-/* Page wrapper to lock the desktop layout at exactly 1440px wide */
+/* Page wrapper for the desktop layout, fluid on smaller screens */
 .page-wrapper {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: var(--color-bg);
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 a {
@@ -144,12 +145,11 @@ button, .btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 80px;
+    padding: 0 var(--container-x);
     background-color: var(--color-bg);
     border-bottom: 1px solid var(--color-border);
     position: relative;
     z-index: 10;
-
 }
 
 .header .logo {
@@ -194,7 +194,7 @@ button, .btn {
 }
 
 .hero-left {
-    padding: 40px 0 170px 80px; /* Increased bottom padding to shift content up and create air */
+    padding: 40px 0 170px var(--container-x); /* Increased bottom padding to shift content up and create air */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -354,8 +354,8 @@ button, .btn {
 .hero-stats-banner {
     position: absolute;
     bottom: 30px;
-    left: 80px;
-    right: 80px;
+    left: var(--container-x);
+    right: var(--container-x);
     height: 90px;
     display: flex;
     justify-content: space-between;
@@ -584,10 +584,10 @@ button, .btn {
 /* Lower Composition: 5 Features Card */
 .methodology-features-box {
     background-color: #F1E7F3; /* Light lavender-fuchsia background */
-    margin-left: -80px;
-    margin-right: -80px;
-    width: calc(100% + 160px);
-    padding: 50px 80px;
+    margin-left: calc(-1 * var(--container-x));
+    margin-right: calc(-1 * var(--container-x));
+    width: calc(100% + (2 * var(--container-x)));
+    padding: 50px var(--container-x);
     box-sizing: border-box;
 }
 
@@ -4523,4 +4523,385 @@ button, .btn {
     background-color: #4C224C;
     color: var(--color-white);
     transform: scale(1.08);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints (Адаптив)
+   ========================================================================== */
+
+/* Hamburger Button Icon Setup */
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label::before,
+.nav-toggle-label::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-text-main);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle-label::before {
+    transform-origin: left top;
+}
+
+.nav-toggle-label::after {
+    transform-origin: left bottom;
+}
+
+@media (max-width: 1024px) {
+    /* Hero section */
+    .hero {
+        grid-template-columns: 1.1fr 0.9fr;
+        height: auto;
+        min-height: 600px;
+        padding-bottom: 140px; /* Space for the stats banner at the bottom */
+    }
+    .hero-left {
+        padding: 60px 0 60px var(--container-x);
+    }
+    .hero-right {
+        min-height: 400px;
+    }
+    .hero-quote-card {
+        top: unset;
+        bottom: 40px;
+        right: 40px;
+        width: 220px;
+    }
+
+    /* Methodology Section */
+    .methodology-intro {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .methodology-img-wrapper {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.6 / 1;
+    }
+    .methodology-intro-text {
+        padding-left: 0;
+    }
+    .methodology-intro-text::after {
+        display: none; /* Hide quote background to avoid visual collision */
+    }
+    .methodology-features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px 0;
+    }
+    .feature-col:nth-child(3) {
+        border-right: none;
+    }
+    .feature-col:nth-child(4) {
+        border-right: 1px solid rgba(82, 35, 106, 0.15);
+    }
+    .feature-col:nth-child(5) {
+        border-right: none;
+    }
+
+    /* Step Selector */
+    .selector-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .row-star {
+        grid-template-columns: 1fr;
+    }
+    .row-star .selector-content {
+        order: 1;
+    }
+    .row-star .selector-img-box {
+        order: 2;
+    }
+
+    /* Courses & Services */
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+    .courses-tabs {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+    .tab-link {
+        flex: 1 1 auto;
+        text-align: center;
+        border: 1px solid var(--color-border) !important;
+        border-radius: 8px;
+        padding: 10px 16px;
+    }
+    .tab-link:not(:last-child)::after {
+        display: none;
+    }
+    
+    /* Sub-tabs layout: Books, Webinars, Science */
+    .library-content-box {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px;
+    }
+    
+    .grid-books-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .book-mockup-wrapper {
+        grid-column: span 2;
+        height: 300px;
+    }
+    .book-details-wrapper {
+        grid-column: span 2;
+    }
+    .lib-preview-card {
+        grid-column: span 1;
+    }
+
+    .grid-webinars-layout, .grid-science-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .webinar-cover-wrapper, .science-cover-wrapper {
+        grid-column: span 2;
+        height: 300px;
+    }
+    .webinar-details-wrapper, .science-details-wrapper {
+        grid-column: span 2;
+    }
+    .webinars-section-header, .science-cta-wrapper {
+        grid-column: span 2;
+    }
+    .webinar-card-wrapper, .science-card-item {
+        grid-column: span 1;
+    }
+
+    /* LUX Club & About Cards */
+    .not-alone-card, .about-card {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        padding: 40px var(--container-x);
+        gap: 40px;
+    }
+    .not-alone-left, .about-left {
+        width: 100%;
+        max-width: 440px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
+    }
+    .about-right {
+        height: auto;
+        width: 100%;
+    }
+
+    /* Blog Grid */
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    /* Contacts Grid */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    /* Footer Banner layout */
+    .footer-banner-cols {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .footer-vertical-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header burger menu */
+    .nav-toggle-label {
+        display: flex;
+    }
+    .header .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--color-bg);
+        border-left: 1px solid var(--color-border);
+        flex-direction: column;
+        padding: 100px var(--container-x) 40px var(--container-x);
+        gap: 24px;
+        z-index: 100;
+        transition: right 0.3s ease;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.05);
+    }
+    .header .btn {
+        display: none; /* Hide header contact button on mobile */
+    }
+    .nav-toggle:checked ~ .nav {
+        right: 0;
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span {
+        opacity: 0;
+    }
+    .nav-toggle:checked ~ .nav-toggle-label::before {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .nav-toggle:checked ~ .nav-toggle-label::after {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Hero Section */
+    .hero {
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
+        background-position: center left 25%; /* adjust background alignment to keep subject visible */
+    }
+    .hero-left {
+        padding: 60px var(--container-x);
+        text-align: center;
+        align-items: center;
+    }
+    .hero-divider {
+        margin: 0 auto 24px auto;
+    }
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-right {
+        min-height: unset;
+        padding: 0 var(--container-x) 40px var(--container-x);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-quote-card {
+        position: relative;
+        bottom: unset;
+        right: unset;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 24px;
+        border-radius: 12px;
+        border-left: 2px solid var(--color-accent-ui);
+    }
+    .hero-stats-banner {
+        position: relative;
+        bottom: unset;
+        left: unset;
+        right: unset;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px;
+        margin-top: 40px;
+        align-items: flex-start;
+    }
+    .hero-banner-item {
+        width: 100%;
+    }
+    .hero-bg-line {
+        display: none;
+    }
+
+    /* Methodology Section */
+    .methodology-img-wrapper {
+        aspect-ratio: 4 / 3;
+    }
+    .methodology-features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .feature-col {
+        padding: 0;
+    }
+    .feature-col:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(82, 35, 106, 0.1);
+        padding-bottom: 24px;
+    }
+
+    /* Library sub-grids full collapse */
+    .grid-books-layout, .grid-webinars-layout, .grid-science-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .book-mockup-wrapper, .book-details-wrapper, .lib-preview-card,
+    .webinar-cover-wrapper, .webinar-details-wrapper, .webinar-card-wrapper,
+    .science-cover-wrapper, .science-details-wrapper, .science-card-item,
+    .webinars-section-header, .science-cta-wrapper {
+        grid-column: span 1 !important;
+    }
+    
+    .lib-preview-card {
+        height: auto;
+        padding: 20px;
+    }
+    .science-cta-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .science-cta-right {
+        width: 100%;
+    }
+    .science-cta-right .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Blog Grid */
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Footer & branding row fixes */
+    .footer-logo-row {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .footer-col-nav {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .webinar-details-wrapper .lib-buttons, .lib-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .webinar-details-wrapper .lib-buttons .btn, .lib-buttons .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
 }

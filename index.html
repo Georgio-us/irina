@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ирина Ужеловская — Психолог, ментор, автор психотехнологий</title>
-    <link rel="stylesheet" href="style.css?v=40">
+    <link rel="stylesheet" href="style.css?v=41">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -15,13 +15,17 @@
     <!-- Header -->
     <header class="header">
         <div class="logo">Ирина Ужеловская</div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
         <nav class="nav">
-            <a href="#about">ПРО ТЕБЯ</a>
-            <a href="#methodology">МЕТОДОЛОГИЯ</a>
-            <a href="#courses">ПРОГРАММЫ</a>
-            <a href="#testimonials">РЕЗУЛЬТАТЫ</a>
-            <a href="#blog">БЛОГ</a>
+            <a href="#about" onclick="document.getElementById('nav-toggle').checked = false;">ПРО ТЕБЯ</a>
+            <a href="#methodology" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
+            <a href="#courses" onclick="document.getElementById('nav-toggle').checked = false;">ПРОГРАММЫ</a>
+            <a href="#testimonials" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
+            <a href="#blog" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
         </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
         <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Связаться со мной</button>
     </header>
 
