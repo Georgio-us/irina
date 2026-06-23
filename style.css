@@ -14,6 +14,20 @@
     --color-border: #EFE8E2;
     --color-white: #FFFFFF;
     --color-accent-gold: #C5A880;
+
+    /* Spacing Grid Tokens */
+    --container-x: 80px;
+    --section-y-lg: 96px;       /* Major sections vertical padding */
+    --section-y-md: 80px;       /* Standard sections vertical padding */
+    --section-y-sm: 56px;       /* Connector/transition sections vertical padding */
+    
+    /* Heading Gaps */
+    --header-label-gap: 10px;   /* Gap between subtitle label and title */
+    --header-desc-gap: 12px;    /* Gap between title and description */
+    --header-content-gap: 48px; /* Gap between header block and content */
+    
+    --block-gap: 64px;          /* Vertical gap between elements inside sections */
+    --card-gap: 28px;           /* Grid/Flex card gaps */
 }
 
 /* Reset and base styles */
@@ -447,11 +461,11 @@ button, .btn {
 
 /* Methodology Section (Replaced Intro & Benefits) */
 .methodology-section {
-    padding: 100px 80px;
+    padding: var(--section-y-md) var(--container-x) calc(var(--section-y-md) / 2) var(--container-x);
     background-color: var(--color-bg);
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: var(--block-gap);
     /* Local variable overrides for the purple accent color scheme */
     --color-rose: #52236A;        /* Fuchsia accent color */
     --color-rose-dark: #3D1652;   /* Dark purple for hovers */
@@ -573,7 +587,7 @@ button, .btn {
 
 .methodology-features-header {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: var(--header-content-gap);
 }
 
 .methodology-features-title {
@@ -582,7 +596,7 @@ button, .btn {
     line-height: 1.3;
     font-weight: 400;
     color: var(--color-text-main);
-    margin: 0 0 10px 0;
+    margin: 0;
 }
 
 .methodology-features-title .highlight-italic {
@@ -595,7 +609,7 @@ button, .btn {
     line-height: 1.55;
     color: var(--color-text-muted);
     max-width: 520px;
-    margin: 0 auto;
+    margin: var(--header-desc-gap) auto 0 auto;
 }
 
 .methodology-features-grid {
@@ -645,7 +659,7 @@ button, .btn {
 
 /* EQ Test Section */
 .eq-test-section {
-    padding: 40px 80px 80px 80px;
+    padding: calc(var(--section-y-sm) / 2) var(--container-x);
     background-color: var(--color-bg);
     /* Local variable overrides for the fuchsia accent color scheme */
     --color-rose: #52236A;
@@ -691,7 +705,7 @@ button, .btn {
     letter-spacing: 0.15em;
     color: var(--color-rose);
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: var(--header-label-gap);
 }
 
 .eq-test-title {
@@ -700,18 +714,19 @@ button, .btn {
     line-height: 1.3;
     font-weight: 400;
     color: var(--color-text-main);
-    margin-bottom: 16px;
+    margin-bottom: 0;
 }
 
 .eq-test-subtitle {
     font-size: 14px;
     color: var(--color-text-muted);
+    margin-top: var(--header-desc-gap);
     margin-bottom: 30px;
 }
 
 /* Step Selector */
 .step-selector {
-    padding: 100px 80px;
+    padding: calc(var(--section-y-md) / 2) var(--container-x) calc(var(--section-y-lg) / 2) var(--container-x);
     background-color: var(--color-bg);
     /* Local variable overrides for the fuchsia accent color scheme */
     --color-rose: #52236A;
@@ -721,7 +736,7 @@ button, .btn {
 
 .selector-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: var(--header-content-gap);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -733,7 +748,7 @@ button, .btn {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-rose);
-    margin-bottom: 12px;
+    margin-bottom: var(--header-label-gap);
 }
 
 .selector-title {
@@ -741,7 +756,7 @@ button, .btn {
     font-size: 32px;
     font-weight: 400;
     color: var(--color-text-main);
-    margin-bottom: 12px;
+    margin-bottom: 0;
     line-height: 1.2;
 }
 
@@ -751,13 +766,14 @@ button, .btn {
     font-weight: 400;
     max-width: 600px;
     line-height: 1.5;
+    margin-top: var(--header-desc-gap);
 }
 
 .selector-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-top: 50px;
+    margin-top: 0;
     width: 100%;
 }
 
@@ -1034,7 +1050,7 @@ button, .btn {
 
 /* Courses & Services */
 .courses {
-    padding: 100px 80px;
+    padding: calc(var(--section-y-lg) / 2) var(--container-x) calc(var(--section-y-md) / 2) var(--container-x);
     background-color: var(--color-bg);
     --color-rose: #4C224C;
     --color-rose-dark: #381838;
@@ -1043,7 +1059,7 @@ button, .btn {
 
 .courses-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: var(--header-content-gap);
 }
 
 .courses-subtitle {
@@ -1052,7 +1068,24 @@ button, .btn {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-rose);
-    margin-bottom: 24px;
+    margin-bottom: var(--header-label-gap);
+}
+
+.courses-title-main {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--color-text-main);
+    margin: 0;
+    line-height: 1.25;
+}
+
+.courses-desc-main {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: var(--header-desc-gap) auto 0 auto;
+    line-height: 1.5;
 }
 
 .courses-tabs-container {
@@ -1157,7 +1190,7 @@ button, .btn {
     border-radius: 24px;
     border: 1px solid rgba(187, 116, 118, 0.1);
     padding: 40px;
-    margin-top: 60px;
+    margin-top: 0;
     box-shadow: 0 10px 40px rgba(143, 85, 88, 0.02);
     width: 100%;
     box-sizing: border-box;
@@ -1174,7 +1207,7 @@ button, .btn {
     grid-template-columns: repeat(12, 1fr);
     column-gap: 24px;
     row-gap: 48px;
-    margin-top: 50px;
+    margin-top: 0;
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -2121,7 +2154,7 @@ button, .btn {
 
 /* Testimonials Section */
 .testimonials {
-    padding: 100px 80px;
+    padding: calc(var(--section-y-md) / 2) var(--container-x) calc(var(--section-y-lg) / 2) var(--container-x);
     background-color: var(--color-bg);
     /* Local variable overrides for the purple accent color scheme */
     --color-rose: #4C224C;        /* Deep purple */
@@ -2129,16 +2162,30 @@ button, .btn {
     --color-rose-light: #F5EBEF;  /* Soft lavender-pink */
 }
 
+.section-label,
+.section-label-center {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #52236A; /* Fuchsia purple as standard */
+    margin-bottom: var(--header-label-gap);
+    display: block;
+}
+.section-label-center {
+    text-align: center;
+}
+
 .testimonials-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: var(--header-content-gap);
 }
 
 .testimonials-title {
     font-family: var(--font-serif);
     font-size: 32px;
     font-weight: 400;
-    margin-bottom: 16px;
+    margin-bottom: 0;
     line-height: 1.3;
 }
 
@@ -2151,7 +2198,7 @@ button, .btn {
     font-size: 14px;
     color: var(--color-text-muted);
     max-width: 600px;
-    margin: 0 auto;
+    margin: var(--header-desc-gap) auto 0 auto;
     line-height: 1.5;
 }
 
@@ -2483,7 +2530,7 @@ button, .btn {
 
 /* Logos / As Seen In Section */
 .logos-section {
-    padding: 80px 80px 100px 80px;
+    padding: calc(var(--section-y-sm) / 2) var(--container-x);
     background-color: var(--color-bg);
 }
 
@@ -2494,7 +2541,7 @@ button, .btn {
     text-transform: uppercase;
     color: #52236A;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: var(--header-content-gap);
 }
 
 .logos-grid {
@@ -2619,7 +2666,7 @@ button, .btn {
 
 /* LUX CLUB CTA Banner */
 .not-alone {
-    padding: 40px 80px 100px 80px;
+    padding: calc(var(--section-y-sm) / 2) var(--container-x);
     background-color: var(--color-bg);
     --color-rose: #52236A;        /* Fuchsia accent */
     --color-rose-dark: #3D1652;   /* Dark fuchsia */
@@ -2665,7 +2712,7 @@ button, .btn {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-rose);
-    margin-bottom: 16px;
+    margin-bottom: var(--header-label-gap);
 }
 
 .not-alone-title {
@@ -2733,7 +2780,7 @@ button, .btn {
 
 /* Blog Section */
 .blog {
-    padding: 100px 80px;
+    padding: calc(var(--section-y-lg) / 2) var(--container-x) calc(var(--section-y-md) / 2) var(--container-x);
     background-color: var(--color-bg);
     --color-rose: #52236A;        /* Fuchsia accent */
     --color-rose-dark: #3D1652;   /* Dark fuchsia */
@@ -2742,14 +2789,14 @@ button, .btn {
 
 .blog-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: var(--header-content-gap);
 }
 
 .blog-title {
     font-family: var(--font-serif);
     font-size: 32px;
     font-weight: 400;
-    margin-bottom: 12px;
+    margin-bottom: 0;
 }
 
 .blog-title span {
@@ -2761,7 +2808,7 @@ button, .btn {
     font-size: 14px;
     color: var(--color-text-muted);
     max-width: 600px;
-    margin: 0 auto;
+    margin: var(--header-desc-gap) auto 0 auto;
     line-height: 1.5;
 }
 
@@ -2771,7 +2818,7 @@ button, .btn {
     gap: 30px;
     border-bottom: 1px solid var(--color-border);
     padding-bottom: 12px;
-    margin-bottom: 40px;
+    margin-bottom: var(--card-gap);
     width: 100%;
     justify-content: flex-start;
 }
@@ -2965,7 +3012,7 @@ button, .btn {
 
 /* Biography / About Section */
 .about {
-    padding: 80px 80px 100px 80px;
+    padding: calc(var(--section-y-md) / 2) var(--container-x) calc(var(--section-y-lg) / 2) var(--container-x);
     background-color: var(--color-bg);
     border-top: 1px solid var(--color-border);
     --color-rose: #52236A;        /* Fuchsia accent */
@@ -3021,7 +3068,7 @@ button, .btn {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-rose);
-    margin-bottom: 16px;
+    margin-bottom: var(--header-label-gap);
 }
 
 .about-title {
@@ -3124,10 +3171,10 @@ button, .btn {
 .contact-footer {
     background: #FBF7F6 url('images/contact_bg.png') no-repeat center;
     background-size: cover;
-    padding: 80px 80px 30px 80px;
+    padding: calc(var(--section-y-lg) / 2) var(--container-x) 30px var(--container-x);
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: var(--block-gap);
     --color-rose: #52236A;        /* Fuchsia accent */
     --color-rose-dark: #3D1652;   /* Dark fuchsia */
 }
@@ -3151,7 +3198,7 @@ button, .btn {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-rose);
-    margin-bottom: 16px;
+    margin-bottom: var(--header-label-gap);
 }
 
 .contact-title {
@@ -3486,7 +3533,7 @@ button, .btn {
     display: none;
     grid-template-columns: repeat(12, 1fr);
     gap: 24px 20px;
-    margin-top: 50px;
+    margin-top: 0;
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -3925,7 +3972,7 @@ button, .btn {
     display: none;
     grid-template-columns: repeat(12, 1fr);
     gap: 24px 20px;
-    margin-top: 50px;
+    margin-top: 0;
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -4171,7 +4218,7 @@ button, .btn {
     display: none;
     grid-template-columns: repeat(12, 1fr);
     gap: 24px 20px;
-    margin-top: 50px;
+    margin-top: 0;
     background-color: transparent;
     border: none;
     box-shadow: none;
