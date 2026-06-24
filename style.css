@@ -5082,6 +5082,20 @@ button, .btn {
         flex-wrap: wrap;
         gap: 15px;
     }
+    .blog-large-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 48px;
+    }
+    .blog-large-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        border-radius: 16px;
+    }
+    .blog-large-info {
+        width: 100%;
+    }
     .blog-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -5149,5 +5163,18 @@ button, .btn {
     }
     .logos-grid-item {
         height: 88px;
+    }
+    .blog-large-card {
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    .blog-large-img {
+        aspect-ratio: 1 / 1;
+    }
+    .blog-large-title {
+        font-size: 24px;
+    }
+    .blog-large-desc {
+        margin-bottom: 20px;
     }
 }
