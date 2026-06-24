@@ -4977,6 +4977,106 @@ button, .btn {
         padding: 20px;
     }
 
+    /* Testimonials and media logos */
+    .testimonials-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 20px;
+        margin-bottom: 48px;
+    }
+    .testimonials-stats .stat-item {
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .testimonials-stats .stat-circle-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+    }
+    .testimonials-stats .stat-number {
+        font-size: 24px;
+    }
+    .slider-wrapper {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .slider-arrow {
+        display: none;
+    }
+    .slider-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .testimonial-slider-card {
+        height: auto;
+        min-height: 240px;
+    }
+    .slider-card-img {
+        width: 38%;
+    }
+    .slider-card-content {
+        width: 62%;
+        padding: 22px;
+    }
+    .slider-dots {
+        margin-top: 18px;
+        margin-bottom: 48px;
+    }
+    .video-testimonials-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 28px;
+    }
+    .video-info-column {
+        align-items: flex-start;
+    }
+    .video-title {
+        margin-bottom: 22px;
+    }
+    .video-reviews-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+    .video-review-name {
+        font-size: 12px;
+    }
+    .logos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .logos-grid .logos-grid-item {
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+    .logos-grid .logos-grid-item:nth-child(odd) {
+        border-right: 1px solid var(--color-border);
+    }
+    .logos-grid .logos-grid-item:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+    .logos-grid-item {
+        height: 96px;
+    }
+    .logo-text.forbes {
+        font-size: 26px;
+    }
+    .logo-text.vogue {
+        font-size: 24px;
+    }
+    .logo-text.marie-claire,
+    .logo-text.tatler {
+        font-size: 21px;
+    }
+    .logo-text.psychologies,
+    .youtube-text {
+        font-size: 14px;
+    }
+    .logo-text.mindly,
+    .rbc-text {
+        font-size: 18px;
+    }
+    .logo-text.esquire {
+        font-size: 23px;
+    }
+
     /* Blog Grid & Tabs */
     .blog-tabs {
         flex-wrap: wrap;
@@ -5016,5 +5116,38 @@ button, .btn {
         width: 100%;
         text-align: center;
         justify-content: center;
+    }
+    .testimonials-stats {
+        gap: 22px 14px;
+    }
+    .testimonial-slider-card {
+        flex-direction: column;
+    }
+    .slider-card-img,
+    .slider-card-content {
+        width: 100%;
+    }
+    .slider-card-img {
+        height: 220px;
+    }
+    .video-testimonials-container {
+        padding: 24px 20px;
+    }
+    .btn-video-more {
+        width: 100%;
+        justify-content: center;
+    }
+    .video-reviews-grid {
+        gap: 16px 14px;
+    }
+    .video-review-thumb {
+        aspect-ratio: 1.25;
+    }
+    .play-svg {
+        width: 38px;
+        height: 38px;
+    }
+    .logos-grid-item {
+        height: 88px;
     }
 }
