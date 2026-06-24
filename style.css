@@ -4640,11 +4640,11 @@ button, .btn {
         box-shadow: none;
         overflow: visible;
     }
-    .tab-link {
-        grid-column: auto !important;
+    .courses-tabs .tab-link {
+        grid-column: auto;
         flex: 1 1 auto;
         text-align: center;
-        border: 1px solid var(--color-border) !important;
+        border: 1px solid var(--color-border);
         border-radius: 8px;
         padding: 10px 16px;
         height: 44px;
@@ -4772,7 +4772,9 @@ button, .btn {
     .hero {
         grid-template-columns: 1fr;
         padding-bottom: 20px;
-        background-position: 80% center; /* Keep subject (Irina) visible on narrow viewports */
+        background-size: auto 500px;
+        background-position: 44% top;
+        background-color: var(--color-bg);
     }
     .hero-left {
         padding: 60px var(--container-x);
@@ -4789,32 +4791,12 @@ button, .btn {
     .hero-buttons {
         justify-content: center;
     }
-    .hero-right {
-        min-height: unset;
-        padding: 0 var(--container-x) 40px var(--container-x);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    .hero-socials,
     .hero-quote-card {
-        position: relative;
-        bottom: unset;
-        right: unset;
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.85); /* Slightly more opaque background */
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        padding: 24px;
-        border-radius: 12px;
-        border-left: 2px solid var(--color-accent-ui);
+        display: none;
     }
-    .hero-quote-card .hero-quote-text {
-        color: var(--color-text-main); /* Fix contrast (was white on white) */
-    }
-    .hero-quote-card .hero-quote-author {
-        color: var(--color-accent-text); /* Ensure good contrast for author name */
+    .hero-right {
+        display: none;
     }
     .hero-stats-banner {
         position: relative;
@@ -4841,6 +4823,9 @@ button, .btn {
     .methodology-img-wrapper {
         aspect-ratio: 4 / 3;
     }
+    .methodology-features-box {
+        display: none;
+    }
     .methodology-features-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -4854,33 +4839,142 @@ button, .btn {
         padding-bottom: 24px;
     }
 
+    /* Step selector separator */
+    .selector-separator {
+        gap: 12px;
+        margin: 32px 0;
+        padding: 0 var(--container-x);
+    }
+    .separator-text {
+        max-width: 100%;
+        white-space: normal;
+        line-height: 1.4;
+        gap: 8px;
+    }
+    .separator-text::before,
+    .separator-text::after {
+        flex-shrink: 0;
+    }
+
     /* Library sub-grids full collapse */
-    .grid-books-layout, .grid-webinars-layout, .grid-science-layout {
+    .grid-programs-layout,
+    .grid-books-layout,
+    .grid-webinars-layout,
+    .grid-science-layout {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    .book-mockup-wrapper, .book-details-wrapper, .lib-preview-card,
-    .webinar-cover-wrapper, .webinar-details-wrapper, .webinar-card-wrapper,
-    .science-cover-wrapper, .science-details-wrapper, .science-card-item,
-    .webinars-section-header, .science-cta-wrapper {
-        grid-column: span 1 !important;
+
+    .grid-programs-layout > .program-card-wrapper,
+    .grid-programs-layout > .program-bottom-quote,
+    .grid-books-layout > .book-mockup-wrapper,
+    .grid-books-layout > .book-details-wrapper,
+    .grid-books-layout > .lib-preview-card,
+    .grid-webinars-layout > .webinar-cover-wrapper,
+    .grid-webinars-layout > .webinar-details-wrapper,
+    .grid-webinars-layout > .webinars-section-header,
+    .grid-webinars-layout > .webinar-card-wrapper,
+    .grid-webinars-layout > .webinar-bottom-quote,
+    .grid-science-layout > .science-cover-wrapper,
+    .grid-science-layout > .science-details-wrapper,
+    .grid-science-layout > .science-cta-wrapper,
+    .grid-science-layout > .science-cards-grid {
+        grid-column: 1 / -1;
+    }
+
+    /* Programs tab */
+    .program-card-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+    .program-card-left,
+    .program-card-right {
+        width: 100%;
+    }
+    .program-card-left {
+        height: 260px;
+    }
+    .program-card-right {
+        height: auto;
+        padding: 24px;
+        gap: 22px;
+    }
+    .program-buttons-stack {
+        margin-top: 0;
+    }
+    .program-bottom-quote,
+    .webinar-bottom-quote {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .program-bottom-quote .quote-mark,
+    .webinar-bottom-quote .quote-mark {
+        margin-bottom: -6px;
+    }
+    .program-bottom-quote .quote-author,
+    .webinar-bottom-quote .quote-author {
+        white-space: normal;
+    }
+
+    /* Webinars tab */
+    .webinar-cover-wrapper,
+    .science-cover-wrapper {
+        height: 300px;
+    }
+    .webinar-details-wrapper,
+    .science-details-wrapper {
+        padding: 0;
+    }
+    .webinar-stats,
+    .webinar-card-meta {
+        flex-wrap: wrap;
+        gap: 8px 14px;
+    }
+    .webinar-details-wrapper .lib-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .webinar-details-wrapper .lib-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .webinar-card-image-box {
+        height: 220px;
+    }
+
+    /* Science tab */
+    .science-cta-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 24px;
+    }
+    .science-cta-left,
+    .science-cta-middle,
+    .science-cta-right {
+        width: 100%;
+    }
+    .science-cta-middle {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+    .science-cta-right .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .science-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .science-card-item {
+        height: 220px;
     }
     
     .lib-preview-card {
         height: auto;
         padding: 20px;
-    }
-    .science-cta-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-    .science-cta-right {
-        width: 100%;
-    }
-    .science-cta-right .btn {
-        width: 100%;
-        justify-content: center;
     }
 
     /* Blog Grid & Tabs */
