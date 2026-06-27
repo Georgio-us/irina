@@ -1000,7 +1000,7 @@
             <div class="video-info-column">
                 <div class="video-subtitle">Результаты клиентов</div>
                 <h3 class="video-title">Смотрите реальные отзывы участниц</h3>
-                <button class="btn-video-more" onclick="alert('Смотреть все отзывы')">
+                <button class="btn-video-more btn-video-more-desktop" onclick="alert('Смотреть все отзывы')">
                     Смотреть все видео
                     <span class="play-icon-circle"><i class="fa-solid fa-play"></i></span>
                 </button>
@@ -1063,6 +1063,11 @@
                     <div class="video-review-name">История Виктории</div>
                 </div>
             </div>
+
+            <button class="btn-video-more btn-video-more-mobile" onclick="alert('Смотреть все отзывы')">
+                Смотреть все видео
+                <span class="play-icon-circle"><i class="fa-solid fa-play"></i></span>
+            </button>
         </div>
     </section>
 
@@ -1137,10 +1142,10 @@
                 </p>
                 <button class="btn btn-primary btn-club" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Присоединиться к LUX CLUB</button>
                 <div class="not-alone-footnote">
-                    Закрытое сообщество по подписке
                     <svg class="lock-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
                     </svg>
+                    <span>Закрытое сообщество по подписке</span>
                 </div>
             </div>
         </div>
@@ -1422,13 +1427,12 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
 
-        <!-- Copyright Row -->
-        <div class="footer-copyright">
-            <div class="footer-copyright-left">2026 Ирина Ужеловская</div>
-            <div class="footer-copyright-right">Все права защищены</div>
+                <div class="footer-copyright">
+                    <div class="footer-copyright-left">2026 Ирина Ужеловская</div>
+                    <div class="footer-copyright-right">Все права защищены</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1483,6 +1487,71 @@
                 document.querySelectorAll('.header .nav-item.is-open').forEach(item => item.classList.remove('is-open'));
             }
         });
+
+        const initTestimonialsSlider = () => {
+            const slider = document.querySelector('.slider-container');
+            const cards = Array.from(document.querySelectorAll('.testimonial-slider-card'));
+            const prevButton = document.querySelector('.slider-arrow.arrow-left');
+            const nextButton = document.querySelector('.slider-arrow.arrow-right');
+            const dotsContainer = document.querySelector('.slider-dots');
+            if (!slider || !cards.length || !prevButton || !nextButton || !dotsContainer) return;
+
+            let activeIndex = 0;
+
+            const getVisibleCount = () => window.matchMedia('(max-width: 768px)').matches ? 1 : 3;
+            const getGap = () => parseFloat(getComputedStyle(slider).gap) || 0;
+            const getMaxIndex = () => Math.max(cards.length - getVisibleCount(), 0);
+
+            const renderDots = () => {
+                const pages = getMaxIndex() + 1;
+                dotsContainer.innerHTML = '';
+                for (let i = 0; i < pages; i += 1) {
+                    const dot = document.createElement('button');
+                    dot.className = `dot${i === activeIndex ? ' active' : ''}`;
+                    dot.type = 'button';
+                    dot.setAttribute('aria-label', `Показать отзыв ${i + 1}`);
+                    dot.addEventListener('click', () => {
+                        activeIndex = i;
+                        updateSlider();
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+            };
+
+            const updateSlider = () => {
+                activeIndex = Math.min(activeIndex, getMaxIndex());
+                const cardWidth = cards[0].getBoundingClientRect().width;
+                const offset = activeIndex * (cardWidth + getGap());
+                cards.forEach(card => {
+                    card.style.transform = `translateX(-${offset}px)`;
+                });
+
+                const dots = Array.from(dotsContainer.querySelectorAll('.dot'));
+                dots.forEach((dot, index) => dot.classList.toggle('active', index === activeIndex));
+                prevButton.disabled = activeIndex === 0;
+                nextButton.disabled = activeIndex === getMaxIndex();
+            };
+
+            prevButton.addEventListener('click', () => {
+                activeIndex = Math.max(activeIndex - 1, 0);
+                updateSlider();
+            });
+
+            nextButton.addEventListener('click', () => {
+                activeIndex = Math.min(activeIndex + 1, getMaxIndex());
+                updateSlider();
+            });
+
+            window.addEventListener('resize', () => {
+                renderDots();
+                updateSlider();
+            });
+
+            renderDots();
+            updateSlider();
+        };
+
+        initTestimonialsSlider();
 
         // Tab switching logic for Knowledge Library / Courses & Services
         document.querySelectorAll('.courses-tabs .tab-link').forEach(tab => {
