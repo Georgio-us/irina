@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ирина Ужеловская — Психолог, ментор, автор психотехнологий</title>
-    <link rel="stylesheet" href="style.css?v=59">
+    <link rel="stylesheet" href="style.css?v=60">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -17,16 +17,26 @@
         <div class="logo">Ирина Ужеловская</div>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
         <nav class="nav">
-            <a href="#about" onclick="document.getElementById('nav-toggle').checked = false;">ПРО ТЕБЯ</a>
-            <a href="#methodology" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
-            <a href="#courses" onclick="document.getElementById('nav-toggle').checked = false;">ПРОГРАММЫ</a>
-            <a href="#testimonials" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
-            <a href="#blog" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
+            <a href="#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
+            <a href="#courses" class="nav-link" data-course-target="grid-science" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
+            <div class="nav-item has-dropdown">
+                <a href="#courses" class="nav-link nav-link-dropdown" aria-haspopup="true">ПРОГРАММЫ</a>
+                <div class="nav-dropdown">
+                    <a href="#courses" data-course-target="grid-programs">Авторские программы</a>
+                    <a href="#courses" data-course-target="grid-webinars">Вебинары</a>
+                    <a href="#courses" data-course-target="grid-books">Книга</a>
+                    <a href="#courses" data-course-target="grid-meditations">Медитации</a>
+                    <a href="#courses" data-course-target="grid-science">Научная база</a>
+                </div>
+            </div>
+            <a href="#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
+            <a href="#blog" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
+            <a href="#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
         </nav>
         <label for="nav-toggle" class="nav-toggle-label">
             <span></span>
         </label>
-        <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Связаться со мной</button>
+        <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Обсудить запрос</button>
     </header>
 
     <!-- Hero Section -->
@@ -1425,29 +1435,60 @@
 </div>
 
     <script>
+        const showCourseTab = (targetId, shouldScroll = true) => {
+            const tabLink = document.querySelector(`.courses-tabs .tab-link[data-target="${targetId}"]`);
+            if (!tabLink) return;
+
+            document.querySelectorAll('.courses-tabs .tab-link').forEach(t => t.classList.remove('active'));
+            tabLink.classList.add('active');
+
+            document.querySelectorAll('.courses-grid-tab').forEach(grid => {
+                grid.classList.remove('active-grid');
+                grid.style.display = 'none';
+            });
+
+            const targetGrid = document.getElementById(targetId);
+            if (targetGrid) {
+                targetGrid.classList.add('active-grid');
+                targetGrid.style.display = 'grid';
+            }
+
+            if (shouldScroll) {
+                document.getElementById('courses').scrollIntoView({behavior: 'smooth'});
+            }
+        };
+
+        document.querySelectorAll('[data-course-target]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showCourseTab(link.getAttribute('data-course-target'));
+                document.getElementById('nav-toggle').checked = false;
+                document.querySelectorAll('.header .nav-item.is-open').forEach(item => item.classList.remove('is-open'));
+            });
+        });
+
+        document.querySelectorAll('.header .nav-link-dropdown').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const navItem = link.closest('.nav-item');
+                document.querySelectorAll('.header .nav-item.is-open').forEach(item => {
+                    if (item !== navItem) item.classList.remove('is-open');
+                });
+                navItem.classList.toggle('is-open');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.header .nav-item')) {
+                document.querySelectorAll('.header .nav-item.is-open').forEach(item => item.classList.remove('is-open'));
+            }
+        });
+
         // Tab switching logic for Knowledge Library / Courses & Services
         document.querySelectorAll('.courses-tabs .tab-link').forEach(tab => {
             tab.addEventListener('click', (e) => {
                 e.preventDefault();
-                
-                // Remove active class from all tabs
-                document.querySelectorAll('.courses-tabs .tab-link').forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                tab.classList.add('active');
-                
-                // Hide all tab grids
-                document.querySelectorAll('.courses-grid-tab').forEach(grid => {
-                    grid.classList.remove('active-grid');
-                    grid.style.display = 'none';
-                });
-                
-                // Show the target grid
-                const targetId = tab.getAttribute('data-target');
-                const targetGrid = document.getElementById(targetId);
-                if (targetGrid) {
-                    targetGrid.classList.add('active-grid');
-                    targetGrid.style.display = 'grid';
-                }
+                showCourseTab(tab.getAttribute('data-target'), false);
             });
         });
 
@@ -1458,8 +1499,7 @@
                 if (target) {
                     const tabLink = document.querySelector(`.courses-tabs .tab-link[data-target="${target}"]`);
                     if (tabLink) {
-                        tabLink.click();
-                        document.getElementById('courses').scrollIntoView({behavior: 'smooth'});
+                        showCourseTab(target);
                     }
                 }
             });
