@@ -159,13 +159,19 @@ button, .btn {
 }
 
 .header .logo {
-    font-family: var(--font-serif);
-    font-size: clamp(18px, 1.6vw, 20px);
-    font-weight: 500;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: var(--color-accent-text);
-    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    width: clamp(150px, 13vw, 190px);
+    height: 42px;
+}
+
+.header .logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
 }
 
 .header .nav {
@@ -771,11 +777,17 @@ button, .btn {
 }
 
 .feature-svg-wrapper {
-    height: 44px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-accent-text);
+}
+
+.feature-svg-wrapper svg {
+    width: 40px;
+    height: 40px;
+    stroke-width: 1.6;
 }
 
 .feature-title {
@@ -1064,6 +1076,10 @@ button, .btn {
     transition: all 0.3s ease;
 }
 
+.play-overlay-circle svg {
+    transform: translateX(1.5px);
+}
+
 .play-overlay:hover .play-overlay-circle {
     transform: scale(1.1);
     background-color: var(--color-accent-text);
@@ -1184,8 +1200,22 @@ button, .btn {
 /* Courses & Services */
 .courses {
     padding: calc(var(--section-y-lg) / 2) var(--container-x) calc(var(--section-y-md) / 2) var(--container-x);
-    background-color: var(--color-bg);
+    background-image: url('images/gradient_noise.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-white);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
 
+.courses::before {
+    display: none;
+}
+
+.courses::after {
+    display: none;
 }
 
 .courses-header {
@@ -1198,7 +1228,7 @@ button, .btn {
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-accent-text);
+    color: rgba(255, 255, 255, 0.74);
     margin-bottom: var(--header-label-gap);
 }
 
@@ -1206,14 +1236,14 @@ button, .btn {
     font-family: var(--font-serif);
     font-size: var(--font-size-h2);
     font-weight: 400;
-    color: var(--color-text-main);
+    color: var(--color-white);
     margin: 0;
     line-height: 1.25;
 }
 
 .courses-desc-main {
     font-size: 14px;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.72);
     max-width: 600px;
     margin: var(--header-desc-gap) auto 0 auto;
     line-height: 1.5;
@@ -1231,12 +1261,14 @@ button, .btn {
     grid-template-columns: repeat(12, 1fr);
     width: 100%;
     height: 50px; /* Reduced height to 50px */
-    background-color: #FAF8F6;
-    border: 1px solid var(--color-border);
+    background-color: rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 8px;
     padding: 0;
     gap: 0;
-    box-shadow: 0 4px 20px rgba(143, 85, 88, 0.02);
+    box-shadow: 0 22px 60px rgba(18, 7, 24, 0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     align-items: stretch;
     overflow: hidden;
 }
@@ -1251,7 +1283,7 @@ button, .btn {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #4C224C;
+    color: rgba(255, 255, 255, 0.82);
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     text-decoration: none;
     position: relative;
@@ -1271,15 +1303,15 @@ button, .btn {
 }
 
 .tab-link:hover:not(.active) {
-    color: #4C224C;
-    background-color: rgba(76, 34, 76, 0.03);
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .tab-link.active {
-    color: var(--color-white);
-    background-color: #4C224C;
+    color: var(--color-accent-ui);
+    background-color: rgba(255, 255, 255, 0.96);
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(76, 34, 76, 0.2);
+    box-shadow: 0 10px 28px rgba(18, 7, 24, 0.18);
 }
 
 .tab-link:not(:last-child)::after {
@@ -1289,7 +1321,7 @@ button, .btn {
     top: 0;
     height: 100%; /* Vertical lines span the entire height */
     width: 1px;
-    background-color: rgba(76, 34, 76, 0.08); /* subtle dividing line */
+    background-color: rgba(255, 255, 255, 0.14); /* subtle dividing line */
     transition: opacity 0.3s ease;
 }
 
@@ -1301,8 +1333,8 @@ button, .btn {
 .courses-grid {
     display: none; /* Changed from display: grid to support JS toggling */
     grid-template-columns: 1fr 1fr;
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     position: relative;
     margin-top: 60px;
     gap: 0;
@@ -1318,11 +1350,12 @@ button, .btn {
     grid-template-columns: 360px 1fr 300px;
     gap: 40px;
     background-color: #FAF8F6;
+    color: var(--color-text-main);
     border-radius: 24px;
     border: 1px solid rgba(187, 116, 118, 0.1);
     padding: 40px;
     margin-top: 0;
-    box-shadow: 0 10px 40px rgba(143, 85, 88, 0.02);
+    box-shadow: 0 24px 70px rgba(18, 7, 24, 0.22);
     width: 100%;
     box-sizing: border-box;
     align-items: stretch;
@@ -1363,7 +1396,7 @@ button, .btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 12px 35px rgba(143, 85, 88, 0.05);
+    box-shadow: 0 18px 45px rgba(18, 7, 24, 0.14);
     border: 1px solid rgba(187, 116, 118, 0.08);
     padding: 0; /* Remove padding */
 }
@@ -1543,6 +1576,7 @@ button, .btn {
     justify-content: space-between;
     align-items: stretch;
     background-color: #FAF8F6;
+    color: var(--color-text-main);
     border-radius: 12px;
     overflow: hidden;
     height: 154px;
@@ -1556,7 +1590,7 @@ button, .btn {
     transform: translateY(-4px);
     background-color: var(--color-accent-light);
     border-color: rgba(76, 34, 76, 0.12);
-    box-shadow: 0 10px 25px rgba(143, 85, 88, 0.06);
+    box-shadow: 0 10px 25px rgba(18, 7, 24, 0.12);
 }
 
 .card-content-left {
@@ -2120,9 +2154,11 @@ button, .btn {
 }
 
 .player-controls {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(32px, 1fr));
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
+    gap: 16px;
 }
 
 .player-btn {
@@ -2154,40 +2190,14 @@ button, .btn {
     box-shadow: 0 4px 10px rgba(176, 110, 114, 0.2);
 }
 
+.btn-play-large i {
+    transform: translateX(2px);
+}
+
 .btn-play-large:hover {
     background-color: var(--color-accent-text-hover);
     color: var(--color-white);
     transform: scale(1.05);
-}
-
-.player-volume {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--color-text-muted);
-}
-
-.player-volume i {
-    font-size: 12px;
-}
-
-.volume-bar {
-    width: 60px;
-    height: 3px;
-    background-color: rgba(187, 116, 118, 0.1);
-    border-radius: 2px;
-    cursor: pointer;
-    position: relative;
-}
-
-.volume-progress {
-    height: 100%;
-    background-color: var(--color-text-muted);
-    border-radius: 2px;
-}
-
-.player-volume:hover .volume-progress {
-    background-color: var(--color-accent-text);
 }
 
 .courses-grid::after {
@@ -2535,8 +2545,12 @@ button, .btn {
 
 /* Video Testimonials Premium Card */
 .video-testimonials-container {
-    background-color: #FAF8F6; /* Premium light cream background for contrast */
-    border: 1px solid rgba(76, 34, 76, 0.08); /* Subtle purple boundary */
+    background-image: url('images/gradient_noise.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 16px; /* Smooth corners aligned with design system */
     padding: 50px;
     display: grid;
@@ -2544,7 +2558,23 @@ button, .btn {
     gap: 40px;
     width: 100%;
     align-items: center;
-    box-shadow: 0 12px 35px rgba(76, 34, 76, 0.02); /* Very soft shadow */
+    box-shadow: 0 24px 70px rgba(18, 7, 24, 0.2);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.video-testimonials-container::before {
+    display: none;
+}
+
+.video-testimonials-container::after {
+    display: none;
+}
+
+.video-testimonials-container > * {
+    position: relative;
+    z-index: 1;
 }
 
 .video-info-column {
@@ -2560,7 +2590,7 @@ button, .btn {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-accent-text);
+    color: rgba(255, 255, 255, 0.76);
     margin-bottom: 16px;
 }
 
@@ -2569,7 +2599,7 @@ button, .btn {
     font-size: var(--font-size-h3);
     line-height: 1.35;
     font-weight: 400;
-    color: var(--color-text-main);
+    color: var(--color-white);
     margin-bottom: 30px;
 }
 
@@ -2578,10 +2608,10 @@ button, .btn {
     align-items: center;
     gap: 12px;
     padding: 12px 20px;
-    border: 1px solid var(--color-accent-ui);
+    border: 1px solid rgba(255, 255, 255, 0.76);
     border-radius: 12px; /* Updated to match 12px standard outline radius */
     background-color: transparent;
-    color: var(--color-accent-text-hover);
+    color: var(--color-white);
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -2599,21 +2629,27 @@ button, .btn {
 }
 
 .btn-video-more:hover {
-    background-color: var(--color-accent-light); /* Hover background matching the purple theme */
-    color: var(--color-accent-text);
+    background-color: rgba(255, 255, 255, 0.96);
+    border-color: rgba(255, 255, 255, 0.96);
+    color: var(--color-accent-ui);
 }
 
 .btn-video-more .play-icon-circle {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background-color: var(--color-accent-text);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-accent-ui);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 8px;
     padding-left: 2px;
+}
+
+.btn-video-more:hover .play-icon-circle {
+    background-color: var(--color-accent-ui);
+    color: var(--color-white);
 }
 
 .video-reviews-grid {
@@ -2636,7 +2672,7 @@ button, .btn {
     aspect-ratio: 1.6;
     border-radius: 12px; /* Updated to 12px for better visual balance */
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 16px 34px rgba(18, 7, 24, 0.22);
 }
 
 .video-review-thumb img {
@@ -2675,7 +2711,7 @@ button, .btn {
 
 .video-review-name {
     font-size: 13px;
-    color: var(--color-text-main);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
 }
 
@@ -4162,10 +4198,11 @@ button, .btn {
     border-radius: 16px;
     border: 1px solid rgba(187, 116, 118, 0.08);
     background-color: #FAF8F6;
+    color: var(--color-text-main);
     overflow: hidden;
     position: relative;
     display: flex;
-    box-shadow: 0 12px 35px rgba(143, 85, 88, 0.03);
+    box-shadow: 0 24px 70px rgba(18, 7, 24, 0.2);
 }
 
 .program-card-left {
@@ -4333,6 +4370,10 @@ button, .btn {
     transition: all 0.3s ease;
 }
 
+.btn-program-link .link-icon-circle i {
+    transform: translateX(1px);
+}
+
 .btn-program-link:hover .link-icon-circle {
     background-color: #4C224C;
     color: var(--color-white);
@@ -4344,13 +4385,14 @@ button, .btn {
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: var(--color-accent-light);
+    background-color: rgba(255, 255, 255, 0.92);
+    color: var(--color-text-main);
     border-radius: 12px;
     padding: 20px 24px;
     margin-top: 12px;
     position: relative;
     border: none;
-    box-shadow: none;
+    box-shadow: 0 18px 50px rgba(18, 7, 24, 0.14);
 }
 
 .program-bottom-quote .quote-mark {
@@ -4705,6 +4747,56 @@ button, .btn {
     transform: scale(1.08);
 }
 
+/* Contrast fixes for library tabs on the dark textured background */
+.courses .webinar-details-wrapper .lib-subtitle,
+.courses .book-details-wrapper .lib-subtitle,
+.courses .science-details-wrapper .lib-subtitle,
+.courses .webinars-section-header .header-text {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.courses .webinar-details-wrapper .lib-title,
+.courses .book-details-wrapper .lib-title,
+.courses .science-details-wrapper .lib-title {
+    color: var(--color-white);
+}
+
+.courses .webinar-details-wrapper .lib-desc,
+.courses .book-details-wrapper .lib-desc,
+.courses .science-details-wrapper .lib-desc,
+.courses .webinar-stats,
+.courses .webinar-card-meta,
+.courses .science-features .feature-text span {
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.courses .webinar-stats .stat-item i,
+.courses .webinar-card-meta .meta-item i,
+.courses .science-features .feature-text strong {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.courses .webinar-stats .stat-divider {
+    color: rgba(255, 255, 255, 0.28);
+}
+
+.courses .webinars-section-header .header-bullet {
+    background-color: rgba(255, 255, 255, 0.54);
+}
+
+.courses .btn-all-webinars,
+.courses .btn-buy-book {
+    border-color: rgba(255, 255, 255, 0.64);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.courses .btn-all-webinars:hover,
+.courses .btn-buy-book:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.86);
+    color: var(--color-white);
+}
+
 /* ==========================================================================
    Responsive Breakpoints (Адаптив)
    ========================================================================== */
@@ -4824,11 +4916,16 @@ button, .btn {
         grid-column: auto;
         flex: 1 1 auto;
         text-align: center;
-        border: 1px solid rgba(82, 35, 106, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.22);
         border-radius: 8px;
         padding: clamp(10px, 2.8vw, 12px) clamp(14px, 3.8vw, 18px);
         height: clamp(44px, 11vw, 50px);
         font-size: clamp(10px, 2.8vw, 11px);
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+    .courses-tabs .tab-link.active {
+        border-color: rgba(255, 255, 255, 0.82);
+        background-color: rgba(255, 255, 255, 0.96);
     }
     .tab-link:not(:last-child)::after {
         display: none;
@@ -4950,6 +5047,10 @@ button, .btn {
         z-index: 100;
         transition: right 0.3s ease;
         box-shadow: -10px 0 30px rgba(0,0,0,0.05);
+    }
+    .header .logo {
+        width: clamp(136px, 42vw, 170px);
+        height: 40px;
     }
     .header .nav a::after {
         display: none;
@@ -5479,6 +5580,7 @@ button, .btn {
     .webinar-details-wrapper .lib-buttons {
         flex-direction: column;
         width: 100%;
+        margin-top: 12px;
     }
     .webinar-details-wrapper .lib-buttons .btn {
         width: 100%;
@@ -5486,6 +5588,14 @@ button, .btn {
     }
     .webinar-card-image-box {
         height: 220px;
+    }
+
+    .book-details-wrapper .lib-buttons {
+        margin-top: 16px;
+    }
+
+    .lib-right-col .sidebar-link {
+        margin-top: 14px;
     }
 
     /* Science tab */
