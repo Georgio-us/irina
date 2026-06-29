@@ -3774,11 +3774,7 @@ button, .btn {
 }
 
 .webinar-cover-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(76, 34, 76, 0.1) 0%, rgba(76, 34, 76, 0.85) 100%);
-    pointer-events: none;
-    z-index: 1;
+    display: none;
 }
 
 .webinar-cover-content {
@@ -3798,6 +3794,7 @@ button, .btn {
     line-height: 1.15;
     letter-spacing: -0.02em;
     color: var(--color-white);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.38);
     margin-bottom: 12px;
     margin-top: 0;
 }
@@ -3807,6 +3804,7 @@ button, .btn {
     font-weight: 400;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
     margin-bottom: 24px;
     max-width: 85%;
     margin-top: 0;
@@ -3836,6 +3834,10 @@ button, .btn {
     font-size: 16px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
+}
+
+.webinar-cover-play-btn i {
+    transform: translateX(1px);
 }
 
 .webinar-cover-play-row:hover .webinar-cover-play-btn {
@@ -3940,21 +3942,22 @@ button, .btn {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #4C224C;
+    background-color: #6B2F70;
     color: var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 12px;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.08em;
     padding: 12px 20px;
-    box-shadow: 0 4px 15px rgba(76, 34, 76, 0.15);
+    box-shadow: 0 10px 24px rgba(34, 16, 38, 0.18);
     transition: all 0.3s ease;
-    border: none;
     cursor: pointer;
 }
 
 .btn-watch-webinar:hover {
-    background-color: #381838;
+    background-color: #4C224C;
+    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(76, 34, 76, 0.25);
     border-radius: 12px;
@@ -3971,6 +3974,10 @@ button, .btn {
     justify-content: center;
     font-size: 8px;
     transition: background-color 0.3s ease;
+}
+
+.btn-watch-webinar .btn-icon-circle i {
+    transform: translateX(1px);
 }
 
 .btn-watch-webinar:hover .btn-icon-circle {
@@ -4054,10 +4061,7 @@ button, .btn {
 }
 
 .webinar-card-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(76, 34, 76, 0.05) 0%, rgba(76, 34, 76, 0.75) 100%);
-    z-index: 1;
+    display: none;
 }
 
 .webinar-card-duration {
@@ -4077,13 +4081,16 @@ button, .btn {
 
 .webinar-card-title {
     position: absolute;
-    bottom: 12px;
-    left: 12px;
-    right: 48px;
+    top: 50%;
+    left: 18px;
+    right: 76px;
+    transform: translateY(-50%);
     color: var(--color-white);
-    font-size: 12px;
-    font-weight: 800;
-    line-height: 1.25;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.36);
+    font-family: var(--font-sans);
+    font-size: clamp(13px, 0.9vw, 17px);
+    font-weight: 500;
+    line-height: 1.18;
     margin: 0;
     z-index: 2;
     letter-spacing: 0.02em;
@@ -4106,6 +4113,10 @@ button, .btn {
     z-index: 2;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.webinar-card-play-btn i {
+    transform: translateX(1px);
 }
 
 .webinar-card-wrapper:hover .webinar-card-play-btn {
