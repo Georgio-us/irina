@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ирина Ужеловская — Психолог, ментор, автор психотехнологий</title>
-    <link rel="stylesheet" href="style.css?v=60">
+    <link rel="stylesheet" href="style.css?v=62">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -20,7 +20,7 @@
         <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
         <nav class="nav">
             <a href="#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
-            <a href="#courses" class="nav-link" data-course-target="grid-science" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
+            <a href="methodology.html" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
             <div class="nav-item has-dropdown">
                 <a href="#courses" class="nav-link nav-link-dropdown" aria-haspopup="true">ПРОГРАММЫ</a>
                 <div class="nav-dropdown">
@@ -119,7 +119,7 @@
             <div class="banner-separator"></div>
             
             <div class="hero-banner-item action-item">
-                <button class="btn btn-primary btn-banner-action" onclick="document.getElementById('methodology').scrollIntoView({behavior: 'smooth'})">
+                <button class="btn btn-primary btn-banner-action" onclick="window.location.href='methodology.html'">
                     ИЗУЧИТЬ МЕТОДОЛОГИЮ <i class="fa-solid fa-arrow-right-long"></i>
                 </button>
             </div>
@@ -422,10 +422,10 @@
                         </ul>
                     </div>
                     <div class="program-buttons-stack">
-                        <button class="btn btn-primary btn-lib-action btn-program-action" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <button class="btn btn-primary btn-lib-action btn-program-action" onclick="window.location.href='programs/mentor-28/'">
                             УЗНАТЬ ПОДРОБНЕЕ <i class="fa-solid fa-arrow-right-long"></i>
                         </button>
-                        <a href="#contact" class="btn-program-link" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <a href="programs/mentor-28/" class="btn-program-link">
                             СМОТРЕТЬ ПРОГРАММУ <span class="link-icon-circle"><i class="fa-solid fa-play"></i></span>
                         </a>
                     </div>
@@ -837,7 +837,7 @@
                     </div>
                 </div>
                 <div class="science-cta-right">
-                    <button class="btn btn-primary btn-lib-action btn-science-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    <button class="btn btn-primary btn-lib-action btn-science-cta" onclick="window.location.href='methodology.html'">
                         ИЗУЧИТЬ МЕТОДОЛОГИЮ <i class="fa-solid fa-arrow-right-long"></i>
                     </button>
                 </div>
@@ -1158,11 +1158,11 @@
 
         <!-- Left-aligned tabs -->
         <div class="blog-tabs">
-            <a href="#blog" class="blog-tab-link active">Все</a>
-            <a href="#blog" class="blog-tab-link">Мышление</a>
-            <a href="#blog" class="blog-tab-link">Состояние</a>
-            <a href="#blog" class="blog-tab-link">Отношения</a>
-            <a href="#blog" class="blog-tab-link">Реализация</a>
+            <a href="#blog" class="blog-tab-link active" data-blog-tab="all">Все</a>
+            <a href="#blog" class="blog-tab-link" data-blog-tab="mindset">Мышление</a>
+            <a href="#blog" class="blog-tab-link" data-blog-tab="state">Состояние</a>
+            <a href="#blog" class="blog-tab-link" data-blog-tab="relationships">Отношения</a>
+            <a href="#blog" class="blog-tab-link" data-blog-tab="realization">Реализация</a>
         </div>
 
         <!-- Big Card (Open Layout) -->
@@ -1236,7 +1236,7 @@
     <section class="about" id="about">
         <div class="about-card">
             <div class="about-left">
-                <img src="images/irina_about.png" alt="Ирина Ужеловская">
+                <img src="images/irina_about_new.png" alt="Ирина Ужеловская">
             </div>
             <div class="about-right">
                 <div class="about-body">
@@ -1367,7 +1367,7 @@
                         <div class="footer-nav-title">НАВИГАЦИЯ</div>
                         <ul class="footer-nav-list">
                             <li><a href="#hero">Главная</a></li>
-                            <li><a href="#methodology">Методология</a></li>
+                            <li><a href="methodology.html">Методология</a></li>
                             <li><a href="#courses">Программы</a></li>
                             <li><a href="#blog">Материалы</a></li>
                             <li><a href="#blog">Блог</a></li>
@@ -1377,7 +1377,7 @@
                     <div class="footer-nav-section">
                         <div class="footer-nav-title">ПРОГРАММЫ</div>
                         <ul class="footer-nav-list">
-                            <li><a href="#courses">Mentor 28</a></li>
+                            <li><a href="programs/mentor-28/">Mentor 28</a></li>
                             <li><a href="#courses">Продавай как звезда</a></li>
                             <li><a href="#courses">Библиотека знаний</a></li>
                             <li><a href="#about-club">LUX CLUB</a></li>
@@ -1436,6 +1436,207 @@
 </div>
 
     <script>
+        const blogTabsData = {
+            all: {
+                main: {
+                    image: 'images/blog_main.png',
+                    alt: 'Почему изменения начинаются не с действий, а с состояния',
+                    badge: 'Состояние',
+                    title: 'Почему изменения начинаются не с действий, а с <span>состояния</span>',
+                    desc: 'Когда мы меняем внутреннее состояние, внешние обстоятельства начинают меняться естественным образом. Как это работает на самом деле.'
+                },
+                cards: [
+                    {
+                        image: 'images/blog_sub_1.png',
+                        alt: 'EQ — новый навык лидера',
+                        badge: 'Эмоциональный интеллект',
+                        title: 'EQ — новый навык лидера',
+                        desc: 'Как эмоциональный интеллект влияет на качество решений, отношения и результаты в бизнесе и жизни.'
+                    },
+                    {
+                        image: 'images/blog_sub_2.png',
+                        alt: 'Близость начинается с уязвимости',
+                        badge: 'Отношения',
+                        title: 'Близость начинается с уязвимости',
+                        desc: 'Почему быть собой — это не слабость, а основа настоящей близости и глубокой связи.'
+                    },
+                    {
+                        image: 'images/blog_sub_3.png',
+                        alt: 'Практика тишины для ясности ума',
+                        badge: 'Практика',
+                        title: 'Практика тишины для ясности ума',
+                        desc: 'Простая медитативная практика, которая помогает вернуться к себе и услышать главное.'
+                    }
+                ]
+            },
+            mindset: {
+                main: {
+                    image: 'images/blog_sub_3.png',
+                    alt: 'Как мысли формируют внутреннюю реальность',
+                    badge: 'Мышление',
+                    title: 'Как мысли формируют вашу <span>внутреннюю реальность</span>',
+                    desc: 'Мы часто пытаемся изменить действия, не замечая, что за ними стоят привычные способы думать, оценивать себя и видеть мир.'
+                },
+                cards: [
+                    {
+                        image: 'images/blog_main.png',
+                        alt: 'Почему цели не работают без нового мышления',
+                        badge: 'Установки',
+                        title: 'Почему цели не работают без нового мышления',
+                        desc: 'Что происходит, когда человек ставит новую цель, но продолжает смотреть на себя через старые убеждения.'
+                    },
+                    {
+                        image: 'images/blog_sub_1.png',
+                        alt: 'Внутренний диалог и качество решений',
+                        badge: 'Решения',
+                        title: 'Внутренний диалог и качество решений',
+                        desc: 'Как фразы, которые мы повторяем себе каждый день, влияют на выбор, уверенность и движение вперед.'
+                    },
+                    {
+                        image: 'images/blog_sub_2.png',
+                        alt: 'Как перестать доказывать свою ценность',
+                        badge: 'Самооценка',
+                        title: 'Как перестать доказывать свою ценность',
+                        desc: 'Почему постоянное доказательство себя забирает энергию и мешает действовать спокойно и устойчиво.'
+                    }
+                ]
+            },
+            state: {
+                main: {
+                    image: 'images/blog_main.png',
+                    alt: 'Почему изменения начинаются с состояния',
+                    badge: 'Состояние',
+                    title: 'Почему изменения начинаются не с действий, а с <span>состояния</span>',
+                    desc: 'Внутреннее состояние определяет скорость решений, уровень энергии и то, как человек реагирует на возможности и сложности.'
+                },
+                cards: [
+                    {
+                        image: 'images/blog_sub_1.png',
+                        alt: 'Эмоциональная устойчивость без контроля',
+                        badge: 'Устойчивость',
+                        title: 'Эмоциональная устойчивость без контроля',
+                        desc: 'Почему устойчивость — это не подавление эмоций, а способность оставаться в контакте с собой.'
+                    },
+                    {
+                        image: 'images/blog_sub_3.png',
+                        alt: 'Как вернуть энергию через внимание к себе',
+                        badge: 'Энергия',
+                        title: 'Как вернуть энергию через внимание к себе',
+                        desc: 'Что забирает ресурс незаметно и почему восстановление начинается с честного внутреннего наблюдения.'
+                    },
+                    {
+                        image: 'images/blog_sub_2.png',
+                        alt: 'Тело как индикатор внутреннего напряжения',
+                        badge: 'Практика',
+                        title: 'Тело как индикатор внутреннего напряжения',
+                        desc: 'Как замечать сигналы тела до того, как усталость превращается в откат и потерю мотивации.'
+                    }
+                ]
+            },
+            relationships: {
+                main: {
+                    image: 'images/blog_sub_2.png',
+                    alt: 'Близость начинается с внутренней честности',
+                    badge: 'Отношения',
+                    title: 'Близость начинается с <span>внутренней честности</span>',
+                    desc: 'Отношения меняются не только через разговоры с другим человеком, но и через то, как мы слышим себя.'
+                },
+                cards: [
+                    {
+                        image: 'images/blog_main.png',
+                        alt: 'Почему мы повторяем одни и те же сценарии',
+                        badge: 'Сценарии',
+                        title: 'Почему мы повторяем одни и те же сценарии',
+                        desc: 'Как старые реакции незаметно управляют выбором партнера, дистанцией и способом говорить о важном.'
+                    },
+                    {
+                        image: 'images/blog_sub_1.png',
+                        alt: 'Границы без жесткости и чувства вины',
+                        badge: 'Границы',
+                        title: 'Границы без жесткости и чувства вины',
+                        desc: 'Почему здоровые границы строятся не из защиты, а из ясного ощущения собственной ценности.'
+                    },
+                    {
+                        image: 'images/blog_sub_3.png',
+                        alt: 'Как говорить о себе спокойно',
+                        badge: 'Коммуникация',
+                        title: 'Как говорить о себе спокойно',
+                        desc: 'Практика, которая помогает не нападать, не оправдываться и оставаться в контакте во время сложного разговора.'
+                    }
+                ]
+            },
+            realization: {
+                main: {
+                    image: 'images/blog_sub_1.png',
+                    alt: 'Как внутреннее состояние влияет на реализацию',
+                    badge: 'Реализация',
+                    title: 'Реализация начинается с <span>внутреннего разрешения</span>',
+                    desc: 'Иногда человек знает, куда хочет идти, но не позволяет себе проявиться, заявить о себе и выдержать новый уровень.'
+                },
+                cards: [
+                    {
+                        image: 'images/blog_main.png',
+                        alt: 'Почему видимость пугает сильнее действия',
+                        badge: 'Проявленность',
+                        title: 'Почему видимость пугает сильнее действия',
+                        desc: 'Что стоит за страхом быть заметной и как внутреннее состояние влияет на публичность и рост.'
+                    },
+                    {
+                        image: 'images/blog_sub_2.png',
+                        alt: 'Решения, которые двигают карьеру',
+                        badge: 'Карьера',
+                        title: 'Решения, которые двигают карьеру',
+                        desc: 'Как перестать ждать идеального момента и начать выбирать действия, которые соответствуют вашему уровню.'
+                    },
+                    {
+                        image: 'images/blog_sub_3.png',
+                        alt: 'Практика ясности перед важным шагом',
+                        badge: 'Практика',
+                        title: 'Практика ясности перед важным шагом',
+                        desc: 'Короткая практика, которая помогает отделить настоящий выбор от тревоги, ожиданий и внешнего давления.'
+                    }
+                ]
+            }
+        };
+
+        const renderBlogTab = (tabId) => {
+            const data = blogTabsData[tabId] || blogTabsData.all;
+            const largeCard = document.querySelector('.blog-large-card');
+            if (!largeCard) return;
+
+            const largeImg = largeCard.querySelector('.blog-large-img img');
+            const largeBadge = largeCard.querySelector('.blog-meta-badge');
+            const largeTitle = largeCard.querySelector('.blog-large-title');
+            const largeDesc = largeCard.querySelector('.blog-large-desc');
+
+            largeImg.src = data.main.image;
+            largeImg.alt = data.main.alt;
+            largeBadge.textContent = data.main.badge;
+            largeTitle.innerHTML = data.main.title;
+            largeDesc.textContent = data.main.desc;
+
+            document.querySelectorAll('.blog-card').forEach((card, index) => {
+                const article = data.cards[index];
+                if (!article) return;
+
+                const img = card.querySelector('.blog-card-img img');
+                img.src = article.image;
+                img.alt = article.alt;
+                card.querySelector('.blog-meta-badge').textContent = article.badge;
+                card.querySelector('.blog-card-title').textContent = article.title;
+                card.querySelector('.blog-card-desc').textContent = article.desc;
+            });
+        };
+
+        document.querySelectorAll('.blog-tab-link').forEach(tab => {
+            tab.addEventListener('click', (event) => {
+                event.preventDefault();
+                document.querySelectorAll('.blog-tab-link').forEach(item => item.classList.remove('active'));
+                tab.classList.add('active');
+                renderBlogTab(tab.getAttribute('data-blog-tab'));
+            });
+        });
+
         const showCourseTab = (targetId, shouldScroll = true) => {
             const tabLink = document.querySelector(`.courses-tabs .tab-link[data-target="${targetId}"]`);
             if (!tabLink) return;
