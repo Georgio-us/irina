@@ -8350,12 +8350,21 @@ button, .btn {
 
 .content-page .header .btn {
     min-height: 42px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 22px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     line-height: 1;
+    color: var(--color-white);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06)),
+        rgba(82, 35, 106, 0.44);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.22),
+        0 14px 34px rgba(18, 7, 28, 0.22);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 
 .content-page .header .logo img {
@@ -8375,6 +8384,36 @@ button, .btn {
 .content-page .nav-toggle-label span::before,
 .content-page .nav-toggle-label span::after {
     background-color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+    .content-page .header {
+        display: grid;
+        grid-template-columns: auto minmax(118px, max-content) auto;
+        gap: clamp(10px, 3vw, 18px);
+    }
+
+    .content-page .header .logo {
+        grid-column: 1;
+        justify-self: start;
+        width: clamp(112px, 30vw, 142px);
+    }
+
+    .content-page .header .btn {
+        grid-column: 2;
+        justify-self: center;
+        min-height: 44px;
+        padding: 0 clamp(14px, 4vw, 22px);
+        font-size: clamp(10px, 2.7vw, 12px);
+        letter-spacing: 0.08em;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .content-page .nav-toggle-label {
+        grid-column: 3;
+        justify-self: end;
+    }
 }
 
 .content-page main {
@@ -9367,4 +9406,80 @@ button, .btn {
     grid-column: 1 / -1;
     align-self: start;
     margin-bottom: clamp(10px, 2vw, 34px);
+}
+
+/* --- WEBINARS LANDING PAGE --- */
+.webinars-landing-hero {
+    padding: clamp(48px, 6vw, 92px) var(--container-x) var(--section-y-sm);
+    background: radial-gradient(circle at top right, #3d143d 0%, #170717 100%);
+    color: var(--color-white);
+}
+
+.webinars-landing-title-row {
+    margin-top: 24px;
+    margin-bottom: clamp(24px, 3vw, 48px);
+}
+
+.webinars-landing-title-row h1 {
+    font-size: clamp(32px, 4.5vw, 64px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.webinars-landing-title-row p {
+    font-size: clamp(14px, 1.1vw, 18px);
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 720px;
+}
+
+.webinars-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.webinars-grid-section {
+    padding: var(--section-y) var(--container-x);
+    background-color: var(--color-bg);
+}
+
+.webinars-grid-title {
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 800;
+    margin-bottom: clamp(24px, 3vw, 40px);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-main);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.webinars-grid-title::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-accent-text);
+    border-radius: 50%;
+}
+
+.webinars-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(32px, 4vw, 56px) clamp(20px, 3vw, 40px);
+}
+
+/* Ensure cards render beautifully in a 2x2 grid */
+.webinars-cards-grid .webinar-card {
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .webinars-cards-grid {
+        grid-template-columns: 1fr;
+    }
 }
