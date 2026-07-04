@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вебинары — Ирина Ужеловская</title>
-    <link rel="stylesheet" href="../style.css?v=66">
+    <link rel="stylesheet" href="../style.css?v=67">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -58,18 +58,19 @@
 
                 <!-- Главный вебинар -->
                 <div class="webinars-featured-layout">
-                    <!-- Left Column (Big Video Preview) -->
                     <div class="webinar-featured-video" onclick="window.location.href='./inner-state.html'">
                         <img src="../images/webinar_main.png" alt="Сила внутреннего состояния">
                         <button class="featured-play-btn" type="button" aria-label="Смотреть вебинар">
                             <i class="fa-solid fa-play"></i>
                         </button>
-                        <div class="featured-duration-badge">01:48:24</div>
+                        <div class="featured-preview-caption">
+                            <span>Предварительный просмотр</span>
+                            <strong>01:30</strong>
+                        </div>
                     </div>
 
-                    <!-- Right Column (Details Copy) -->
                     <div class="webinar-featured-info">
-                        <div class="featured-kicker-label">ГЛАВНЫЙ ВЕБИНАР</div>
+                        <div class="featured-kicker-label">ВЕБИНАР</div>
                         <h2>Сила внутреннего состояния</h2>
                         <p class="featured-desc">
                             Практический вебинар о том, как управлять своим состоянием, чтобы достигать большего в жизни, отношениях и реализации.
@@ -83,13 +84,14 @@
                                 <span class="content-action-icon"><i class="fa-solid fa-play"></i></span>
                                 Смотреть вебинар
                             </a>
+                            <a class="btn btn-secondary" href="#popular-webinars">Смотреть все вебинары <i class="fa-solid fa-arrow-right-long"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="webinars-grid-section">
+        <section class="webinars-grid-section" id="popular-webinars">
             <div class="webinar-container">
                 <div class="webinars-grid-title">Популярные вебинары</div>
 
