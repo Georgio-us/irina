@@ -6429,9 +6429,19 @@ button, .btn {
         --header-height: 90px;
     }
 
+    .header {
+        display: grid;
+        grid-template-columns: minmax(104px, 1fr) auto minmax(38px, 1fr);
+        align-items: center;
+        gap: 10px;
+    }
+
     /* Header burger menu */
     .nav-toggle-label {
         display: flex;
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
     }
     .header .nav {
         position: fixed;
@@ -6454,7 +6464,10 @@ button, .btn {
         -webkit-backdrop-filter: blur(22px);
     }
     .header .logo {
-        width: clamp(136px, 42vw, 170px);
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+        width: clamp(104px, 28vw, 132px);
         height: 40px;
     }
     .header .nav a::after {
@@ -6525,7 +6538,29 @@ button, .btn {
         transform: none;
     }
     .header .btn {
-        display: none; /* Hide header contact button on mobile */
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: center;
+        min-height: 34px;
+        padding: 0 clamp(12px, 3vw, 16px);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-white);
+        font-size: clamp(8px, 2.25vw, 10px);
+        line-height: 1;
+        letter-spacing: 0.07em;
+        text-align: center;
+        white-space: nowrap;
+        background:
+            linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06)),
+            rgba(82, 35, 106, 0.44);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.22),
+            0 14px 34px rgba(18, 7, 28, 0.22);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
     }
     .nav-toggle:checked ~ .nav {
         right: 0;
