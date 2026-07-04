@@ -9231,11 +9231,39 @@ button, .btn {
     .content-footer-column:nth-of-type(3),
     .site-footer-column:nth-of-type(3) {
         grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px 18px;
+        padding: 28px 18px 0;
     }
 
     .content-footer-column h3,
     .site-footer-column h3 {
         margin-bottom: 8px;
+    }
+
+    .content-footer-column:nth-of-type(3) h3,
+    .site-footer-column:nth-of-type(3) h3 {
+        grid-column: 1 / -1;
+    }
+
+    .content-footer-column:nth-of-type(3) span,
+    .content-footer-column:nth-of-type(3) a,
+    .site-footer-column:nth-of-type(3) span,
+    .site-footer-column:nth-of-type(3) a {
+        margin: 0;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .content-footer-column:nth-of-type(3) span,
+    .site-footer-column:nth-of-type(3) span {
+        font-size: clamp(13px, 3.7vw, 15px);
+    }
+
+    .content-footer-column:nth-of-type(3) a,
+    .site-footer-column:nth-of-type(3) a {
+        font-size: clamp(12px, 3.4vw, 14px);
     }
 
     .content-footer-v2::before,
