@@ -6218,7 +6218,7 @@ button, .btn {
     content: "";
     height: 2px;
     width: 100%;
-    background-color: var(--color-text-main);
+    background-color: var(--color-white);
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -6437,16 +6437,21 @@ button, .btn {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 280px;
+        width: 100vw;
         height: 100vh;
-        background-color: var(--color-bg);
-        border-left: 1px solid var(--color-border);
+        background:
+            linear-gradient(120deg, rgba(15, 7, 22, 0.94), rgba(36, 13, 48, 0.9)),
+            url("images/gradient_noise.png") center / cover no-repeat;
+        border-left: 0;
         flex-direction: column;
-        padding: 100px var(--container-x) 40px var(--container-x);
-        gap: 24px;
+        align-items: flex-start;
+        padding: calc(var(--header-height) + 34px) var(--container-x) 40px;
+        gap: 22px;
         z-index: 100;
         transition: right 0.3s ease;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.05);
+        box-shadow: -18px 0 48px rgba(7, 3, 12, 0.28);
+        backdrop-filter: blur(22px);
+        -webkit-backdrop-filter: blur(22px);
     }
     .header .logo {
         width: clamp(136px, 42vw, 170px);
@@ -6462,6 +6467,10 @@ button, .btn {
     }
     .header .nav-link {
         width: 100%;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: clamp(18px, 5vw, 28px);
+        font-weight: 500;
+        letter-spacing: 0.06em;
     }
     .header .nav-dropdown {
         position: static;
@@ -6470,9 +6479,9 @@ button, .btn {
         max-height: 0;
         padding: 0 0 0 12px;
         gap: 6px;
-        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0.04);
         border: 0;
-        border-radius: 0;
+        border-radius: 14px;
         box-shadow: none;
         opacity: 0;
         overflow: hidden;
@@ -6505,13 +6514,14 @@ button, .btn {
         transform: translateY(-35%) rotate(225deg);
     }
     .header .nav-dropdown a {
-        padding: 7px 0;
-        font-size: clamp(12px, 3.2vw, 13px);
-        color: var(--color-text-muted);
+        padding: 10px 12px;
+        font-size: clamp(13px, 3.5vw, 15px);
+        color: rgba(255, 255, 255, 0.62);
     }
     .header .nav-dropdown a:hover,
     .header .nav-dropdown a:focus-visible {
-        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0.06);
+        color: var(--color-white);
         transform: none;
     }
     .header .btn {
@@ -8926,7 +8936,8 @@ button, .btn {
     font-weight: 600;
 }
 
-.content-footer-v2 {
+.content-footer-v2,
+.site-footer {
     padding: clamp(56px, 6vw, 88px) var(--container-x) 28px;
     background:
         linear-gradient(120deg, rgba(7, 4, 14, 0.96), rgba(26, 9, 37, 0.94)),
@@ -8938,7 +8949,8 @@ button, .btn {
     position: relative;
 }
 
-.content-footer-v2::before {
+.content-footer-v2::before,
+.site-footer::before {
     content: "";
     position: absolute;
     left: var(--container-x);
@@ -8948,17 +8960,20 @@ button, .btn {
     background: rgba(255, 255, 255, 0.08);
 }
 
-.content-footer-v2 > * {
+.content-footer-v2 > *,
+.site-footer > * {
     position: relative;
     z-index: 1;
 }
 
-.content-footer-brand img {
+.content-footer-brand img,
+.site-footer-brand img {
     width: min(240px, 70vw);
     filter: brightness(0) invert(1);
 }
 
-.content-footer-brand p {
+.content-footer-brand p,
+.site-footer-brand p {
     max-width: 260px;
     margin: 24px 0 26px;
     color: rgba(255, 255, 255, 0.62);
@@ -8966,12 +8981,14 @@ button, .btn {
     line-height: 1.55;
 }
 
-.content-footer-socials {
+.content-footer-socials,
+.site-footer-socials {
     display: flex;
     gap: 14px;
 }
 
-.content-footer-socials a {
+.content-footer-socials a,
+.site-footer-socials a {
     width: 38px;
     height: 38px;
     border-radius: 50%;
@@ -8983,7 +9000,8 @@ button, .btn {
     justify-content: center;
 }
 
-.content-footer-column {
+.content-footer-column,
+.site-footer-column {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -8993,7 +9011,8 @@ button, .btn {
     border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.content-footer-column h3 {
+.content-footer-column h3,
+.site-footer-column h3 {
     margin: 0 0 18px;
     color: rgba(255, 255, 255, 0.76);
     font-size: 11px;
@@ -9003,23 +9022,28 @@ button, .btn {
 }
 
 .content-footer-column a,
-.content-footer-column span {
+.content-footer-column span,
+.site-footer-column a,
+.site-footer-column span {
     color: rgba(255, 255, 255, 0.58);
     font-size: 13px;
     line-height: 1.3;
 }
 
-.content-footer-column a:hover {
+.content-footer-column a:hover,
+.site-footer-column a:hover {
     color: var(--color-white);
 }
 
-.content-footer-column span {
+.content-footer-column span,
+.site-footer-column span {
     margin-top: 8px;
     color: rgba(255, 255, 255, 0.78);
     font-weight: 700;
 }
 
-.content-footer-bottom {
+.content-footer-bottom,
+.site-footer-bottom {
     grid-column: 1 / -1;
     padding-top: 40px;
     display: flex;
@@ -9029,7 +9053,8 @@ button, .btn {
     font-size: 12px;
 }
 
-.content-footer-bottom div {
+.content-footer-bottom div,
+.site-footer-bottom div {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
@@ -9166,24 +9191,71 @@ button, .btn {
         display: none;
     }
 
-    .content-footer-v2 {
-        grid-template-columns: 1fr;
-        gap: 34px;
+    .content-footer-v2,
+    .site-footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 26px;
+        padding-top: 48px;
+        text-align: center;
     }
 
-    .content-footer-column {
+    .content-footer-brand,
+    .site-footer-brand {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-footer-brand p,
+    .site-footer-brand p {
+        max-width: 320px;
+        margin: 20px auto 22px;
+    }
+
+    .content-footer-socials,
+    .site-footer-socials {
+        justify-content: center;
+    }
+
+    .content-footer-column,
+    .site-footer-column {
         min-height: 0;
-        padding: 24px 0 0;
+        padding: 26px 0 0;
         border-left: 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+        align-items: center;
+        gap: 10px;
     }
 
-    .content-footer-v2::before {
-        bottom: 96px;
+    .content-footer-column:nth-of-type(3),
+    .site-footer-column:nth-of-type(3) {
+        grid-column: 1 / -1;
     }
 
-    .content-footer-bottom {
+    .content-footer-column h3,
+    .site-footer-column h3 {
+        margin-bottom: 8px;
+    }
+
+    .content-footer-v2::before,
+    .site-footer::before {
+        bottom: 112px;
+    }
+
+    .content-footer-bottom,
+    .site-footer-bottom {
+        grid-column: 1 / -1;
         flex-direction: column;
+        align-items: center;
+        padding-top: 34px;
+        text-align: center;
+    }
+
+    .content-footer-bottom div,
+    .site-footer-bottom div {
+        justify-content: center;
+        gap: 14px 22px;
     }
 }
 
@@ -9221,4 +9293,50 @@ button, .btn {
     .mentor-page .product-stories-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* --- UNIVERSAL BREADCRUMBS --- */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    font-size: clamp(10px, 0.76vw, 12px);
+    font-weight: 700;
+}
+
+.breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Dark background context (white text) */
+.breadcrumb-dark-bg {
+    color: rgba(255, 255, 255, 0.52);
+}
+.breadcrumb-dark-bg a:hover {
+    color: var(--color-white);
+}
+.breadcrumb-dark-bg span:last-child {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+/* Light background context (dark text) */
+.breadcrumb-light-bg {
+    color: var(--color-text-muted);
+}
+.breadcrumb-light-bg a:hover {
+    color: var(--color-accent-text);
+}
+.breadcrumb-light-bg span:last-child {
+    color: var(--color-text-main);
+}
+
+/* Grid integration span styles */
+.product-breadcrumb,
+.method-page-breadcrumb {
+    grid-column: 1 / -1;
+    align-self: start;
+    margin-bottom: clamp(10px, 2vw, 34px);
 }
