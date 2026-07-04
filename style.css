@@ -9678,7 +9678,7 @@ button, .btn {
 }
 
 .webinars-grid-section {
-    padding: var(--section-y) 0;
+    padding: var(--section-y-lg) 0;
     background:
         linear-gradient(120deg, rgba(6, 4, 13, 0.92), rgba(28, 10, 42, 0.86)),
         url("images/gradient_noise.png") center / cover no-repeat;
@@ -9850,7 +9850,7 @@ button, .btn {
 
 /* EQ Test Section spacing on webinars landing page */
 .webinars-eq-section {
-    padding: var(--section-y) 0;
+    padding: var(--section-y-md) 0 var(--section-y-lg);
     background:
         linear-gradient(120deg, rgba(6, 4, 13, 0.92), rgba(28, 10, 42, 0.86)),
         url("images/gradient_noise.png") center / cover no-repeat;
