@@ -8389,29 +8389,34 @@ button, .btn {
 @media (max-width: 768px) {
     .content-page .header {
         display: grid;
-        grid-template-columns: auto minmax(118px, max-content) auto;
-        gap: clamp(10px, 3vw, 18px);
+        grid-template-columns: minmax(104px, 1fr) auto minmax(38px, 1fr);
+        align-items: center;
+        gap: 10px;
     }
 
     .content-page .header .logo {
         grid-column: 1;
+        grid-row: 1;
         justify-self: start;
-        width: clamp(112px, 30vw, 142px);
+        width: clamp(104px, 28vw, 132px);
     }
 
     .content-page .header .btn {
         grid-column: 2;
+        grid-row: 1;
         justify-self: center;
-        min-height: 44px;
-        padding: 0 clamp(14px, 4vw, 22px);
-        font-size: clamp(10px, 2.7vw, 12px);
-        letter-spacing: 0.08em;
+        min-height: 34px;
+        padding: 0 clamp(12px, 3vw, 16px);
+        font-size: clamp(8px, 2.25vw, 10px);
+        letter-spacing: 0.07em;
         line-height: 1;
         text-align: center;
+        white-space: nowrap;
     }
 
     .content-page .nav-toggle-label {
         grid-column: 3;
+        grid-row: 1;
         justify-self: end;
     }
 }
