@@ -3370,11 +3370,9 @@ button, .btn {
 .contact-footer {
     background: #FBF7F6 url('images/contact_bg.png') no-repeat center;
     background-size: cover;
-    padding: calc(var(--section-y-lg) / 2) var(--container-x) 30px var(--container-x);
+    padding: calc(var(--section-y-lg) / 2) var(--container-x) var(--section-y-sm);
     display: flex;
     flex-direction: column;
-    gap: var(--block-gap);
-
 }
 
 .contact-grid {
@@ -9463,12 +9461,15 @@ button, .btn {
 /* --- WEBINARS LANDING PAGE --- */
 .webinars-landing-hero {
     padding: clamp(48px, 6vw, 92px) var(--container-x) var(--section-y-sm);
-    background:
-        linear-gradient(120deg, rgba(6, 4, 13, 0.92), rgba(28, 10, 42, 0.86)),
-        url("images/gradient_noise.png") center / cover no-repeat;
+    background: radial-gradient(circle at top right, #3d143d 0%, #170717 100%);
     color: var(--color-white);
-    position: relative;
-    overflow: hidden;
+}
+
+.webinar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 var(--container-x);
 }
 
 .webinars-landing-title-row {
@@ -9498,7 +9499,7 @@ button, .btn {
 }
 
 .webinars-grid-section {
-    padding: var(--section-y) var(--container-x);
+    padding: var(--section-y) 0;
     background:
         linear-gradient(120deg, rgba(6, 4, 13, 0.92), rgba(28, 10, 42, 0.86)),
         url("images/gradient_noise.png") center / cover no-repeat;
@@ -9508,15 +9509,15 @@ button, .btn {
 }
 
 .webinars-grid-title {
-    font-size: clamp(18px, 2vw, 24px);
-    font-weight: 800;
-    margin-bottom: clamp(24px, 3vw, 40px);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-white);
+    color: rgba(255, 255, 255, 0.8);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    margin-bottom: clamp(24px, 3vw, 40px);
 }
 
 .webinars-grid-title::before {
@@ -9524,43 +9525,185 @@ button, .btn {
     display: inline-block;
     width: 6px;
     height: 6px;
-    background-color: var(--color-accent-text);
+    background-color: #B574C9;
     border-radius: 50%;
 }
 
 .webinars-cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: clamp(32px, 4vw, 56px) clamp(20px, 3vw, 40px);
+    gap: clamp(32px, 4vw, 48px) clamp(24px, 3vw, 40px);
 }
 
-/* Ensure cards render beautifully in a 2x2 grid */
-.webinars-cards-grid .webinar-card {
-    margin-bottom: 0;
+/* Premium horizontal split cards */
+.webinar-premium-card {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.webinars-cards-grid .webinar-card > a {
-    min-height: auto;
-    height: auto;
-    aspect-ratio: 16 / 9;
+.webinar-premium-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
-.webinars-cards-grid .webinar-card img {
-    min-height: auto;
-    height: auto;
-    aspect-ratio: 16 / 9;
+/* Left part cover overlay style - fills full column height */
+.card-cover-left {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.webinar-card-desc {
-    margin-top: 10px;
+.card-cover-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.webinar-premium-card:hover .card-cover-left img {
+    transform: scale(1.04);
+}
+
+.card-cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.66) 100%);
+    z-index: 1;
+}
+
+.card-cover-title {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: var(--color-white);
+    font-size: clamp(16px, 1.2vw, 20px);
+    font-weight: 800;
+    line-height: 1.18;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+/* Right part details style */
+.card-details-right {
+    padding: 24px 24px 24px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.card-author {
+    color: #B574C9;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.card-details-right .card-title {
+    font-family: var(--font-serif);
+    font-size: clamp(18px, 1.4vw, 22px);
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 8px;
+    line-height: 1.25;
+}
+
+.card-desc {
     font-size: 13px;
     line-height: 1.45;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 500;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
-@media (max-width: 900px) {
+.card-stats-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 12px;
+}
+
+.card-stats-row span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-action-link {
+    font-size: 12px;
+    font-weight: 700;
+    color: #B574C9;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+    align-self: flex-start;
+}
+
+.webinar-premium-card:hover .card-action-link {
+    color: var(--color-white);
+}
+
+.webinar-premium-card:hover .card-action-link i {
+    transform: translateX(3px);
+}
+
+/* EQ Test Section spacing on webinars landing page */
+.webinars-eq-section {
+    padding: var(--section-y) 0;
+    background:
+        linear-gradient(120deg, rgba(6, 4, 13, 0.92), rgba(28, 10, 42, 0.86)),
+        url("images/gradient_noise.png") center / cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.webinars-eq-section .eq-test-card {
+    background-color: #FAF8F6;
+}
+
+@media (max-width: 1024px) {
+    .card-details-right {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 768px) {
     .webinars-cards-grid {
         grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .webinar-premium-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .card-cover-left {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+    .card-details-right {
+        padding: 0 20px 20px 20px;
     }
 }
