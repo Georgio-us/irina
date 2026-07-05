@@ -1128,24 +1128,13 @@ button, .btn {
     background-color: rgba(82, 35, 106, 0.15);
 }
 
-.separator-text {
-    font-family: var(--font-serif);
-    font-size: 16px;
-    font-style: italic;
-    color: var(--color-accent-text);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    white-space: nowrap;
-}
-
-.separator-text::before,
-.separator-text::after {
-    content: "♦";
-    font-size: 10px;
-    color: var(--color-accent-text);
-    opacity: 0.5;
+.separator-mark {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--color-accent-text);
+    box-shadow: 0 0 0 8px rgba(82, 35, 106, 0.06);
+    flex: 0 0 auto;
 }
 
 /* Card overlay texts (Mentor 28 & Selling Star) */
@@ -1218,9 +1207,9 @@ button, .btn {
 .courses {
     padding: calc(var(--section-y-lg) / 2) var(--container-x) calc(var(--section-y-md) / 2) var(--container-x);
     background-image: url('images/gradient_noise.png');
-    background-size: cover;
+    background-size: 100% auto;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     color: var(--color-white);
     position: relative;
     isolation: isolate;
@@ -4112,32 +4101,33 @@ button, .btn {
     text-align: left;
 }
 
-.webinar-card-play-btn {
+.webinar-card-link-btn {
     position: absolute;
     bottom: 12px;
     right: 12px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
+    min-width: 74px;
+    height: 30px;
+    padding: 0 13px;
+    border-radius: 999px;
     background-color: rgba(255, 255, 255, 0.9);
     color: #4C224C;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--font-sans);
     font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     z-index: 2;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.webinar-card-play-btn i {
-    transform: translateX(1px);
-}
-
-.webinar-card-wrapper:hover .webinar-card-play-btn {
+.webinar-card-wrapper:hover .webinar-card-link-btn {
     background-color: #4C224C;
     color: var(--color-white);
-    transform: scale(1.08);
+    transform: translateY(-1px);
 }
 
 .webinar-card-meta {
@@ -6173,17 +6163,6 @@ button, .btn {
     .btn-selector-link i {
         flex: 0 0 auto;
     }
-    .separator-text {
-        max-width: 100%;
-        white-space: normal;
-        line-height: 1.4;
-        gap: 8px;
-    }
-    .separator-text::before,
-    .separator-text::after {
-        flex-shrink: 0;
-    }
-
     /* Library sub-grids full collapse */
     .grid-programs-layout,
     .grid-books-layout,
@@ -6271,6 +6250,20 @@ button, .btn {
     .webinar-card-image-box {
         height: 220px;
     }
+    .webinar-card-duration {
+        font-size: clamp(11px, 2.7vw, 12px);
+        padding: 5px 8px;
+    }
+    .webinar-card-title {
+        right: 112px;
+        font-size: clamp(17px, 4.2vw, 20px);
+        line-height: 1.12;
+    }
+    .webinar-card-link-btn {
+        min-width: 86px;
+        height: 34px;
+        font-size: clamp(10px, 2.5vw, 11px);
+    }
 
     .book-details-wrapper .lib-buttons {
         margin-top: 16px;
@@ -6278,6 +6271,8 @@ button, .btn {
 
     .lib-right-col .sidebar-link {
         margin-top: 14px;
+        align-self: center;
+        justify-content: center;
     }
 
     /* Science tab */
@@ -6306,7 +6301,32 @@ button, .btn {
         gap: 18px;
     }
     .science-card-item {
-        height: 220px;
+        min-height: 176px;
+        height: auto;
+        justify-content: center;
+        background-color: var(--color-white);
+        border-color: rgba(82, 35, 106, 0.16);
+        box-shadow: 0 8px 24px rgba(82, 35, 106, 0.06);
+    }
+    .science-card-img,
+    .science-card-overlay {
+        display: none;
+    }
+    .science-card-content {
+        max-width: calc(100% - 48px);
+    }
+    .science-card-title {
+        color: var(--color-accent-text);
+        font-size: clamp(15px, 3.8vw, 18px);
+    }
+    .science-card-desc {
+        color: var(--color-text-main);
+        font-size: clamp(12px, 3vw, 14px);
+    }
+    .science-card-arrow {
+        background-color: rgba(82, 35, 106, 0.08);
+        color: var(--color-accent-text);
+        box-shadow: none;
     }
     
     .lib-preview-card {
@@ -8352,6 +8372,7 @@ button, .btn {
     .content-hero {
         padding-top: 26px;
         padding-bottom: 58px;
+        min-height: auto;
     }
 
     .content-breadcrumb {
@@ -8363,13 +8384,8 @@ button, .btn {
         gap: 34px;
     }
 
-    .video-preview {
-        border-radius: 16px;
-        aspect-ratio: 4 / 5;
-    }
-
-    .video-preview img {
-        object-position: 68% center;
+    .content-hero .video-preview {
+        display: none;
     }
 
     .content-hero-copy h1 {
@@ -9928,9 +9944,7 @@ button, .btn {
     }
 
     .webinar-featured-video {
-        min-height: auto;
-        aspect-ratio: 4 / 5;
-        border-radius: 16px;
+        display: none;
     }
 
     .webinar-featured-info {

@@ -115,11 +115,11 @@
 | URL | Template | Status | Notes |
 | --- | --- | --- | --- |
 | `/` | Home Template | In progress | Основная главная сверстана и адаптирована, продолжаются точечные правки и линковка. |
-| `/methodology` | Page Template | Draft | Рабочая версия есть, но адаптив и визуальная зрелость требуют отдельной доработки. |
+| `/methodology` | Page Template | Ready for iteration | Новая версия утверждена как официальная `methodology.html`; нужна отдельная вторая волна мобильной оценки. |
 | `/programs` | Catalog Template | Missing | Следует создать после фиксации документации и `/webinars`. |
 | `/programs/mentor-28` | Product Template v1 | Draft | Есть отдельная страница, но не основной эталон шаблона. |
 | `/programs/sell-star` | Product Template v2 | Ready for iteration | Основной кандидат на reusable product template. |
-| `/webinars` | Catalog Template | Missing | Следующий приоритет реализации. |
+| `/webinars` | Catalog Template | Ready for iteration | Каталог вебинаров создан; список вебинаров выглядит сильным, hero требует мобильной проверки. |
 | `/webinars/inner-state.html` | Detail Template / Webinar | Ready for iteration | Текущий эталон cinematic content page. |
 | `/book` | Page Template | Missing | Нужна отдельная страница книги. |
 | `/meditations` | Catalog Template | Missing | Нужна страница медитаций. |
@@ -135,7 +135,7 @@
 ## Implementation Order
 
 1. `SITE_STRUCTURE.md`
-2. `/webinars`
+2. `/webinars` — ✅ создан, требуется итерация hero/mobile.
 3. `/programs`
 4. `/book`
 5. `/meditations`
