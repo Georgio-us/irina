@@ -9515,10 +9515,32 @@ button, .btn {
     letter-spacing: 0;
 }
 
-.method-v2-focus-panel p {
+.method-v2-focus-panel ul {
     margin: clamp(18px, 2vw, 28px) 0 0;
     padding-top: clamp(18px, 2vw, 28px);
     border-top: 1px solid rgba(255, 255, 255, 0.14);
+    list-style: none;
+}
+
+.method-v2-focus-panel li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.66);
+    font-size: clamp(13px, 0.95vw, 15px);
+    line-height: 1.45;
+}
+
+.method-v2-focus-panel strong {
+    display: block;
+    margin-top: clamp(18px, 2vw, 26px);
+    color: var(--color-white);
+    font-size: clamp(15px, 1.05vw, 18px);
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.method-v2-focus-panel p {
+    margin: 14px 0 0;
     color: rgba(255, 255, 255, 0.68);
     font-size: clamp(14px, 1.02vw, 17px);
     line-height: 1.72;
