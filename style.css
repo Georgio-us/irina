@@ -9005,14 +9005,14 @@ button, .btn {
         grid-column: 1 / -1;
         flex-direction: column;
         align-items: center;
-        padding-top: 52px;
+        padding-top: 22px;
         text-align: center;
     }
 
     .content-footer-bottom div,
     .site-footer-bottom div {
         justify-content: center;
-        gap: 14px 22px;
+        gap: 6px 6px;
     }
 }
 
