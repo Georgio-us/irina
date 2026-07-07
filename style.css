@@ -9776,6 +9776,17 @@ button, .btn {
         font-size: clamp(40px, 12vw, 58px);
     }
 
+    .method-v2-section-head h2,
+    .method-v2-final h2 {
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.1;
+    }
+
+    .method-v2-evidence-copy h2 {
+        font-size: clamp(30px, 7.8vw, 36px);
+        line-height: 1.1;
+    }
+
     .method-v2-focus-grid,
     .method-v2-proof-metrics,
     .method-v2-change-grid {
@@ -9816,33 +9827,39 @@ button, .btn {
     }
 
     .method-v2-product-card.featured img {
-        min-height: 260px;
+        height: auto;
+        min-height: 0;
     }
 
     .method-v2-foundation-row {
         gap: 26px;
         padding: 38px 0;
+        overflow: hidden;
     }
 
     .method-v2-foundation-topic {
-        grid-template-columns: 58px minmax(0, 1fr);
-        gap: 20px;
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 14px;
         padding-right: 0;
         border-right: 0;
     }
 
     .method-v2-foundation-icon {
-        width: 56px;
-        height: 56px;
-        font-size: 22px;
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+        box-shadow: 0 8px 22px rgba(82, 35, 106, 0.06);
     }
 
     .method-v2-foundation-topic h3 {
-        font-size: clamp(25px, 7.5vw, 34px);
+        font-size: clamp(22px, 5.9vw, 24px);
+        line-height: 1.12;
     }
 
     .method-v2-source {
-        padding-left: 78px;
+        width: calc(100% - 56px);
+        margin-left: 56px;
+        padding-left: 0;
         padding-right: 0;
     }
 
@@ -9860,20 +9877,32 @@ button, .btn {
         min-height: 420px;
     }
 
+    .method-v2-chip-grid {
+        gap: 8px;
+    }
+
+    .method-v2-chip-grid span {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 1.25;
+    }
+
     .method-v2-change-grid article {
         min-height: 190px;
     }
 
     .method-v2-change-grid h3 {
-        font-size: clamp(28px, 8vw, 38px);
+        font-size: clamp(24px, 7vw, 30px);
     }
 
     .method-v2-final {
         align-items: flex-start;
+        flex-direction: column;
+        gap: 28px;
     }
 
     .method-v2-actions {
-        width: min(100%, 340px);
+        width: 100%;
         flex-direction: column;
         align-items: stretch;
     }
