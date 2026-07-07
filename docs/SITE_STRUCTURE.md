@@ -8,6 +8,44 @@
 
 Сайт рассматривается как публичный маркетинговый сайт. Платформенные функции вроде личного кабинета, оплаты, скачивания MP3, избранного и закрытого доступа пока не являются частью Website v1.0.
 
+## Site Entity Tree
+
+Это рабочее дерево сущностей и шаблонов. Его задача — помочь сверять, какие страницы уже попадают в шаблон, какие требуют отдельного шаблона, а какие являются уникальными страницами.
+
+```text
+├── Home
+
+├── Product Template
+│   ├── Mentor 28
+│   ├── Sell Star
+│   └── ...
+
+├── Library Template
+│   ├── Webinars
+│   ├── Books
+│   ├── Meditations
+│   └── Programs
+
+├── Detail Template
+│   ├── Webinar
+│   ├── Book
+│   ├── Meditation
+
+└── Knowledge Template
+    ├── Methodology
+    ├── Science
+    ├── Blog
+    └── Articles
+```
+
+Рабочее разделение:
+
+- `Home` — уникальная главная витрина бренда.
+- `Product Template` — продающие страницы конкретных программ.
+- `Library Template` — каталоги/витрины материалов и продуктов.
+- `Detail Template` — страницы одного просматриваемого/изучаемого материала.
+- `Knowledge Template` — экспертные страницы и статьи, где главный сценарий — понять, прочитать, поверить и продолжить изучение.
+
 ## Sitemap
 
 ```text
@@ -125,7 +163,7 @@
 | `/meditations` | Catalog Template | Missing | Нужна страница медитаций. |
 | `/science` | Page Template | Missing | Нужна научная база как отдельная доверительная страница. |
 | `/blog` | Catalog Template | Missing | Нужен каталог материалов. |
-| `/blog/[slug]` | Detail Template / Article | Missing | Нужен шаблон статьи. |
+| `/blog/inner-state.html` | Knowledge Template / Article | Draft | Первый шаблон Knowledge Article создан для сверки и дальнейшей доработки. |
 | `/about` | Page Template | Missing | Нужна отдельная страница об Ирине. |
 | `/contact` | Page Template / Utility | Missing | Нужна страница контактов и запроса. |
 | `/privacy` | Legal Template | Missing | Нужна юридическая страница. |

@@ -10,6 +10,14 @@
             localStorage.setItem(LANG_KEY, lang);
             window.location.reload();
         },
+        getTranslation: function(dict, value) {
+            const trimmed = value ? value.trim() : '';
+            if (!trimmed) return '';
+            if (dict[trimmed]) return dict[trimmed];
+
+            const normalized = trimmed.replace(/\s+/g, ' ');
+            return dict[normalized] || '';
+        },
         translateDOM: function() {
             if (this.lang !== 'uk') {
                 this.updateActiveToggle();
@@ -28,8 +36,9 @@
 
             // Translate document title
             const trimmedTitle = document.title ? document.title.trim() : '';
-            if (trimmedTitle && dict[trimmedTitle]) {
-                document.title = dict[trimmedTitle];
+            const translatedTitle = this.getTranslation(dict, trimmedTitle);
+            if (translatedTitle) {
+                document.title = translatedTitle;
             }
 
             // Walk the DOM tree
@@ -37,23 +46,33 @@
                 if (node.nodeType === 3) { // Text node
                     const rawVal = node.nodeValue;
                     const trimmed = rawVal.trim();
-                    if (trimmed && dict[trimmed]) {
+                    const translated = i18n.getTranslation(dict, trimmed);
+                    if (translated) {
                         const leadingSpace = rawVal.match(/^\s*/)[0];
                         const trailingSpace = rawVal.match(/\s*$/)[0];
-                        node.nodeValue = leadingSpace + dict[trimmed] + trailingSpace;
+                        node.nodeValue = leadingSpace + translated + trailingSpace;
                     }
                 } else if (node.nodeType === 1) { // Element node
                     const tag = node.tagName.toLowerCase();
                     if (tag !== 'script' && tag !== 'style' && tag !== 'iframe' && tag !== 'noscript') {
                         // Translate common text attributes
-                        if (node.placeholder && dict[node.placeholder.trim()]) {
-                            node.placeholder = dict[node.placeholder.trim()];
+                        const translatedPlaceholder = i18n.getTranslation(dict, node.placeholder);
+                        if (translatedPlaceholder) {
+                            node.placeholder = translatedPlaceholder;
                         }
-                        if (node.alt && dict[node.alt.trim()]) {
-                            node.alt = dict[node.alt.trim()];
+                        const translatedAlt = i18n.getTranslation(dict, node.alt);
+                        if (translatedAlt) {
+                            node.alt = translatedAlt;
                         }
-                        if (node.title && dict[node.title.trim()]) {
-                            node.title = dict[node.title.trim()];
+                        const translatedNodeTitle = i18n.getTranslation(dict, node.title);
+                        if (translatedNodeTitle) {
+                            node.title = translatedNodeTitle;
+                        }
+                        if (node.hasAttribute('data-label')) {
+                            const translatedLabel = i18n.getTranslation(dict, node.getAttribute('data-label'));
+                            if (translatedLabel) {
+                                node.setAttribute('data-label', translatedLabel);
+                            }
                         }
                         // Recurse children
                         for (let child of node.childNodes) {
@@ -82,9 +101,9 @@
             if (!obj || typeof obj !== 'object') return;
             for (let key in obj) {
                 if (typeof obj[key] === 'string') {
-                    const trimmed = obj[key].trim();
-                    if (dict[trimmed]) {
-                        obj[key] = dict[trimmed];
+                    const translated = this.getTranslation(dict, obj[key]);
+                    if (translated) {
+                        obj[key] = translated;
                     }
                 } else if (typeof obj[key] === 'object') {
                     this.translateObject(obj[key], dict);

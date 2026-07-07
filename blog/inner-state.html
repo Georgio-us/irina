@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Почему изменения начинаются не с действий, а с состояния — Ирина Ужеловская</title>
+    <link rel="stylesheet" href="../style.css?v=77">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+<div class="page-wrapper content-page article-page">
+    <header class="header">
+        <a href="../index.html#hero" class="logo" aria-label="Ирина Ужеловская">
+            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
+        <nav class="nav">
+            <a href="../index.html#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
+            <a href="../methodology.html" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
+            <div class="nav-item has-dropdown">
+                <a href="../index.html#courses" class="nav-link nav-link-dropdown" aria-haspopup="true">ПРОГРАММЫ</a>
+                <div class="nav-dropdown">
+                    <a href="../programs/mentor-28/">Mentor 28</a>
+                    <a href="../programs/sell-star/">Продавай как звезда</a>
+                    <a href="../webinars/index.html">Вебинары</a>
+                    <a href="../index.html#courses">Книга</a>
+                    <a href="../index.html#courses">Медитации</a>
+                </div>
+            </div>
+            <a href="../index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
+            <a href="../index.html#blog" class="nav-link active" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
+            <a href="../index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
+                <span class="lang-separator">/</span>
+                <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
+            </div>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+    </header>
+
+    <main>
+        <article class="article-template">
+            <section class="article-hero">
+                <nav class="breadcrumb breadcrumb-light-bg article-breadcrumb" aria-label="Навигация">
+                    <a href="../index.html#hero">Главная</a>
+                    <span>/</span>
+                    <a href="../index.html#blog">Блог</a>
+                    <span>/</span>
+                    <span>Состояние</span>
+                </nav>
+
+                <div class="article-hero-grid">
+                    <figure class="article-featured-image">
+                        <img src="../images/blog_main.png" alt="Почему изменения начинаются не с действий, а с состояния">
+                    </figure>
+                    <div class="article-hero-copy">
+                        <div class="article-kicker">Состояние</div>
+                        <h1>Почему изменения начинаются не с действий, а с состояния</h1>
+                        <p>
+                            Когда мы меняем внутреннее состояние, внешние обстоятельства начинают меняться естественным образом. Разбираем, почему действия без внутренней опоры часто возвращают человека в прежнюю точку.
+                        </p>
+                    </div>
+                </div>
+                <div class="article-hero-footer">
+                    <div class="article-meta article-meta-editorial">
+                        <span>Автор: Ирина Ужеловская</span>
+                        <span>8 минут чтения</span>
+                        <span>Опубликовано: 7 июля 2026</span>
+                        <span>Обновлено: 7 июля 2026</span>
+                    </div>
+                    <div class="article-share-panel" aria-label="Поделиться статьёй">
+                        <span>Поделиться</span>
+                        <div class="article-share-links">
+                            <a href="https://t.me/share/url?url=https://irina-uzhelovskaya.com/blog/inner-state" target="_blank" rel="noopener" aria-label="Telegram">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                            <button class="article-copy-link" type="button" aria-label="Скопировать ссылку">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="article-body">
+                <div class="article-layout-grid">
+                    <aside class="article-sidebar">
+                        <div class="article-sidebar-inner">
+                            <span class="article-sidebar-title">В статье</span>
+                            <nav class="article-toc" aria-label="Содержание статьи">
+                                <a href="#section-monday" class="toc-step-link active">
+                                    <span>01</span>
+                                    <strong>Синдром понедельника</strong>
+                                </a>
+                                <a href="#section-biology" class="toc-step-link">
+                                    <span>02</span>
+                                    <strong>Биология выбора</strong>
+                                </a>
+                                <a href="#section-support" class="toc-step-link">
+                                    <span>03</span>
+                                    <strong>Внутренняя опора</strong>
+                                </a>
+                                <a href="#section-practice" class="toc-step-link">
+                                    <span>04</span>
+                                    <strong>Практика перехода</strong>
+                                </a>
+                            </nav>
+                        </div>
+                    </aside>
+                    
+                    <div class="article-content-main">
+                        <section id="section-monday" class="article-section">
+                            <p class="article-lead">
+                                Мы часто оцениваем изменения через действия: что сделать, куда пойти, какой план составить, какую привычку внедрить. Но действия редко существуют сами по себе. За ними стоит внутреннее состояние, из которого человек принимает решения.
+                            </p>
+                            <p>
+                                Каждый из нас хотя бы раз пытался начать новую жизнь с понедельника. Мы пишем списки целей, покупаем абонементы в спортзал, планируем рабочие задачи и обещаем себе больше не откладывать дела. Но почему же большинство подобных попыток заканчивается возвращением в исходную точку уже через две недели?
+                            </p>
+                            <p>
+                                Проблема кроется в том, что мы пытаемся внедрить новые действия, используя старое состояние нервной системы. Если Вы находитесь в состоянии хронической усталости, выгорания или постоянной тревоги, то попытка заставить себя делать больше — это лишь дополнительное насилие над собой. Мозг воспринимает новые задачи не как развитие, а как прямую угрозу выживанию, и включает защитные механизмы: прокрастинацию и саботаж.
+                            </p>
+                            <div class="article-table-wrapper">
+                                <table class="article-compare-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Действие из состояния тревоги</th>
+                                            <th>Действие из состояния ресурса</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Хаотичные попытки сделать «хоть что-то» для снижения беспокойства</td>
+                                            <td>Взвешенные целенаправленные шаги с пониманием долгосрочной цели</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Фокус на избегании неудач и защите от внешних рисков</td>
+                                            <td>Фокус на возможностях, развитии и создании новой реальности</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Быстрое выгорание, прокрастинация и чувство вины</td>
+                                            <td>Устойчивый темп работы, вдохновение и способность держать фокус</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>
+                                План может быть правильным, логичным и вдохновляющим. Но если внутри есть напряжение, страх ошибки или ощущение, что Вы снова должны себя заставлять, этот план быстро превращается в ещё один источник давления.
+                            </p>
+                        </section>
+
+                        <section id="section-biology" class="article-section">
+                            <h2>Биология выбора: как стресс сужает восприятие</h2>
+                            <p>
+                                Когда мы принимаем решения, мы опираемся на работу лобных долей коры головного мозга (префронтальной коры), которая отвечает за долгосрочное планирование, анализ, творчество и осознанный выбор. Однако этот механизм работает только тогда, когда нервная система чувствует себя в безопасности.
+                            </p>
+                            <p>
+                                В состоянии стресса, тревоги или сильной усталости управление перехватывает миндалевидное тело (амигдала) — древний центр страха и выживания. С биологической точки зрения, задача амигдалы — быстро спасти нас от опасности. В этот момент префронтальная кора отключается, а спектр нашего внимания резко сужается.
+                            </p>
+                            <blockquote>
+                                Состояние определяет не только то, как человек действует, но и какие решения он вообще считает для себя возможными.
+                            </blockquote>
+                            <p>
+                                В состоянии тревоги или внутреннего напряжения выбор сужается до трех базовых реакций: «бей, беги или замри». Мы не можем увидеть новые творческие пути решения бизнес-задач, не способны спокойно реагировать на критику в отношениях и выбираем самые привычные, пусть и разрушительные, паттерны поведения. Мы просто пытаемся «выжить» в текущем моменте.
+                            </p>
+                        </section>
+
+                        <section id="section-support" class="article-section">
+                            <h2>Сила внутренней опоры: что меняется на самом деле</h2>
+                            <p>
+                                Внутренняя опора — это не отсутствие трудностей или эмоций. Это способность нервной системы быстро возвращаться в состояние баланса после стрессовых нагрузок. Когда активируется парасимпатический отдел нервной системы, организм переключается из режима выживания в режим восстановления и развития.
+                            </p>
+                            <p>
+                                В спокойном состоянии мы видим больше вариантов развития событий, легче различаем свои истинные желания от навязанных ожиданий и точнее оцениваем реальность. Мы перестаём действовать только из необходимости соответствовать кому-то или доказывать свою ценность.
+                            </p>
+                            <div class="article-insight">
+                                <span>Ключевая мысль</span>
+                                <p>Устойчивые изменения начинаются не с давления на себя, а с восстановления внутренней опоры, из которой рождаются новые решения и действия.</p>
+                            </div>
+                            <p>
+                                Изменения становятся не борьбой с собой, а естественным продолжением нового способа воспринимать себя и происходящее вокруг. Когда есть устойчивое состояние, действия совершаются с меньшим сопротивлением и приносят гораздо больше результатов.
+                            </p>
+                            <div class="article-grid-list">
+                                <div class="grid-list-item">
+                                    <span class="grid-list-num">01</span>
+                                    <span class="grid-list-text">Решения становятся спокойнее, логичнее и взвешеннее</span>
+                                </div>
+                                <div class="grid-list-item">
+                                    <span class="grid-list-num">02</span>
+                                    <span class="grid-list-text">Энергия перестаёт уходить на постоянное внутреннее сопротивление и страх</span>
+                                </div>
+                                <div class="grid-list-item">
+                                    <span class="grid-list-num">03</span>
+                                    <span class="grid-list-text">Появляется больше честности с собой и своими настоящими желаниями</span>
+                                </div>
+                                <div class="grid-list-item">
+                                    <span class="grid-list-num">04</span>
+                                    <span class="grid-list-text">Действия начинают опираться на состояние, а не на изнуряющую силу воли</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="section-practice" class="article-section">
+                            <h2>Практика перехода: с чего начать восстановление</h2>
+                            <p>
+                                Первый шаг к новому состоянию — это не активное действие, а пауза и честное наблюдение за собой. Если Вы обнаружили, что пытаетесь менять жизнь из состояния сильного напряжения, остановитесь. Любое действие, совершенное из этой точки, лишь закрепит старый паттерн.
+                            </p>
+                            <p>
+                                Начните с простых практик заземления, восстановления сна, качественного отдыха и снижения информационной нагрузки. Позвольте своей нервной системе понять, что опасность миновала. Только после этого можно приступать к планированию и действиям.
+                            </p>
+                            <div class="article-practice-box">
+                                <span class="practice-tag">Практика самопознания</span>
+                                <h3>Вопросы для честного разговора с собой</h3>
+                                <p>Выделите 5 минут, чтобы побыть наедине с собой и честно ответить на эти вопросы:</p>
+                                <ul class="practice-questions">
+                                    <li>Из какого состояния я принимаю решения последние несколько дней?</li>
+                                    <li>Что именно сейчас забирает мою энергию больше всего?</li>
+                                    <li>Где я пытаюсь заставить себя действовать силой воли, игнорируя усталость?</li>
+                                </ul>
+                            </div>
+                            <div class="article-author-card">
+                                <img src="../images/what_if_img.png" alt="Ирина Ужеловская" class="author-avatar">
+                                <div class="author-info">
+                                   <span class="author-label">Об авторе</span>
+                                   <h4>Ирина Ужеловская</h4>
+                                   <p>Психолог, ментор, автор методологии и выпускница программы Cambridge International по поведенческим наукам. Более 15 лет практической работы и 10 000+ клиентских кейсов.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <section class="article-sources" aria-labelledby="article-sources-title">
+            <div class="article-kicker">Источники</div>
+            <h2 id="article-sources-title">Источники и дополнительные материалы</h2>
+            <div class="article-source-list">
+                <a href="#" class="article-source-item">
+                    <strong>Stanford University</strong>
+                    <span>Материалы о поведении, привычках и принятии решений.</span>
+                </a>
+                <a href="#" class="article-source-item">
+                    <strong>Harvard Health</strong>
+                    <span>Обзор влияния стресса на тело, мышление и ежедневные реакции.</span>
+                </a>
+                <a href="#" class="article-source-item">
+                    <strong>APA</strong>
+                    <span>Исследования о психологической устойчивости и работе со стрессом.</span>
+                </a>
+                <a href="#" class="article-source-item">
+                    <strong>Nature Reviews Neuroscience</strong>
+                    <span>Научные обзоры о нейропластичности и механизмах обучения.</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="article-social-continuation" aria-labelledby="article-social-title">
+            <div>
+                <div class="article-kicker">Продолжить тему</div>
+                <h2 id="article-social-title">Больше материалов о состоянии и внутренних изменениях</h2>
+            </div>
+            <div class="article-social-links">
+                <a href="https://t.me/irina_uzhelovskaya" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-telegram"></i>
+                    Telegram
+                </a>
+                <a href="https://instagram.com/irina_uzhelovskaya" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-instagram"></i>
+                    Instagram
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-youtube"></i>
+                    YouTube
+                </a>
+            </div>
+        </section>
+
+        <section class="article-related">
+            <div class="article-related-head">
+                <div class="article-kicker">Также может быть интересно</div>
+                <h2>Продолжить чтение</h2>
+            </div>
+            <div class="article-related-grid">
+                <a class="article-related-card" href="../index.html#blog">
+                    <span>Эмоциональный интеллект</span>
+                    <h3>EQ — новый навык лидера</h3>
+                    <p>Как эмоциональный интеллект влияет на качество решений и внутреннюю устойчивость.</p>
+                </a>
+                <a class="article-related-card" href="../index.html#blog">
+                    <span>Отношения</span>
+                    <h3>Близость начинается с уязвимости</h3>
+                    <p>Почему контакт с собой меняет способ строить близость и говорить о важном.</p>
+                </a>
+                <a class="article-related-card" href="../index.html#blog">
+                    <span>Практика</span>
+                    <h3>Практика тишины для ясности ума</h3>
+                    <p>Короткий материал о том, как возвращать ясность через паузу и внимание.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="content-footer-v2">
+        <div class="content-footer-brand">
+            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+            <p>психолог · ментор · автор психотехнологий формирования событий</p>
+            <div class="content-footer-socials">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <nav class="content-footer-column" aria-label="Навигация">
+            <h3>Навигация</h3>
+            <a href="../index.html#hero">Главная</a>
+            <a href="../methodology.html">Методология</a>
+            <a href="../index.html#courses">Программы</a>
+            <a href="../webinars/index.html">Вебинары</a>
+            <a href="../index.html#courses">Книга</a>
+            <a href="../index.html#courses">Медитации</a>
+            <a href="../index.html#blog">Материалы</a>
+            <a href="../index.html#blog">Блог</a>
+            <a href="../index.html#about">Обо мне</a>
+        </nav>
+
+        <nav class="content-footer-column" aria-label="Программы">
+            <h3>Программы</h3>
+            <a href="../programs/mentor-28/">Mentor 28</a>
+            <a href="../programs/sell-star/">Продавай как звезда</a>
+            <a href="../index.html#courses">Библиотека знаний</a>
+            <a href="../index.html#about-club">LUX CLUB</a>
+        </nav>
+
+        <div class="content-footer-column">
+            <h3>Контакты</h3>
+            <span>Instagram</span>
+            <a href="https://instagram.com/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
+            <span>Telegram</span>
+            <a href="https://t.me/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
+            <span>Email</span>
+            <a href="mailto:hello@irina-uzhelovskaya.com">hello@irina-uzhelovskaya.com</a>
+        </div>
+
+        <div class="content-footer-bottom">
+            <span>© 2026 Ирина Ужеловская. Все права защищены</span>
+            <div>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.querySelectorAll('.header .nav-link-dropdown').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const navItem = link.closest('.nav-item');
+            document.querySelectorAll('.header .nav-item.is-open').forEach(item => {
+                if (item !== navItem) item.classList.remove('is-open');
+            });
+            navItem.classList.toggle('is-open');
+        });
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.header .nav-item')) {
+            document.querySelectorAll('.header .nav-item.is-open').forEach(item => item.classList.remove('is-open'));
+        }
+    });
+
+    // Scroll Progress Indicator Fallback for browsers without animation-timeline support
+    if (!CSS.supports('animation-timeline', 'scroll()')) {
+        const progress = document.querySelector('#scroll-progress');
+        if (progress) {
+            window.addEventListener('scroll', () => {
+                const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = window.scrollY;
+                const progressPercentage = scrollable > 0 ? (scrolled / scrollable) : 0;
+                progress.style.transform = `scaleX(${progressPercentage})`;
+            });
+        }
+    }
+
+    // Intersection Observer for Sidebar Table of Contents
+    const sections = document.querySelectorAll('.article-section');
+    const tocLinks = document.querySelectorAll('.toc-step-link');
+
+    if (sections.length && tocLinks.length) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -60% 0px', // Trigger when section is in top 40% of viewport
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    tocLinks.forEach(link => {
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+
+        // Smooth Scroll with Header Offset
+        tocLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = 110; // Avoid being covered by the sticky header
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    }
+
+    const copyLinkButton = document.querySelector('.article-copy-link');
+    if (copyLinkButton) {
+        copyLinkButton.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(window.location.href);
+                copyLinkButton.classList.add('is-copied');
+                setTimeout(() => copyLinkButton.classList.remove('is-copied'), 1400);
+            } catch (error) {
+                console.warn('Could not copy article link', error);
+            }
+        });
+    }
+
+</script>
+
+    <script src="../js/translations.js"></script>
+    <script src="../js/i18n.js"></script>
+</body>
+</html>
