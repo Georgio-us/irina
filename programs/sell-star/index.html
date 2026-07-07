@@ -31,6 +31,11 @@
             <a href="../../index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
             <a href="../../index.html#blog" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
             <a href="../../index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
+                <span class="lang-separator">/</span>
+                <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
+            </div>
         </nav>
         <label for="nav-toggle" class="nav-toggle-label">
             <span></span>
@@ -276,22 +281,61 @@
                 <div class="product-kicker">Экосистема</div>
                 <h2>Вам также может быть интересно</h2>
             </div>
-            <div class="product-related-grid">
-                <a href="../mentor-28/">
-                    <img src="../../images/program_mentor_28.png" alt="Mentor 28">
-                    <span>Mentor 28</span>
+            <div class="library-related-grid">
+                <a class="lib-preview-card" href="../mentor-28/">
+                    <div class="card-content-left">
+                        <div class="card-category">
+                            <i class="fa-solid fa-graduation-cap"></i> ПРОГРАММА
+                        </div>
+                        <h4 class="card-title">Mentor 28</h4>
+                        <p class="card-text">Глубокая трансформация мышления и внутренней опоры</p>
+                        <span class="card-link">ПОДРОБНЕЕ <i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                    <div class="card-image-right">
+                        <img src="../../images/program_mentor_28.png" alt="Mentor 28">
+                    </div>
                 </a>
-                <a href="../../index.html#courses">
-                    <img src="../../images/webinar_main.png" alt="Вебинары">
-                    <span>Вебинары</span>
+
+                <a class="lib-preview-card" href="../../webinars/index.html">
+                    <div class="card-content-left">
+                        <div class="card-category">
+                            <i class="fa-solid fa-circle-play"></i> ВЕБИНАРЫ
+                        </div>
+                        <h4 class="card-title">Сила внутреннего состояния</h4>
+                        <p class="card-text">Практические вебинары и видеолекции</p>
+                        <span class="card-link">СМОТРЕТЬ <i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                    <div class="card-image-right">
+                        <img src="../../images/webinar_edge.png" alt="Вебинары">
+                    </div>
                 </a>
-                <a href="../../index.html#courses">
-                    <img src="../../images/book_main.png" alt="Книга">
-                    <span>Книга</span>
+
+                <a class="lib-preview-card" href="../../index.html#courses">
+                    <div class="card-content-left">
+                        <div class="card-category">
+                            <i class="fa-solid fa-book-open"></i> КНИГА
+                        </div>
+                        <h4 class="card-title">Меняя внутреннее</h4>
+                        <p class="card-text">Книга о принципах глубокой трансформации</p>
+                        <span class="card-link">ЧИТАТЬ <i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                    <div class="card-image-right">
+                        <img src="../../images/book_main.png" alt="Книга">
+                    </div>
                 </a>
-                <a href="../../index.html#courses">
-                    <img src="../../images/meditation_mockup.png" alt="Медитации">
-                    <span>Медитации</span>
+
+                <a class="lib-preview-card" href="../../index.html#courses">
+                    <div class="card-content-left">
+                        <div class="card-category">
+                            <i class="fa-solid fa-headphones"></i> МЕДИТАЦИИ
+                        </div>
+                        <h4 class="card-title">Возвращение к себе</h4>
+                        <p class="card-text">Медитация для восстановления внутренней опоры</p>
+                        <span class="card-link">СЛУШАТЬ <i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                    <div class="card-image-right">
+                        <img src="../../images/meditation_mockup.png" alt="Медитации">
+                    </div>
                 </a>
             </div>
         </section>
@@ -368,5 +412,7 @@
     });
 </script>
 
+    <script src="../../js/translations.js"></script>
+    <script src="../../js/i18n.js"></script>
 </body>
 </html>
