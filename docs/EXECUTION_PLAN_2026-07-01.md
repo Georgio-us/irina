@@ -1,5 +1,9 @@
 # Execution Plan 1 июля 2026 года
 
+> Статус на 9 июля 2026: реализовано / reference.
+>
+> План использовался для создания `/programs/sell-star` как Product Template v2. Текущий статус страницы и дальнейший порядок работ фиксируются в `SITE_STRUCTURE.md` и `CURRENT_ASSESSMENT_2026-07-05.md`.
+
 Задача: создать новую страницу /programs/sell-star как тестовый Product Template v2 для программы «Продавай как звезда».
 
 Важно:

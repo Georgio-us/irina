@@ -1,5 +1,9 @@
 # Execution Plan 2 июля 2022 года
 
+> Статус на 9 июля 2026: реализовано / reference.
+>
+> План использовался для создания `/webinars/inner-state.html` как первого webinar detail/content template. Текущий статус вебинарных страниц и дальнейший порядок работ фиксируются в `SITE_STRUCTURE.md` и `CURRENT_ASSESSMENT_2026-07-05.md`.
+
 Задача: создать новую страницу отдельного вебинара /webinars/inner-state.html как тестовый Content Template v1 для вебинаров.
 
 Важно:

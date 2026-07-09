@@ -4,6 +4,10 @@
 
 Этот документ фиксирует рабочую структуру Website v1.0: sitemap, типы шаблонов, статус страниц и порядок реализации.
 
+Последнее обновление: 9 июля 2026.
+
+Статус документа: актуальная карта сайта и шаблонов. Если этот файл конфликтует со старыми execution-документами, ориентироваться на `SITE_STRUCTURE.md`.
+
 Цель — собирать сайт как систему, а не создавать отдельные страницы хаотично. Внутренние страницы должны выглядеть как продолжение существующей дизайн-системы: те же токены, типографика, кнопки, отступы, карточки и общий визуальный язык.
 
 Сайт рассматривается как публичный маркетинговый сайт. Платформенные функции вроде личного кабинета, оплаты, скачивания MP3, избранного и закрытого доступа пока не являются частью Website v1.0.
@@ -58,14 +62,14 @@
 │   └── /webinars/[slug]
 ├── /book
 ├── /meditations
-├── /science
+├── /science (deferred)
 ├── /blog
 │   └── /blog/[slug]
-├── /about
+├── /about (deferred)
 ├── /contact
 ├── /privacy
 ├── /terms
-└── /404
+└── /404 (deferred)
 ```
 
 ## Templates
@@ -78,7 +82,7 @@
 
 Назначение: главная витрина бренда, быстрый вход в методологию, программы, материалы, результаты и автора.
 
-Статус: есть, точечно дорабатывается.
+Статус: есть, финальная desktop/mobile ревизия впереди.
 
 ### 2. Page Template
 
@@ -86,8 +90,8 @@
 
 - `/methodology`
 - `/book`
-- `/science`
-- `/about`
+- `/science` — deferred, потому что роль научной базы сейчас закрывает `/methodology`.
+- `/about` — deferred, потому что блок `Обо мне` остается на главной.
 - `/contact`
 
 Назначение: экспертные, информационные и utility-страницы. Они не должны выглядеть как отдельные новые лендинги с нуля.
@@ -106,7 +110,7 @@
 
 Текущий эталон: `/programs/sell-star`.
 
-Примечание: `/programs/mentor-28` существует, но сейчас воспринимается как Product Template v1. Для дальнейшей унификации ориентироваться на подход Product Template v2 из `/programs/sell-star`.
+Примечание: `/programs/sell-star` остается главным эталоном Product Template v2. `/programs/mentor-28` уже подтянут к общему продуктовому подходу, но финальную контентную ревизию стоит делать отдельно.
 
 ### 4. Catalog Template
 
@@ -152,63 +156,77 @@
 
 | URL | Template | Status | Notes |
 | --- | --- | --- | --- |
-| `/` | Home Template | In progress | Основная главная сверстана и адаптирована, продолжаются точечные правки и линковка. |
-| `/methodology` | Page Template | Ready for iteration | Новая версия утверждена как официальная `methodology.html`; нужна отдельная вторая волна мобильной оценки. |
-| `/programs` | Catalog Template | Missing | Следует создать после фиксации документации и `/webinars`. |
-| `/programs/mentor-28` | Product Template v1 | Draft | Есть отдельная страница, но не основной эталон шаблона. |
-| `/programs/sell-star` | Product Template v2 | Ready for iteration | Основной кандидат на reusable product template. |
-| `/webinars` | Catalog Template | Ready for iteration | Каталог вебинаров создан; список вебинаров выглядит сильным, hero требует мобильной проверки. |
-| `/webinars/inner-state.html` | Detail Template / Webinar | Ready for iteration | Текущий эталон cinematic content page. |
+| `/` | Home Template | Ready for final review | Главная собрана, адаптирована и связана с текущими рабочими страницами; нужна финальная desktop/mobile оценка. |
+| `/methodology` | Knowledge Template / Methodology | Ready | Новая методология утверждена как официальная `methodology.html`; мобильная волна закрыта. |
+| `/programs` | Library Template / Programs | Missing | Нужен каталог авторских программ. |
+| `/programs/mentor-28` | Product Template | Ready for final review | Страница существует, мобильный hero упрощен, related-блок заменен на компактный ecosystem-паттерн. |
+| `/programs/sell-star` | Product Template v2 | Ready for final review | Текущий эталон reusable product template. |
+| `/webinars` | Library Template / Webinars | Ready for final review | Каталог вебинаров создан; список вебинаров сильный, mobile hero упрощен. |
+| `/webinars/inner-state.html` | Detail Template / Webinar | Ready | Эталон cinematic content page для одного вебинара. |
+| `/webinars/youth-code.html` | Detail Template / Webinar | Ready | Страница вебинара на общем webinar detail шаблоне. |
+| `/webinars/self-esteem.html` | Detail Template / Webinar | Ready | Страница вебинара на общем webinar detail шаблоне. |
+| `/webinars/relationship-code.html` | Detail Template / Webinar | Ready | Страница вебинара на общем webinar detail шаблоне. |
+| `/webinars/choosing-oneself.html` | Detail Template / Webinar | Ready | Страница вебинара на общем webinar detail шаблоне. |
 | `/book` | Page Template | Missing | Нужна отдельная страница книги. |
 | `/meditations` | Catalog Template | Missing | Нужна страница медитаций. |
-| `/science` | Page Template | Missing | Нужна научная база как отдельная доверительная страница. |
+| `/science` | Knowledge Template / Science | Deferred | Пока не создаем: роль научной базы закрывает `/methodology`; отдельные научные темы могут стать статьями блога. |
 | `/blog` | Catalog Template | Missing | Нужен каталог материалов. |
-| `/blog/inner-state.html` | Knowledge Template / Article | Draft | Первый шаблон Knowledge Article создан для сверки и дальнейшей доработки. |
-| `/about` | Page Template | Missing | Нужна отдельная страница об Ирине. |
+| `/blog/inner-state.html` | Knowledge Template / Article | Ready for final review | Первый Knowledge Article шаблон создан: article hero, sticky TOC, sources, social continuation, related materials. |
+| `/about` | Page Template | Deferred | Пока не создаем: блок `Обо мне` остается на главной. |
 | `/contact` | Page Template / Utility | Missing | Нужна страница контактов и запроса. |
-| `/privacy` | Legal Template | Missing | Нужна юридическая страница. |
-| `/terms` | Legal Template | Missing | Нужна юридическая страница. |
-| `/404` | Utility Template | Missing | Нужна страница ошибки. |
+| `/privacy` | Legal Template | Deferred | Не входит в текущую предполировочную волну. |
+| `/terms` | Legal Template | Deferred | Не входит в текущую предполировочную волну. |
+| `/404` | Utility Template | Deferred | Вернуться ближе к финальной полировке. |
 
 ## Implementation Order
 
-1. `SITE_STRUCTURE.md`
-2. `/webinars` — ✅ создан, требуется итерация hero/mobile.
-3. `/programs`
-4. `/book`
-5. `/meditations`
-6. `/science`
-7. `/about`
-8. `/contact`
-9. Проверить все ссылки и кнопки с главной
+### Уже закрыто
+
+1. `SITE_STRUCTURE.md` создан.
+2. `/methodology` пересобрана и утверждена как рабочая версия.
+3. `/programs/mentor-28` создана.
+4. `/programs/sell-star` создана и используется как Product Template v2.
+5. `/webinars` создан.
+6. `/webinars/[slug]` создан на пяти страницах.
+7. `/blog/inner-state.html` создан как первый Knowledge Article шаблон.
+
+### Следующий порядок
+
+1. `/programs` — каталог авторских программ.
+2. `/blog` — каталог материалов.
+3. `/book` — страница книги.
+4. `/meditations` — каталог медитаций.
+5. `/contact` или единый modal/contact flow для заявок и покупок.
+6. Финальный аудит ссылок и кнопок после появления активных целевых страниц.
+7. Deferred: `/science`, `/about`, `/privacy`, `/terms`, `/404`.
 
 ## Main Page Link Audit
 
-После создания базовых страниц нужно пройти главную и заменить временные якоря или заглушки на реальные URL.
+После создания оставшихся базовых страниц нужно пройти главную и заменить временные якоря или заглушки на реальные URL.
 
 Целевые направления:
 
-| UI / CTA | Target |
-| --- | --- |
-| `Методология` | `/methodology` |
-| `Изучить методологию` | `/methodology` |
-| `Мои программы` | `/programs` |
-| `Все программы` | `/programs` |
-| `Mentor 28` | `/programs/mentor-28` |
-| `Продавай как звезда` | `/programs/sell-star` |
-| `Смотреть вебинар` | `/webinars/inner-state.html` или соответствующий slug |
-| `Смотреть все вебинары` | `/webinars` |
-| `Книга` | `/book` |
-| `Читать фрагмент` | `/book` или `/contact?topic=book` |
-| `Купить книгу` | `/book` или внешний магазин, когда будет готово |
-| `Медитации` | `/meditations` |
-| `Все медитации` | `/meditations` |
-| `Научная база` | `/science` |
-| `Блог` | `/blog` |
-| `Смотреть все материалы` | `/blog` |
-| `Обо мне` | `/about` |
-| `Обсудить запрос` | `/contact` |
-| `Отправить сообщение` | `/contact` или форма на текущей странице |
+| UI / CTA | Target | Status |
+| --- | --- | --- |
+| `Методология` | `/methodology` | Ready |
+| `Изучить методологию` | `/methodology` | Ready |
+| `Мои программы` | `/programs` | Missing target |
+| `Все программы` | `/programs` | Missing target |
+| `Mentor 28` | `/programs/mentor-28` | Ready |
+| `Продавай как звезда` | `/programs/sell-star` | Ready |
+| `Смотреть вебинар` | `/webinars/inner-state.html` или соответствующий slug | Ready |
+| `Смотреть все вебинары` | `/webinars` | Ready |
+| `Книга` | `/book` | Missing target |
+| `Читать фрагмент` | `/book` или `/contact?topic=book` | Missing target |
+| `Купить книгу` | `/book` или внешний магазин, когда будет готово | Missing target |
+| `Медитации` | `/meditations` | Missing target |
+| `Все медитации` | `/meditations` | Missing target |
+| `Научная база` | `/methodology` или статьи `/blog/[slug]` | Deferred standalone page |
+| `Блог` | `/blog` | Missing target |
+| `Смотреть все материалы` | `/blog`; временно может вести на `/blog/inner-state.html` | Missing catalog |
+| `Обо мне` | якорь на блок главной или будущий `/about` | Deferred standalone page |
+| `Обсудить запрос` | `/contact` или modal/contact flow | Missing target / needs decision |
+| `Отправить сообщение` | `/contact`, modal/contact flow или форма на текущей странице | Needs decision |
 
 ## Design Rules
 
