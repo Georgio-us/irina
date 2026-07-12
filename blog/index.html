@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все материалы — Ирина Ужеловская</title>
+    <link rel="stylesheet" href="../style.css?v=89">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+<div class="page-wrapper content-page blog-hub-page">
+    <header class="header">
+        <a href="../index.html#hero" class="logo" aria-label="Ирина Ужеловская">
+            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
+        <nav class="nav">
+            <a href="../index.html#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
+            <a href="../methodology.html" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
+            <div class="nav-item has-dropdown">
+                <a href="../index.html#courses" class="nav-link nav-link-dropdown" aria-haspopup="true">ПРОГРАММЫ</a>
+                <div class="nav-dropdown">
+                    <a href="../programs/mentor-28/">Mentor 28</a>
+                    <a href="../programs/sell-star/">Продавай как звезда</a>
+                    <a href="../webinars/index.html">Вебинары</a>
+                    <a href="../index.html#courses">Книга</a>
+                    <a href="../index.html#courses">Медитации</a>
+                </div>
+            </div>
+            <a href="../index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
+            <a href="index.html" class="nav-link active" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
+            <a href="../index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
+                <span class="lang-separator">/</span>
+                <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
+            </div>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+    </header>
+
+    <main>
+        <section class="blog-hub-hero">
+            <div class="blog-hub-container">
+                <nav class="breadcrumb breadcrumb-light-bg product-breadcrumb" aria-label="Навигация">
+                    <a href="../index.html#hero">Главная</a>
+                    <span>/</span>
+                    <span>Материалы</span>
+                </nav>
+                <div class="blog-hub-title-row">
+                    <h1>Мысли, исследования и практика</h1>
+                    <p>
+                        Статьи и наблюдения о мышлении, состоянии, отношениях и реализации, а также научные материалы о психотехнологиях, эмоциональном интеллекте и устойчивых изменениях.
+                    </p>
+                </div>
+                <div class="blog-hub-summary" aria-label="Состав библиотеки материалов">
+                    <span>7 материалов</span>
+                    <span>4 авторские статьи</span>
+                    <span>3 научных разбора</span>
+                </div>
+                <div class="blog-hub-divider"></div>
+            </div>
+        </section>
+
+        <section class="blog-hub-catalog">
+            <div class="blog-hub-container">
+                <div class="blog-hub-tabs" aria-label="Фильтр материалов">
+                    <button class="blog-tab-btn active" data-blog-tab="all">Все материалы</button>
+                    <button class="blog-tab-btn" data-blog-tab="blog">Блог / Мысли</button>
+                    <button class="blog-tab-btn" data-blog-tab="science">Научная база</button>
+                </div>
+
+                <div class="blog-hub-grid">
+                    <article class="blog-hub-card" data-category="blog">
+                        <a href="inner-state.html" class="blog-hub-card-cover">
+                            <img src="../images/blog_main.png" alt="Почему изменения начинаются не с действий, а с состояния">
+                        </a>
+                        <div class="blog-hub-card-body">
+                            <div class="blog-hub-card-kicker">Состояние</div>
+                            <h2>Почему изменения начинаются не с действий, а с состояния</h2>
+                            <p>Когда мы меняем внутреннее состояние, внешние обстоятельства начинают меняться естественным образом. Как это работает на самом деле.</p>
+                            <a class="blog-hub-card-link" href="inner-state.html">Читать статью <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-hub-card" data-category="blog">
+                        <a href="eq-leader.html" class="blog-hub-card-cover">
+                            <img src="../images/blog_sub_1.png" alt="EQ — новый навык лидера">
+                        </a>
+                        <div class="blog-hub-card-body">
+                            <div class="blog-hub-card-kicker">Эмоциональный интеллект</div>
+                            <h2>EQ — новый навык лидера</h2>
+                            <p>Как эмоциональный интеллект влияет на качество решений, отношения и результаты в бизнесе и жизни.</p>
+                            <a class="blog-hub-card-link" href="eq-leader.html">Читать статью <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-hub-card" data-category="blog">
+                        <a href="vulnerability.html" class="blog-hub-card-cover">
+                            <img src="../images/blog_sub_2.png" alt="Близость начинается с уязвимости">
+                        </a>
+                        <div class="blog-hub-card-body">
+                            <div class="blog-hub-card-kicker">Отношения</div>
+                            <h2>Близость начинается с уязвимости</h2>
+                            <p>Почему быть собой — это не слабость, а основа настоящей близости и глубокой связи.</p>
+                            <a class="blog-hub-card-link" href="vulnerability.html">Читать статью <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-hub-card" data-category="blog">
+                        <a href="silence-practice.html" class="blog-hub-card-cover">
+                            <img src="../images/blog_sub_3.png" alt="Практика тишины для ясности ума">
+                        </a>
+                        <div class="blog-hub-card-body">
+                            <div class="blog-hub-card-kicker">Практика</div>
+                            <h2>Практика тишины для ясности ума</h2>
+                            <p>Простая медитативная практика, которая помогает вернуться к себе и услышать главное.</p>
+                            <a class="blog-hub-card-link" href="silence-practice.html">Читать статью <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-hub-card" data-category="science">
+                        <a href="psychotechnologies.html" class="blog-hub-card-cover">
+                            <img src="../images/science_card_1.png" alt="Работа по психотехнологиям">
+                        </a>
+                        <div class="blog-hub-card-body">
+                            <div class="blog-hub-card-kicker">Нейропластичность</div>
+                            <h2>Работа по психотехнологиям</h2>
+                            <p>Методы и инструменты, основанные на нейропластичности и когнитивных подходах.</p>
+                            <a class="blog-hub-card-link" href="psychotechnologies.html">Читать статью <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-hub-card" data-category="science">
+                        <a href="eq-research.html" class="blog-hub-card-cover">
+                            <img src="../images/science_card_2.png" alt="Исследование эмоционального интеллекта">
+                        </a>
+                        <div class="blog-hub-card-body">
+                            <div class="blog-hub-card-kicker">Исследование</div>
+                            <h2>Исследование эмоционального интеллекта</h2>
+                            <p>Научные данные об эмоциональном интеллекте и его влиянии на качество жизни и успех.</p>
+                            <a class="blog-hub-card-link" href="eq-research.html">Читать статью <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-hub-card" data-category="science">
+                        <a href="behavioral-psychology.html" class="blog-hub-card-cover">
+                            <img src="../images/science_card_3.png" alt="Поведенческая психология">
+                        </a>
+                        <div class="blog-hub-card-body">
+                            <div class="blog-hub-card-kicker">Поведение</div>
+                            <h2>Поведенческая психология</h2>
+                            <p>Исследования поведения человека и практики устойчивых изменений.</p>
+                            <a class="blog-hub-card-link" href="behavioral-psychology.html">Читать статью <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="content-footer-v2">
+        <div class="content-footer-brand">
+            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+            <p>психолог · ментор · автор психотехнологий формирования событий</p>
+            <div class="content-footer-socials">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <nav class="content-footer-column" aria-label="Навигация">
+            <h3>Навигация</h3>
+            <a href="../index.html#hero">Главная</a>
+            <a href="../methodology.html">Методология</a>
+            <a href="../index.html#courses">Программы</a>
+            <a href="../webinars/index.html">Вебинары</a>
+            <a href="../index.html#courses">Книга</a>
+            <a href="../index.html#courses">Медитации</a>
+            <a href="index.html">Материалы</a>
+            <a href="index.html">Блог</a>
+            <a href="../index.html#about">Обо мне</a>
+        </nav>
+
+        <nav class="content-footer-column" aria-label="Программы">
+            <h3>Программы</h3>
+            <a href="../programs/mentor-28/">Mentor 28</a>
+            <a href="../programs/sell-star/">Продавай как звезда</a>
+            <a href="../index.html#courses">Библиотека знаний</a>
+            <a href="../index.html#about-club">LUX CLUB</a>
+        </nav>
+
+        <div class="content-footer-column">
+            <h3>Контакты</h3>
+            <span>Instagram</span>
+            <a href="https://instagram.com/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
+            <span>Telegram</span>
+            <a href="https://t.me/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
+            <span>Email</span>
+            <a href="mailto:hello@irina-uzhelovskaya.com">hello@irina-uzhelovskaya.com</a>
+        </div>
+
+        <div class="content-footer-bottom">
+            <span>© 2026 Ирина Ужеловская. Все права защищены</span>
+            <div>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.querySelectorAll('.header .nav-link-dropdown').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const navItem = link.closest('.nav-item');
+            document.querySelectorAll('.header .nav-item.is-open').forEach(item => {
+                if (item !== navItem) item.classList.remove('is-open');
+            });
+            navItem.classList.toggle('is-open');
+        });
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.header .nav-item')) {
+            document.querySelectorAll('.header .nav-item.is-open').forEach(item => item.classList.remove('is-open'));
+        }
+    });
+
+    // Scroll Progress Indicator Fallback for browsers without animation-timeline support
+    if (!CSS.supports('animation-timeline', 'scroll()')) {
+        const progress = document.querySelector('#scroll-progress');
+        if (progress) {
+            window.addEventListener('scroll', () => {
+                const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = window.scrollY;
+                const progressPercentage = scrollable > 0 ? (scrolled / scrollable) : 0;
+                progress.style.transform = `scaleX(${progressPercentage})`;
+            });
+        }
+    }
+
+    // Client-side filtering logic
+    const filterTab = (tabCategory) => {
+        // Toggle active class on buttons
+        document.querySelectorAll('.blog-hub-tabs .blog-tab-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-blog-tab') === tabCategory);
+        });
+
+        document.querySelectorAll('.blog-hub-grid .blog-hub-card').forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (tabCategory === 'all' || cat === tabCategory) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    };
+
+    // Attach click listeners to tabs
+    document.querySelectorAll('.blog-hub-tabs .blog-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetCategory = btn.getAttribute('data-blog-tab');
+            filterTab(targetCategory);
+        });
+    });
+
+    // Check URL parameters on load to trigger initial tab filter if coming from Homepage 'Наука' tab redirect
+    window.addEventListener('DOMContentLoaded', () => {
+        const params = new URLSearchParams(window.location.search);
+        const initialTab = params.get('tab');
+        if (initialTab === 'science') {
+            filterTab('science');
+        } else if (initialTab === 'blog') {
+            filterTab('blog');
+        } else {
+            filterTab('all');
+        }
+    });
+
+</script>
+
+    <script src="../js/translations.js"></script>
+    <script src="../js/i18n.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 
 Этот документ фиксирует рабочую структуру Website v1.0: sitemap, типы шаблонов, статус страниц и порядок реализации.
 
-Последнее обновление: 9 июля 2026.
+Последнее обновление: 12 июля 2026.
 
 Статус документа: актуальная карта сайта и шаблонов. Если этот файл конфликтует со старыми execution-документами, ориентироваться на `SITE_STRUCTURE.md`.
 
@@ -170,8 +170,8 @@
 | `/book` | Page Template | Missing | Нужна отдельная страница книги. |
 | `/meditations` | Catalog Template | Missing | Нужна страница медитаций. |
 | `/science` | Knowledge Template / Science | Deferred | Пока не создаем: роль научной базы закрывает `/methodology`; отдельные научные темы могут стать статьями блога. |
-| `/blog` | Catalog Template | Missing | Нужен каталог материалов. |
-| `/blog/inner-state.html` | Knowledge Template / Article | Ready for final review | Первый Knowledge Article шаблон создан: article hero, sticky TOC, sources, social continuation, related materials. |
+| `/blog` | Catalog Template | Ready for final review | Каталог материалов создан: 7 материалов, фильтры блога и научной базы. |
+| `/blog/[slug]` | Knowledge Template / Article | Ready for final review | Созданы 7 статей на общем Knowledge Article шаблоне; нужны ручной QA, финальная типографика и реальные ссылки на источники. |
 | `/about` | Page Template | Deferred | Пока не создаем: блок `Обо мне` остается на главной. |
 | `/contact` | Page Template / Utility | Missing | Нужна страница контактов и запроса. |
 | `/privacy` | Legal Template | Deferred | Не входит в текущую предполировочную волну. |
@@ -188,17 +188,17 @@
 4. `/programs/sell-star` создана и используется как Product Template v2.
 5. `/webinars` создан.
 6. `/webinars/[slug]` создан на пяти страницах.
-7. `/blog/inner-state.html` создан как первый Knowledge Article шаблон.
+7. `/blog` создан как каталог материалов.
+8. Созданы 7 статей на Knowledge Article шаблоне, включая 3 материала научной базы.
 
 ### Следующий порядок
 
-1. `/programs` — каталог авторских программ.
-2. `/blog` — каталог материалов.
-3. `/book` — страница книги.
-4. `/meditations` — каталог медитаций.
-5. `/contact` или единый modal/contact flow для заявок и покупок.
-6. Финальный аудит ссылок и кнопок после появления активных целевых страниц.
-7. Deferred: `/science`, `/about`, `/privacy`, `/terms`, `/404`.
+1. Ручной desktop/mobile QA текущей сборки.
+2. Недостающие страницы: `/programs`, `/book`, `/meditations`, `/contact` или единый contact flow.
+3. Backend-логика для форм, заявок и других подтвержденных сценариев.
+4. Пользовательские сценарии, CTA/modal flows и предфинальные правки по итогам QA.
+5. Финальный аудит ссылок, SEO и launch QA после появления всех активных целевых страниц.
+6. Deferred: `/science`, `/about`, `/privacy`, `/terms`, `/404`.
 
 ## Main Page Link Audit
 
@@ -222,8 +222,8 @@
 | `Медитации` | `/meditations` | Missing target |
 | `Все медитации` | `/meditations` | Missing target |
 | `Научная база` | `/methodology` или статьи `/blog/[slug]` | Deferred standalone page |
-| `Блог` | `/blog` | Missing target |
-| `Смотреть все материалы` | `/blog`; временно может вести на `/blog/inner-state.html` | Missing catalog |
+| `Блог` | `/blog` | Ready |
+| `Смотреть все материалы` | `/blog` | Ready |
 | `Обо мне` | якорь на блок главной или будущий `/about` | Deferred standalone page |
 | `Обсудить запрос` | `/contact` или modal/contact flow | Missing target / needs decision |
 | `Отправить сообщение` | `/contact`, modal/contact flow или форма на текущей странице | Needs decision |
