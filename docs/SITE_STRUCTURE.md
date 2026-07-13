@@ -167,8 +167,13 @@
 | `/webinars/self-esteem.html` | Detail Template / Webinar | Ready | Страница вебинара на общем webinar detail шаблоне. |
 | `/webinars/relationship-code.html` | Detail Template / Webinar | Ready | Страница вебинара на общем webinar detail шаблоне. |
 | `/webinars/choosing-oneself.html` | Detail Template / Webinar | Ready | Страница вебинара на общем webinar detail шаблоне. |
-| `/book` | Page Template | Missing | Нужна отдельная страница книги. |
-| `/meditations` | Catalog Template | Missing | Нужна страница медитаций. |
+| `/book` | Detail / Product hybrid | Ready for review | Создана страница книги: hero, описание, визуальные смысловые части, интерактивный фрагмент 12–15 с отдельным mobile-слайдером, финальный purchase CTA и переиспользованный ecosystem-блок. Реальные отзывы и purchase-flow отложены до получения контента и этапа пользовательских сценариев. |
+| `/meditations` | Catalog Template / Product catalog | Ready for review | Создана витрина из 5 аудиопрактик: одна featured-медитация и четыре карточки. Плеер и purchase-flow намеренно не реализованы до этапа пользовательских сценариев. |
+| `/meditations/return-to-self.html` | Detail Template / Meditation | Ready for review | Первый detail-шаблон медитации: hero, описание, три фазы практики, подготовка, возможные ощущения и related-медитации; без плеера и backend-логики. |
+| `/meditations/morning-tuning.html` | Detail Template / Meditation | Ready for review | Вторая страница на общем meditation detail-шаблоне с самостоятельным содержанием утренней практики; без плеера и backend-логики. |
+| `/meditations/balance-and-clarity.html` | Detail Template / Meditation | Ready for review | Третья detail-страница: практика для снижения информационной перегрузки, возвращения фокуса и ясного следующего шага. |
+| `/meditations/stress-release.html` | Detail Template / Meditation | Ready for review | Четвёртая detail-страница: практика телесного расслабления и переключения нервной системы в режим восстановления. |
+| `/meditations/deep-sleep.html` | Detail Template / Meditation | Ready for review | Пятая detail-страница: вечерняя практика завершения дня, расслабления тела и естественного перехода ко сну. |
 | `/science` | Knowledge Template / Science | Deferred | Пока не создаем: роль научной базы закрывает `/methodology`; отдельные научные темы могут стать статьями блога. |
 | `/blog` | Catalog Template | Ready for final review | Каталог материалов создан: 7 материалов, фильтры блога и научной базы. |
 | `/blog/[slug]` | Knowledge Template / Article | Ready for final review | Созданы 7 статей на общем Knowledge Article шаблоне; нужны ручной QA, финальная типографика и реальные ссылки на источники. |
@@ -194,7 +199,7 @@
 ### Следующий порядок
 
 1. Ручной desktop/mobile QA текущей сборки.
-2. Недостающие страницы: `/programs`, `/book`, `/meditations`, `/contact` или единый contact flow.
+2. Недостающая основная страница: `/programs`. Отдельная `/contact` не создается; используется контактный блок главной и будущий единый contact/modal flow.
 3. Backend-логика для форм, заявок и других подтвержденных сценариев.
 4. Пользовательские сценарии, CTA/modal flows и предфинальные правки по итогам QA.
 5. Финальный аудит ссылок, SEO и launch QA после появления всех активных целевых страниц.
@@ -216,11 +221,11 @@
 | `Продавай как звезда` | `/programs/sell-star` | Ready |
 | `Смотреть вебинар` | `/webinars/inner-state.html` или соответствующий slug | Ready |
 | `Смотреть все вебинары` | `/webinars` | Ready |
-| `Книга` | `/book` | Missing target |
-| `Читать фрагмент` | `/book` или `/contact?topic=book` | Missing target |
-| `Купить книгу` | `/book` или внешний магазин, когда будет готово | Missing target |
-| `Медитации` | `/meditations` | Missing target |
-| `Все медитации` | `/meditations` | Missing target |
+| `Книга` | `/book` | Ready |
+| `Читать фрагмент` | `/book#book-excerpt` | Ready |
+| `Купить книгу` | `/book` или внешний магазин, когда будет готово | Page ready / purchase flow pending |
+| `Медитации` | `/meditations` | Ready |
+| `Все медитации` | `/meditations` | Ready |
 | `Научная база` | `/methodology` или статьи `/blog/[slug]` | Deferred standalone page |
 | `Блог` | `/blog` | Ready |
 | `Смотреть все материалы` | `/blog` | Ready |

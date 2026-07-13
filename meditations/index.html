@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медитации — Ирина Ужеловская</title>
+    <link rel="stylesheet" href="../style.css?v=97">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="page-wrapper content-page meditation-page">
+    <header class="header">
+        <a href="../index.html#hero" class="logo" aria-label="Ирина Ужеловская">
+            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
+        <nav class="nav">
+            <a href="../index.html#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
+            <a href="../methodology.html" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
+            <div class="nav-item has-dropdown">
+                <a href="../index.html#courses" class="nav-link nav-link-dropdown active" aria-haspopup="true">ПРОГРАММЫ</a>
+                <div class="nav-dropdown">
+                    <a href="../programs/mentor-28/">Mentor 28</a>
+                    <a href="../programs/sell-star/">Продавай как звезда</a>
+                    <a href="../webinars/">Вебинары</a>
+                    <a href="../book/">Книга</a>
+                    <a href="./index.html">Медитации</a>
+                </div>
+            </div>
+            <a href="../index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
+            <a href="../blog/" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
+            <a href="../index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
+                <span class="lang-separator">/</span>
+                <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
+            </div>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+        <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+    </header>
+
+    <main>
+        <section class="meditation-hero">
+            <div class="meditation-container">
+                <nav class="breadcrumb breadcrumb-dark-bg product-breadcrumb" aria-label="Навигация">
+                    <a href="../index.html#hero">Главная</a>
+                    <span>/</span>
+                    <span>Медитации</span>
+                </nav>
+
+                <div class="meditation-hero-heading">
+                    <h1>Медитации</h1>
+                    <p>Авторские медитации Ирины Ужеловской для восстановления внутренней опоры, ясности и спокойствия. Практики, которые помогают замедлиться и снова услышать себя.</p>
+                </div>
+
+                <div class="meditation-featured">
+                    <a class="meditation-featured-art" href="return-to-self.html">
+                        <div class="meditation-orbit meditation-orbit-one"></div>
+                        <div class="meditation-orbit meditation-orbit-two"></div>
+                        <img src="../images/meditation_mockup.png" alt="Медитация Возвращение к себе">
+                        <div class="meditation-duration"><i class="fa-regular fa-clock"></i> 17:42</div>
+                    </a>
+
+                    <div class="meditation-featured-copy">
+                        <div class="meditation-number">01 / 05</div>
+                        <h2>Возвращение<br>к себе</h2>
+                        <p>Медитативная практика глубокого расслабления и сонастройки. Помогает снять ментальное напряжение, восстановить контакт с телом и вернуться в состояние внутренней гармонии.</p>
+                        <ul class="meditation-benefits">
+                            <li>Снять накопленное напряжение</li>
+                            <li>Восстановить контакт с телом</li>
+                            <li>Почувствовать устойчивость и опору</li>
+                        </ul>
+                        <div class="meditation-actions">
+                            <a class="btn btn-primary" href="return-to-self.html">Подробнее о медитации</a>
+                            <a class="btn btn-secondary" href="#meditation-collection">Смотреть все практики <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="meditation-collection" id="meditation-collection">
+            <div class="meditation-container">
+                <div class="meditation-section-head">
+                    <div>
+                        <div class="meditation-eyebrow">КОЛЛЕКЦИЯ</div>
+                        <h2>Выберите практику<br>под своё состояние</h2>
+                    </div>
+                    <p>Не нужно делать всё сразу. Выберите медитацию, которая отвечает Вашему состоянию сегодня, и позвольте практике стать тихой точкой опоры.</p>
+                </div>
+
+                <div class="meditation-grid">
+                    <article class="meditation-card meditation-card-morning">
+                        <a class="meditation-card-visual" href="morning-tuning.html">
+                            <span>02</span>
+                            <img src="../images/meditation_mockup.png" alt="Медитация Утренний настрой">
+                        </a>
+                        <div class="meditation-card-body">
+                            <div class="meditation-card-meta"><span>УТРО</span><span>12:45</span></div>
+                            <h3>Утренний настрой</h3>
+                            <p>Мягкая практика для спокойного начала дня. Помогает собрать внимание, почувствовать свои намерения и войти в день без внутренней спешки.</p>
+                            <a class="meditation-card-link" href="morning-tuning.html">Подробнее о практике <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="meditation-card meditation-card-clarity">
+                        <a class="meditation-card-visual" href="balance-and-clarity.html">
+                            <span>03</span>
+                            <img src="../images/meditation_mockup.png" alt="Медитация Баланс и ясность">
+                        </a>
+                        <div class="meditation-card-body">
+                            <div class="meditation-card-meta"><span>ФОКУС</span><span>15:30</span></div>
+                            <h3>Баланс и ясность</h3>
+                            <p>Практика для моментов информационной перегрузки и сомнений. Возвращает внимание в настоящее и помогает отделить важное от лишнего.</p>
+                            <a class="meditation-card-link" href="balance-and-clarity.html">Подробнее о практике <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="meditation-card meditation-card-release">
+                        <a class="meditation-card-visual" href="stress-release.html">
+                            <span>04</span>
+                            <img src="../images/meditation_mockup.png" alt="Медитация Освобождение от стресса">
+                        </a>
+                        <div class="meditation-card-body">
+                            <div class="meditation-card-meta"><span>ВОССТАНОВЛЕНИЕ</span><span>20:00</span></div>
+                            <h3>Освобождение<br>от стресса</h3>
+                            <p>Глубокое расслабление после эмоционально насыщенного дня. Помогает снизить внутреннее напряжение и переключить нервную систему в режим восстановления.</p>
+                            <a class="meditation-card-link" href="stress-release.html">Подробнее о практике <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="meditation-card meditation-card-sleep">
+                        <a class="meditation-card-visual" href="deep-sleep.html">
+                            <span>05</span>
+                            <img src="../images/meditation_mockup.png" alt="Медитация Глубокий сон">
+                        </a>
+                        <div class="meditation-card-body">
+                            <div class="meditation-card-meta"><span>ВЕЧЕР</span><span>18:20</span></div>
+                            <h3>Глубокий сон</h3>
+                            <p>Вечерняя практика для завершения дня. Помогает отпустить поток мыслей, расслабить тело и создать спокойный переход к глубокому сну.</p>
+                            <a class="meditation-card-link" href="deep-sleep.html">Подробнее о практике <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="meditation-rhythm">
+            <div class="meditation-container meditation-rhythm-layout">
+                <div class="meditation-rhythm-copy">
+                    <div class="meditation-eyebrow">МАЛЕНЬКИЙ РИТУАЛ</div>
+                    <h2>Несколько минут тишины могут изменить качество целого дня</h2>
+                    <p>Медитация не требует идеальной концентрации или специальной подготовки. Достаточно выбрать удобное место, позволить себе остановиться и следовать за голосом практики.</p>
+                </div>
+                <div class="meditation-rhythm-steps">
+                    <div><span>01</span><p>Выберите практику под текущее состояние</p></div>
+                    <div><span>02</span><p>Найдите тихое место и устройтесь удобно</p></div>
+                    <div><span>03</span><p>Разрешите себе ничего не достигать</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="meditation-final">
+            <div class="meditation-container meditation-final-inner">
+                <div class="meditation-eyebrow">КОЛЛЕКЦИЯ МЕДИТАЦИЙ</div>
+                <h2>Возвращайтесь к себе<br>столько раз, сколько нужно</h2>
+                <p>Пять практик для разных состояний и моментов дня — от утренней настройки до глубокого вечернего расслабления.</p>
+                <a class="btn btn-primary" href="#meditation-collection">Выбрать практику</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="content-footer-v2">
+        <div class="content-footer-brand">
+            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+            <p>психолог · ментор · автор психотехнологий формирования событий</p>
+            <div class="content-footer-socials">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <nav class="content-footer-column" aria-label="Навигация">
+            <h3>Навигация</h3>
+            <a href="../index.html#hero">Главная</a>
+            <a href="../methodology.html">Методология</a>
+            <a href="../index.html#courses">Программы</a>
+            <a href="../webinars/">Вебинары</a>
+            <a href="../book/">Книга</a>
+            <a href="./index.html">Медитации</a>
+            <a href="../blog/">Материалы</a>
+            <a href="../blog/">Блог</a>
+            <a href="../index.html#about">Обо мне</a>
+        </nav>
+        <nav class="content-footer-column" aria-label="Программы">
+            <h3>Программы</h3>
+            <a href="../programs/mentor-28/">Mentor 28</a>
+            <a href="../programs/sell-star/">Продавай как звезда</a>
+            <a href="../index.html#courses">Библиотека знаний</a>
+            <a href="../index.html#about-club">LUX CLUB</a>
+        </nav>
+        <div class="content-footer-column">
+            <h3>Контакты</h3>
+            <span>Instagram</span>
+            <a href="https://instagram.com/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
+            <span>Telegram</span>
+            <a href="https://t.me/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
+            <span>Email</span>
+            <a href="mailto:hello@irina-uzhelovskaya.com">hello@irina-uzhelovskaya.com</a>
+        </div>
+        <div class="content-footer-bottom">
+            <span>© 2026 Ирина Ужеловская. Все права защищены</span>
+            <div><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.querySelectorAll('.header .nav-link-dropdown').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            link.closest('.nav-item').classList.toggle('is-open');
+        });
+    });
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.header .nav-item')) {
+            document.querySelectorAll('.header .nav-item.is-open').forEach(item => item.classList.remove('is-open'));
+        }
+    });
+</script>
+<script src="../js/translations.js"></script>
+<script src="../js/i18n.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ирина Ужеловская — Психолог, ментор, автор психотехнологий</title>
-    <link rel="stylesheet" href="style.css?v=89">
+    <link rel="stylesheet" href="style.css?v=97">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -26,8 +26,8 @@
                 <div class="nav-dropdown">
                     <a href="#courses" data-course-target="grid-programs">Авторские программы</a>
                     <a href="#courses" data-course-target="grid-webinars">Вебинары</a>
-                    <a href="#courses" data-course-target="grid-books">Книга</a>
-                    <a href="#courses" data-course-target="grid-meditations">Медитации</a>
+                    <a href="book/">Книга</a>
+                    <a href="meditations/">Медитации</a>
                     <a href="#courses" data-course-target="grid-science">Научная база</a>
                 </div>
             </div>
@@ -753,10 +753,10 @@
                 </div>
                 <div>
                     <div class="lib-buttons">
-                        <button class="btn btn-primary btn-lib-action btn-read-fragment" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <button class="btn btn-primary btn-lib-action btn-read-fragment" onclick="window.location.href='book/#book-excerpt'">
                             <i class="fa-solid fa-book-open"></i> Читать фрагмент
                         </button>
-                        <button class="btn btn-secondary btn-lib-outline btn-buy-book" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <button class="btn btn-secondary btn-lib-outline btn-buy-book" onclick="window.location.href='book/'">
                             Купить книгу
                         </button>
                     </div>
@@ -861,7 +861,7 @@
                 </div>
 
                 <div class="lib-buttons">
-                    <button class="btn btn-primary btn-lib-action" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Смотреть все медитации</button>
+                    <button class="btn btn-primary btn-lib-action" onclick="window.location.href='meditations/'">Смотреть все медитации</button>
                     <button class="btn btn-secondary btn-lib-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Купить медитации</button>
                 </div>
             </div>
@@ -890,7 +890,7 @@
                         </div>
                     </li>
                 </ul>
-                <a href="#contact" class="sidebar-link" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                <a href="meditations/" class="sidebar-link">
                     Все медитации <i class="fa-solid fa-arrow-right-long"></i>
                 </a>
             </div>
@@ -1630,8 +1630,8 @@
             <a href="methodology.html">Методология</a>
             <a href="#courses">Программы</a>
             <a href="webinars/index.html">Вебинары</a>
-            <a href="#courses">Книга</a>
-            <a href="#courses">Медитации</a>
+            <a href="book/">Книга</a>
+            <a href="meditations/">Медитации</a>
             <a href="#blog">Материалы</a>
             <a href="#blog">Блог</a>
             <a href="#about">Обо мне</a>

@@ -227,11 +227,11 @@
 | --- | --- | --- | --- |
 | `/programs` | Library Template / Programs | todo | Каталог авторских программ. |
 | `/blog` | Library Template / Blog | done | Готово — 12 июля 2026: каталог и 7 article pages созданы; остается ручной QA и финальный content/source polish. |
-| `/book` | Page / Detail hybrid | todo | Страница книги. |
-| `/meditations` | Library Template / Meditations | todo | Каталог медитаций. |
+| `/book` | Page / Detail hybrid | done | Готово — 12 июля 2026: создан hybrid detail/product-шаблон с интерактивным desktop-разворотом и отдельным mobile-слайдером страниц. Реальные отзывы и purchase-flow остаются на контентный/сценарный этап. |
+| `/meditations` | Library Template / Meditations | done | Готово — 12 июля 2026: создан адаптивный каталог и пять detail-страниц медитаций. Каталог полностью перелинкован; плеер и бизнес-логика CTA намеренно отложены до этапа пользовательских сценариев. |
 | `/science` | Knowledge Template / Science | removed | Пока не создаем: эту роль закрывает `/methodology`. |
 | `/about` | Page Template | removed | Пока не создаем: блок `Обо мне` остается на главной. |
-| `/contact` | Utility Page / modal flow | todo | Нужна страница контактов или единый сценарий связи через модалки/форму. |
+| `/contact` | Utility Page / modal flow | removed | Отдельную страницу не создаем: контакты уже представлены в header/footer и блоке перед footer; позже нужен единый сценарий связи через форму/модалки. |
 | `/privacy` | Legal Template | deferred | Не входит в текущую предполировочную волну. |
 | `/terms` | Legal Template | deferred | Не входит в текущую предполировочную волну. |
 | `/404` | Utility Template | deferred | Вернуться ближе к финальной полировке. |
