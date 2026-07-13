@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторские программы — Ирина Ужеловская</title>
+    <link rel="stylesheet" href="../style.css?v=98">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="page-wrapper programs-catalog-page">
+    <header class="header">
+        <a href="../index.html#hero" class="logo" aria-label="Ирина Ужеловская">
+            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
+        <nav class="nav">
+            <a href="../index.html#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
+            <a href="../methodology.html" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
+            <div class="nav-item has-dropdown">
+                <a href="./" class="nav-link nav-link-dropdown active" aria-haspopup="true">ПРОГРАММЫ</a>
+                <div class="nav-dropdown">
+                    <a href="./">Авторские программы</a>
+                    <a href="mentor-28/">Mentor 28</a>
+                    <a href="sell-star/">Продавай как звезда</a>
+                    <a href="../webinars/">Вебинары</a>
+                    <a href="../book/">Книга</a>
+                    <a href="../meditations/">Медитации</a>
+                </div>
+            </div>
+            <a href="../index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
+            <a href="../blog/" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
+            <a href="../index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
+                <span class="lang-separator">/</span>
+                <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
+            </div>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+        <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+    </header>
+
+    <main>
+        <section class="programs-catalog-hero">
+            <div class="programs-catalog-container">
+                <nav class="breadcrumb breadcrumb-dark-bg product-breadcrumb" aria-label="Навигация">
+                    <a href="../index.html#hero">Главная</a>
+                    <span>/</span>
+                    <span>Авторские программы</span>
+                </nav>
+                <div class="programs-catalog-heading">
+                    <h1>Авторские<br>программы</h1>
+                    <p>Системные программы Ирины Ужеловской для глубокой работы с мышлением, внутренним состоянием, проявленностью и реализацией.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="programs-catalog-list" id="programs-list">
+            <div class="programs-catalog-container">
+                <div class="programs-catalog-section-head">
+                    <div>
+                        <div class="programs-catalog-kicker">ПРОГРАММЫ</div>
+                        <h2>Выберите направление<br>под свою задачу</h2>
+                    </div>
+                    <p>Каждая программа строится вокруг конкретной точки изменений. Выберите ту, которая ближе к Вашему запросу сейчас.</p>
+                </div>
+
+                <div class="programs-catalog-grid">
+                    <article class="program-card-wrapper programs-catalog-card">
+                        <a class="program-card-left" href="mentor-28/" aria-label="Подробнее о программе Mentor 28">
+                            <img src="../images/program_mentor_28.png" alt="MENTOR 28 — 28-дневная программа перезагрузки" class="program-card-img">
+                        </a>
+                        <div class="program-card-right">
+                            <div class="program-details-content">
+                                <div class="program-subtitle">АВТОРСКАЯ ПРОГРАММА</div>
+                                <h3 class="program-title">MENTOR 28</h3>
+                                <div class="program-badge">28 ДНЕЙ ГЛУБОКОЙ ВНУТРЕННЕЙ ПЕРЕЗАГРУЗКИ</div>
+                                <p class="program-desc">Системная работа над мышлением, эмоциональным состоянием и поведением для создания устойчивых изменений.</p>
+                                <ul class="program-features">
+                                    <li><i class="fa-solid fa-brain"></i><span>Трансформация мышления</span></li>
+                                    <li><i class="fa-solid fa-heart"></i><span>Эмоциональная устойчивость</span></li>
+                                    <li><i class="fa-solid fa-compass"></i><span>Новые жизненные решения</span></li>
+                                </ul>
+                            </div>
+                            <div class="program-buttons-stack">
+                                <a class="btn btn-primary btn-lib-action btn-program-action" href="mentor-28/">Подробнее о программе <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="program-card-wrapper programs-catalog-card">
+                        <a class="program-card-left" href="sell-star/" aria-label="Подробнее о программе Продавай как звезда">
+                            <img src="../images/program_sell_star.png" alt="Продавай как звезда — авторская программа" class="program-card-img">
+                        </a>
+                        <div class="program-card-right">
+                            <div class="program-details-content">
+                                <div class="program-subtitle">АВТОРСКАЯ ПРОГРАММА</div>
+                                <h3 class="program-title">ПРОДАВАЙ<br>КАК ЗВЕЗДА</h3>
+                                <div class="program-badge">СИСТЕМА ПРОДАЖ ЧЕРЕЗ СОСТОЯНИЕ И САМОЦЕННОСТЬ</div>
+                                <p class="program-desc">Для экспертов и предпринимателей, которые хотят проявляться, продавать уверенно и развивать личный бренд.</p>
+                                <ul class="program-features">
+                                    <li><i class="fa-solid fa-star"></i><span>Проявленность и самоценность</span></li>
+                                    <li><i class="fa-solid fa-comments"></i><span>Продажи без напряжения</span></li>
+                                    <li><i class="fa-solid fa-crown"></i><span>Сильный личный бренд</span></li>
+                                </ul>
+                            </div>
+                            <div class="program-buttons-stack">
+                                <a class="btn btn-primary btn-lib-action btn-program-action" href="sell-star/">Подробнее о программе <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="programs-catalog-quote">
+            <div class="programs-catalog-container programs-catalog-quote-inner">
+                <span class="programs-catalog-quote-mark">“</span>
+                <blockquote>Мои программы — это не просто обучение. Это глубокая трансформация, которая меняет жизнь.</blockquote>
+                <span class="programs-catalog-quote-author">— Ирина Ужеловская</span>
+            </div>
+        </section>
+
+        <section class="programs-catalog-related">
+            <div class="programs-catalog-container">
+                <div class="programs-catalog-section-head compact">
+                    <div>
+                        <div class="programs-catalog-kicker">ЭКОСИСТЕМА</div>
+                        <h2>Вам также может быть интересно</h2>
+                    </div>
+                </div>
+                <div class="library-related-grid">
+                    <a class="lib-preview-card" href="../webinars/">
+                        <div class="card-content-left">
+                            <div class="card-category"><i class="fa-solid fa-circle-play"></i> ВЕБИНАРЫ</div>
+                            <h4 class="card-title">Сила внутреннего состояния</h4>
+                            <p class="card-text">Практические вебинары и видеолекции</p>
+                            <span class="card-link">СМОТРЕТЬ <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                        <div class="card-image-right"><img src="../images/webinar_edge.png" alt="Вебинары"></div>
+                    </a>
+                    <a class="lib-preview-card" href="../book/">
+                        <div class="card-content-left">
+                            <div class="card-category"><i class="fa-solid fa-book-open"></i> КНИГА</div>
+                            <h4 class="card-title">Меняя внутреннее</h4>
+                            <p class="card-text">Книга о принципах глубокой трансформации</p>
+                            <span class="card-link">ЧИТАТЬ <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                        <div class="card-image-right"><img src="../images/book_main.png" alt="Книга Ирины Ужеловской"></div>
+                    </a>
+                    <a class="lib-preview-card" href="../meditations/">
+                        <div class="card-content-left">
+                            <div class="card-category"><i class="fa-solid fa-headphones"></i> МЕДИТАЦИИ</div>
+                            <h4 class="card-title">Возвращение к себе</h4>
+                            <p class="card-text">Практики для восстановления внутренней опоры</p>
+                            <span class="card-link">ПЕРЕЙТИ <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                        <div class="card-image-right"><img src="../images/meditation_mockup.png" alt="Медитации"></div>
+                    </a>
+                    <a class="lib-preview-card" href="../methodology.html">
+                        <div class="card-content-left">
+                            <div class="card-category"><i class="fa-solid fa-compass"></i> МЕТОДОЛОГИЯ</div>
+                            <h4 class="card-title">Как происходят изменения</h4>
+                            <p class="card-text">Мышление, состояние и новые решения</p>
+                            <span class="card-link">ИЗУЧИТЬ <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                        <div class="card-image-right"><img src="../images/science_photo.png" alt="Методология"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="content-footer-v2">
+        <div class="content-footer-brand">
+            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+            <p>психолог · ментор · автор психотехнологий формирования событий</p>
+            <div class="content-footer-socials">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <nav class="content-footer-column" aria-label="Навигация">
+            <h3>Навигация</h3>
+            <a href="../index.html#hero">Главная</a>
+            <a href="../methodology.html">Методология</a>
+            <a href="./">Программы</a>
+            <a href="../webinars/">Вебинары</a>
+            <a href="../book/">Книга</a>
+            <a href="../meditations/">Медитации</a>
+            <a href="../blog/">Материалы</a>
+            <a href="../blog/">Блог</a>
+            <a href="../index.html#about">Обо мне</a>
+        </nav>
+        <nav class="content-footer-column" aria-label="Программы">
+            <h3>Программы</h3>
+            <a href="mentor-28/">Mentor 28</a>
+            <a href="sell-star/">Продавай как звезда</a>
+            <a href="../index.html#courses">Библиотека знаний</a>
+            <a href="../index.html#about-club">LUX CLUB</a>
+        </nav>
+        <div class="content-footer-column">
+            <h3>Контакты</h3>
+            <span>Instagram</span>
+            <a href="https://instagram.com/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
+            <span>Telegram</span>
+            <a href="https://t.me/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
+            <span>Email</span>
+            <a href="mailto:hello@irina-uzhelovskaya.com">hello@irina-uzhelovskaya.com</a>
+        </div>
+        <div class="content-footer-bottom">
+            <span>© 2026 Ирина Ужеловская. Все права защищены</span>
+            <div><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.querySelectorAll('.header .nav-link-dropdown').forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            const navItem = link.closest('.nav-item');
+            document.querySelectorAll('.header .nav-item.is-open').forEach(item => {
+                if (item !== navItem) item.classList.remove('is-open');
+            });
+            navItem.classList.toggle('is-open');
+        });
+    });
+    document.addEventListener('click', event => {
+        if (!event.target.closest('.header .nav-item')) {
+            document.querySelectorAll('.header .nav-item.is-open').forEach(item => item.classList.remove('is-open'));
+        }
+    });
+</script>
+<script src="../js/translations.js"></script>
+<script src="../js/i18n.js"></script>
+</body>
+</html>

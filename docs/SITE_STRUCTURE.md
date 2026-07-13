@@ -4,7 +4,7 @@
 
 Этот документ фиксирует рабочую структуру Website v1.0: sitemap, типы шаблонов, статус страниц и порядок реализации.
 
-Последнее обновление: 12 июля 2026.
+Последнее обновление: 13 июля 2026.
 
 Статус документа: актуальная карта сайта и шаблонов. Если этот файл конфликтует со старыми execution-документами, ориентироваться на `SITE_STRUCTURE.md`.
 
@@ -158,7 +158,7 @@
 | --- | --- | --- | --- |
 | `/` | Home Template | Ready for final review | Главная собрана, адаптирована и связана с текущими рабочими страницами; нужна финальная desktop/mobile оценка. |
 | `/methodology` | Knowledge Template / Methodology | Ready | Новая методология утверждена как официальная `methodology.html`; мобильная волна закрыта. |
-| `/programs` | Library Template / Programs | Missing | Нужен каталог авторских программ. |
+| `/programs` | Catalog Template / Programs | Ready for review | Создан масштабируемый каталог: спокойный hero, равноправная сетка программ по две карточки в ряду, авторская цитата и переиспользованный ecosystem-блок. |
 | `/programs/mentor-28` | Product Template | Ready for final review | Страница существует, мобильный hero упрощен, related-блок заменен на компактный ecosystem-паттерн. |
 | `/programs/sell-star` | Product Template v2 | Ready for final review | Текущий эталон reusable product template. |
 | `/webinars` | Library Template / Webinars | Ready for final review | Каталог вебинаров создан; список вебинаров сильный, mobile hero упрощен. |
@@ -198,12 +198,11 @@
 
 ### Следующий порядок
 
-1. Ручной desktop/mobile QA текущей сборки.
-2. Недостающая основная страница: `/programs`. Отдельная `/contact` не создается; используется контактный блок главной и будущий единый contact/modal flow.
-3. Backend-логика для форм, заявок и других подтвержденных сценариев.
-4. Пользовательские сценарии, CTA/modal flows и предфинальные правки по итогам QA.
-5. Финальный аудит ссылок, SEO и launch QA после появления всех активных целевых страниц.
-6. Deferred: `/science`, `/about`, `/privacy`, `/terms`, `/404`.
+1. Ручной desktop/mobile QA текущей сборки, включая новый каталог `/programs`.
+2. Backend-логика для форм, заявок и других подтвержденных сценариев.
+3. Пользовательские сценарии, CTA/modal flows и предфинальные правки по итогам QA.
+4. Финальный аудит ссылок, SEO и launch QA после появления всех активных целевых страниц.
+5. Deferred: `/science`, `/about`, `/privacy`, `/terms`, `/404`. Отдельная `/contact` не создается; используется контактный блок главной и будущий единый contact/modal flow.
 
 ## Main Page Link Audit
 
@@ -215,8 +214,7 @@
 | --- | --- | --- |
 | `Методология` | `/methodology` | Ready |
 | `Изучить методологию` | `/methodology` | Ready |
-| `Мои программы` | `/programs` | Missing target |
-| `Все программы` | `/programs` | Missing target |
+| Header dropdown / `Авторские программы` | `/programs` | Ready |
 | `Mentor 28` | `/programs/mentor-28` | Ready |
 | `Продавай как звезда` | `/programs/sell-star` | Ready |
 | `Смотреть вебинар` | `/webinars/inner-state.html` или соответствующий slug | Ready |
