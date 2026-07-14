@@ -64,9 +64,9 @@
 
                 <!-- Главный вебинар -->
                 <div class="webinars-featured-layout">
-                    <div class="webinar-featured-video" onclick="window.location.href='./inner-state.html'">
+                    <div class="webinar-featured-video" style="cursor: pointer;">
                         <img src="../images/webinar_main.png" alt="Сила внутреннего состояния">
-                        <button class="featured-play-btn" type="button" aria-label="Смотреть вебинар">
+                        <button class="featured-play-btn" type="button" data-webinar-video-open aria-label="Смотреть вебинар">
                             <i class="fa-solid fa-play"></i>
                         </button>
                         <div class="featured-preview-caption">
@@ -86,13 +86,11 @@
                             <span><i class="fa-regular fa-eye"></i> 2 450 просмотров</span>
                         </div>
                         <div class="featured-action-btn">
-                            <a class="btn btn-primary" href="./inner-state.html">
-                                <span class="content-action-icon"><i class="fa-solid fa-play"></i></span>
-                                Смотреть вебинар
-                            </a>
-                            <a class="btn btn-secondary" href="#popular-webinars">Смотреть все вебинары <i class="fa-solid fa-arrow-right-long"></i></a>
+                            <button class="btn btn-primary" type="button" data-webinar-buy-open>
+                                Купить вебинар
+                            </button>
+                            <a class="btn btn-secondary" href="./inner-state.html">Подробнее про вебинар <i class="fa-solid fa-arrow-right-long"></i></a>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -280,6 +278,105 @@
         }
     });
 </script>
+
+    <!-- Modals for general Webinars page -->
+    <div class="video-modal" id="webinarVideoModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-webinar-video-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="webinarVideoModalTitle">
+            <button class="video-modal-close" type="button" data-webinar-video-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">ПРЕВЬЮ ВЕБИНАРА</div>
+            <h3 id="webinarVideoModalTitle">Видео-превью вебинара</h3>
+            <p>
+                Здесь будет отображаться видео вебинара с YouTube. Функция интеграции медиаплеера находится в разработке.
+            </p>
+            <div class="video-modal-actions">
+                <button class="btn btn-primary" type="button" data-webinar-video-close>Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-modal" id="webinarBuyModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-webinar-buy-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="webinarBuyModalTitle" style="max-width: 480px;">
+            <button class="video-modal-close" type="button" data-webinar-buy-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+            <h3 id="webinarBuyModalTitle" style="margin-bottom: 8px;">Купить вебинар «Сила внутреннего состояния»</h3>
+            <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы получить ссылку на полную версию вебинара.</p>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на покупку вебинара отправлена!'); document.getElementById('webinarBuyModal').classList.remove('is-open'); document.body.style.overflow = '';">
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="buy-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
+                    <input type="text" id="buy-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="buy-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
+                    <input type="email" id="buy-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="buy-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
+                    <input type="text" id="buy-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const initLandingWebinarModals = () => {
+            const setupModal = (modalId, openAttr, closeAttr) => {
+                const modal = document.getElementById(modalId);
+                const openButtons = Array.from(document.querySelectorAll(`[${openAttr}]`));
+                if (!modal || !openButtons.length) return;
+
+                const closeButtons = Array.from(modal.querySelectorAll(`[${closeAttr}]`));
+                const openModal = () => {
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                };
+                const closeModal = () => {
+                    modal.classList.remove('is-open');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                };
+
+                openButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        openModal();
+                    });
+                });
+                closeButtons.forEach(button => {
+                    button.addEventListener('click', closeModal);
+                });
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                        closeModal();
+                    }
+                });
+            };
+
+            setupModal('webinarVideoModal', 'data-webinar-video-open', 'data-webinar-video-close');
+            setupModal('webinarBuyModal', 'data-webinar-buy-open', 'data-webinar-buy-close');
+
+            const featuredVideoCard = document.querySelector('.webinar-featured-video');
+            if (featuredVideoCard) {
+                featuredVideoCard.addEventListener('click', () => {
+                    const videoModal = document.getElementById('webinarVideoModal');
+                    if (videoModal) {
+                        videoModal.classList.add('is-open');
+                        videoModal.setAttribute('aria-hidden', 'false');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            }
+        };
+
+        initLandingWebinarModals();
+    </script>
 
     <script src="../js/translations.js"></script>
     <script src="../js/i18n.js"></script>

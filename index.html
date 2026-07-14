@@ -135,7 +135,7 @@
         <!-- Upper Composition: Photo + Text -->
         <div class="methodology-intro">
             <div class="methodology-img-wrapper">
-                <img src="images/what_if_img.png" alt="Ирина Хакамада">
+                <img src="images/what_if_img.png" alt="Ирина Ужеловская">
             </div>
             <div class="methodology-intro-text">
                 <h2 class="methodology-title">Что если проблема<br><span class="highlight-italic">не в целях?</span></h2>
@@ -262,7 +262,7 @@
                         <div class="overlay-badge">28-дневная программа<br>глубокой перезагрузки</div>
                         <p class="overlay-desc">Системная работа над мышлением, эмоциональным состоянием и поведенческими стратегиями для создания новой реальности.</p>
                     </div>
-                    <div class="play-overlay" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">
+                    <div class="play-overlay" style="cursor: pointer;" data-video-mentor-open>
                         <div class="play-overlay-circle">
                             <svg width="10" height="12" viewBox="0 0 12 14" fill="currentColor">
                                 <path d="M1.5 1a1 1 0 0 0-1.5 1v10a1 1 0 0 0 1.5.8l9-5a1 1 0 0 0 0-1.6l-9-5.2Z"/>
@@ -297,8 +297,8 @@
                         </div>
                     </div>
                     <div class="selector-buttons">
-                        <button class="btn btn-selector-primary" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">УЗНАТЬ ПОДРОБНЕЕ</button>
-                        <a href="#courses" class="btn-selector-link" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})"><span class="selector-link-text">ПРОЙТИ ДИАГНОСТИКУ</span><i class="fa-solid fa-arrow-right-long"></i></a>
+                        <button class="btn btn-selector-primary" type="button" data-booking-mentor-open>ЗАБРОНИРОВАТЬ МЕСТО</button>
+                        <a href="programs/mentor-28/" class="btn-selector-link"><span class="selector-link-text">СМОТРЕТЬ ПРОГРАММУ</span><i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
                 </div>
             </div>
@@ -338,8 +338,8 @@
                         </div>
                     </div>
                     <div class="selector-buttons">
-                        <button class="btn btn-selector-primary" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">УЗНАТЬ ПОДРОБНЕЕ</button>
-                        <a href="#courses" class="btn-selector-link" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})"><span class="selector-link-text">ПОСМОТРЕТЬ ПРОГРАММУ</span><i class="fa-solid fa-arrow-right-long"></i></a>
+                        <button class="btn btn-selector-primary" type="button" data-booking-star-open>ЗАБРОНИРОВАТЬ МЕСТО</button>
+                        <a href="programs/sell-star/" class="btn-selector-link"><span class="selector-link-text">СМОТРЕТЬ ПРОГРАММУ</span><i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
                 </div>
                 <div class="selector-image-wrapper">
@@ -350,7 +350,7 @@
                         <div class="overlay-badge">Система продаж через состояние,<br>самооценность и личный бренд</div>
                         <p class="overlay-desc">Для экспертов и предпринимателей, которые хотят продавать легко, дорого и в удовольствие.</p>
                     </div>
-                    <div class="play-overlay" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">
+                    <div class="play-overlay" style="cursor: pointer;" data-video-star-open>
                         <div class="play-overlay-circle">
                             <svg width="10" height="12" viewBox="0 0 12 14" fill="currentColor">
                                 <path d="M1.5 1a1 1 0 0 0-1.5 1v10a1 1 0 0 0 1.5.8l9-5a1 1 0 0 0 0-1.6l-9-5.2Z"/>
@@ -427,11 +427,11 @@
                         </ul>
                     </div>
                     <div class="program-buttons-stack">
-                        <button class="btn btn-primary btn-lib-action btn-program-action" onclick="window.location.href='programs/mentor-28/'">
-                            УЗНАТЬ ПОДРОБНЕЕ <i class="fa-solid fa-arrow-right-long"></i>
+                        <button class="btn btn-primary btn-lib-action btn-program-action" type="button" data-booking-mentor-open>
+                            ЗАБРОНИРОВАТЬ МЕСТО
                         </button>
                         <a href="programs/mentor-28/" class="btn-program-link">
-                            СМОТРЕТЬ ПРОГРАММУ <span class="link-icon-circle"><i class="fa-solid fa-play"></i></span>
+                            СМОТРЕТЬ ПРОГРАММУ <i class="fa-solid fa-arrow-right-long"></i>
                         </a>
                     </div>
                 </div>
@@ -470,11 +470,11 @@
                         </ul>
                     </div>
                     <div class="program-buttons-stack">
-                        <button class="btn btn-primary btn-lib-action btn-program-action" onclick="window.location.href='programs/sell-star/'">
-                            УЗНАТЬ ПОДРОБНЕЕ <i class="fa-solid fa-arrow-right-long"></i>
+                        <button class="btn btn-primary btn-lib-action btn-program-action" type="button" data-booking-star-open>
+                            ЗАБРОНИРОВАТЬ МЕСТО
                         </button>
                         <a href="programs/sell-star/" class="btn-program-link">
-                            СМОТРЕТЬ ПРОГРАММУ <span class="link-icon-circle"><i class="fa-solid fa-play"></i></span>
+                            СМОТРЕТЬ ПРОГРАММУ <i class="fa-solid fa-arrow-right-long"></i>
                         </a>
                     </div>
                 </div>
@@ -490,7 +490,7 @@
             <div class="library-related-block">
                 <div class="library-related-heading">Вам также может быть интересно</div>
                 <div class="library-related-grid">
-                    <div class="lib-preview-card" data-tab-target="grid-webinars">
+                    <a class="lib-preview-card" href="webinars/inner-state.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-circle-play"></i> ВЕБИНАРЫ
@@ -502,9 +502,9 @@
                         <div class="card-image-right">
                             <img src="images/webinar_edge.png" alt="Сила внутреннего состояния">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-books">
+                    <a class="lib-preview-card" href="book/">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-book-open"></i> КНИГА
@@ -516,9 +516,9 @@
                         <div class="card-image-right">
                             <img src="images/book_main.png" alt="Книга Ирины Ужеловской">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-meditations">
+                    <a class="lib-preview-card" href="meditations/return-to-self.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-headphones"></i> МЕДИТАЦИИ
@@ -530,9 +530,9 @@
                         <div class="card-image-right">
                             <img src="images/meditation_mockup.png" alt="Возвращение к себе">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-science">
+                    <a class="lib-preview-card" href="methodology.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-flask"></i> НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ
@@ -544,7 +544,7 @@
                         <div class="card-image-right">
                             <img src="images/science_photo.png" alt="Исследования и публикации">
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -584,8 +584,8 @@
                 </div>
                 <div class="webinar-buttons-container">
                     <div class="lib-buttons">
-                        <button class="btn btn-primary btn-lib-action btn-watch-webinar" onclick="window.location.href='webinars/inner-state.html'">
-                            <span class="btn-icon-circle"><i class="fa-solid fa-play"></i></span> СМОТРЕТЬ ВЕБИНАР
+                        <button class="btn btn-primary btn-lib-action btn-watch-webinar" type="button" data-webinar-buy-open>
+                            КУПИТЬ ВЕБИНАР
                         </button>
                         <button class="btn btn-secondary btn-lib-outline btn-all-webinars" onclick="window.location.href='webinars/index.html'">
                             СМОТРЕТЬ ВСЕ ВЕБИНАРЫ <i class="fa-solid fa-arrow-right-long"></i>
@@ -671,7 +671,7 @@
             <div class="library-related-block">
                 <div class="library-related-heading">Вам также может быть интересно</div>
                 <div class="library-related-grid">
-                    <div class="lib-preview-card" data-tab-target="grid-programs">
+                    <a class="lib-preview-card" href="programs/mentor-28/">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-graduation-cap"></i> АВТОРСКИЕ ПРОГРАММЫ
@@ -683,9 +683,9 @@
                         <div class="card-image-right">
                             <img src="images/mentor_2_photo.png" alt="Mentor 28">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-books">
+                    <a class="lib-preview-card" href="book/">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-book-open"></i> КНИГА
@@ -697,9 +697,9 @@
                         <div class="card-image-right">
                             <img src="images/book_main.png" alt="Книга Ирины Ужеловской">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-meditations">
+                    <a class="lib-preview-card" href="meditations/return-to-self.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-headphones"></i> МЕДИТАЦИИ
@@ -711,9 +711,9 @@
                         <div class="card-image-right">
                             <img src="images/meditation_mockup.png" alt="Возвращение к себе">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-science">
+                    <a class="lib-preview-card" href="methodology.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-flask"></i> НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ
@@ -725,7 +725,7 @@
                         <div class="card-image-right">
                             <img src="images/science_photo.png" alt="Исследования и публикации">
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -753,10 +753,10 @@
                 </div>
                 <div>
                     <div class="lib-buttons">
-                        <button class="btn btn-primary btn-lib-action btn-read-fragment" onclick="window.location.href='book/#book-excerpt'">
-                            <i class="fa-solid fa-book-open"></i> Читать фрагмент
+                        <button class="btn btn-primary btn-lib-action btn-read-fragment" onclick="window.location.href='book/'">
+                            <i class="fa-solid fa-book-open"></i> Описание
                         </button>
-                        <button class="btn btn-secondary btn-lib-outline btn-buy-book" onclick="window.location.href='book/'">
+                        <button class="btn btn-secondary btn-lib-outline btn-buy-book" type="button" data-book-buy-open>
                             Купить книгу
                         </button>
                     </div>
@@ -766,7 +766,7 @@
             <div class="library-related-block">
                 <div class="library-related-heading">Вам также может быть интересно</div>
                 <div class="library-related-grid">
-                    <div class="lib-preview-card" data-tab-target="grid-programs">
+                    <a class="lib-preview-card" href="programs/mentor-28/">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-graduation-cap"></i> АВТОРСКИЕ ПРОГРАММЫ
@@ -778,9 +778,9 @@
                         <div class="card-image-right">
                             <img src="images/mentor_2_photo.png" alt="Mentor 28">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-webinars">
+                    <a class="lib-preview-card" href="webinars/inner-state.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-circle-play"></i> ВЕБИНАРЫ
@@ -792,9 +792,9 @@
                         <div class="card-image-right">
                             <img src="images/webinar_edge.png" alt="Сила внутреннего состояния">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-meditations">
+                    <a class="lib-preview-card" href="meditations/return-to-self.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-headphones"></i> МЕДИТАЦИИ
@@ -806,9 +806,9 @@
                         <div class="card-image-right">
                             <img src="images/meditation_mockup.png" alt="Возвращение к себе">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-science">
+                    <a class="lib-preview-card" href="methodology.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-flask"></i> НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ
@@ -820,15 +820,14 @@
                         <div class="card-image-right">
                             <img src="images/science_photo.png" alt="Исследования и публикации">
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Grid for "Медитации" -->
         <div class="library-content-box courses-grid-tab" id="grid-meditations" style="display: none;">
             <div class="lib-left-col">
-                <div class="lib-player-artwork">
+                <div class="lib-player-artwork" onclick="window.location.href='meditations/return-to-self.html'" style="cursor: pointer;">
                     <img src="images/meditation_mockup.png" alt="Медитация: Возвращение к себе">
                 </div>
             </div>
@@ -854,7 +853,7 @@
                     <div class="player-controls">
                         <button class="player-btn"><i class="fa-solid fa-backward-step"></i></button>
                         <button class="player-btn"><i class="fa-solid fa-rotate-left"></i></button>
-                        <button class="player-btn btn-play-large"><i class="fa-solid fa-play"></i></button>
+                        <button class="player-btn btn-play-large" onclick="window.location.href='meditations/return-to-self.html'"><i class="fa-solid fa-play"></i></button>
                         <button class="player-btn"><i class="fa-solid fa-rotate-right"></i></button>
                         <button class="player-btn"><i class="fa-solid fa-forward-step"></i></button>
                     </div>
@@ -862,32 +861,47 @@
 
                 <div class="lib-buttons">
                     <button class="btn btn-primary btn-lib-action" onclick="window.location.href='meditations/'">Смотреть все медитации</button>
-                    <button class="btn btn-secondary btn-lib-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Купить медитации</button>
+                    <button class="btn btn-secondary btn-lib-outline" type="button" data-meditation-buy-open>Купить медитацию</button>
                 </div>
             </div>
             <div class="lib-right-col">
                 <div class="sidebar-title">Другие медитации</div>
                 <ul class="sidebar-list">
                     <li>
-                        <i class="fa-solid fa-headphones sidebar-item-icon"></i>
-                        <div class="sidebar-item-text">
-                            <span class="item-title">Утренний настрой</span>
-                            <span class="item-desc">Аудиопрактика • 12:45 мин</span>
-                        </div>
+                        <a href="meditations/morning-tuning.html" style="display: flex; align-items: center; gap: 16px; width: 100%; text-decoration: none; color: inherit;">
+                            <i class="fa-solid fa-headphones sidebar-item-icon"></i>
+                            <div class="sidebar-item-text">
+                                <span class="item-title">Утренний настрой</span>
+                                <span class="item-desc">Аудиопрактика • 12:45 мин</span>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-headphones sidebar-item-icon"></i>
-                        <div class="sidebar-item-text">
-                            <span class="item-title">Баланс и ясность</span>
-                            <span class="item-desc">Аудиопрактика • 15:30 мин</span>
-                        </div>
+                        <a href="meditations/balance-and-clarity.html" style="display: flex; align-items: center; gap: 16px; width: 100%; text-decoration: none; color: inherit;">
+                            <i class="fa-solid fa-headphones sidebar-item-icon"></i>
+                            <div class="sidebar-item-text">
+                                <span class="item-title">Баланс и ясность</span>
+                                <span class="item-desc">Аудиопрактика • 15:30 мин</span>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-headphones sidebar-item-icon"></i>
-                        <div class="sidebar-item-text">
-                            <span class="item-title">Освобождение от стресса</span>
-                            <span class="item-desc">Аудиопрактика • 20:00 мин</span>
-                        </div>
+                        <a href="meditations/stress-release.html" style="display: flex; align-items: center; gap: 16px; width: 100%; text-decoration: none; color: inherit;">
+                            <i class="fa-solid fa-headphones sidebar-item-icon"></i>
+                            <div class="sidebar-item-text">
+                                <span class="item-title">Освобождение от стресса</span>
+                                <span class="item-desc">Аудиопрактика • 20:00 мин</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="meditations/deep-sleep.html" style="display: flex; align-items: center; gap: 16px; width: 100%; text-decoration: none; color: inherit;">
+                            <i class="fa-solid fa-headphones sidebar-item-icon"></i>
+                            <div class="sidebar-item-text">
+                                <span class="item-title">Глубокий сон</span>
+                                <span class="item-desc">Аудиопрактика • 18:20 мин</span>
+                            </div>
+                        </a>
                     </li>
                 </ul>
                 <a href="meditations/" class="sidebar-link">
@@ -898,7 +912,7 @@
             <div class="library-related-block">
                 <div class="library-related-heading">Вам также может быть интересно</div>
                 <div class="library-related-grid">
-                    <div class="lib-preview-card" data-tab-target="grid-programs">
+                    <a class="lib-preview-card" href="programs/mentor-28/">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-graduation-cap"></i> АВТОРСКИЕ ПРОГРАММЫ
@@ -910,9 +924,9 @@
                         <div class="card-image-right">
                             <img src="images/mentor_2_photo.png" alt="Mentor 28">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-webinars">
+                    <a class="lib-preview-card" href="webinars/inner-state.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-circle-play"></i> ВЕБИНАРЫ
@@ -924,9 +938,9 @@
                         <div class="card-image-right">
                             <img src="images/webinar_edge.png" alt="Сила внутреннего состояния">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-books">
+                    <a class="lib-preview-card" href="book/">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-book-open"></i> КНИГА
@@ -938,9 +952,9 @@
                         <div class="card-image-right">
                             <img src="images/book_main.png" alt="Книга Ирины Ужеловской">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-science">
+                    <a class="lib-preview-card" href="methodology.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-flask"></i> НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ
@@ -952,7 +966,7 @@
                         <div class="card-image-right">
                             <img src="images/science_photo.png" alt="Исследования и публикации">
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1065,7 +1079,7 @@
             <div class="library-related-block">
                 <div class="library-related-heading">Вам также может быть интересно</div>
                 <div class="library-related-grid">
-                    <div class="lib-preview-card" data-tab-target="grid-programs">
+                    <a class="lib-preview-card" href="programs/mentor-28/">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-graduation-cap"></i> АВТОРСКИЕ ПРОГРАММЫ
@@ -1077,9 +1091,9 @@
                         <div class="card-image-right">
                             <img src="images/mentor_2_photo.png" alt="Mentor 28">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-webinars">
+                    <a class="lib-preview-card" href="webinars/inner-state.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-circle-play"></i> ВЕБИНАРЫ
@@ -1091,9 +1105,9 @@
                         <div class="card-image-right">
                             <img src="images/webinar_edge.png" alt="Сила внутреннего состояния">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-books">
+                    <a class="lib-preview-card" href="book/">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-book-open"></i> КНИГА
@@ -1105,9 +1119,9 @@
                         <div class="card-image-right">
                             <img src="images/book_main.png" alt="Книга Ирины Ужеловской">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="lib-preview-card" data-tab-target="grid-meditations">
+                    <a class="lib-preview-card" href="meditations/return-to-self.html">
                         <div class="card-content-left">
                             <div class="card-category">
                                 <i class="fa-solid fa-headphones"></i> МЕДИТАЦИИ
@@ -1119,7 +1133,7 @@
                         <div class="card-image-right">
                             <img src="images/meditation_mockup.png" alt="Возвращение к себе">
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1205,6 +1219,40 @@
                 </div>
 
                 <!-- Card 3 -->
+                <div class="testimonial-slider-card">
+                    <div class="slider-card-img">
+                        <img src="images/rewiew_card.png" alt="Анна">
+                    </div>
+                    <div class="slider-card-content">
+                        <span class="quote-mark">“</span>
+                        <p class="quote-body">
+                            Ментор 28 стал для меня точкой перезагрузки. Я вернула себе уверенность, энергию и радость от жизни
+                        </p>
+                        <div class="quote-divider"></div>
+                        <div class="quote-author-name">Анна, 35 лет</div>
+                        <div class="quote-author-details">Предприниматель, Киев</div>
+                        <div class="quote-badge">программа mentor 28</div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="testimonial-slider-card">
+                    <div class="slider-card-img">
+                        <img src="images/rewiew_card.png" alt="Анна">
+                    </div>
+                    <div class="slider-card-content">
+                        <span class="quote-mark">“</span>
+                        <p class="quote-body">
+                            Ментор 28 стал для меня точкой перезагрузки. Я вернула себе уверенность, энергию и радость от жизни
+                        </p>
+                        <div class="quote-divider"></div>
+                        <div class="quote-author-name">Анна, 35 лет</div>
+                        <div class="quote-author-details">Предприниматель, Киев</div>
+                        <div class="quote-badge">программа mentor 28</div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
                 <div class="testimonial-slider-card">
                     <div class="slider-card-img">
                         <img src="images/rewiew_card.png" alt="Анна">
@@ -1329,6 +1377,195 @@
         </div>
     </div>
 
+    <!-- Modal for LUX CLUB -->
+    <div class="video-modal" id="luxClubModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-lux-modal-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="luxClubModalTitle">
+            <button class="video-modal-close" type="button" data-lux-modal-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">LUX CLUB</div>
+            <h3 id="luxClubModalTitle">Присоединяйтесь к закрытому сообществу</h3>
+            <p>
+                LUX CLUB — это закрытое женское сообщество для поддержки, вдохновения и совместного роста в окружении единомышленниц.
+            </p>
+            <div class="video-modal-actions">
+                <a class="btn btn-primary" href="https://t.me/irina_uzhelovskaya" target="_blank" rel="noopener">Написать в Telegram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Mentor 28 Booking -->
+    <div class="video-modal" id="bookingMentorModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-booking-mentor-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingMentorModalTitle" style="max-width: 480px;">
+            <button class="video-modal-close" type="button" data-booking-mentor-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">РЕГИСТРАЦИЯ</div>
+            <h3 id="bookingMentorModalTitle" style="margin-bottom: 8px;">Забронировать место на программу Mentor 28</h3>
+            <p style="margin-bottom: 20px;">Оставьте ваши контактные данные, и мы свяжемся с вами для подтверждения участия.</p>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на программу Mentor 28 отправлена!'); document.getElementById('bookingMentorModal').classList.remove('is-open'); document.body.style.overflow = '';">
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="mentor-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
+                    <input type="text" id="mentor-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="mentor-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
+                    <input type="email" id="mentor-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="mentor-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
+                    <input type="text" id="mentor-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Sell Star Booking -->
+    <div class="video-modal" id="bookingSellStarModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-booking-star-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingSellStarModalTitle" style="max-width: 480px;">
+            <button class="video-modal-close" type="button" data-booking-star-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">РЕГИСТРАЦИЯ</div>
+            <h3 id="bookingSellStarModalTitle" style="margin-bottom: 8px;">Забронировать место на программу Продавай как звезда</h3>
+            <p style="margin-bottom: 20px;">Оставьте ваши контактные данные, и мы свяжемся с вами для подтверждения участия.</p>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на программу Продавай как звезда отправлена!'); document.getElementById('bookingSellStarModal').classList.remove('is-open'); document.body.style.overflow = '';">
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="star-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
+                    <input type="text" id="star-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="star-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
+                    <input type="email" id="star-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="star-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
+                    <input type="text" id="star-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="video-modal" id="webinarBuyModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-webinar-buy-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="webinarBuyModalTitle" style="max-width: 480px;">
+            <button class="video-modal-close" type="button" data-webinar-buy-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+            <h3 id="webinarBuyModalTitle" style="margin-bottom: 8px;">Купить вебинар «Сила внутреннего состояния»</h3>
+            <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы получить ссылку на полную версию вебинара.</p>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на покупку вебинара отправлена!'); document.getElementById('webinarBuyModal').classList.remove('is-open'); document.body.style.overflow = '';">
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="buy-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
+                    <input type="text" id="buy-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="buy-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
+                    <input type="email" id="buy-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="buy-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
+                    <input type="text" id="buy-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="video-modal" id="meditationBuyModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-meditation-buy-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="meditationBuyModalTitle" style="max-width: 480px;">
+            <button class="video-modal-close" type="button" data-meditation-buy-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+            <h3 id="meditationBuyModalTitle" style="margin-bottom: 8px;">Купить медитацию «Возвращение к себе»</h3>
+            <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы получить ссылку на аудиопрактику.</p>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на покупку медитации отправлена!'); document.getElementById('meditationBuyModal').classList.remove('is-open'); document.body.style.overflow = '';">
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="med-buy-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
+                    <input type="text" id="med-buy-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="med-buy-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
+                    <input type="email" id="med-buy-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="med-buy-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
+                    <input type="text" id="med-buy-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="video-modal" id="bookBuyModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-book-buy-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="bookBuyModalTitle" style="max-width: 480px;">
+            <button class="video-modal-close" type="button" data-book-buy-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+            <h3 id="bookBuyModalTitle" style="margin-bottom: 8px;">Купить книгу «Меняя внутреннее — меняется реальность»</h3>
+            <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы приобрести печатную или электронную версию книги.</p>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на покупку книги отправлена!'); document.getElementById('bookBuyModal').classList.remove('is-open'); document.body.style.overflow = '';">
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="book-buy-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
+                    <input type="text" id="book-buy-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="book-buy-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
+                    <input type="email" id="book-buy-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="book-buy-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
+                    <input type="text" id="book-buy-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Video Modal for Mentor 28 -->
+    <div class="video-modal" id="videoMentorModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-video-mentor-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-label="Видеопрезентация Mentor 28">
+            <button class="video-modal-close" type="button" data-video-mentor-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-aspect-ratio-box">
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: #fff; background: #000; font-family: sans-serif;">
+                    <i class="fa-brands fa-youtube" style="font-size: 64px; color: #ff0000; margin-bottom: 16px;"></i>
+                    <h3 style="margin: 0 0 8px; font-weight: 500; font-size: 18px; color: #fff;">Презентация программы Mentor 28</h3>
+                    <p style="margin: 0; font-size: 14px; color: #aaa;">Смотрите нас на YouTube</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal for Sell Star -->
+    <div class="video-modal" id="videoSellStarModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-video-star-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-label="Видеопрезентация Продавай как звезда">
+            <button class="video-modal-close" type="button" data-video-star-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-aspect-ratio-box">
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: #fff; background: #000; font-family: sans-serif;">
+                    <i class="fa-brands fa-youtube" style="font-size: 64px; color: #ff0000; margin-bottom: 16px;"></i>
+                    <h3 style="margin: 0 0 8px; font-weight: 500; font-size: 18px; color: #fff;">Презентация программы Продавай как звезда</h3>
+                    <p style="margin: 0; font-size: 14px; color: #aaa;">Смотрите нас на YouTube</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Logos Section -->
     <section class="logos-section">
         <div class="logos-subtitle">О нас говорят</div>
@@ -1398,7 +1635,7 @@
                 <p class="not-alone-text">
                     Закрытое сообщество женщин, которые проходят этот путь вместе. Поддержка, вдохновение и рост в окружении единомышленниц.
                 </p>
-                <button class="btn btn-primary btn-club" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Присоединиться к LUX CLUB</button>
+                <button class="btn btn-primary btn-club" type="button" data-lux-modal-open>Присоединиться к LUX CLUB</button>
                 <div class="not-alone-footnote">
                     <svg class="lock-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
@@ -1557,7 +1794,7 @@
                         </span>
                         <div class="contact-info-details">
                             <div class="contact-info-label">Instagram</div>
-                            <a href="https://instagram.com/irina.uzhelovskaya" target="_blank" class="contact-info-value">@irina.uzhelovskaya</a>
+                            <a href="https://instagram.com/irina_uzhelovskaya" target="_blank" class="contact-info-value">@irina_uzhelovskaya</a>
                         </div>
                     </div>
                     <div class="contact-info-item">
@@ -1982,6 +2219,80 @@
         };
 
         initVideoTestimonialsModal();
+
+        const initLuxClubModal = () => {
+            const modal = document.getElementById('luxClubModal');
+            const openButtons = Array.from(document.querySelectorAll('[data-lux-modal-open]'));
+            if (!modal || !openButtons.length) return;
+
+            const closeButtons = Array.from(modal.querySelectorAll('[data-lux-modal-close]'));
+            const openModal = () => {
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            };
+            const closeModal = () => {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            };
+
+            openButtons.forEach(button => {
+                button.addEventListener('click', openModal);
+            });
+            closeButtons.forEach(button => {
+                button.addEventListener('click', closeModal);
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                    closeModal();
+                }
+            });
+        };
+
+        initLuxClubModal();
+
+        const initBookingModals = () => {
+            const setupModal = (modalId, openAttr, closeAttr) => {
+                const modal = document.getElementById(modalId);
+                const openButtons = Array.from(document.querySelectorAll(`[${openAttr}]`));
+                if (!modal || !openButtons.length) return;
+
+                const closeButtons = Array.from(modal.querySelectorAll(`[${closeAttr}]`));
+                const openModal = () => {
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                };
+                const closeModal = () => {
+                    modal.classList.remove('is-open');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                };
+
+                openButtons.forEach(button => {
+                    button.addEventListener('click', openModal);
+                });
+                closeButtons.forEach(button => {
+                    button.addEventListener('click', closeModal);
+                });
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                        closeModal();
+                    }
+                });
+            };
+
+            setupModal('bookingMentorModal', 'data-booking-mentor-open', 'data-booking-mentor-close');
+            setupModal('bookingSellStarModal', 'data-booking-star-open', 'data-booking-star-close');
+            setupModal('webinarBuyModal', 'data-webinar-buy-open', 'data-webinar-buy-close');
+            setupModal('meditationBuyModal', 'data-meditation-buy-open', 'data-meditation-buy-close');
+            setupModal('bookBuyModal', 'data-book-buy-open', 'data-book-buy-close');
+            setupModal('videoMentorModal', 'data-video-mentor-open', 'data-video-mentor-close');
+            setupModal('videoSellStarModal', 'data-video-star-open', 'data-video-star-close');
+        };
+
+        initBookingModals();
 
         const initTestimonialsSlider = () => {
             const slider = document.querySelector('.slider-container');

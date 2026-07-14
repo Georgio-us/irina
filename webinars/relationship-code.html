@@ -49,7 +49,7 @@
             <nav class="breadcrumb breadcrumb-dark-bg content-breadcrumb" aria-label="Навигация">
                 <a href="../index.html#hero">Главная</a>
                 <span>/</span>
-                <a href="../index.html#courses">Вебинары</a>
+                <a href="./index.html">Вебинары</a>
                 <span>/</span>
                 <span>Код отношений</span>
             </nav>
@@ -57,7 +57,7 @@
             <div class="content-hero-grid">
                 <article class="video-preview" aria-label="Предварительный просмотр вебинара">
                     <img src="../images/webinar_3.png" alt="Код отношений">
-                    <button class="video-preview-play" type="button" aria-label="Смотреть предварительный просмотр">
+                    <button class="video-preview-play" type="button" data-webinar-video-open aria-label="Смотреть предварительный просмотр">
                         <i class="fa-solid fa-play"></i>
                     </button>
                     <div class="video-preview-caption">
@@ -77,11 +77,10 @@
                         <span><i class="fa-regular fa-eye"></i> 1 950 просмотров</span>
                     </div>
                     <div class="content-actions">
-                        <a class="btn btn-primary" href="../index.html#contact">
-                            <span class="content-action-icon"><i class="fa-solid fa-play"></i></span>
-                            Смотреть вебинар
-                        </a>
-                        <a class="btn btn-secondary" href="./index.html">Смотреть все вебинары <i class="fa-solid fa-arrow-right-long"></i></a>
+                        <button class="btn btn-primary" type="button" data-webinar-buy-open>
+                            Купить вебинар
+                        </button>
+                        <button class="btn btn-secondary" onclick="document.querySelector('.content-intro').scrollIntoView({behavior: 'smooth'})">Подробнее <i class="fa-solid fa-arrow-down-long"></i></button>
                     </div>
                 </div>
             </div>
@@ -110,7 +109,7 @@
             <div class="content-section-side">
                 <div class="content-kicker">Структура вебинара</div>
                 <h2>О чем<br>мы поговорим</h2>
-                <button class="btn btn-secondary" type="button">
+                <button class="btn btn-secondary" type="button" data-webinar-program-open>
                     <i class="fa-solid fa-download"></i>
                     Скачать программу
                 </button>
@@ -206,11 +205,13 @@
                         <img src="../images/webinar_main.png" alt="Сила внутреннего состояния">
                         <span class="webinar-card-duration">1:48:24</span>
                         <span class="webinar-card-title">Сила внутреннего состояния</span>
-                        <span class="webinar-card-play"><i class="fa-solid fa-play"></i></span>
                     </a>
-                    <div class="webinar-card-meta-row">
-                        <span><i class="fa-regular fa-eye"></i> 2 450 просмотров</span>
-                        <span><i class="fa-regular fa-calendar"></i> 17 мая 2024</span>
+                    <div class="webinar-card-meta-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <div style="display: flex; gap: 10px 18px;">
+                            <span><i class="fa-regular fa-eye"></i> 2 450 просмотров</span>
+                            <span><i class="fa-regular fa-calendar"></i> 17 мая 2024</span>
+                        </div>
+                        <a href="./inner-state.html" class="webinar-card-more-link" style="color: var(--color-accent-ui); font-size: 11px; font-weight: 800; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: 4px;">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
                 <article class="webinar-card">
@@ -218,11 +219,13 @@
                         <img src="../images/webinar_1.png" alt="Код молодости">
                         <span class="webinar-card-duration">58:24</span>
                         <span class="webinar-card-title">Код молодости</span>
-                        <span class="webinar-card-play"><i class="fa-solid fa-play"></i></span>
                     </a>
-                    <div class="webinar-card-meta-row">
-                        <span><i class="fa-regular fa-eye"></i> 1 820 просмотров</span>
-                        <span><i class="fa-regular fa-calendar"></i> 12 мая 2024</span>
+                    <div class="webinar-card-meta-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <div style="display: flex; gap: 10px 18px;">
+                            <span><i class="fa-regular fa-eye"></i> 1 820 просмотров</span>
+                            <span><i class="fa-regular fa-calendar"></i> 12 мая 2024</span>
+                        </div>
+                        <a href="./youth-code.html" class="webinar-card-more-link" style="color: var(--color-accent-ui); font-size: 11px; font-weight: 800; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: 4px;">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
                 <article class="webinar-card">
@@ -230,11 +233,13 @@
                         <img src="../images/webinar_2.png" alt="Самооценка и вера в себя">
                         <span class="webinar-card-duration">1:05:18</span>
                         <span class="webinar-card-title">Самооценка и вера в себя</span>
-                        <span class="webinar-card-play"><i class="fa-solid fa-play"></i></span>
                     </a>
-                    <div class="webinar-card-meta-row">
-                        <span><i class="fa-regular fa-eye"></i> 2 310 просмотров</span>
-                        <span><i class="fa-regular fa-calendar"></i> 3 мая 2024</span>
+                    <div class="webinar-card-meta-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <div style="display: flex; gap: 10px 18px;">
+                            <span><i class="fa-regular fa-eye"></i> 2 310 просмотров</span>
+                            <span><i class="fa-regular fa-calendar"></i> 3 мая 2024</span>
+                        </div>
+                        <a href="./self-esteem.html" class="webinar-card-more-link" style="color: var(--color-accent-ui); font-size: 11px; font-weight: 800; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: 4px;">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
                 <article class="webinar-card">
@@ -242,11 +247,13 @@
                         <img src="../images/webinar_4.png" alt="Выбор себя">
                         <span class="webinar-card-duration">1:03:42</span>
                         <span class="webinar-card-title">Выбор себя</span>
-                        <span class="webinar-card-play"><i class="fa-solid fa-play"></i></span>
                     </a>
-                    <div class="webinar-card-meta-row">
-                        <span><i class="fa-regular fa-eye"></i> 1 760 просмотров</span>
-                        <span><i class="fa-regular fa-calendar"></i> 10 апр 2024</span>
+                    <div class="webinar-card-meta-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <div style="display: flex; gap: 10px 18px;">
+                            <span><i class="fa-regular fa-eye"></i> 1 760 просмотров</span>
+                            <span><i class="fa-regular fa-calendar"></i> 10 апр 2024</span>
+                        </div>
+                        <a href="./choosing-oneself.html" class="webinar-card-more-link" style="color: var(--color-accent-ui); font-size: 11px; font-weight: 800; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: 4px;">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
             </div>
@@ -323,6 +330,112 @@
         }
     });
 </script>
+
+    <!-- Modals for Webinars -->
+    <div class="video-modal" id="webinarVideoModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-webinar-video-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="webinarVideoModalTitle">
+            <button class="video-modal-close" type="button" data-webinar-video-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">ПРЕВЬЮ ВЕБИНАРА</div>
+            <h3 id="webinarVideoModalTitle">Видео-превью вебинара</h3>
+            <p>
+                Здесь будет отображаться видео вебинара с YouTube. Функция интеграции медиаплеера находится в разработке.
+            </p>
+            <div class="video-modal-actions">
+                <button class="btn btn-primary" type="button" data-webinar-video-close>Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-modal" id="webinarProgramModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-webinar-program-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="webinarProgramModalTitle" style="max-width: 480px;">
+            <button class="video-modal-close" type="button" data-webinar-program-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">СКАЧАТЬ ПРОГРАММУ</div>
+            <h3 id="webinarProgramModalTitle" style="margin-bottom: 8px;">Программа вебинара</h3>
+            <p style="margin-bottom: 20px;">
+                Полная программа вебинара в формате PDF будет доступна для скачивания в ближайшее время. Оставьте запрос, чтобы получить её первыми.
+            </p>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на получение программы отправлена!'); document.getElementById('webinarProgramModal').classList.remove('is-open'); document.body.style.overflow = '';">
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="prog-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Ваш Email</label>
+                    <input type="email" id="prog-email" required placeholder="example@email.com" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ПОЛУЧИТЬ PDF</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="video-modal" id="webinarBuyModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-webinar-buy-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="webinarBuyModalTitle" style="max-width: 480px;">
+            <button class="video-modal-close" type="button" data-webinar-buy-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+            <h3 id="webinarBuyModalTitle" style="margin-bottom: 8px;">Купить вебинар «Код отношений»</h3>
+            <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы получить ссылку на полную версию вебинара.</p>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на покупку вебинара отправлена!'); document.getElementById('webinarBuyModal').classList.remove('is-open'); document.body.style.overflow = '';">
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="buy-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
+                    <input type="text" id="buy-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="buy-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
+                    <input type="email" id="buy-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="buy-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
+                    <input type="text" id="buy-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const initWebinarModals = () => {
+            const setupModal = (modalId, openAttr, closeAttr) => {
+                const modal = document.getElementById(modalId);
+                const openButtons = Array.from(document.querySelectorAll(`[${openAttr}]`));
+                if (!modal || !openButtons.length) return;
+
+                const closeButtons = Array.from(modal.querySelectorAll(`[${closeAttr}]`));
+                const openModal = () => {
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                };
+                const closeModal = () => {
+                    modal.classList.remove('is-open');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                };
+
+                openButtons.forEach(button => {
+                    button.addEventListener('click', openModal);
+                });
+                closeButtons.forEach(button => {
+                    button.addEventListener('click', closeModal);
+                });
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                        closeModal();
+                    }
+                });
+            };
+
+            setupModal('webinarVideoModal', 'data-webinar-video-open', 'data-webinar-video-close');
+            setupModal('webinarProgramModal', 'data-webinar-program-open', 'data-webinar-program-close');
+            setupModal('webinarBuyModal', 'data-webinar-buy-open', 'data-webinar-buy-close');
+        };
+
+        initWebinarModals();
+    </script>
 
     <script src="../js/translations.js"></script>
     <script src="../js/i18n.js"></script>

@@ -46,7 +46,7 @@
 
     <main>
         <section class="method-v2-prehero method-v2-dark">
-            <nav class="breadcrumb breadcrumb-dark-bg method-v2-breadcrumb" aria-label="Навигация">
+            <nav class="breadcrumb breadcrumb-dark-bg method-v2-breadcrumb" aria-label="Навигация" id="methodology-breadcrumbs">
                 <a href="index.html#hero">Главная</a>
                 <span>/</span>
                 <span>Методология</span>
@@ -275,12 +275,12 @@
                     <h3>Вебинары</h3>
                     <p>Точечная работа с отдельными темами.</p>
                 </a>
-                <a class="method-v2-product-card compact" href="index.html#courses">
+                <a class="method-v2-product-card compact" href="meditations/">
                     <i class="fa-solid fa-headphones"></i>
                     <h3>Медитации</h3>
                     <p>Закрепление внутреннего состояния через практику.</p>
                 </a>
-                <a class="method-v2-product-card compact" href="index.html#courses">
+                <a class="method-v2-product-card compact" href="book/">
                     <i class="fa-solid fa-book-open"></i>
                     <h3>Книга</h3>
                     <p>Фундаментальные принципы методологии в самостоятельном формате.</p>
@@ -362,5 +362,38 @@
 
     <script src="js/translations.js"></script>
     <script src="js/i18n.js"></script>
+
+    <script>
+        const initDynamicBreadcrumbs = () => {
+            const container = document.getElementById('methodology-breadcrumbs');
+            if (!container) return;
+
+            const params = new URLSearchParams(window.location.search);
+            const from = params.get('from');
+
+            if (from === 'mentor-28') {
+                container.innerHTML = `
+                    <a href="index.html#hero">Главная</a>
+                    <span>/</span>
+                    <a href="programs/index.html">Авторские программы</a>
+                    <span>/</span>
+                    <a href="programs/mentor-28/index.html">Mentor 28</a>
+                    <span>/</span>
+                    <span>Методология</span>
+                `;
+            } else if (from === 'sell-star') {
+                container.innerHTML = `
+                    <a href="index.html#hero">Главная</a>
+                    <span>/</span>
+                    <a href="programs/index.html">Авторские программы</a>
+                    <span>/</span>
+                    <a href="programs/sell-star/index.html">Продавай как звезда</a>
+                    <span>/</span>
+                    <span>Методология</span>
+                `;
+            }
+        };
+        initDynamicBreadcrumbs();
+    </script>
 </body>
 </html>

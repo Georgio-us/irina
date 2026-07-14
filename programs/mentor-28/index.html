@@ -17,14 +17,14 @@
         <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
         <nav class="nav">
             <a href="../../index.html#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
-            <a href="../../methodology.html" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
+            <a href="../../methodology.html?from=mentor-28" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
             <div class="nav-item has-dropdown">
                 <a href="../" class="nav-link nav-link-dropdown active" aria-haspopup="true">ПРОГРАММЫ</a>
                 <div class="nav-dropdown">
                     <a href="../">Авторские программы</a>
                     <a href="./">Mentor 28</a>
                     <a href="../sell-star/">Продавай как звезда</a>
-                    <a href="../../index.html#courses">Вебинары</a>
+                    <a href="../../webinars/index.html">Вебинары</a>
                     <a href="../../book/">Книга</a>
                     <a href="../../meditations/">Медитации</a>
                 </div>
@@ -61,8 +61,8 @@
                     Для женщин, которые готовы перестать возвращаться в одну и ту же точку и выстроить новый способ мышления, состояния и действия.
                 </p>
                 <div class="product-actions">
-                    <a class="btn btn-primary" href="../../index.html#contact">Стать участником</a>
-                    <a class="btn btn-secondary" href="../../methodology.html">Изучить методологию</a>
+                    <button class="btn btn-primary" type="button" data-booking-mentor-open>Стать участником</button>
+                    <a class="btn btn-secondary" href="../../methodology.html?from=mentor-28">Изучить методологию</a>
                 </div>
             </div>
             <div class="product-hero-media">
@@ -117,7 +117,7 @@
         <section class="product-intro mentor-video-section">
             <div class="mentor-video-shell video-preview">
                 <img src="../../images/what_if_img.png" alt="Видеообращение Ирины Ужеловской">
-                <button class="video-preview-play mentor-play-button" type="button" aria-label="Смотреть видеообращение">
+                <button class="video-preview-play mentor-play-button" type="button" data-video-mentor-open aria-label="Смотреть видеообращение">
                     <i class="fa-solid fa-play"></i>
                 </button>
             </div>
@@ -127,7 +127,7 @@
                 <p>
                     Это не презентация курса. Это разговор о том, почему изменения начинаются не с плана, а с внутреннего состояния человека, который этот план реализует.
                 </p>
-                <a class="btn btn-secondary" href="../../index.html#contact">Обсудить участие</a>
+                <button class="btn btn-secondary" type="button" data-booking-mentor-open>Обсудить участие</button>
             </div>
         </section>
 
@@ -258,8 +258,8 @@
             <h2>Самые важные изменения начинаются внутри</h2>
             <p>Если Вы чувствуете, что готовы к новому уровню внутренней опоры, начните с разговора о программе.</p>
             <div class="product-actions">
-                <a class="btn btn-primary" href="../../index.html#contact">Стать участником Mentor 28</a>
-                <a class="btn btn-secondary" href="../../index.html#contact">Обсудить запрос</a>
+                <button class="btn btn-primary" type="button" data-booking-mentor-open>Стать участником Mentor 28</button>
+                <button class="btn btn-secondary" type="button" data-booking-mentor-open>Обсудить запрос</button>
             </div>
         </section>
 
@@ -269,7 +269,7 @@
                 <h2>Вам также может быть интересно</h2>
             </div>
             <div class="library-related-grid">
-                <a class="lib-preview-card" href="../sell-star/">
+                <a class="lib-preview-card" href="../sell-star/?from=mentor-28">
                     <div class="card-content-left">
                         <div class="card-category">
                             <i class="fa-solid fa-star"></i> ПРОГРАММА
@@ -283,7 +283,7 @@
                     </div>
                 </a>
 
-                <a class="lib-preview-card" href="../../webinars/index.html">
+                <a class="lib-preview-card" href="../../webinars/index.html?from=mentor-28">
                     <div class="card-content-left">
                         <div class="card-category">
                             <i class="fa-solid fa-circle-play"></i> ВЕБИНАРЫ
@@ -297,7 +297,7 @@
                     </div>
                 </a>
 
-                <a class="lib-preview-card" href="../../index.html#courses">
+                <a class="lib-preview-card" href="../../book/?from=mentor-28">
                     <div class="card-content-left">
                         <div class="card-category">
                             <i class="fa-solid fa-book-open"></i> КНИГА
@@ -311,7 +311,7 @@
                     </div>
                 </a>
 
-                <a class="lib-preview-card" href="../../index.html#courses">
+                <a class="lib-preview-card" href="../../meditations/?from=mentor-28">
                     <div class="card-content-left">
                         <div class="card-category">
                             <i class="fa-solid fa-headphones"></i> МЕДИТАЦИИ
@@ -342,13 +342,13 @@
         <nav class="content-footer-column" aria-label="Навигация">
             <h3>Навигация</h3>
             <a href="../../index.html#hero">Главная</a>
-            <a href="../../methodology.html">Методология</a>
+            <a href="../../methodology.html?from=mentor-28">Методология</a>
             <a href="../">Программы</a>
             <a href="../../webinars/index.html">Вебинары</a>
             <a href="../../book/">Книга</a>
             <a href="../../meditations/">Медитации</a>
-            <a href="../../index.html#blog">Материалы</a>
-            <a href="../../index.html#blog">Блог</a>
+            <a href="../../blog/">Материалы</a>
+            <a href="../../blog/">Блог</a>
             <a href="../../index.html#about">Обо мне</a>
         </nav>
 
@@ -401,5 +401,88 @@
 
     <script src="../../js/translations.js"></script>
     <script src="../../js/i18n.js"></script>
+
+    <!-- Booking Modal -->
+    <div class="video-modal" id="bookingMentorModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-booking-mentor-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingMentorModalTitle" style="max-width: 480px;">
+            <button class="video-modal-close" type="button" data-booking-mentor-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">ЗАЯВКА НА УЧАСТИЕ</div>
+            <h3 id="bookingMentorModalTitle" style="margin-bottom: 8px;">Забронировать место в Mentor 28</h3>
+            <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы обсудить участие в программе.</p>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на участие в программе Mentor 28 отправлена!'); document.getElementById('bookingMentorModal').classList.remove('is-open'); document.body.style.overflow = '';">
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="mnt-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
+                    <input type="text" id="mnt-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="mnt-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
+                    <input type="email" id="mnt-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="mnt-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
+                    <input type="text" id="mnt-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoMentorModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-video-mentor-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-label="Видеопрезентация Mentor 28">
+            <button class="video-modal-close" type="button" data-video-mentor-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-aspect-ratio-box">
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: #fff; background: #000; font-family: sans-serif;">
+                    <i class="fa-brands fa-youtube" style="font-size: 64px; color: #ff0000; margin-bottom: 16px;"></i>
+                    <h3 style="margin: 0 0 8px; font-weight: 500; font-size: 18px; color: #fff;">Презентация программы Mentor 28</h3>
+                    <p style="margin: 0; font-size: 14px; color: #aaa;">Смотрите нас на YouTube</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const initMentorModals = () => {
+            const setupModal = (modalId, openAttr, closeAttr) => {
+                const modal = document.getElementById(modalId);
+                const openButtons = Array.from(document.querySelectorAll(`[${openAttr}]`));
+                if (!modal || !openButtons.length) return;
+
+                const closeButtons = Array.from(modal.querySelectorAll(`[${closeAttr}]`));
+                const openModal = () => {
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                };
+                const closeModal = () => {
+                    modal.classList.remove('is-open');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                };
+
+                openButtons.forEach(button => {
+                    button.addEventListener('click', openModal);
+                });
+                closeButtons.forEach(button => {
+                    button.addEventListener('click', closeModal);
+                });
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                        closeModal();
+                    }
+                });
+            };
+
+            setupModal('bookingMentorModal', 'data-booking-mentor-open', 'data-booking-mentor-close');
+            setupModal('videoMentorModal', 'data-video-mentor-open', 'data-video-mentor-close');
+        };
+        initMentorModals();
+    </script>
 </body>
 </html>

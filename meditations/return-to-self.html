@@ -59,8 +59,8 @@
                         <h1>Возвращение<br>к себе</h1>
                         <p>Мягкая практика глубокого расслабления, которая помогает снять ментальное напряжение, восстановить контакт с телом и снова почувствовать внутреннюю опору.</p>
                         <div class="meditation-detail-actions">
-                            <a class="btn btn-primary" href="#about-practice">О медитации</a>
-                            <a class="btn btn-secondary" href="./">Все медитации <i class="fa-solid fa-arrow-right-long"></i></a>
+                            <button class="btn btn-primary" type="button" data-meditation-buy-open>Купить медитацию</button>
+                            <button class="btn btn-secondary" onclick="document.querySelector('#about-practice').scrollIntoView({behavior: 'smooth'})">О медитации <i class="fa-solid fa-arrow-down-long"></i></button>
                         </div>
                         <div class="meditation-detail-meta">
                             <span><i class="fa-regular fa-clock"></i> 17 минут</span>
@@ -243,5 +243,65 @@
 </script>
 <script src="../js/translations.js"></script>
 <script src="../js/i18n.js"></script>
+
+    <div class="video-modal" id="meditationBuyModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-meditation-buy-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="meditationBuyModalTitle" style="max-width: 480px;">
+            <button class="video-modal-close" type="button" data-meditation-buy-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+            <h3 id="meditationBuyModalTitle" style="margin-bottom: 8px;">Купить медитацию «Возвращение к себе»</h3>
+            <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы получить ссылку на аудиопрактику.</p>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на покупку медитации отправлена!'); document.getElementById('meditationBuyModal').classList.remove('is-open'); document.body.style.overflow = '';">
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="med-buy-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
+                    <input type="text" id="med-buy-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="med-buy-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
+                    <input type="email" id="med-buy-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="med-buy-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
+                    <input type="text" id="med-buy-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const initMeditationModal = () => {
+            const modal = document.getElementById('meditationBuyModal');
+            const openButtons = Array.from(document.querySelectorAll('[data-meditation-buy-open]'));
+            if (!modal || !openButtons.length) return;
+
+            const closeButtons = Array.from(modal.querySelectorAll('[data-meditation-buy-close]'));
+            const openModal = () => {
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            };
+            const closeModal = () => {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            };
+
+            openButtons.forEach(button => {
+                button.addEventListener('click', openModal);
+            });
+            closeButtons.forEach(button => {
+                button.addEventListener('click', closeModal);
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                    closeModal();
+                }
+            });
+        };
+        initMeditationModal();
+    </script>
 </body>
 </html>

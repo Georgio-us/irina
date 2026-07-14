@@ -20,7 +20,7 @@
         <section class="meditation-detail-hero"><div class="meditation-detail-container">
             <nav class="breadcrumb breadcrumb-dark-bg product-breadcrumb" aria-label="Навигация"><a href="../index.html#hero">Главная</a><span>/</span><a href="./">Медитации</a><span>/</span><span>Освобождение от стресса</span></nav>
             <div class="meditation-detail-hero-grid">
-                <div class="meditation-detail-copy"><div class="meditation-detail-kicker">АУДИОПРАКТИКА · 20:00</div><h1>Освобождение<br>от стресса</h1><p>Глубокая практика восстановления после эмоционально насыщенного дня. Помогает снизить телесное напряжение и мягко переключить нервную систему из режима постоянной готовности.</p><div class="meditation-detail-actions"><a class="btn btn-primary" href="#about-practice">О медитации</a><a class="btn btn-secondary" href="./">Все медитации <i class="fa-solid fa-arrow-right-long"></i></a></div><div class="meditation-detail-meta"><span><i class="fa-regular fa-clock"></i> 20 минут</span><span><i class="fa-solid fa-headphones"></i> Голосовая практика</span><span><i class="fa-solid fa-spa"></i> Для восстановления</span></div></div>
+                <div class="meditation-detail-copy"><div class="meditation-detail-kicker">АУДИОПРАКТИКА · 20:00</div><h1>Освобождение<br>от стресса</h1><p>Глубокая практика восстановления после эмоционально насыщенного дня. Помогает снизить телесное напряжение и мягко переключить нервную систему из режима постоянной готовности.</p><div class="meditation-detail-actions"><button class="btn btn-primary" type="button" data-meditation-buy-open>Купить медитацию</button><button class="btn btn-secondary" onclick="document.querySelector('#about-practice').scrollIntoView({behavior: 'smooth'})">О медитации <i class="fa-solid fa-arrow-down-long"></i></button></div><div class="meditation-detail-meta"><span><i class="fa-regular fa-clock"></i> 20 минут</span><span><i class="fa-solid fa-headphones"></i> Голосовая практика</span><span><i class="fa-solid fa-spa"></i> Для восстановления</span></div></div>
                 <div class="meditation-detail-cover" aria-label="Обложка медитации Освобождение от стресса"><div class="meditation-detail-ring ring-one"></div><div class="meditation-detail-ring ring-two"></div><img src="../images/meditation_mockup.png" alt="Медитация Освобождение от стресса"><div class="meditation-detail-cover-label"><span>ИРИНА УЖЕЛОВСКАЯ</span><strong>20:00</strong></div></div>
             </div>
         </div></section>
@@ -47,4 +47,64 @@
     <footer class="content-footer-v2"><div class="content-footer-brand"><img src="../images/logotype.svg" alt="Ирина Ужеловская"><p>психолог · ментор · автор психотехнологий формирования событий</p><div class="content-footer-socials"><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a><a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div><nav class="content-footer-column" aria-label="Навигация"><h3>Навигация</h3><a href="../index.html#hero">Главная</a><a href="../methodology.html">Методология</a><a href="../programs/">Программы</a><a href="../webinars/">Вебинары</a><a href="../book/">Книга</a><a href="./">Медитации</a><a href="../blog/">Материалы</a><a href="../blog/">Блог</a><a href="../index.html#about">Обо мне</a></nav><nav class="content-footer-column" aria-label="Программы"><h3>Программы</h3><a href="../programs/mentor-28/">Mentor 28</a><a href="../programs/sell-star/">Продавай как звезда</a><a href="../index.html#courses">Библиотека знаний</a><a href="../index.html#about-club">LUX CLUB</a></nav><div class="content-footer-column"><h3>Контакты</h3><span>Instagram</span><a href="https://instagram.com/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a><span>Telegram</span><a href="https://t.me/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a><span>Email</span><a href="mailto:hello@irina-uzhelovskaya.com">hello@irina-uzhelovskaya.com</a></div><div class="content-footer-bottom"><span>© 2026 Ирина Ужеловская. Все права защищены</span><div><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div></div></footer>
 </div>
 <script>document.querySelectorAll('.header .nav-link-dropdown').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();link.closest('.nav-item').classList.toggle('is-open');}));document.addEventListener('click',event=>{if(!event.target.closest('.header .nav-item'))document.querySelectorAll('.header .nav-item.is-open').forEach(item=>item.classList.remove('is-open'));});</script><script src="../js/translations.js"></script><script src="../js/i18n.js"></script>
+
+    <div class="video-modal" id="meditationBuyModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-meditation-buy-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="meditationBuyModalTitle" style="max-width: 480px;">
+            <button class="video-modal-close" type="button" data-meditation-buy-close aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-kicker">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+            <h3 id="meditationBuyModalTitle" style="margin-bottom: 8px;">Купить медитацию «Освобождение от стресса»</h3>
+            <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы получить ссылку на аудиопрактику.</p>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на покупку медитации отправлена!'); document.getElementById('meditationBuyModal').classList.remove('is-open'); document.body.style.overflow = '';">
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="med-buy-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
+                    <input type="text" id="med-buy-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
+                    <label for="med-buy-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
+                    <input type="email" id="med-buy-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="med-buy-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
+                    <input type="text" id="med-buy-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const initMeditationModal = () => {
+            const modal = document.getElementById('meditationBuyModal');
+            const openButtons = Array.from(document.querySelectorAll('[data-meditation-buy-open]'));
+            if (!modal || !openButtons.length) return;
+
+            const closeButtons = Array.from(modal.querySelectorAll('[data-meditation-buy-close]'));
+            const openModal = () => {
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            };
+            const closeModal = () => {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            };
+
+            openButtons.forEach(button => {
+                button.addEventListener('click', openModal);
+            });
+            closeButtons.forEach(button => {
+                button.addEventListener('click', closeModal);
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                    closeModal();
+                }
+            });
+        };
+        initMeditationModal();
+    </script>
 </body></html>
