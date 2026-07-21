@@ -53,6 +53,14 @@
     ].join('');
 
     document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll([
+            '#bookingMentorModal',
+            '#bookingSellStarModal',
+            '#webinarBuyModal',
+            '#meditationBuyModal',
+            '#bookBuyModal'
+        ].join(',')).forEach(legacyModal => legacyModal.remove());
+
         document.body.appendChild(modal);
 
         const legacySelectors = {
