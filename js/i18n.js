@@ -68,6 +68,11 @@
                         if (translatedNodeTitle) {
                             node.title = translatedNodeTitle;
                         }
+                        const ariaLabel = node.getAttribute('aria-label');
+                        const translatedAriaLabel = i18n.getTranslation(dict, ariaLabel);
+                        if (translatedAriaLabel) {
+                            node.setAttribute('aria-label', translatedAriaLabel);
+                        }
                         if (node.hasAttribute('data-label')) {
                             const translatedLabel = i18n.getTranslation(dict, node.getAttribute('data-label'));
                             if (translatedLabel) {

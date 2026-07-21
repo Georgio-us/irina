@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Работа по психотехнологиям — Ирина Ужеловская</title>
-    <link rel="stylesheet" href="../style.css?v=98">
+    <link rel="stylesheet" href="../style.css?v=99">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <!-- Scroll Progress Bar -->
     <div id="scroll-progress" aria-hidden="true"></div>
 
-<div class="page-wrapper content-page article-page">
+<div class="page-wrapper content-page article-page article-page--editorial">
     <header class="header">
         <a href="../index.html#hero" class="logo" aria-label="Ирина Ужеловская">
             <img src="../images/logotype.svg" alt="Ирина Ужеловская">
@@ -49,7 +49,7 @@
 
     <main>
         <article class="article-template">
-            <section class="article-hero">
+            <section class="article-hero article-hero--editorial"><figure class="article-hero-backdrop" aria-hidden="true"><img src="../images/science_card_1.png" alt=""></figure>
                 <nav class="breadcrumb breadcrumb-light-bg article-breadcrumb" aria-label="Навигация">
                     <a href="../index.html#hero">Главная</a>
                     <span>/</span>
@@ -61,15 +61,9 @@
                 </nav>
 
                 <div class="article-hero-grid">
-                    <figure class="article-featured-image">
-                        <img src="../images/science_card_1.png" alt="Работа по психотехнологиям">
-                    </figure>
                     <div class="article-hero-copy">
                         <div class="article-kicker">Нейропластичность</div>
                         <h1>Работа по психотехнологиям</h1>
-                        <p>
-                            Методы и инструменты, основанные на нейропластичности и когнитивных подходах. Как современная наука о мозге позволяет целенаправленно менять паттерны мышления и поведения.
-                        </p>
                     </div>
                 </div>
                 <div class="article-hero-footer">
@@ -79,25 +73,10 @@
                         <span>Опубликовано: 9 июля 2026</span>
                         <span>Обновлено: 9 июля 2026</span>
                     </div>
-                    <div class="article-share-panel" aria-label="Поделиться статьёй">
-                        <span>Поделиться</span>
-                        <div class="article-share-links">
-                            <a href="https://t.me/share/url?url=https://irina-uzhelovskaya.com/blog/psychotechnologies" target="_blank" rel="noopener" aria-label="Telegram">
-                                <i class="fa-brands fa-telegram"></i>
-                            </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
-                            <button class="article-copy-link" type="button" aria-label="Скопировать ссылку">
-                                <i class="fa-regular fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </section>
+
+            <section class="article-editorial-intro" aria-labelledby="article-intro-title"><div class="article-editorial-intro-label">(01) · Коротко о главном</div><p id="article-intro-title">Методы и инструменты, основанные на нейропластичности и когнитивных подходах. Как современная наука о мозге позволяет целенаправленно менять паттерны мышления и поведения.</p></section>
 
             <section class="article-body">
                 <div class="article-layout-grid">
@@ -245,6 +224,7 @@
                         </section>
 
                     </div>
+                    <aside class="article-service-sidebar" aria-label="Сервисы статьи"><div class="article-service-sidebar-inner"><span>Поделиться</span><div class="article-share-links"><a href="https://t.me/share/url?url=https://irina-uzhelovskaya.com/blog/psychotechnologies" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><button class="article-copy-link" type="button" aria-label="Скопировать ссылку"><i class="fa-regular fa-copy"></i></button></div></div></aside>
                 </div>
             </section>
         </article>
@@ -435,9 +415,10 @@
     if (copyLinkButton) {
         copyLinkButton.addEventListener('click', async () => {
             try {
-                await navigator.clipboard.writeText(window.location.href);
+                if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(window.location.href); } else { const textarea = document.createElement('textarea'); textarea.value = window.location.href; textarea.setAttribute('readonly', ''); textarea.style.position = 'fixed'; textarea.style.opacity = '0'; document.body.appendChild(textarea); textarea.select(); document.execCommand('copy'); textarea.remove(); }
                 copyLinkButton.classList.add('is-copied');
-                setTimeout(() => copyLinkButton.classList.remove('is-copied'), 1400);
+                copyLinkButton.setAttribute('aria-label', 'Ссылка скопирована');
+                setTimeout(() => { copyLinkButton.classList.remove('is-copied'); copyLinkButton.setAttribute('aria-label', 'Скопировать ссылку'); }, 1400);
             } catch (error) {
                 console.warn('Could not copy article link', error);
             }
