@@ -9,6 +9,12 @@
                 text: 'Откроем личный чат в Telegram, чтобы обсудить ваш запрос и формат участия.',
                 action: 'Открыть Telegram'
             },
+            meditation: {
+                kicker: 'БЕСПЛАТНАЯ МЕДИТАЦИЯ',
+                title: 'Получить медитацию',
+                text: 'Перейдите в Telegram Ирины, чтобы бесплатно получить выбранную медитацию.',
+                action: 'Получить в Telegram'
+            },
             stripe: {
                 kicker: 'ОНЛАЙН-ОПЛАТА',
                 title: 'Оплата через Stripe',
@@ -23,6 +29,12 @@
                 title: "Зв'язатися з Іриною",
                 text: 'Відкриємо особистий чат у Telegram, щоб обговорити ваш запит і формат участі.',
                 action: 'Відкрити Telegram'
+            },
+            meditation: {
+                kicker: 'БЕЗКОШТОВНА МЕДИТАЦІЯ',
+                title: 'Отримати медитацію',
+                text: 'Перейдіть у Telegram Ірини, щоб безкоштовно отримати обрану медитацію.',
+                action: 'Отримати в Telegram'
             },
             stripe: {
                 kicker: 'ОНЛАЙН-ОПЛАТА',
@@ -65,7 +77,8 @@
 
         const legacySelectors = {
             telegram: '[data-booking-mentor-open], [data-booking-star-open]',
-            stripe: '[data-webinar-buy-open], [data-meditation-buy-open], [data-book-buy-open]'
+            meditation: '[data-meditation-buy-open]',
+            stripe: '[data-webinar-buy-open], [data-book-buy-open]'
         };
 
         Object.entries(legacySelectors).forEach(([type, selector]) => {
@@ -97,7 +110,7 @@
             modal.querySelector('[data-commerce-text]').textContent = content.text;
             closeButton.setAttribute('aria-label', locale.close);
 
-            const isTelegram = type === 'telegram';
+            const isTelegram = type === 'telegram' || type === 'meditation';
             telegramButton.hidden = !isTelegram;
             stripeButton.hidden = isTelegram;
 

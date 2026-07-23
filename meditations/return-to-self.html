@@ -24,7 +24,7 @@
                     <a href="../programs/">Авторские программы</a>
                     <a href="../programs/mentor-28/">Mentor 28</a>
                     <a href="../programs/sell-star/">Продавай как звезда</a>
-                    <a href="../webinars/">Вебинары</a>
+                    <a href="../webinars/">Zoom-встречи</a>
                     <a href="../book/">Книга</a>
                     <a href="./">Медитации</a>
                 </div>
@@ -59,7 +59,7 @@
                         <h1>Возвращение<br>к себе</h1>
                         <p>Мягкая практика глубокого расслабления, которая помогает снять ментальное напряжение, восстановить контакт с телом и снова почувствовать внутреннюю опору.</p>
                         <div class="meditation-detail-actions">
-                            <button class="btn btn-primary" type="button" data-meditation-buy-open>Купить медитацию</button>
+                            <button class="btn btn-primary" type="button" data-meditation-buy-open>Получить медитацию</button>
                             <button class="btn btn-secondary" onclick="document.querySelector('#about-practice').scrollIntoView({behavior: 'smooth'})">О медитации <i class="fa-solid fa-arrow-down-long"></i></button>
                         </div>
                         <div class="meditation-detail-meta">
@@ -206,7 +206,7 @@
         <nav class="content-footer-column" aria-label="Навигация">
             <h3>Навигация</h3>
             <a href="../index.html#hero">Главная</a><a href="../methodology.html">Методология</a>
-            <a href="../programs/">Программы</a><a href="../webinars/">Вебинары</a>
+            <a href="../programs/">Программы</a><a href="../webinars/">Zoom-встречи</a>
             <a href="../book/">Книга</a><a href="./">Медитации</a>
             <a href="../blog/">Материалы</a><a href="../blog/">Блог</a><a href="../index.html#about">Обо мне</a>
         </nav>
@@ -250,10 +250,10 @@
             <button class="video-modal-close" type="button" data-meditation-buy-close aria-label="Закрыть окно">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <div class="video-modal-kicker">ОФОРМЛЕНИЕ ЗАКАЗА</div>
-            <h3 id="meditationBuyModalTitle" style="margin-bottom: 8px;">Купить медитацию «Возвращение к себе»</h3>
+            <div class="video-modal-kicker">БЕСПЛАТНАЯ МЕДИТАЦИЯ</div>
+            <h3 id="meditationBuyModalTitle" style="margin-bottom: 8px;">Получить медитацию «Возвращение к себе»</h3>
             <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы получить ссылку на аудиопрактику.</p>
-            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на покупку медитации отправлена!'); document.getElementById('meditationBuyModal').classList.remove('is-open'); document.body.style.overflow = '';">
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Запрос на получение медитации отправлен!'); document.getElementById('meditationBuyModal').classList.remove('is-open'); document.body.style.overflow = '';">
                 <div class="form-group" style="margin-bottom: 12px; text-align: left;">
                     <label for="med-buy-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
                     <input type="text" id="med-buy-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">

@@ -20,7 +20,7 @@
                 <div class="nav-dropdown">
                     <a href="../programs/">Авторские программы</a>
                     <a href="../programs/mentor-28/">Mentor 28</a><a href="../programs/sell-star/">Продавай как звезда</a>
-                    <a href="../webinars/">Вебинары</a><a href="../book/">Книга</a><a href="./">Медитации</a>
+                    <a href="../webinars/">Zoom-встречи</a><a href="../book/">Книга</a><a href="./">Медитации</a>
                 </div>
             </div>
             <a href="../index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
@@ -43,7 +43,7 @@
                         <h1>Утренний<br>настрой</h1>
                         <p>Мягкая практика для спокойного начала дня. Помогает собрать внимание, почувствовать свои намерения и войти в новый день без внутренней спешки.</p>
                         <div class="meditation-detail-actions">
-                            <button class="btn btn-primary" type="button" data-meditation-buy-open>Купить медитацию</button>
+                            <button class="btn btn-primary" type="button" data-meditation-buy-open>Получить медитацию</button>
                             <button class="btn btn-secondary" onclick="document.querySelector('#about-practice').scrollIntoView({behavior: 'smooth'})">О медитации <i class="fa-solid fa-arrow-down-long"></i></button>
                         </div>
                         <div class="meditation-detail-meta">
@@ -143,7 +143,7 @@
 
     <footer class="content-footer-v2">
         <div class="content-footer-brand"><img src="../images/logotype.svg" alt="Ирина Ужеловская"><p>психолог · ментор · автор психотехнологий формирования событий</p><div class="content-footer-socials"><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a><a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
-        <nav class="content-footer-column" aria-label="Навигация"><h3>Навигация</h3><a href="../index.html#hero">Главная</a><a href="../methodology.html">Методология</a><a href="../programs/">Программы</a><a href="../webinars/">Вебинары</a><a href="../book/">Книга</a><a href="./">Медитации</a><a href="../blog/">Материалы</a><a href="../blog/">Блог</a><a href="../index.html#about">Обо мне</a></nav>
+        <nav class="content-footer-column" aria-label="Навигация"><h3>Навигация</h3><a href="../index.html#hero">Главная</a><a href="../methodology.html">Методология</a><a href="../programs/">Программы</a><a href="../webinars/">Zoom-встречи</a><a href="../book/">Книга</a><a href="./">Медитации</a><a href="../blog/">Материалы</a><a href="../blog/">Блог</a><a href="../index.html#about">Обо мне</a></nav>
         <nav class="content-footer-column" aria-label="Программы"><h3>Программы</h3><a href="../programs/mentor-28/">Mentor 28</a><a href="../programs/sell-star/">Продавай как звезда</a><a href="../index.html#courses">Библиотека знаний</a><a href="../index.html#about-club">LUX CLUB</a></nav>
         <div class="content-footer-column"><h3>Контакты</h3><span>Instagram</span><a href="https://instagram.com/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a><span>Telegram</span><a href="https://t.me/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a><span>Email</span><a href="mailto:hello@irina-uzhelovskaya.com">hello@irina-uzhelovskaya.com</a></div>
         <div class="content-footer-bottom"><span>© 2026 Ирина Ужеловская. Все права защищены</span><div><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div></div>
@@ -161,10 +161,10 @@ document.addEventListener('click',event=>{if(!event.target.closest('.header .nav
             <button class="video-modal-close" type="button" data-meditation-buy-close aria-label="Закрыть окно">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <div class="video-modal-kicker">ОФОРМЛЕНИЕ ЗАКАЗА</div>
-            <h3 id="meditationBuyModalTitle" style="margin-bottom: 8px;">Купить медитацию «Утренний настрой»</h3>
+            <div class="video-modal-kicker">БЕСПЛАТНАЯ МЕДИТАЦИЯ</div>
+            <h3 id="meditationBuyModalTitle" style="margin-bottom: 8px;">Получить медитацию «Утренний настрой»</h3>
             <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы получить ссылку на аудиопрактику.</p>
-            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на покупку медитации отправлена!'); document.getElementById('meditationBuyModal').classList.remove('is-open'); document.body.style.overflow = '';">
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Запрос на получение медитации отправлен!'); document.getElementById('meditationBuyModal').classList.remove('is-open'); document.body.style.overflow = '';">
                 <div class="form-group" style="margin-bottom: 12px; text-align: left;">
                     <label for="med-buy-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
                     <input type="text" id="med-buy-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">

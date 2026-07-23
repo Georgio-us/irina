@@ -4,11 +4,13 @@
 
 Этот документ фиксирует рабочую структуру Website v1.0: sitemap, типы шаблонов, статус страниц и порядок реализации.
 
-Последнее обновление: 13 июля 2026.
+Последнее обновление: 23 июля 2026.
 
 Статус документа: актуальная карта сайта и шаблонов. Если этот файл конфликтует со старыми execution-документами, ориентироваться на `SITE_STRUCTURE.md`.
 
 Цель — собирать сайт как систему, а не создавать отдельные страницы хаотично. Внутренние страницы должны выглядеть как продолжение существующей дизайн-системы: те же токены, типографика, кнопки, отступы, карточки и общий визуальный язык.
+
+Публичное название категории — **Zoom-встречи**. Технические URL `/webinars/`, имена файлов и внутренние CSS/JS-идентификаторы сохраняются на текущей итерации, чтобы не ломать существующую маршрутизацию.
 
 Сайт рассматривается как публичный маркетинговый сайт. Платформенные функции вроде личного кабинета, оплаты, скачивания MP3, избранного и закрытого доступа пока не являются частью Website v1.0.
 
@@ -25,13 +27,13 @@
 │   └── ...
 
 ├── Library Template
-│   ├── Webinars
+│   ├── Zoom Meetings
 │   ├── Books
 │   ├── Meditations
 │   └── Programs
 
 ├── Detail Template
-│   ├── Webinar
+│   ├── Zoom Meeting
 │   ├── Book
 │   ├── Meditation
 
@@ -137,11 +139,11 @@
 
 Варианты:
 
-- webinar detail — video-first, cinematic content page;
+- Zoom meeting detail — video-first, cinematic content page;
 - blog article — text-first, editorial page;
 - science detail — evidence-first, экспертная/исследовательская страница.
 
-Текущий эталон для webinar detail: `/webinars/inner-state.html`.
+Текущий эталон для Zoom meeting detail: `/webinars/inner-state.html`.
 
 ### 6. Legal Template
 
@@ -161,12 +163,12 @@
 | `/programs` | Catalog Template / Programs | Ready for review | Создан масштабируемый каталог: спокойный hero, равноправная сетка программ по две карточки в ряду, авторская цитата и переиспользованный ecosystem-блок. |
 | `/programs/mentor-28` | Product Template | Ready for final review | Страница существует, мобильный hero упрощен, related-блок заменен на компактный ecosystem-паттерн. |
 | `/programs/sell-star` | Product Template v2 | Ready for final review | Текущий эталон reusable product template. |
-| `/webinars` | Library Template / Webinars | Ready for final review | Каталог вебинаров создан; список вебинаров сильный, mobile hero упрощен. |
-| `/webinars/inner-state.html` | Detail Template / Webinar | Ready | Эталон cinematic content page для одного вебинара. |
-| `/webinars/youth-code.html` | Detail Template / Webinar | Ready | Страница вебинара на общем webinar detail шаблоне. |
-| `/webinars/self-esteem.html` | Detail Template / Webinar | Ready | Страница вебинара на общем webinar detail шаблоне. |
-| `/webinars/relationship-code.html` | Detail Template / Webinar | Ready | Страница вебинара на общем webinar detail шаблоне. |
-| `/webinars/choosing-oneself.html` | Detail Template / Webinar | Ready | Страница вебинара на общем webinar detail шаблоне. |
+| `/webinars` | Library Template / Zoom Meetings | Ready for final review | Каталог Zoom-встреч создан; список Zoom-встреч сильный, mobile hero упрощен. |
+| `/webinars/inner-state.html` | Detail Template / Zoom Meeting | Ready | Эталон cinematic content page для одного Zoom-встречи. |
+| `/webinars/youth-code.html` | Detail Template / Zoom Meeting | Ready | Страница Zoom-встречи на общем Zoom meeting detail шаблоне. |
+| `/webinars/self-esteem.html` | Detail Template / Zoom Meeting | Ready | Страница Zoom-встречи на общем Zoom meeting detail шаблоне. |
+| `/webinars/relationship-code.html` | Detail Template / Zoom Meeting | Ready | Страница Zoom-встречи на общем Zoom meeting detail шаблоне. |
+| `/webinars/choosing-oneself.html` | Detail Template / Zoom Meeting | Ready | Страница Zoom-встречи на общем Zoom meeting detail шаблоне. |
 | `/book` | Detail / Product hybrid | Ready for review | Создана страница книги: hero, описание, визуальные смысловые части, интерактивный фрагмент 12–15 с отдельным mobile-слайдером, финальный purchase CTA и переиспользованный ecosystem-блок. Реальные отзывы и purchase-flow отложены до получения контента и этапа пользовательских сценариев. |
 | `/meditations` | Catalog Template / Product catalog | Ready for review | Создана витрина из 5 аудиопрактик: одна featured-медитация и четыре карточки. Плеер и purchase-flow намеренно не реализованы до этапа пользовательских сценариев. |
 | `/meditations/return-to-self.html` | Detail Template / Meditation | Ready for review | Первый detail-шаблон медитации: hero, описание, три фазы практики, подготовка, возможные ощущения и related-медитации; без плеера и backend-логики. |
@@ -217,8 +219,8 @@
 | Header dropdown / `Авторские программы` | `/programs` | Ready |
 | `Mentor 28` | `/programs/mentor-28` | Ready |
 | `Продавай как звезда` | `/programs/sell-star` | Ready |
-| `Смотреть вебинар` | `/webinars/inner-state.html` или соответствующий slug | Ready |
-| `Смотреть все вебинары` | `/webinars` | Ready |
+| `Смотреть Zoom-встреча` | `/webinars/inner-state.html` или соответствующий slug | Ready |
+| `Смотреть все Zoom-встречаы` | `/webinars` | Ready |
 | `Книга` | `/book` | Ready |
 | `Читать фрагмент` | `/book#book-excerpt` | Ready |
 | `Купить книгу` | `/book` или внешний магазин, когда будет готово | Page ready / purchase flow pending |

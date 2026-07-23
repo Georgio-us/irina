@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Продавай как звезда — Ирина Ужеловская</title>
-    <link rel="stylesheet" href="../../style.css?v=98">
+    <title>Продавай як Зірка — Ирина Ужеловская</title>
+    <link rel="stylesheet" href="../../style.css?v=104">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="typography-manrope-preview">
 
-<div class="page-wrapper product-page sell-star-page">
+<div class="page-wrapper product-page sell-star-page sell-star-page--stage">
     <header class="header">
         <a href="../../index.html#hero" class="logo" aria-label="Ирина Ужеловская">
             <img src="../../images/logotype.svg" alt="Ирина Ужеловская">
@@ -23,13 +23,13 @@
                 <div class="nav-dropdown">
                     <a href="../">Авторские программы</a>
                     <a href="../mentor-28/">Mentor 28</a>
-                    <a href="./">Продавай как звезда</a>
-                    <a href="../../webinars/index.html">Вебинары</a>
+                    <a href="./">Продавай як Зірка</a>
+                    <a href="../../webinars/index.html">Zoom-встречи</a>
                     <a href="../../book/">Книга</a>
                     <a href="../../meditations/">Медитации</a>
                 </div>
             </div>
-            <a href="../../index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
+            <a href="#star-reviews" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
             <a href="../../index.html#blog" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
             <a href="../../index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
             <div class="lang-switcher">
@@ -45,238 +45,331 @@
     </header>
 
     <main>
-        <section class="product-hero product-hero-dark">
-            <nav class="breadcrumb breadcrumb-dark-bg product-breadcrumb" aria-label="Навигация">
+        <section class="star-hero" id="star-top">
+            <div class="star-hero__beam" aria-hidden="true"></div>
+            <div class="star-hero__orbit star-hero__orbit--one" aria-hidden="true"></div>
+            <div class="star-hero__orbit star-hero__orbit--two" aria-hidden="true"></div>
+
+            <nav class="breadcrumb breadcrumb-dark-bg star-breadcrumb" aria-label="Навигация">
                 <a href="../../index.html#hero">Главная</a>
                 <span>/</span>
                 <a href="../">Программы</a>
                 <span>/</span>
-                <span>Продавай как звезда</span>
+                <span>Продавай як Зірка</span>
             </nav>
-            <div class="product-hero-copy">
-                <div class="product-kicker">Авторская программа</div>
-                <h1>Продавай как звезда</h1>
-                <p class="product-hero-subtitle">Система продаж через состояние, самоценность и личный бренд</p>
-                <p class="product-hero-desc">
-                    Для экспертов и предпринимателей, которые хотят продавать уверенно, дорого и без внутреннего напряжения.
-                </p>
-                <div class="product-actions">
-                    <button class="btn btn-primary" type="button" data-commerce-modal="telegram">Стать участником</button>
-                    <button class="btn btn-secondary" onclick="document.querySelector('#product-intro').scrollIntoView({behavior: 'smooth'})">Узнать подробнее</button>
+
+            <div class="star-hero__grid">
+                <div class="star-hero__copy">
+                    <div class="star-kicker">28-дневный психотехнологический интенсив</div>
+                    <h1>
+                        <span>Продавай</span>
+                        <span>як Зірка</span>
+                    </h1>
+                    <p class="star-hero__lead">Продажи через личность, силу и внутреннюю опору</p>
+                    <p class="star-hero__text">Для женщин, которые хотят продавать без страха, стыда, давления и выгорания.</p>
+                    <div class="star-hero__actions">
+                        <button class="btn star-button star-button--light" type="button" data-commerce-modal="telegram">Стать участницей</button>
+                        <a class="star-text-link" href="#star-program">
+                            Смотреть программу
+                            <i class="fa-solid fa-arrow-down-long" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="star-hero__meta" aria-label="Формат программы">
+                        <span>28 дней</span>
+                        <span>Zoom-встречи</span>
+                        <span>Ежедневный чат</span>
+                        <span>Разборы</span>
+                    </div>
                 </div>
+
+                <figure class="star-hero__media">
+                    <img src="../../images/program_sell_star.png" alt="Ирина Ужеловская на сцене">
+                    <figcaption>
+                        <span>Автор и ведущая</span>
+                        <strong>Ирина Ужеловская</strong>
+                    </figcaption>
+                </figure>
             </div>
-            <div class="product-hero-media">
-                <img src="../../images/program_sell_star.png" alt="Продавай как звезда">
+
+            <div class="star-hero__manifesto">
+                <span aria-hidden="true">✦</span>
+                <p>Зірка не просить дозволу світити. Вона просто перестає ховатися.</p>
             </div>
         </section>
 
-        <section class="product-intro" id="product-intro">
-            <div class="product-statement">
-                <div class="product-kicker">Ключевой сдвиг</div>
-                <h2>Продажи начинаются не со скриптов, а с внутреннего состояния</h2>
+        <section class="star-problem" id="star-intro">
+            <div class="star-section-heading star-section-heading--wide">
+                <div class="star-kicker">Про что эта программа</div>
+                <h2>Проблема не всегда в продажах.</h2>
+                <p>Чаще она начинается в тот момент, когда нужно заявить о себе, выдержать внимание и спокойно назвать цену.</p>
             </div>
-            <div class="product-intro-copy">
-                <p>
-                    Многие эксперты хорошо знают свой продукт и умеют помогать людям, но не могут стабильно продавать. Не потому что им не хватает техник.
-                </p>
-                <p>
-                    Чаще мешают страх проявленности, неуверенность, занижение собственной ценности и внутреннее напряжение в момент разговора о цене.
-                </p>
-            </div>
-        </section>
 
-        <section class="product-results">
-            <div class="product-section-head">
-                <div class="product-kicker">После программы</div>
-                <h2>Что изменится после программы</h2>
-            </div>
-            <div class="product-results-list">
-                <article>
-                    <span>01</span>
-                    <h3>Уверенность в проявленности</h3>
-                </article>
-                <article>
-                    <span>02</span>
-                    <h3>Спокойствие в продажах</h3>
-                </article>
-                <article>
-                    <span>03</span>
-                    <h3>Понимание собственной ценности</h3>
-                </article>
-                <article>
-                    <span>04</span>
-                    <h3>Сильная упаковка себя</h3>
-                </article>
-                <article>
-                    <span>05</span>
-                    <h3>Навык говорить о цене</h3>
-                </article>
-                <article>
-                    <span>06</span>
-                    <h3>Системность в коммуникации</h3>
-                </article>
-            </div>
-        </section>
-
-        <section class="product-quote-break">
-            <div>
+            <div class="star-problem__layout">
                 <blockquote>
-                    Когда человек чувствует свою ценность, ему больше не нужно уговаривать — он начинает выбирать и быть выбранным.
+                    Большинство женщин не имеют проблемы с продажами. Они сталкиваются с проблемой самоценности, проявленности и внутреннего разрешения быть дорогой.
                 </blockquote>
-                <span>— Ирина Ужеловская</span>
+                <div class="star-problem__list">
+                    <article>
+                        <span>01</span>
+                        <p>Страх оценки и отторжения</p>
+                    </article>
+                    <article>
+                        <span>02</span>
+                        <p>Стыд говорить о деньгах</p>
+                    </article>
+                    <article>
+                        <span>03</span>
+                        <p>Сложно удерживать свою цену</p>
+                    </article>
+                    <article>
+                        <span>04</span>
+                        <p>Страшно быть заметной</p>
+                    </article>
+                    <article>
+                        <span>05</span>
+                        <p>Продажи откладываются «на потом»</p>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section class="product-for">
-            <div class="product-section-head">
-                <div class="product-kicker">Для кого программа</div>
-                <h2>Для экспертов, которые готовы перестать продавать из напряжения</h2>
+        <section class="star-signals">
+            <div class="star-signals__intro">
+                <div class="star-kicker star-kicker--light">Что считывают люди</div>
+                <h2>Продажа — это состояние в момент контакта с миром.</h2>
+                <p>Можно знать все техники, но сжиматься в момент, когда нужно назвать цену или заявить о себе.</p>
             </div>
-            <ul class="product-check-list">
-                <li>Вы сильны в своем деле, но сложно говорить о себе;</li>
-                <li>Вы занижаете стоимость;</li>
-                <li>Вы устаете от переговоров;</li>
-                <li>клиенты не всегда понимают Вашу ценность;</li>
-                <li>Вы хотите продавать дороже и спокойнее;</li>
-                <li>Вам нужен личный бренд, который работает на Вас.</li>
-            </ul>
+
+            <div class="star-signals__field">
+                <div class="star-signals__center">
+                    <span>Внутренняя опора</span>
+                    <strong>Доверие</strong>
+                </div>
+                <article class="star-signal star-signal--one"><span>Напряжение</span></article>
+                <article class="star-signal star-signal--two"><span>Сомнение</span></article>
+                <article class="star-signal star-signal--three"><span>Страх</span></article>
+                <article class="star-signal star-signal--four"><span>Разрешение на деньги</span></article>
+                <article class="star-signal star-signal--five"><span>Ясность</span></article>
+            </div>
         </section>
 
-        <section class="product-path">
-            <div class="product-section-head centered">
-                <div class="product-kicker">Как работает программа</div>
-                <h2>Пять этапов, которые собирают продажи в систему</h2>
+        <section class="star-contrast">
+            <div class="star-section-heading">
+                <div class="star-kicker">Не классический курс продаж</div>
+                <h2>Без давления на себя и на клиента.</h2>
             </div>
-            <div class="product-path-grid">
-                <article>
+
+            <div class="star-contrast__grid">
+                <article class="star-contrast__card star-contrast__card--muted">
+                    <span class="star-contrast__label">Здесь не будет</span>
+                    <ul>
+                        <li>манипуляций;</li>
+                        <li>агрессивных скриптов;</li>
+                        <li>подхода «дави на боль»;</li>
+                        <li>чужих шаблонов.</li>
+                    </ul>
+                </article>
+                <article class="star-contrast__card star-contrast__card--accent">
+                    <span class="star-contrast__label">Продажи через</span>
+                    <ul>
+                        <li>личность и ясность;</li>
+                        <li>эмоциональную передачу;</li>
+                        <li>архетип и внутреннюю силу;</li>
+                        <li>глубокое понимание людей.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="star-outcomes">
+            <div class="star-section-heading star-section-heading--wide">
+                <div class="star-kicker">Что изменится за 28 дней</div>
+                <h2>Не новая роль. Свой способ быть видимой и продавать.</h2>
+            </div>
+
+            <div class="star-outcomes__grid">
+                <article class="star-outcome star-outcome--large">
                     <span>01</span>
-                    <h3>Внутренний фундамент</h3>
-                    <p>Снимаем напряжение, которое мешает проявляться и говорить о ценности.</p>
+                    <h3>Свой стиль продаж</h3>
+                    <p>Без копирования чужих схем и роли «правильного эксперта». Вы определите, как Вам естественно влиять, говорить и вести людей.</p>
                 </article>
-                <article>
+                <article class="star-outcome star-outcome--large star-outcome--rose">
                     <span>02</span>
-                    <h3>Самоценность и позиционирование</h3>
-                    <p>Формулируем, в чем Ваша сила и почему клиент выбирает именно Вас.</p>
+                    <h3>Меньше страха продаж</h3>
+                    <p>Работа со страхом отторжения, синдромом «я недостаточна», стыдом за деньги и реакциями нервной системы.</p>
                 </article>
-                <article>
+                <article class="star-outcome">
                     <span>03</span>
-                    <h3>Коммуникация и проявленность</h3>
-                    <p>Учимся говорить о себе спокойно, уверенно и без внутреннего зажима.</p>
+                    <h3>Психология покупателя</h3>
+                    <p>Почему люди покупают, молчат, исчезают, сомневаются и начинают доверять.</p>
                 </article>
-                <article>
+                <article class="star-outcome">
                     <span>04</span>
-                    <h3>Продажи и переговоры</h3>
-                    <p>Выстраиваем разговор о продукте, цене и решении без давления.</p>
+                    <h3>Продажа через себя</h3>
+                    <p>Через доверие, личную историю, эмоциональную передачу и внутреннюю опору.</p>
                 </article>
-                <article>
+                <article class="star-outcome star-outcome--dark">
                     <span>05</span>
-                    <h3>Масштабирование результата</h3>
-                    <p>Собираем личный бренд и коммуникацию в повторяемую систему.</p>
+                    <h3>Собственная система</h3>
+                    <p>Контент → доверие → контакт → продажа.</p>
                 </article>
             </div>
         </section>
 
-        <section class="product-included">
-            <div class="product-included-list">
-                <div class="product-section-head">
-                    <div class="product-kicker">Комплектация</div>
-                    <h2>Что входит в программу</h2>
+        <section class="star-program" id="star-program">
+            <div class="star-program__head">
+                <div class="star-section-heading">
+                    <div class="star-kicker star-kicker--light">Программа</div>
+                    <h2>Четыре этапа выхода из тени.</h2>
+                    <p>От понимания страха проявленности — к собственной системе регулярных продаж.</p>
                 </div>
-                <div class="product-included-grid">
-                    <span>Видеоуроки</span>
-                    <span>Практические задания</span>
-                    <span>Рабочие материалы</span>
-                    <span>Разборы</span>
-                    <span>Поддержка</span>
-                    <span>Записи</span>
-                    <span>Дополнительные материалы</span>
+                <div class="star-program__note">
+                    <span>28 дней</span>
+                    <p>Все эфиры проходят в Zoom. Записи остаются в чате, поэтому программу можно проходить в своем ритме.</p>
                 </div>
             </div>
-            <aside class="product-value-card">
-                <div class="product-kicker">Ценность</div>
-                <h3>Вы не просто изучаете продажи. Вы меняете состояние, из которого продаете.</h3>
-                <p>Именно поэтому результат программы должен ощущаться не как новый скрипт, а как новый уровень внутренней уверенности.</p>
-            </aside>
-        </section>
 
-        <section class="product-stories">
-            <div class="product-section-head centered">
-                <div class="product-kicker">Истории участников</div>
-                <h2>Не отзывы. Сдвиги в проявленности и продажах.</h2>
-            </div>
-            <div class="product-stories-grid">
+            <div class="star-program__modules">
                 <article>
-                    <div class="product-story-person">
-                        <strong>Марина</strong>
-                        <span>эксперт в сфере услуг</span>
+                    <div class="star-module__number">00</div>
+                    <div class="star-module__body">
+                        <span>Подготовительный этап</span>
+                        <h3>Почему сильные женщины боятся проявляться</h3>
+                        <p>Страх выхода «из племени», механизм социального отторжения и точки, в которых Вы перестаете выбирать себя.</p>
+                        <ul>
+                            <li>почему мозг воспринимает проявленность как опасность;</li>
+                            <li>как формируется страх продаж;</li>
+                            <li>где именно Вы «сливаете» себя.</li>
+                        </ul>
                     </div>
-                    <p><b>До:</b> стеснялась говорить о стоимости и часто соглашалась на условия клиента.</p>
-                    <p><b>После:</b> спокойно подняла цену и начала выбирать проекты, которые соответствуют ее уровню.</p>
-                    <blockquote>«Я впервые почувствовала, что продажа может быть спокойным разговором, а не экзаменом.»</blockquote>
                 </article>
                 <article>
-                    <div class="product-story-person">
-                        <strong>Елена</strong>
-                        <span>психолог</span>
+                    <div class="star-module__number">01</div>
+                    <div class="star-module__body">
+                        <span>Психология покупателя</span>
+                        <h3>Почему люди покупают на самом деле</h3>
+                        <p>Поведенческая психология продаж, эмоциональные триггеры доверия и механизмы принятия решений.</p>
+                        <ul>
+                            <li>как люди выбирают;</li>
+                            <li>почему покупают состояние человека;</li>
+                            <li>как возникает безопасный контакт.</li>
+                        </ul>
                     </div>
-                    <p><b>До:</b> хорошо помогала клиентам, но почти не проявлялась публично.</p>
-                    <p><b>После:</b> собрала понятное позиционирование и стала увереннее говорить о своем подходе.</p>
-                    <blockquote>«Я перестала доказывать ценность и начала ее спокойно транслировать.»</blockquote>
                 </article>
                 <article>
-                    <div class="product-story-person">
-                        <strong>Анна</strong>
-                        <span>предприниматель</span>
+                    <div class="star-module__number">02</div>
+                    <div class="star-module__body">
+                        <span>Продажа через личность</span>
+                        <h3>Подача, тексты и собственный стиль проявленности</h3>
+                        <p>Учимся говорить о себе, создавать живые продающие тексты и выстраивать коммуникацию, вызывающую доверие.</p>
+                        <ul>
+                            <li>работа со страхом камеры;</li>
+                            <li>подача без чужой роли;</li>
+                            <li>личная история как основа контакта.</li>
+                        </ul>
                     </div>
-                    <p><b>До:</b> переговоры забирали много энергии и часто заканчивались уступками.</p>
-                    <p><b>После:</b> появилась структура коммуникации и ясность в том, где не нужно прогибаться.</p>
-                    <blockquote>«Стало легче говорить о цене и не терять себя в процессе продажи.»</blockquote>
+                </article>
+                <article>
+                    <div class="star-module__number">03</div>
+                    <div class="star-module__body">
+                        <span>Система без выгорания</span>
+                        <h3>Регулярные продажи и разрешение на большие деньги</h3>
+                        <p>Собираем личный протокол продаж, систему контента и структуру коммуникации.</p>
+                        <ul>
+                            <li>механика регулярных продаж;</li>
+                            <li>структура контента;</li>
+                            <li>внутреннее разрешение быть дорогой.</li>
+                        </ul>
+                    </div>
                 </article>
             </div>
-        </section>
 
-        <section class="product-faq">
-            <div class="product-section-head">
-                <div class="product-kicker">FAQ</div>
-                <h2>Частые вопросы</h2>
-            </div>
-            <div class="product-faq-list">
-                <details>
-                    <summary>Кому подойдет программа?</summary>
-                    <p>Экспертам, психологам, наставникам, коучам и предпринимателям, которые хотят продавать увереннее, дороже и спокойнее.</p>
-                </details>
-                <details>
-                    <summary>Сколько времени занимает обучение?</summary>
-                    <p>Программа рассчитана на регулярную работу в удобном онлайн-формате. Точный темп зависит от выбранного потока и формата участия.</p>
-                </details>
-                <details>
-                    <summary>Нужна ли подготовка?</summary>
-                    <p>Нет. Важно иметь продукт, услугу или экспертность, которую Вы хотите научиться сильнее проявлять и продавать.</p>
-                </details>
-                <details>
-                    <summary>Будут ли записи?</summary>
-                    <p>Да, материалы и записи предполагаются в структуре программы, чтобы к ним можно было возвращаться.</p>
-                </details>
-                <details>
-                    <summary>Можно ли совмещать с работой?</summary>
-                    <p>Да. Структура программы рассчитана на постепенное внедрение в реальную профессиональную жизнь.</p>
-                </details>
-                <details>
-                    <summary>Как получить доступ?</summary>
-                    <p>Оставьте запрос, и команда подскажет актуальный формат, даты и условия участия.</p>
-                </details>
+            <div class="star-formula" aria-label="Формула решения о покупке">
+                <span>Боль</span>
+                <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+                <span>Желание</span>
+                <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+                <span>Безопасность</span>
+                <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+                <span>Доверие</span>
+                <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+                <span>Действие</span>
             </div>
         </section>
 
-        <section class="product-cta">
-            <h2>Ваш экспертный уровень заслуживает, чтобы о вас знали и выбирали именно вас.</h2>
-            <div class="product-actions">
-                <button class="btn btn-primary" type="button" data-commerce-modal="telegram">Стать участником</button>
-                <button class="btn btn-secondary" type="button" data-commerce-modal="telegram">Обсудить запрос</button>
+        <section class="star-format">
+            <div class="star-section-heading star-section-heading--wide">
+                <div class="star-kicker">Формат участия</div>
+                <h2>Глубокая работа, встроенная в реальную жизнь.</h2>
+                <p>Вы не остаетесь один на один с материалами: программа сохраняет ежедневный ритм, живой контакт и возможность возвращаться к записям.</p>
+            </div>
+
+            <div class="star-format__grid">
+                <article><span>01</span><i class="fa-regular fa-calendar" aria-hidden="true"></i><h3>28 дней</h3></article>
+                <article><span>02</span><i class="fa-solid fa-video" aria-hidden="true"></i><h3>Zoom-встречи</h3></article>
+                <article><span>03</span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i><h3>Психотехнологические практики</h3></article>
+                <article><span>04</span><i class="fa-regular fa-comments" aria-hidden="true"></i><h3>Ежедневный чат</h3></article>
+                <article><span>05</span><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><h3>Личные разборы</h3></article>
+                <article><span>06</span><i class="fa-regular fa-heart" aria-hidden="true"></i><h3>Поддержка</h3></article>
+                <article><span>07</span><i class="fa-solid fa-play" aria-hidden="true"></i><h3>Записи всех эфиров</h3></article>
             </div>
         </section>
 
-        <section class="product-related">
+        <section class="product-stories product-stories--reviews star-reviews" id="star-reviews">
+            <div
+                class="reviews-component"
+                data-testimonials
+                data-filter="sell-star"
+                data-limit="15"
+                data-filters="false"
+                data-heading="Отзывы участниц «Продавай як Зірка»"
+                data-description="Личный опыт участниц о проявленности, продажах и внутренней опоре."
+                data-heading-uk="Відгуки учасниць «Продавай як Зірка»"
+                data-description-uk="Особистий досвід учасниць про проявленість, продажі та внутрішню опору."
+            ></div>
+        </section>
+
+        <section class="star-faq">
+            <div class="star-section-heading">
+                <div class="star-kicker">Вопросы</div>
+                <h2>Перед участием</h2>
+            </div>
+            <div class="star-faq__list">
+                <details>
+                    <summary>Для кого создана программа?</summary>
+                    <p>В первую очередь для выпускниц Mentor 28, которые уже имеют знания и опыт, но хотят увереннее проявляться, удерживать цену и выстроить систему продаж без выгорания.</p>
+                </details>
+                <details>
+                    <summary>Что делать, если я не могу быть на встрече онлайн?</summary>
+                    <p>Записи эфиров публикуются в чате, поэтому к ним можно возвращаться и проходить программу в своем часовом поясе.</p>
+                </details>
+                <details>
+                    <summary>Это обучение скриптам продаж?</summary>
+                    <p>Нет. В центре программы — личность, психология покупателя, нервная система в продажах, доверие и внутренняя опора.</p>
+                </details>
+                <details>
+                    <summary>Как узнать даты следующего потока?</summary>
+                    <p>Оставьте запрос в Telegram, и команда сообщит актуальные даты и детали участия.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="star-investment">
+            <div class="star-investment__glow" aria-hidden="true"></div>
+            <div class="star-investment__copy">
+                <div class="star-kicker star-kicker--light">Инвестиция в проявленность</div>
+                <blockquote>Зірка не просить дозволу світити. Вона просто перестає ховатися.</blockquote>
+                <p>Это не просто обучение продажам. Это перестройка того, как Вы взаимодействуете с деньгами, вниманием и собственной ценностью.</p>
+            </div>
+            <div class="star-investment__action">
+                <span>Стоимость участия</span>
+                <strong>1 190 €</strong>
+                <button class="btn star-button star-button--light" type="button" data-commerce-modal="telegram">Стать участницей</button>
+                <small>Актуальные даты и формат следующего потока уточнит команда.</small>
+            </div>
+        </section>
+
+        <section class="product-related star-related">
             <div class="product-section-head">
                 <div class="product-kicker">Экосистема</div>
                 <h2>Вам также может быть интересно</h2>
@@ -284,58 +377,39 @@
             <div class="library-related-grid">
                 <a class="lib-preview-card" href="../mentor-28/?from=sell-star">
                     <div class="card-content-left">
-                        <div class="card-category">
-                            <i class="fa-solid fa-graduation-cap"></i> ПРОГРАММА
-                        </div>
+                        <div class="card-category"><i class="fa-solid fa-graduation-cap"></i> ПРОГРАММА</div>
                         <h4 class="card-title">Mentor 28</h4>
                         <p class="card-text">Глубокая трансформация мышления и внутренней опоры</p>
                         <span class="card-link">ПОДРОБНЕЕ <i class="fa-solid fa-arrow-right-long"></i></span>
                     </div>
-                    <div class="card-image-right">
-                        <img src="../../images/program_mentor_28.png" alt="Mentor 28">
-                    </div>
+                    <div class="card-image-right"><img src="../../images/program_mentor_28.png" alt="Mentor 28"></div>
                 </a>
-
                 <a class="lib-preview-card" href="../../webinars/index.html?from=sell-star">
                     <div class="card-content-left">
-                        <div class="card-category">
-                            <i class="fa-solid fa-circle-play"></i> ВЕБИНАРЫ
-                        </div>
+                        <div class="card-category"><i class="fa-solid fa-circle-play"></i> ZOOM-ВСТРЕЧИ</div>
                         <h4 class="card-title">Сила внутреннего состояния</h4>
-                        <p class="card-text">Практические вебинары и видеолекции</p>
+                        <p class="card-text">Практические Zoom-встречи и видеолекции</p>
                         <span class="card-link">СМОТРЕТЬ <i class="fa-solid fa-arrow-right-long"></i></span>
                     </div>
-                    <div class="card-image-right">
-                        <img src="../../images/webinar_edge.png" alt="Вебинары">
-                    </div>
+                    <div class="card-image-right"><img src="../../images/webinar_edge.png" alt="Zoom-встречи"></div>
                 </a>
-
                 <a class="lib-preview-card" href="../../book/?from=sell-star">
                     <div class="card-content-left">
-                        <div class="card-category">
-                            <i class="fa-solid fa-book-open"></i> КНИГА
-                        </div>
-                        <h4 class="card-title">Меняя внутреннее</h4>
-                        <p class="card-text">Книга о принципах глубокой трансформации</p>
-                        <span class="card-link">ЧИТАТЬ <i class="fa-solid fa-arrow-right-long"></i></span>
+                        <div class="card-category"><i class="fa-solid fa-book-open"></i> КНИГА</div>
+                        <h4 class="card-title">У меня всё получится</h4>
+                        <p class="card-text">Книга-бестселлер и 28 дней сопровождения</p>
+                        <span class="card-link">ПОДРОБНЕЕ <i class="fa-solid fa-arrow-right-long"></i></span>
                     </div>
-                    <div class="card-image-right">
-                        <img src="../../images/book_main.png" alt="Книга">
-                    </div>
+                    <div class="card-image-right"><img src="../../images/book_main.png" alt="Книга"></div>
                 </a>
-
                 <a class="lib-preview-card" href="../../meditations/?from=sell-star">
                     <div class="card-content-left">
-                        <div class="card-category">
-                            <i class="fa-solid fa-headphones"></i> МЕДИТАЦИИ
-                        </div>
+                        <div class="card-category"><i class="fa-solid fa-headphones"></i> МЕДИТАЦИИ</div>
                         <h4 class="card-title">Возвращение к себе</h4>
                         <p class="card-text">Медитация для восстановления внутренней опоры</p>
                         <span class="card-link">СЛУШАТЬ <i class="fa-solid fa-arrow-right-long"></i></span>
                     </div>
-                    <div class="card-image-right">
-                        <img src="../../images/meditation_mockup.png" alt="Медитации">
-                    </div>
+                    <div class="card-image-right"><img src="../../images/meditation_mockup.png" alt="Медитации"></div>
                 </a>
             </div>
         </section>
@@ -351,28 +425,24 @@
                 <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
-
         <nav class="content-footer-column" aria-label="Навигация">
             <h3>Навигация</h3>
             <a href="../../index.html#hero">Главная</a>
             <a href="../../methodology.html?from=sell-star">Методология</a>
             <a href="../">Программы</a>
-            <a href="../../webinars/index.html">Вебинары</a>
+            <a href="../../webinars/index.html">Zoom-встречи</a>
             <a href="../../book/">Книга</a>
             <a href="../../meditations/">Медитации</a>
-            <a href="../../blog/">Материалы</a>
             <a href="../../blog/">Блог</a>
             <a href="../../index.html#about">Обо мне</a>
         </nav>
-
         <nav class="content-footer-column" aria-label="Программы">
             <h3>Программы</h3>
             <a href="../mentor-28/">Mentor 28</a>
-            <a href="./">Продавай как звезда</a>
+            <a href="./">Продавай як Зірка</a>
             <a href="../../index.html#courses">Библиотека знаний</a>
             <a href="../../index.html#about-club">LUX CLUB</a>
         </nav>
-
         <div class="content-footer-column">
             <h3>Контакты</h3>
             <span>Instagram</span>
@@ -382,7 +452,6 @@
             <span>Email</span>
             <a href="mailto:hello@irina-uzhelovskaya.com">hello@irina-uzhelovskaya.com</a>
         </div>
-
         <div class="content-footer-bottom">
             <span>© 2026 Ирина Ужеловская. Все права защищены</span>
             <div>
@@ -411,92 +480,9 @@
         }
     });
 </script>
-
-    <script src="../../js/translations.js"></script>
-    <script src="../../js/i18n.js"></script>
-    <script src="../../js/commerce-modal.js"></script>
-
-    <!-- Booking Modal -->
-    <div class="video-modal" id="bookingSellStarModal" aria-hidden="true">
-        <div class="video-modal-backdrop" data-booking-star-close></div>
-        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingSellStarModalTitle" style="max-width: 480px;">
-            <button class="video-modal-close" type="button" data-booking-star-close aria-label="Закрыть окно">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="video-modal-kicker">ЗАЯВКА НА УЧАСТИЕ</div>
-            <h3 id="bookingSellStarModalTitle" style="margin-bottom: 8px;">Забронировать место в Продавай как звезда</h3>
-            <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы обсудить участие в программе.</p>
-            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на участие в программе Продавай как звезда отправлена!'); document.getElementById('bookingSellStarModal').classList.remove('is-open'); document.body.style.overflow = '';">
-                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
-                    <label for="str-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
-                    <input type="text" id="str-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
-                </div>
-                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
-                    <label for="str-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
-                    <input type="email" id="str-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
-                </div>
-                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
-                    <label for="str-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
-                    <input type="text" id="str-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
-                </div>
-                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Video Modal -->
-    <div class="video-modal" id="videoSellStarModal" aria-hidden="true">
-        <div class="video-modal-backdrop" data-video-star-close></div>
-        <div class="video-modal-card" role="dialog" aria-modal="true" aria-label="Видеопрезентация Продавай как звезда">
-            <button class="video-modal-close" type="button" data-video-star-close aria-label="Закрыть окно">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="video-aspect-ratio-box">
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: #fff; background: #000; font-family: sans-serif;">
-                    <i class="fa-brands fa-youtube" style="font-size: 64px; color: #ff0000; margin-bottom: 16px;"></i>
-                    <h3 style="margin: 0 0 8px; font-weight: 500; font-size: 18px; color: #fff;">Презентация программы Продавай как звезда</h3>
-                    <p style="margin: 0; font-size: 14px; color: #aaa;">Смотрите нас на YouTube</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const initSellStarModals = () => {
-            const setupModal = (modalId, openAttr, closeAttr) => {
-                const modal = document.getElementById(modalId);
-                const openButtons = Array.from(document.querySelectorAll(`[${openAttr}]`));
-                if (!modal || !openButtons.length) return;
-
-                const closeButtons = Array.from(modal.querySelectorAll(`[${closeAttr}]`));
-                const openModal = () => {
-                    modal.classList.add('is-open');
-                    modal.setAttribute('aria-hidden', 'false');
-                    document.body.style.overflow = 'hidden';
-                };
-                const closeModal = () => {
-                    modal.classList.remove('is-open');
-                    modal.setAttribute('aria-hidden', 'true');
-                    document.body.style.overflow = '';
-                };
-
-                openButtons.forEach(button => {
-                    button.addEventListener('click', openModal);
-                });
-                closeButtons.forEach(button => {
-                    button.addEventListener('click', closeModal);
-                });
-                document.addEventListener('keydown', (event) => {
-                    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
-                        closeModal();
-                    }
-                });
-            };
-
-            setupModal('bookingSellStarModal', 'data-booking-star-open', 'data-booking-star-close');
-            setupModal('videoSellStarModal', 'data-video-star-open', 'data-video-star-close');
-        };
-        initSellStarModals();
-    </script>
+<script src="../../js/translations.js"></script>
+<script src="../../js/i18n.js"></script>
+<script src="../../js/commerce-modal.js"></script>
+<script src="../../js/testimonials.js?v=1"></script>
 </body>
 </html>
