@@ -3603,7 +3603,7 @@
     }
 
     .mentor-modules-stage__tabs button span {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .mentor-modules-stage__progress {
@@ -5938,5 +5938,90 @@
     .mentor-template-page .mentor-participation-block__plans .mentor-plan--vip {
         border-left: 1px solid rgba(216, 153, 202, 0.24);
         border-color: rgba(216, 153, 202, 0.24);
+    }
+}
+
+/* Final mobile interaction and legibility pass. Desktop rules remain unchanged. */
+@media (max-width: 760px) {
+    .mentor-template-page .mentor-new-hero__topline,
+    .mentor-template-page .mentor-recognition-scene__topline,
+    .mentor-template-page .mentor-program-system__topline,
+    .mentor-template-page .mentor-modules-stage__topline,
+    .mentor-template-page .mentor-live-message__topline,
+    .mentor-template-page .mentor-testimonials-block__topline,
+    .mentor-template-page .mentor-participation-block__topline,
+    .mentor-template-page .mentor-ecosystem__topline {
+        min-height: 46px;
+        padding-bottom: 16px;
+        font-size: 11px;
+        font-weight: 650;
+        line-height: 1.25;
+        letter-spacing: 0.13em;
+    }
+
+    .mentor-template-page .mentor-new-hero__actions {
+        gap: 18px;
+    }
+
+    .mentor-template-page .mentor-new-hero__program-link {
+        border-bottom: 0;
+    }
+
+    .mentor-template-page .mentor-modules-stage__tabs {
+        padding-bottom: 16px;
+        scroll-snap-type: x proximity;
+    }
+
+    .mentor-template-page .mentor-modules-stage__tabs button {
+        width: 50px;
+        height: 48px;
+        flex-basis: 50px;
+        margin-right: 9px;
+        border: 1px solid rgba(255, 248, 252, 0.14);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.035);
+        cursor: pointer;
+        scroll-snap-align: center;
+        transition:
+            color 180ms ease,
+            border-color 180ms ease,
+            background-color 180ms ease,
+            box-shadow 180ms ease,
+            transform 180ms ease;
+    }
+
+    .mentor-template-page .mentor-modules-stage__tabs button[aria-selected="true"] {
+        border-color: var(--module-accent-strong);
+        background: rgba(196, 133, 180, 0.14);
+        background: color-mix(in srgb, var(--module-accent-strong) 18%, transparent);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+        box-shadow:
+            0 0 0 2px color-mix(in srgb, var(--module-accent-strong) 16%, transparent),
+            0 8px 20px rgba(0, 0, 0, 0.16);
+        transform: translateY(-2px);
+    }
+
+    .mentor-template-page .mentor-modules-stage__tabs button strong,
+    .mentor-template-page .mentor-modules-stage__tabs button span {
+        font-size: 14px;
+    }
+
+    .mentor-template-page .mentor-modules-stage__tabs button i {
+        font-size: 16px;
+    }
+
+    .mentor-template-page .mentor-testimonials-block .reviews-component__footer {
+        margin-top: 34px;
+    }
+
+    .mentor-template-page .mentor-testimonials-block .reviews-component__footer a {
+        min-height: 60px;
+        padding: 14px 24px;
+        gap: 13px;
+        font-size: 14px;
+    }
+
+    .mentor-template-page .mentor-testimonials-block .reviews-component__footer a i {
+        font-size: 19px;
     }
 }

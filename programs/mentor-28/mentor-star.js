@@ -34,10 +34,32 @@
 
     const tabs = Array.from(section.querySelectorAll('[role="tab"]'));
     const panels = Array.from(section.querySelectorAll("[data-module-panel]"));
+    const tabStrip = section.querySelector(".mentor-modules-stage__tabs");
+    const mobileQuery = window.matchMedia("(max-width: 760px)");
+    const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     let activeIndex = 0;
     let pointerStart = null;
+    let hasInteracted = false;
+    let cueTimer = 0;
 
-    const activate = (index, { focus = false } = {}) => {
+    const cancelCue = () => {
+        hasInteracted = true;
+        window.clearTimeout(cueTimer);
+    };
+
+    const centerActiveTab = (behavior = "smooth") => {
+        if (!mobileQuery.matches || !tabStrip) return;
+
+        const tab = tabs[activeIndex];
+        const left = tab.offsetLeft - ((tabStrip.clientWidth - tab.offsetWidth) / 2);
+
+        tabStrip.scrollTo({
+            left: Math.max(0, left),
+            behavior: reducedMotionQuery.matches ? "auto" : behavior,
+        });
+    };
+
+    const activate = (index, { focus = false, reveal = false } = {}) => {
         activeIndex = (index + tabs.length) % tabs.length;
         section.dataset.activeModule = String(activeIndex + 1);
 
@@ -52,24 +74,30 @@
         });
 
         if (focus) tabs[activeIndex].focus();
+        if (reveal) centerActiveTab();
     };
 
     tabs.forEach((tab, index) => {
-        tab.addEventListener("click", () => activate(index));
+        tab.addEventListener("click", () => {
+            cancelCue();
+            activate(index, { reveal: true });
+        });
         tab.addEventListener("keydown", (event) => {
             const keys = ["ArrowDown", "ArrowRight", "ArrowUp", "ArrowLeft", "Home", "End"];
             if (!keys.includes(event.key)) return;
 
             event.preventDefault();
+            cancelCue();
 
-            if (event.key === "Home") activate(0, { focus: true });
-            else if (event.key === "End") activate(tabs.length - 1, { focus: true });
-            else if (event.key === "ArrowDown" || event.key === "ArrowRight") activate(activeIndex + 1, { focus: true });
-            else activate(activeIndex - 1, { focus: true });
+            if (event.key === "Home") activate(0, { focus: true, reveal: true });
+            else if (event.key === "End") activate(tabs.length - 1, { focus: true, reveal: true });
+            else if (event.key === "ArrowDown" || event.key === "ArrowRight") activate(activeIndex + 1, { focus: true, reveal: true });
+            else activate(activeIndex - 1, { focus: true, reveal: true });
         });
     });
 
     section.addEventListener("touchstart", (event) => {
+        cancelCue();
         pointerStart = event.changedTouches[0]?.clientX ?? null;
     }, { passive: true });
 
@@ -81,10 +109,27 @@
         pointerStart = null;
 
         if (Math.abs(distance) < 52) return;
-        activate(distance < 0 ? activeIndex + 1 : activeIndex - 1);
+        activate(distance < 0 ? activeIndex + 1 : activeIndex - 1, { reveal: true });
     }, { passive: true });
 
     activate(0);
+
+    if (mobileQuery.matches && !reducedMotionQuery.matches && "IntersectionObserver" in window) {
+        let cueScheduled = false;
+        const cueObserver = new IntersectionObserver((entries) => {
+            if (cueScheduled || !entries.some((entry) => entry.isIntersecting)) return;
+
+            cueScheduled = true;
+            cueObserver.disconnect();
+            cueTimer = window.setTimeout(() => {
+                if (!hasInteracted && activeIndex === 0) {
+                    activate(1, { reveal: true });
+                }
+            }, 1000);
+        }, { threshold: 0.3 });
+
+        cueObserver.observe(section);
+    }
 })();
 
 (() => {
