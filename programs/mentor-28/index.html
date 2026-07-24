@@ -3,540 +3,823 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentor 28 — Ирина Ужеловская</title>
-    <link rel="stylesheet" href="../../style.css?v=103">
+    <meta name="description" content="Mentor 28 — 28-дневная авторская программа Ирины Ужеловской для системной работы с мышлением, состоянием и поведением.">
+    <title>Mentor 28 — программа Ирины Ужеловской</title>
+    <link rel="stylesheet" href="../../style.css?v=105">
+    <link rel="stylesheet" href="./mentor-star.css?v=20">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-
-<div class="page-wrapper product-page mentor-page mentor-page--editorial">
-    <header class="header">
-        <a href="../../index.html#hero" class="logo" aria-label="Ирина Ужеловская">
+<body class="mentor-template-page typography-manrope-preview">
+    <header class="header mentor-template-header">
+        <a href="../../index.html#hero" class="logo" aria-label="Ирина Ужеловская — на главную">
             <img src="../../images/logotype.svg" alt="Ирина Ужеловская">
         </a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
-        <nav class="nav">
-            <a href="../../index.html#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
-            <a href="../../methodology.html?from=mentor-28" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="../../index.html#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О тебе</a>
+            <a href="../../methodology.html?from=mentor-28" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Методология</a>
             <div class="nav-item has-dropdown">
-                <a href="../" class="nav-link nav-link-dropdown active" aria-haspopup="true">ПРОГРАММЫ</a>
+                <a href="../" class="nav-link nav-link-dropdown active" aria-haspopup="true">Программы</a>
                 <div class="nav-dropdown">
                     <a href="../">Авторские программы</a>
-                    <a href="./">Mentor 28</a>
+                    <a href="../mentor-28/">Mentor 28</a>
                     <a href="../sell-star/">Продавай как звезда</a>
-                    <a href="../../webinars/index.html">Zoom-встречи</a>
+                    <a href="../../webinars/">Zoom-встречи</a>
                     <a href="../../book/">Книга</a>
                     <a href="../../meditations/">Медитации</a>
                 </div>
             </div>
-            <a href="../../index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
-            <a href="../../index.html#blog" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
-            <a href="../../index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
+            <a href="#mentor-testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Результаты</a>
+            <a href="../../index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Об Ирине</a>
             <div class="lang-switcher">
-                <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
+                <button class="lang-btn" data-lang="ru" type="button" onclick="i18n.setLanguage('ru')">RU</button>
                 <span class="lang-separator">/</span>
-                <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
+                <button class="lang-btn" data-lang="uk" type="button" onclick="i18n.setLanguage('uk')">UA</button>
             </div>
+            <a class="btn btn-primary mentor-template-header__cta" href="https://t.me/irina_uzhelovskaya" target="_blank" rel="noopener">Обсудить участие</a>
         </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Открыть меню">
             <span></span>
         </label>
         <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
     </header>
 
-    <main>
-        <section class="product-hero product-hero-dark">
-            <nav class="breadcrumb breadcrumb-dark-bg product-breadcrumb" aria-label="Навигация">
-                <a href="../../index.html#hero">Главная</a>
-                <span>/</span>
-                <a href="../">Программы</a>
-                <span>/</span>
-                <span>Mentor 28</span>
-            </nav>
-            <div class="product-hero-copy">
-                <div class="product-kicker">Авторская программа</div>
-                <h1>MENTOR 28</h1>
-                <p class="product-hero-subtitle">28 дней, чтобы собрать новую систему управления собой и своей жизнью.</p>
-                <p class="product-hero-desc">
-                    Психотехнологическое наставничество для мужчин и женщин, которые хотят выйти из хаоса, внутреннего сопротивления и кратких рывков — к устойчивым изменениям в решениях, состоянии и действиях.
+    <main id="mentor-template-root">
+        <section class="mentor-new-hero" id="mentor-top" aria-labelledby="mentor-hero-title">
+            <div class="mentor-new-hero__visual">
+                <img
+                    src="../../images/program_mentor_28.png"
+                    alt="Ирина Ужеловская — автор программы Mentor 28"
+                    width="1086"
+                    height="1448"
+                    fetchpriority="high">
+
+                <div class="mentor-new-hero__author">
+                    <span>Автор и ведущая</span>
+                    <strong>Ирина Ужеловская</strong>
+                </div>
+            </div>
+
+            <div class="mentor-new-hero__content">
+                <div class="mentor-new-hero__topline" aria-hidden="true">
+                    <span>Авторская программа</span>
+                    <span>01 / 08</span>
+                </div>
+
+                <div class="mentor-new-hero__copy">
+                    <p class="mentor-new-hero__eyebrow">28 дней глубокой системной работы</p>
+                    <h1 id="mentor-hero-title">Mentor 28</h1>
+                    <p class="mentor-new-hero__promise">От понимания себя — к устойчивым изменениям.</p>
+                    <p class="mentor-new-hero__audience">
+                        Для тех, кто многое понимает о себе, но хочет превратить это понимание в новые решения, состояние и действия.
+                    </p>
+
+                    <div class="mentor-new-hero__actions">
+                        <a class="mentor-new-hero__button" href="https://t.me/irina_uzhelovskaya" target="_blank" rel="noopener">
+                            <span>Обсудить участие</span>
+                            <span class="mentor-new-hero__button-icon" aria-hidden="true">↗</span>
+                        </a>
+                        <a class="mentor-new-hero__program-link" href="#mentor-program">
+                            Смотреть программу
+                            <span aria-hidden="true">↓</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mentor-new-hero__facts" id="mentor-hero-details" aria-label="Формат программы">
+                    <div>
+                        <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                        <span><strong>28 дней</strong><small>последовательной работы</small></span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                        <span><strong>4 модуля</strong><small>последовательная система изменений</small></span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-video" aria-hidden="true"></i>
+                        <span><strong>Zoom, чат и поддержка</strong><small>сопровождение на протяжении программы</small></span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
+                        <span><strong>4 «Кофе с ментором»</strong><small>живые встречи с Ириной</small></span>
+                    </div>
+                    <div class="mentor-new-hero__fact--mobile-only">
+                        <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                        <span><strong>2 специалиста</strong><small>психолог и гипнотерапевт</small></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mentor-recognition-scene" id="mentor-relevance" aria-labelledby="mentor-relevance-title">
+            <div class="mentor-recognition-scene__topline" aria-hidden="true">
+                <span>Суть программы</span>
+                <span>02 / 08</span>
+            </div>
+
+            <div class="mentor-recognition-scene__stage">
+                <div class="mentor-recognition-scene__copy">
+                    <p class="mentor-recognition-scene__eyebrow">Возможно, дело не в силе воли</p>
+                    <h2 id="mentor-relevance-title">
+                        Знать, что делать, — ещё не значит изменить способ действовать.
+                    </h2>
+                    <p class="mentor-recognition-scene__summary">
+                        Mentor 28 создан для момента, когда знаний уже достаточно, но прежние реакции, состояние и сценарии продолжают определять ваши решения.
+                    </p>
+
+                    <ul class="mentor-recognition-scene__list">
+                        <li>Начинаю с рывка — и снова останавливаюсь</li>
+                        <li>Жду правильного состояния для важного решения</li>
+                        <li>Узнаю повторяющиеся сценарии, но проживаю их снова</li>
+                        <li>Хочу внутреннюю опору вместо борьбы с собой</li>
+                    </ul>
+
+                    <a class="mentor-recognition-scene__link" href="#mentor-mechanics">
+                        <span>Понять, как работает программа</span>
+                        <span aria-hidden="true">↓</span>
+                    </a>
+                </div>
+
+                <figure class="mentor-recognition-scene__media">
+                    <img
+                        src="../../images/irina_about_new.png"
+                        alt="Ирина Ужеловская"
+                        width="1122"
+                        height="1402"
+                        loading="lazy">
+                    <figcaption>
+                        <span>Принцип Mentor 28</span>
+                        <strong>Увидеть механизм. Выбрать другое действие.</strong>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="mentor-program-system" id="mentor-mechanics" aria-labelledby="mentor-mechanics-title">
+            <div class="mentor-program-system__topline" aria-hidden="true">
+                <span>Как работает программа</span>
+                <span>03 / 08</span>
+            </div>
+
+            <div class="mentor-program-system__heading">
+                <div>
+                    <p class="mentor-program-system__eyebrow">От понимания к устойчивому действию</p>
+                    <h2 id="mentor-mechanics-title">Изменения проходят три последовательных этапа.</h2>
+                </div>
+                <p>
+                    Программа помогает не только понять причину привычной реакции, но и пройти весь путь до нового способа действовать в реальной жизни.
                 </p>
-                <div class="product-actions">
-                    <button class="btn btn-primary" type="button" data-commerce-modal="telegram">Стать участником</button>
-                    <a class="btn btn-secondary" href="#mentor-architecture">Как проходит</a>
+            </div>
+
+            <ol class="mentor-program-system__flow">
+                <li>
+                    <span class="mentor-program-system__step">01</span>
+                    <div>
+                        <h3>Увидеть</h3>
+                        <p>Определить повторяющиеся реакции, сценарии и решения, которые формируют текущую реальность.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="mentor-program-system__step">02</span>
+                    <div>
+                        <h3>Перестроить</h3>
+                        <p>Научиться регулировать состояние и выбирать новое действие вместо автоматической реакции.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="mentor-program-system__step">03</span>
+                    <div>
+                        <h3>Закрепить</h3>
+                        <p>Перенести новый способ действовать в деньги, отношения, проявленность и ежедневные решения.</p>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="mentor-program-system__result" aria-label="Логика изменений">
+                <span>Понимание</span>
+                <i aria-hidden="true">→</i>
+                <span>Новое состояние</span>
+                <i aria-hidden="true">→</i>
+                <span>Другое решение</span>
+                <i aria-hidden="true">→</i>
+                <span>Устойчивое действие</span>
+            </div>
+
+            <div class="mentor-program-system__action">
+                <p>4 модуля · 4 «Кофе с ментором» · Zoom · сопровождение</p>
+                <a href="#mentor-program">
+                    <span>Смотреть программу</span>
+                    <span aria-hidden="true">↓</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="mentor-modules-stage" id="mentor-program" aria-labelledby="mentor-program-title">
+            <div class="mentor-modules-stage__topline" aria-hidden="true">
+                <span>Программа Mentor 28</span>
+                <span>04 / 08</span>
+            </div>
+
+            <div class="mentor-modules-stage__heading">
+                <p>28 дней · 4 модуля · 4 живые встречи</p>
+                <h2 id="mentor-program-title">Четыре модуля и четыре живые встречи «Кофе с ментором» — одна последовательная система изменений.</h2>
+            </div>
+
+            <!-- Содержание сокращено для сайта на основе исходной программы Mentor 28. -->
+            <div class="mentor-modules-stage__workspace">
+                <div
+                    class="mentor-modules-stage__tabs"
+                    role="tablist"
+                    aria-label="Модули и живые встречи программы">
+                    <button type="button" role="tab" id="mentor-module-tab-1" aria-controls="mentor-module-panel-1" aria-selected="true" tabindex="0">
+                        <span>01</span><strong>Формирование событий</strong>
+                    </button>
+                    <button class="mentor-modules-stage__coffee-tab" type="button" role="tab" id="mentor-module-tab-2" aria-controls="mentor-module-panel-2" aria-selected="false" tabindex="-1">
+                        <span aria-hidden="true"><i class="fa-solid fa-mug-hot"></i></span><strong>Кофе №1</strong>
+                    </button>
+                    <button type="button" role="tab" id="mentor-module-tab-3" aria-controls="mentor-module-panel-3" aria-selected="false" tabindex="-1">
+                        <span>02</span><strong>Тенденции</strong>
+                    </button>
+                    <button class="mentor-modules-stage__coffee-tab" type="button" role="tab" id="mentor-module-tab-4" aria-controls="mentor-module-panel-4" aria-selected="false" tabindex="-1">
+                        <span aria-hidden="true"><i class="fa-solid fa-mug-hot"></i></span><strong>Кофе №2</strong>
+                    </button>
+                    <button type="button" role="tab" id="mentor-module-tab-5" aria-controls="mentor-module-panel-5" aria-selected="false" tabindex="-1">
+                        <span>03</span><strong>Денежные протоколы</strong>
+                    </button>
+                    <button class="mentor-modules-stage__coffee-tab" type="button" role="tab" id="mentor-module-tab-6" aria-controls="mentor-module-panel-6" aria-selected="false" tabindex="-1">
+                        <span aria-hidden="true"><i class="fa-solid fa-mug-hot"></i></span><strong>Кофе №3</strong>
+                    </button>
+                    <button type="button" role="tab" id="mentor-module-tab-7" aria-controls="mentor-module-panel-7" aria-selected="false" tabindex="-1">
+                        <span>04</span><strong>Квантовый прорыв и новое «Я»</strong>
+                    </button>
+                    <button class="mentor-modules-stage__coffee-tab" type="button" role="tab" id="mentor-module-tab-8" aria-controls="mentor-module-panel-8" aria-selected="false" tabindex="-1">
+                        <span aria-hidden="true"><i class="fa-solid fa-mug-hot"></i></span><strong>Кофе №4</strong>
+                    </button>
+
+                    <span class="mentor-modules-stage__progress" aria-hidden="true">
+                        <i></i>
+                    </span>
+                </div>
+
+                <div class="mentor-modules-stage__panels">
+                    <article role="tabpanel" id="mentor-module-panel-1" aria-labelledby="mentor-module-tab-1" data-module-panel data-module-theme="1">
+                        <div class="mentor-modules-stage__panel-copy">
+                            <p class="mentor-modules-stage__module-label">Модуль 01 · Технология формирования событий</p>
+                            <h3>Технология формирования событий</h3>
+                            <p class="mentor-modules-stage__lead">Исследуем, как внимание, состояние и ежедневные решения формируют текущую реальность, и находим точку, из которой можно изменить траекторию событий.</p>
+                            <div class="mentor-modules-stage__topics">
+                                <span>Точка А и актуальная реальность</span>
+                                <span>Повторяющиеся сценарии</span>
+                                <span>Траектория изменений</span>
+                            </div>
+                        </div>
+                        <div class="mentor-modules-stage__result">
+                            <span>После модуля</span>
+                            <strong>Понимание, как ваши решения и состояние формируют события.</strong>
+                        </div>
+                        <div class="mentor-modules-stage__visual" aria-hidden="true"><span>01</span><strong>События</strong></div>
+                    </article>
+
+                    <article class="mentor-modules-stage__coffee-panel" role="tabpanel" id="mentor-module-panel-2" aria-labelledby="mentor-module-tab-2" data-module-panel data-module-theme="2" hidden>
+                        <div class="mentor-modules-stage__panel-copy">
+                            <p class="mentor-modules-stage__module-label">Кофе с ментором №1 · Живая встреча</p>
+                            <h3>Точка А, эмоциональный тон и персональная карта изменений</h3>
+                            <p class="mentor-modules-stage__lead">Проводим групповую диагностику, определяем главный запрос на 28 дней и переносим технологию первого модуля в вашу личную ситуацию.</p>
+                            <div class="mentor-modules-stage__topics">
+                                <span>Групповая диагностика</span>
+                                <span>Карта энергии и состояния</span>
+                                <span>Персональные рекомендации</span>
+                            </div>
+                        </div>
+                        <div class="mentor-modules-stage__result">
+                            <span>После встречи</span>
+                            <strong>Трекер состояния, карта энергии и личный протокол изменений.</strong>
+                        </div>
+                        <div class="mentor-modules-stage__visual mentor-modules-stage__visual--coffee" aria-hidden="true"><i class="fa-solid fa-mug-hot"></i><strong>Живая встреча</strong></div>
+                    </article>
+
+                    <article role="tabpanel" id="mentor-module-panel-3" aria-labelledby="mentor-module-tab-3" data-module-panel data-module-theme="3" hidden>
+                        <div class="mentor-modules-stage__panel-copy">
+                            <p class="mentor-modules-stage__module-label">Модуль 02 · Тенденции</p>
+                            <h3>Тенденции</h3>
+                            <p class="mentor-modules-stage__lead">Создаём устойчивый вектор, который постепенно меняет решения, поведение и события — без зависимости от резких стартов и временной мотивации.</p>
+                            <div class="mentor-modules-stage__topics">
+                                <span>Новый устойчивый вектор</span>
+                                <span>Протокол 21 × 4</span>
+                                <span>Антисаботаж и закрепление</span>
+                            </div>
+                        </div>
+                        <div class="mentor-modules-stage__result">
+                            <span>После модуля</span>
+                            <strong>Направление, которое ежедневно поддерживается вашими решениями.</strong>
+                        </div>
+                        <div class="mentor-modules-stage__visual" aria-hidden="true"><span>02</span><strong>Вектор</strong></div>
+                    </article>
+
+                    <article class="mentor-modules-stage__coffee-panel" role="tabpanel" id="mentor-module-panel-4" aria-labelledby="mentor-module-tab-4" data-module-panel data-module-theme="4" hidden>
+                        <div class="mentor-modules-stage__panel-copy">
+                            <p class="mentor-modules-stage__module-label">Кофе с ментором №2 · Живая встреча</p>
+                            <h3>Антисаботаж и новая система действий</h3>
+                            <p class="mentor-modules-stage__lead">Работаем с тем, что мешает действовать стабильно: откладыванием, внутренними запретами, страхами, незавершёнными действиями и возвратом после пропусков.</p>
+                            <div class="mentor-modules-stage__topics">
+                                <span>Прокрастинация и перфекционизм</span>
+                                <span>Страх ошибки и проявленности</span>
+                                <span>Система маленьких завершений</span>
+                            </div>
+                        </div>
+                        <div class="mentor-modules-stage__result">
+                            <span>После встречи</span>
+                            <strong>Персональный антисаботажный протокол и план стабильных действий.</strong>
+                        </div>
+                        <div class="mentor-modules-stage__visual mentor-modules-stage__visual--coffee" aria-hidden="true"><i class="fa-solid fa-mug-hot"></i><strong>Живая встреча</strong></div>
+                    </article>
+
+                    <article role="tabpanel" id="mentor-module-panel-5" aria-labelledby="mentor-module-tab-5" data-module-panel data-module-theme="5" hidden>
+                        <div class="mentor-modules-stage__panel-copy">
+                            <p class="mentor-modules-stage__module-label">Модуль 03 · Денежные протоколы</p>
+                            <h3>Денежные протоколы</h3>
+                            <p class="mentor-modules-stage__lead">Работаем с финансовыми сценариями, внутренними ограничениями, ценой, масштабом, видимостью и способностью получать и удерживать деньги.</p>
+                            <div class="mentor-modules-stage__topics">
+                                <span>Финансовый сценарий и потолок</span>
+                                <span>Цена, получение и видимость</span>
+                                <span>Удержание денег и рост</span>
+                            </div>
+                        </div>
+                        <div class="mentor-modules-stage__result">
+                            <span>После модуля</span>
+                            <strong>Новая финансовая позиция и система конкретных денежных действий.</strong>
+                        </div>
+                        <div class="mentor-modules-stage__visual" aria-hidden="true"><span>03</span><strong>Деньги</strong></div>
+                    </article>
+
+                    <article class="mentor-modules-stage__coffee-panel" role="tabpanel" id="mentor-module-panel-6" aria-labelledby="mentor-module-tab-6" data-module-panel data-module-theme="6" hidden>
+                        <div class="mentor-modules-stage__panel-copy">
+                            <p class="mentor-modules-stage__module-label">Кофе с ментором №3 · Живая встреча</p>
+                            <h3>Деньги, реализация и масштаб</h3>
+                            <p class="mentor-modules-stage__lead">Разбираем финансовые запросы участниц, страх цены и продаж, обесценивание экспертности, проявленность и конкретные решения на следующий этап.</p>
+                            <div class="mentor-modules-stage__topics">
+                                <span>Цена и продажи</span>
+                                <span>Проявленность и экспертность</span>
+                                <span>План на 30–90 дней</span>
+                            </div>
+                        </div>
+                        <div class="mentor-modules-stage__result">
+                            <span>После встречи</span>
+                            <strong>Коррекция денежной стратегии и план практических действий.</strong>
+                        </div>
+                        <div class="mentor-modules-stage__visual mentor-modules-stage__visual--coffee" aria-hidden="true"><i class="fa-solid fa-mug-hot"></i><strong>Живая встреча</strong></div>
+                    </article>
+
+                    <article role="tabpanel" id="mentor-module-panel-7" aria-labelledby="mentor-module-tab-7" data-module-panel data-module-theme="7" hidden>
+                        <div class="mentor-modules-stage__panel-copy">
+                            <p class="mentor-modules-stage__module-label">Модуль 04 · Новое «Я»</p>
+                            <h3>Квантовый прорыв, ключи, отношения и коммуникации</h3>
+                            <p class="mentor-modules-stage__lead">Переходим к новой внутренней позиции, меняем способ принимать решения и выстраиваем другой уровень отношений, коммуникации и взаимодействия с миром.</p>
+                            <div class="mentor-modules-stage__topics">
+                                <span>Новое «Я» и точки выбора</span>
+                                <span>Авторские ключи</span>
+                                <span>Отношения, границы и диалог</span>
+                            </div>
+                        </div>
+                        <div class="mentor-modules-stage__result">
+                            <span>После модуля</span>
+                            <strong>Новая позиция в решениях, отношениях и взаимодействии с миром.</strong>
+                        </div>
+                        <div class="mentor-modules-stage__visual" aria-hidden="true"><span>04</span><strong>Новое «Я»</strong></div>
+                    </article>
+
+                    <article class="mentor-modules-stage__coffee-panel" role="tabpanel" id="mentor-module-panel-8" aria-labelledby="mentor-module-tab-8" data-module-panel data-module-theme="8" hidden>
+                        <div class="mentor-modules-stage__panel-copy">
+                            <p class="mentor-modules-stage__module-label">Кофе с ментором №4 · Финальная встреча</p>
+                            <h3>Интеграция нового «Я» и 90-дневная волна</h3>
+                            <p class="mentor-modules-stage__lead">Объединяем технологии программы в личную систему и создаём понятный способ продолжать изменения после завершения 28 дней.</p>
+                            <div class="mentor-modules-stage__topics">
+                                <span>Интеграция технологий</span>
+                                <span>Персональная 90-дневная волна</span>
+                                <span>Протокол продолжения изменений</span>
+                            </div>
+                        </div>
+                        <div class="mentor-modules-stage__result">
+                            <span>После встречи</span>
+                            <strong>Личная система, которую можно продолжать самостоятельно.</strong>
+                        </div>
+                        <div class="mentor-modules-stage__visual mentor-modules-stage__visual--coffee" aria-hidden="true"><i class="fa-solid fa-mug-hot"></i><strong>Интеграция</strong></div>
+                    </article>
                 </div>
             </div>
-            <div class="product-hero-media">
-                <img src="../../images/program_mentor_28.png" alt="Mentor 28">
+
+            <div class="mentor-modules-stage__footer">
+                <p>Полный перечень практик, протоколов и материалов вынесен в подробную программу.</p>
+                <a href="https://t.me/irina_uzhelovskaya" target="_blank" rel="noopener">
+                    <span>Получить подробную программу</span>
+                    <span aria-hidden="true">↗</span>
+                </a>
             </div>
         </section>
 
-        <nav class="mentor-page-nav" aria-label="Навигация по программе">
-            <div>
-                <a href="#mentor-format">О программе</a>
-                <a href="#mentor-architecture">Как проходит</a>
-                <a href="#mentor-modules">Модули</a>
-                <a href="#mentor-participation">Участие</a>
+        <section class="mentor-live-message" id="mentor-live" aria-labelledby="mentor-live-title">
+            <div class="mentor-live-message__topline" aria-hidden="true">
+                <span>Обращение автора</span>
+                <span>05 / 08</span>
             </div>
-        </nav>
 
-        <section class="mentor-program-snapshot" id="mentor-format">
-            <div class="mentor-editorial-wrap mentor-program-snapshot-grid">
-                <div class="mentor-program-snapshot-title"><span class="mentor-editorial-label">Что это за программа</span><h2>Система, которая переводит понимание в устойчивые действия.</h2></div>
-                <div class="mentor-program-snapshot-copy"><p>Mentor 28 — психотехнологическое наставничество, в котором вы последовательно работаете с решениями, реакциями, состоянием, поведением и теми сценариями, которые создают повторяющиеся события в жизни.</p><p>Цель — не дать очередной инсайт, а собрать внутреннюю систему управления собой: заметить реакцию, отрегулировать состояние, выбрать другое действие и закрепить его в реальности.</p></div>
-                <div class="mentor-program-snapshot-facts" aria-label="Формат программы"><span><b>28</b> дней системной работы</span><span><b>4</b> модуля изменений</span><span><b>4</b> живые встречи</span></div>
-                <div class="mentor-program-snapshot-flow is-decorative" aria-hidden="true"><span>Состояние</span><i></i><span>Фокус</span><i></i><span>Решение</span><i></i><span>Действие</span><i></i><span>Результат</span></div>
+            <div class="mentor-live-message__stage">
+                <div class="mentor-live-message__intro">
+                    <p class="mentor-live-message__eyebrow">Личное обращение Ирины</p>
+                    <h2 id="mentor-live-title">Материалы дают понимание. Живая работа помогает применить его к себе.</h2>
+                </div>
+
+                <figure class="mentor-live-message__media">
+                    <img
+                        src="../../images/what_if_img.png"
+                        alt="Ирина Ужеловская"
+                        width="1548"
+                        height="1016"
+                        loading="lazy">
+                    <div class="mentor-live-message__video-mark" aria-label="Здесь будет видеообращение Ирины">
+                        <span aria-hidden="true">▶</span>
+                        <p><strong>Видеообращение</strong><small>Скоро здесь</small></p>
+                    </div>
+                </figure>
+
+                <div class="mentor-live-message__content">
+                    <div class="mentor-live-message__author">
+                        <span>Ирина Ужеловская</span>
+                        <strong>Автор и ведущая Mentor 28</strong>
+                    </div>
+
+                    <div class="mentor-live-message__note">
+                        <span>Принцип программы</span>
+                        <p>Не дать готовую роль, а помочь собрать внутреннюю систему, которая останется с вами.</p>
+                    </div>
+
+                    <div class="mentor-live-message__actions">
+                        <a class="mentor-live-message__primary" href="https://t.me/irina_uzhelovskaya" target="_blank" rel="noopener">
+                            <span>Обсудить участие</span>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                        <a class="mentor-live-message__next" href="#mentor-testimonials">
+                            Результаты участниц
+                            <span aria-hidden="true">↓</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="product-for mentor-audience" id="mentor-for-whom">
-            <div class="product-section-head">
-                <div class="product-kicker">Для кого</div>
-                <h2>Возможно, Вы узнаете себя</h2>
-                <p>Не нужно быть «недостаточно собранным», чтобы попасть в эту точку. Часто проблема не в характере, а в системе, которая больше не поддерживает вас.</p>
+        <section class="mentor-testimonials-block" id="mentor-testimonials" aria-labelledby="mentor-testimonials-title">
+            <div class="mentor-testimonials-block__topline" aria-hidden="true">
+                <span>Результаты участниц</span>
+                <span>06 / 08</span>
             </div>
-            <ul class="product-check-list">
-                <li>Вы много понимаете, но реализуете значительно меньше, чем можете;</li>
-                <li>Вы снова начинаете «с понедельника», а затем возвращаетесь к прежнему ритму;</li>
-                <li>Вы знаете, что делать, но откладываете, усложняете или ждёте правильного состояния;</li>
-                <li>Вы устали от хаотичных стартов, внутреннего шума и самокритики;</li>
-                <li>В деньгах, отношениях или реализации повторяются похожие сценарии;</li>
-                <li>Вы хотите не очередной импульс, а систему, которая останется с вами.</li>
-            </ul>
-        </section>
 
-        <section class="product-results">
-            <div class="product-section-head">
-                <div class="product-kicker">После программы</div>
-                <h2>Что вы забираете из этих 28 дней</h2>
-                <p>Не набор вдохновляющих мыслей, а личную систему, которую можно применять в обычной, неидеальной жизни.</p>
-            </div>
-            <div class="product-results-list">
-                <article>
-                    <span>01</span>
-                    <h3>Ясность мышления</h3>
-                    <p>Понимаете свою «Точку А», повторяющиеся сценарии и одну точку, с которой разумно начать изменения.</p>
-                </article>
-                <article>
-                    <span>02</span>
-                    <h3>Эмоциональная устойчивость</h3>
-                    <p>Учитесь распознавать перегрузку, тревогу и сопротивление — и возвращать себе рабочее состояние.</p>
-                </article>
-                <article>
-                    <span>03</span>
-                    <h3>Новые модели поведения</h3>
-                    <p>Собираете минимальные действия, которые не требуют каждый день начинать борьбу с собой.</p>
-                </article>
-                <article>
-                    <span>04</span>
-                    <h3>Внутренняя опора</h3>
-                    <p>Формируете взрослую позицию: выдерживать неопределённость, ошибаться и продолжать движение.</p>
-                </article>
-                <article>
-                    <span>05</span>
-                    <h3>Антисаботажный протокол</h3>
-                    <p>Понимаете собственную форму саботажа и знаете, как вернуться к процессу после паузы или срыва.</p>
-                </article>
-                <article>
-                    <span>06</span>
-                    <h3>План на 90 дней</h3>
-                    <p>Выходите с тенденцией, критериями прогресса и следующим реалистичным циклом изменений.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="product-path" id="mentor-architecture">
-            <div class="product-section-head centered">
-                <div class="product-kicker">Как проходит программа</div>
-                <h2>28 дней: четыре модуля, практика и живые встречи.</h2>
-                <p class="product-path-intro">Каждый модуль — это неделя сфокусированной работы: разбираете тему, применяете инструменты в своей ситуации и закрепляете следующий шаг.</p>
-            </div>
-            <div class="product-path-grid">
-                <article>
-                    <span>Модуль 01</span>
-                    <h3>Формирование событий</h3>
-                    <p>Диагностируете «Точку А», повторяющиеся сценарии и незавершённые решения. Собираете личную систему: намерение → фокус → решение → действие → результат.</p>
-                    <div class="product-path-card-format"><b>Неделя 01</b><span><i>Диагностика «Точка А»</i><i>Карта сценариев</i><i>Первый план действий</i></span></div>
-                </article>
-                <article>
-                    <span>Модуль 02</span>
-                    <h3>Тенденции и антисаботаж</h3>
-                    <p>Создаёте устойчивый вектор изменений, работаете с прокрастинацией, перфекционизмом и возвратом после срывов. Маленькие действия становятся новой системой поведения.</p>
-                    <div class="product-path-card-format"><b>Неделя 02</b><span><i>Протокол 21 × 4</i><i>Антисаботаж</i><i>План возвращения после срыва</i></span></div>
-                </article>
-                <article>
-                    <span>Модуль 03</span>
-                    <h3>Денежные протоколы</h3>
-                    <p>Исследуете финансовые сценарии, страх цены, видимости и масштаба. Формируете новую финансовую позицию и конкретный план действий на ближайшие 90 дней.</p>
-                    <div class="product-path-card-format"><b>Неделя 03</b><span><i>Денежная «Точка А»</i><i>Финансовые убеждения</i><i>План на 30–90 дней</i></span></div>
-                </article>
-                <article>
-                    <span>Модуль 04</span>
-                    <h3>Новое «Я», отношения и коммуникация</h3>
-                    <p>Закрепляете новую внутреннюю позицию: решения, границы, отношения, проявленность и зрелый диалог. Собираете личную 90-дневную волну изменений.</p>
-                    <div class="product-path-card-format"><b>Неделя 04</b><span><i>Кодекс нового «Я»</i><i>Сложные разговоры</i><i>Личный план на 90 дней</i></span></div>
-                </article>
-            </div>
-        </section>
-
-        <section class="mentor-format-cta" aria-label="Обсудить участие">
-            <div class="mentor-editorial-wrap mentor-format-cta-grid">
+            <div class="mentor-testimonials-block__heading">
                 <div>
-                    <span class="mentor-editorial-label">Следующий шаг</span>
-                    <h2>Обсудите участие лично с Ириной</h2>
+                    <p>Mentor 28 глазами участниц</p>
+                    <h2 id="mentor-testimonials-title">Реальный опыт прохождения программы</h2>
                 </div>
-                <div>
-                    <p>На коротком личном контакте можно сверить ваш запрос с форматом Mentor 28, задать вопросы и понять, подходит ли программа именно сейчас.</p>
-                    <button class="btn btn-primary" type="button" data-commerce-modal="telegram">Связаться с Ириной</button>
-                </div>
+                <p>Без шаблонных лиц и рекламных формулировок — только исходные сообщения участниц о материалах, практике и собственных изменениях.</p>
             </div>
-        </section>
 
-        <section class="product-included">
-            <div class="product-included-list">
-                <div class="product-included-head">
-                    <div class="product-kicker">Во время программы</div>
-                    <h2>Среда, которая помогает не бросить процесс на середине</h2>
-                </div>
-                <div class="product-included-grid">
-                    <span><i class="fa-solid fa-circle-play"></i>Видеоуроки</span>
-                    <span><i class="fa-solid fa-book-open"></i>Рабочая тетрадь</span>
-                    <span><i class="fa-solid fa-spa"></i>Практики</span>
-                    <span><i class="fa-solid fa-headphones"></i>Медитации</span>
-                    <span><i class="fa-solid fa-pen-to-square"></i>Домашние задания</span>
-                    <span><i class="fa-solid fa-comments"></i>Сопровождение</span>
-                    <span><i class="fa-solid fa-folder-open"></i>Материалы</span>
-                </div>
-            </div>
-            <aside class="product-value-card">
-                <div class="product-kicker">Не просто контент</div>
-                <h3>У вас есть материалы, поддержка и пространство, чтобы действительно внедрять изменения.</h3>
-                <p>Потому что новый способ действий закрепляется не от одного сильного инсайта, а через повторение, обратную связь и возвращение к себе.</p>
-            </aside>
-        </section>
-
-        <section class="mentor-editorial-principle">
-            <div class="mentor-editorial-wrap mentor-editorial-principle-grid">
-                <div><span class="mentor-editorial-label">Главная идея</span><h2>Понимания недостаточно, чтобы жизнь начала меняться.</h2></div>
-                <div class="mentor-editorial-principle-copy">
-                    <p>Можно знать причины своих страхов, ставить цели и проходить обучение — но снова воспроизводить прежние сценарии. Между пониманием и реальным изменением существует система, которую нужно выстроить и повторять.</p>
-                    <div class="mentor-editorial-chain" aria-label="Система изменений"><span>Осознание</span><i>→</i><span>Регуляция</span><i>→</i><span>Новая реакция</span><i>→</i><span>Действие</span><i>→</i><span>Закрепление</span></div>
-                    <p>Mentor 28 не предлагает воевать с собой. Программа помогает замечать автоматические реакции, снижать внутреннее сопротивление и переводить желаемые изменения в ежедневные действия.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="mentor-editorial-modules" id="mentor-modules">
-            <div class="mentor-editorial-wrap">
-                <div class="mentor-editorial-section-head"><span class="mentor-editorial-label">Подробная программа</span><h2>Каждый модуль даёт не просто тему, а набор решений для конкретного этапа.</h2></div>
-                <div class="mentor-editorial-module-list">
-                    <article><span>01 / Формирование событий</span><h3>Увидеть свою текущую траекторию и точку изменения</h3><p>Работаем с диагностикой «Точка А», картой актуальной реальности, повторяющимися сценариями, фокусом внимания и незавершёнными решениями.</p><ul><li>Карта возможностей и препятствий</li><li>Технология минимального действия</li><li>Протокол смены траектории</li><li>Трекер решений, действий и результатов</li></ul></article>
-                    <article><span>02 / Тенденции</span><h3>Создать вектор, который поддерживается каждый день</h3><p>Вместо резкого старта и очередного отката вы выбираете ключевую тенденцию и закрепляете её через поведение, среду, повторение и доказательства движения.</p><ul><li>Авторский протокол 21 × 4</li><li>Антисаботажные техники</li><li>План возвращения после срыва</li><li>Первая 90-дневная волна</li></ul></article>
-                    <article><span>03 / Деньги</span><h3>Понять финансовый сценарий и начать действовать иначе</h3><p>Исследуем внутреннюю финансовую планку, страх продаж, цены, проявленности и потери. Затем собираем реалистичную финансовую тенденцию.</p><ul><li>Денежная «Точка А»</li><li>Карта финансовых убеждений</li><li>Протокол права получать и удерживать</li><li>План действий на 30–90 дней</li></ul></article>
-                    <article><span>04 / Новое «Я»</span><h3>Закрепить новую позицию в отношениях, коммуникации и выборе</h3><p>Завершаем старые сценарии и формируем поведенческие доказательства новой идентичности: границы, зрелый диалог, решения, проявленность и ответственность.</p><ul><li>Кодекс нового «Я»</li><li>Практика сложных разговоров</li><li>Работа с ролями жертвы, спасателя и контролёра</li><li>Личный протокол продолжения изменений</li></ul></article>
-                </div>
-            </div>
-        </section>
-
-        <section class="mentor-editorial-coffee">
-            <div class="mentor-editorial-wrap"><div class="mentor-editorial-section-head"><span class="mentor-editorial-label">4 живые встречи</span><h2>«Кава з ментором» — пространство, где программа встречается с вашей реальной жизнью.</h2><p>На каждой встрече разбираем один этап программы, отвечаем на вопросы и переводим материал в следующий конкретный шаг.</p></div>
-                <div class="mentor-editorial-coffee-grid"><article><b>01</b><h3>Точка А и карта изменений</h3><p>Диагностика, эмоциональный тон, источники энергии и первая минимальная действие.</p></article><article><b>02</b><h3>Антисаботаж и действия</h3><p>Прокрастинация, перфекционизм, страх ошибки и возвращение к процессу.</p></article><article><b>03</b><h3>Деньги, реализация, масштаб</h3><p>Финансовые решения, цена, проявленность и личная стратегия роста.</p></article><article><b>04</b><h3>Интеграция и 90 дней</h3><p>Три главных результата, карта срывов и самостоятельный следующий цикл.</p></article></div>
-            </div>
-        </section>
-
-        <section class="mentor-editorial-team">
-            <div class="mentor-editorial-wrap"><div class="mentor-editorial-section-head"><span class="mentor-editorial-label">Команда</span><h2>Вы не остаётесь один на один с записями и заданиями.</h2></div><div class="mentor-editorial-team-content"><div class="mentor-editorial-team-grid"><article><span>Автор и ведущая</span><p>Архитектура программы, встречи, авторские психотехнологии и стратегическая работа с вашим запросом.</p></article><article><span>Психолог</span><p>Поддержка в эмоционально сложных этапах, работе с конфликтами, страхом, виной и самосаботажем.</p></article><article><span>Гипнотерапевт</span><p>Специальные практики сфокусированного внимания, образов и внутренних реакций в рамках комплексной работы.</p></article><article><span>Куратор</span><p>Навигация по материалам, ежедневный ритм, адаптация нагрузки и помощь в возвращении после пауз.</p></article></div><figure class="mentor-editorial-team-video video-preview"><img src="../../images/what_if_img.png" alt="Фрагмент живой встречи Mentor 28"><button class="video-preview-play mentor-play-button" type="button" data-video-mentor-open aria-label="Смотреть, как проходит встреча Mentor 28"><i class="fa-solid fa-play"></i></button></figure></div></div>
-        </section>
-
-        <section class="product-stories product-stories--reviews">
             <div
-                class="reviews-component"
+                class="reviews-component mentor-testimonials-block__reviews"
                 data-testimonials
                 data-filter="mentor-28"
-                data-limit="15"
+                data-limit="5"
                 data-filters="false"
-                data-heading="Отзывы участниц Mentor 28"
-                data-description="Личный опыт участниц, которые проходят программу и применяют ее инструменты в своей жизни."
-                data-heading-uk="Відгуки учасниць Mentor 28"
-                data-description-uk="Особистий досвід учасниць, які проходять програму та застосовують її інструменти у своєму житті."
+                data-show-heading="false"
             ></div>
         </section>
 
-        <section class="mentor-editorial-price" id="mentor-participation">
-            <div class="mentor-editorial-wrap mentor-editorial-price-grid"><div><span class="mentor-editorial-label">Участие</span><h2>Ваша следующая система изменений начинается с одного разговора.</h2></div><div><div class="mentor-editorial-price-list"><p><span>Сентябрь</span><strong>750 €</strong></p><p><span>Ноябрь</span><strong>950 €</strong></p></div><button class="btn btn-primary" type="button" data-commerce-modal="telegram">Обсудить участие</button><small>Перед стартом уточним ваш запрос, формат и актуальную возможность участия.</small></div></div>
+        <section class="mentor-participation-block" id="mentor-participation" aria-labelledby="mentor-participation-title">
+            <div class="mentor-participation-block__topline" aria-hidden="true">
+                <span>Форматы участия</span>
+                <span>07 / 08</span>
+            </div>
+
+            <div class="mentor-participation-block__heading">
+                <div>
+                    <p>Выберите уровень сопровождения</p>
+                    <h2 id="mentor-participation-title">Одна система. Два уровня личного участия.</h2>
+                </div>
+                <p>Оба варианта включают полную 28-дневную программу. VIP добавляет индивидуальную работу и личное наставничество Ирины.</p>
+            </div>
+
+            <div class="mentor-participation-block__plan-switch" aria-label="Форматы участия">
+                <button type="button" data-plan-switch="0" aria-pressed="true">Mentor 28</button>
+                <button type="button" data-plan-switch="1" aria-pressed="false">Mentor VIP</button>
+            </div>
+
+            <div class="mentor-participation-block__plans">
+                <article class="mentor-plan">
+                    <div class="mentor-plan__head">
+                        <div>
+                            <span>Основной формат</span>
+                            <h3>Mentor 28</h3>
+                        </div>
+                        <p><strong>595 €</strong><small>за программу</small></p>
+                    </div>
+
+                    <ul>
+                        <li>4 учебных модуля</li>
+                        <li>4 живые встречи «Кофе с ментором»</li>
+                        <li>Zoom-встречи</li>
+                        <li>Работа с психологом</li>
+                        <li>Работа с гипнотерапевтом</li>
+                        <li>Чат и сопровождение на протяжении программы</li>
+                    </ul>
+
+                    <a href="https://t.me/irina_uzhelovskaya" target="_blank" rel="noopener">
+                        <span>Выбрать Mentor 28</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+
+                <article class="mentor-plan mentor-plan--vip">
+                    <div class="mentor-plan__head">
+                        <div>
+                            <span>Расширенный формат</span>
+                            <h3>Mentor 28 VIP</h3>
+                        </div>
+                        <p><strong>833 €</strong><small>за программу</small></p>
+                    </div>
+
+                    <p class="mentor-plan__includes">Всё, что входит в Mentor 28, плюс:</p>
+                    <ul>
+                        <li>Личная стратегическая сессия с Ириной</li>
+                        <li>Индивидуальный разбор</li>
+                        <li>Личное наставничество</li>
+                    </ul>
+
+                    <a href="https://t.me/irina_uzhelovskaya" target="_blank" rel="noopener">
+                        <span>Выбрать VIP</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+            </div>
+
+            <div class="mentor-participation-block__faq">
+                <div class="mentor-participation-block__faq-title">
+                    <span>Перед участием</span>
+                    <h3>Остались вопросы?</h3>
+                </div>
+
+                <div class="mentor-participation-block__faq-content">
+                    <div class="mentor-participation-block__questions">
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-1" aria-expanded="true" aria-controls="mentor-faq-answer-1" data-participation-question>
+                                    <span>Что входит в Mentor 28?</span>
+                                    <i aria-hidden="true">−</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-1" role="region" aria-labelledby="mentor-faq-button-1" data-participation-answer>
+                                <p>Четыре учебных модуля, четыре живые встречи «Кофе с ментором», работа с психологом и гипнотерапевтом, Zoom, чат и сопровождение. Также участницы получают рабочую тетрадь, чек-листы, трекеры, аудиопрактики и библиотеку психотехнологических инструментов.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-2" aria-expanded="false" aria-controls="mentor-faq-answer-2" data-participation-question>
+                                    <span>Чем VIP отличается от основного формата?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-2" role="region" aria-labelledby="mentor-faq-button-2" data-participation-answer hidden>
+                                <p>VIP включает всю программу Mentor 28, а также личную стратегическую сессию с Ириной, индивидуальный разбор и личное наставничество.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-3" aria-expanded="false" aria-controls="mentor-faq-answer-3" data-participation-question>
+                                    <span>Как проходит программа?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-3" role="region" aria-labelledby="mentor-faq-button-3" data-participation-answer hidden>
+                                <p>Программа длится 28 дней. Четыре учебных модуля чередуются с четырьмя живыми встречами «Кофе с ментором», а работа продолжается в Zoom и чате с сопровождением.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-4" aria-expanded="false" aria-controls="mentor-faq-answer-4" data-participation-question>
+                                    <span>Что такое «Кофе с ментором»?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-4" role="region" aria-labelledby="mentor-faq-button-4" data-participation-answer hidden>
+                                <p>Это четыре живые встречи с Ириной между учебными модулями. На них участницы разбирают личные ситуации, переносят технологии программы в практику и получают рекомендации для следующего этапа.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-5" aria-expanded="false" aria-controls="mentor-faq-answer-5" data-participation-question>
+                                    <span>Что происходит на живых встречах?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-5" role="region" aria-labelledby="mentor-faq-button-5" data-participation-answer hidden>
+                                <p>Встречи посвящены диагностике текущей ситуации, антисаботажу и системе действий, деньгам и реализации, а также итоговой интеграции нового способа действовать.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-6" aria-expanded="false" aria-controls="mentor-faq-answer-6" data-participation-question>
+                                    <span>Где посмотреть полное содержание программы?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-6" role="region" aria-labelledby="mentor-faq-button-6" data-participation-answer hidden>
+                                <p>На странице показана компактная структура. Полный перечень практик, протоколов и материалов можно запросить у Ирины в Telegram.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-7" aria-expanded="false" aria-controls="mentor-faq-answer-7" data-participation-question>
+                                    <span>Можно ли проходить материалы в своём темпе?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-7" role="region" aria-labelledby="mentor-faq-button-7" data-participation-answer hidden>
+                                <p>Да. Учебные материалы можно изучать в удобном ритме в течение программы. Записи групповых встреч сохраняются, поэтому к ним можно вернуться, если не получилось присутствовать онлайн.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-8" aria-expanded="false" aria-controls="mentor-faq-answer-8" data-participation-question>
+                                    <span>Что делает куратор программы?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-8" role="region" aria-labelledby="mentor-faq-button-8" data-participation-answer hidden>
+                                <p>Куратор помогает сохранять ритм прохождения, ориентироваться в материалах, фиксировать вопросы и не выпадать из процесса между модулями и живыми встречами.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-9" aria-expanded="false" aria-controls="mentor-faq-answer-9" data-participation-question>
+                                    <span>Как проходят гипнотерапевтические практики?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-9" role="region" aria-labelledby="mentor-faq-button-9" data-participation-answer hidden>
+                                <p>Это практики сфокусированного внимания под сопровождением специалиста. Участница остаётся в сознании, контролирует процесс и в любой момент может остановить практику.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-10" aria-expanded="false" aria-controls="mentor-faq-answer-10" data-participation-question>
+                                    <span>Заменяет ли программа психотерапию или медицинскую помощь?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-10" role="region" aria-labelledby="mentor-faq-button-10" data-participation-answer hidden>
+                                <p>Нет. Mentor 28 — образовательная и наставническая программа. Она не заменяет медицинскую диагностику, психиатрическую помощь, кризисную или индивидуальную психотерапию.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-11" aria-expanded="false" aria-controls="mentor-faq-answer-11" data-participation-question>
+                                    <span>Каких результатов можно ожидать?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-11" role="region" aria-labelledby="mentor-faq-button-11" data-participation-answer hidden>
+                                <p>Результат зависит от исходной ситуации и включённости участницы. Программа не обещает гарантированного дохода или одинаковых изменений для всех, но даёт систему для работы с состоянием, решениями, действиями и повторяющимися сценариями.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-12" aria-expanded="false" aria-controls="mentor-faq-answer-12" data-participation-question>
+                                    <span>Что останется после завершения 28 дней?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-12" role="region" aria-labelledby="mentor-faq-button-12" data-participation-answer hidden>
+                                <p>Персональная карта изменений, рабочие протоколы, трекеры и план следующего 90-дневного цикла — инструменты, к которым можно возвращаться после программы.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h4>
+                                <button type="button" id="mentor-faq-button-13" aria-expanded="false" aria-controls="mentor-faq-answer-13" data-participation-question>
+                                    <span>Как присоединиться?</span>
+                                    <i aria-hidden="true">+</i>
+                                </button>
+                            </h4>
+                            <div id="mentor-faq-answer-13" role="region" aria-labelledby="mentor-faq-button-13" data-participation-answer hidden>
+                                <p>Напишите Ирине в Telegram. Перед участием можно уточнить формат, задать вопросы и выбрать подходящий вариант программы.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="mentor-participation-block__support">
+                        <p>Не нашли нужный ответ?</p>
+                        <a href="https://t.me/irina_uzhelovskaya" target="_blank" rel="noopener">
+                            <span>Написать Ирине</span>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="product-quote-break">
-            <div>
-                <blockquote>
-                    Самые важные изменения начинаются изнутри — когда меняется состояние, меняются и решения.
-                </blockquote>
-                <span>— Ирина Ужеловская</span>
+        <section class="mentor-ecosystem" id="mentor-ecosystem" aria-labelledby="mentor-ecosystem-title">
+            <div class="mentor-ecosystem__topline" aria-hidden="true">
+                <span>Другие направления</span>
+                <span>08 / 08</span>
             </div>
-        </section>
 
-        <section class="product-faq">
-            <div class="product-section-head">
-                <div class="product-kicker">FAQ</div>
-                <h2>Частые вопросы</h2>
+            <div class="mentor-ecosystem__heading">
+                <div>
+                    <p>Продолжить знакомство</p>
+                    <h2 id="mentor-ecosystem-title">Другие форматы работы с Ириной</h2>
+                </div>
+                <a href="../../programs/">
+                    Все продукты
+                    <span aria-hidden="true">↗</span>
+                </a>
             </div>
-            <div class="product-faq-list">
-                <details>
-                    <summary>Сколько времени занимает программа?</summary>
-                    <p>Программа рассчитана на 28 дней. Основная работа строится короткими регулярными шагами, чтобы изменения встраивались в реальную жизнь.</p>
-                </details>
-                <details>
-                    <summary>Подойдет ли программа новичку?</summary>
-                    <p>Да. Важно не наличие подготовки, а готовность внимательно работать со своим состоянием, мышлением и ежедневными решениями.</p>
-                </details>
-                <details>
-                    <summary>Программа проходит онлайн?</summary>
-                    <p>Да, формат рассчитан на онлайн-прохождение с доступом к материалам и практикам.</p>
-                </details>
-                <details>
-                    <summary>Будут ли записи и материалы?</summary>
-                    <p>Материалы программы доступны в удобном формате, чтобы к ним можно было возвращаться в процессе работы.</p>
-                </details>
-                <details>
-                    <summary>Нужна ли специальная подготовка?</summary>
-                    <p>Нет. Достаточно выделить время на практики и быть готовой честно исследовать свои внутренние механизмы.</p>
-                </details>
-                <details>
-                    <summary>Что останется у меня после программы?</summary>
-                    <p>Карта «Точка А», планы действий, протоколы работы с саботажем, практики, аудиосессии и личный план на следующие 90 дней.</p>
-                </details>
-                <details>
-                    <summary>Подходит ли программа, если мне нужна медицинская или кризисная помощь?</summary>
-                    <p>Mentor 28 — образовательное и наставническое пространство. Оно не заменяет медицинскую диагностику, психиатрическую помощь, кризисную или индивидуальную психотерапию.</p>
-                </details>
-                <details>
-                    <summary>От чего зависит результат?</summary>
-                    <p>От исходной ситуации, регулярности участия и готовности применять новые решения. Команда даёт систему и поддержку, но не может принимать решения за участника.</p>
-                </details>
-            </div>
-        </section>
 
-        <section class="product-related">
-            <div class="product-section-head">
-                <div class="product-kicker">Экосистема</div>
-                <h2>Вам также может быть интересно</h2>
-            </div>
-            <div class="library-related-grid">
-                <a class="lib-preview-card" href="../sell-star/?from=mentor-28">
-                    <div class="card-content-left">
-                        <div class="card-category">
-                            <i class="fa-solid fa-star"></i> ПРОГРАММА
-                        </div>
-                        <h4 class="card-title">Продавай как звезда</h4>
-                        <p class="card-text">Продажи через состояние, самоценность и личный бренд</p>
-                        <span class="card-link">ПОДРОБНЕЕ <i class="fa-solid fa-arrow-right-long"></i></span>
-                    </div>
-                    <div class="card-image-right">
-                        <img src="../../images/program_sell_star.png" alt="Продавай как звезда">
+            <div class="mentor-ecosystem__grid">
+                <a class="mentor-ecosystem-card" href="../sell-star/">
+                    <figure>
+                        <img src="../../images/program_sell_star.png" alt="Программа «Продавай как звезда»" width="1086" height="1448" loading="lazy">
+                        <span>01</span>
+                    </figure>
+                    <div>
+                        <span>Авторская программа</span>
+                        <h3>Продавай как звезда</h3>
+                        <p>Работа с продажами, проявленностью и внутренней опорой.</p>
+                        <strong>Подробнее <i aria-hidden="true">↗</i></strong>
                     </div>
                 </a>
 
-                <a class="lib-preview-card" href="../../webinars/index.html?from=mentor-28">
-                    <div class="card-content-left">
-                        <div class="card-category">
-                            <i class="fa-solid fa-circle-play"></i> ZOOM-ВСТРЕЧИ
-                        </div>
-                        <h4 class="card-title">Сила внутреннего состояния</h4>
-                        <p class="card-text">Практические Zoom-встречи и видеолекции</p>
-                        <span class="card-link">СМОТРЕТЬ <i class="fa-solid fa-arrow-right-long"></i></span>
-                    </div>
-                    <div class="card-image-right">
-                        <img src="../../images/webinar_edge.png" alt="Zoom-встречи">
-                    </div>
-                </a>
-
-                <a class="lib-preview-card" href="../../book/?from=mentor-28">
-                    <div class="card-content-left">
-                        <div class="card-category">
-                            <i class="fa-solid fa-book-open"></i> КНИГА
-                        </div>
-                        <h4 class="card-title">У меня всё получится</h4>
-                        <p class="card-text">Книга-бестселлер и 28 дней сопровождения</p>
-                        <span class="card-link">ПОДРОБНЕЕ <i class="fa-solid fa-arrow-right-long"></i></span>
-                    </div>
-                    <div class="card-image-right">
-                        <img src="../../images/book_main.png" alt="Книга">
+                <a class="mentor-ecosystem-card" href="../../webinars/">
+                    <figure>
+                        <img src="../../images/webinar_main.png" alt="Практические Zoom-встречи" width="1774" height="887" loading="lazy">
+                        <span>02</span>
+                    </figure>
+                    <div>
+                        <span>Zoom-встречи</span>
+                        <h3>Практические встречи</h3>
+                        <p>Отдельные темы, инструменты и разборы в живом формате.</p>
+                        <strong>Смотреть встречи <i aria-hidden="true">↗</i></strong>
                     </div>
                 </a>
 
-                <a class="lib-preview-card" href="../../meditations/?from=mentor-28">
-                    <div class="card-content-left">
-                        <div class="card-category">
-                            <i class="fa-solid fa-headphones"></i> МЕДИТАЦИИ
-                        </div>
-                        <h4 class="card-title">Возвращение к себе</h4>
-                        <p class="card-text">Медитация для восстановления внутренней опоры</p>
-                        <span class="card-link">СЛУШАТЬ <i class="fa-solid fa-arrow-right-long"></i></span>
+                <a class="mentor-ecosystem-card" href="../../book/">
+                    <figure>
+                        <img src="../../images/book_mockup.png" alt="Книга «У меня всё получится»" width="1024" height="1024" loading="lazy">
+                        <span>03</span>
+                    </figure>
+                    <div>
+                        <span>Книга и программа</span>
+                        <h3>У меня всё получится</h3>
+                        <p>Книга-бестселлер и 28 дней авторского сопровождения.</p>
+                        <strong>О книге <i aria-hidden="true">↗</i></strong>
                     </div>
-                    <div class="card-image-right">
-                        <img src="../../images/meditation_mockup.png" alt="Медитации">
+                </a>
+
+                <a class="mentor-ecosystem-card" href="../../meditations/">
+                    <figure>
+                        <img src="../../images/meditation_mockup.png" alt="Авторские медитации Ирины Ужеловской" width="1024" height="1024" loading="lazy">
+                        <span>04</span>
+                    </figure>
+                    <div>
+                        <span>Бесплатные практики</span>
+                        <h3>Медитации</h3>
+                        <p>Аудиопрактики для состояния, внимания и возвращения к себе.</p>
+                        <strong>Получить медитацию <i aria-hidden="true">↗</i></strong>
                     </div>
                 </a>
             </div>
+
+            <footer class="mentor-ecosystem__footer">
+                <a class="mentor-ecosystem__brand" href="../../index.html" aria-label="На главную">
+                    <img src="../../images/logotype.svg" alt="Ирина Ужеловская">
+                </a>
+                <p>Психология, наставничество и авторские психотехнологии.</p>
+                <div>
+                    <a href="https://t.me/irina_uzhelovskaya" target="_blank" rel="noopener">Telegram</a>
+                    <a href="#mentor-top">Наверх ↑</a>
+                </div>
+            </footer>
         </section>
     </main>
-
-    <footer class="content-footer-v2">
-        <div class="content-footer-brand">
-            <img src="../../images/logotype.svg" alt="Ирина Ужеловская">
-            <p>психолог · ментор · автор психотехнологий формирования событий</p>
-            <div class="content-footer-socials">
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
-                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
-
-        <nav class="content-footer-column" aria-label="Навигация">
-            <h3>Навигация</h3>
-            <a href="../../index.html#hero">Главная</a>
-            <a href="../../methodology.html?from=mentor-28">Методология</a>
-            <a href="../">Программы</a>
-            <a href="../../webinars/index.html">Zoom-встречи</a>
-            <a href="../../book/">Книга</a>
-            <a href="../../meditations/">Медитации</a>
-            <a href="../../blog/">Материалы</a>
-            <a href="../../blog/">Блог</a>
-            <a href="../../index.html#about">Обо мне</a>
-        </nav>
-
-        <nav class="content-footer-column" aria-label="Программы">
-            <h3>Программы</h3>
-            <a href="./">Mentor 28</a>
-            <a href="../sell-star/">Продавай как звезда</a>
-            <a href="../../index.html#courses">Библиотека знаний</a>
-            <a href="../../index.html#about-club">LUX CLUB</a>
-        </nav>
-
-        <div class="content-footer-column">
-            <h3>Контакты</h3>
-            <span>Instagram</span>
-            <a href="https://instagram.com/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
-            <span>Telegram</span>
-            <a href="https://t.me/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
-            <span>Email</span>
-            <a href="mailto:hello@irina-uzhelovskaya.com">hello@irina-uzhelovskaya.com</a>
-        </div>
-
-        <div class="content-footer-bottom">
-            <span>© 2026 Ирина Ужеловская. Все права защищены</span>
-            <div>
-                <a href="#">Политика конфиденциальности</a>
-                <a href="#">Пользовательское соглашение</a>
-            </div>
-        </div>
-    </footer>
-</div>
-
-<script>
-    document.querySelectorAll('.header .nav-link-dropdown').forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const navItem = link.closest('.nav-item');
-            document.querySelectorAll('.header .nav-item.is-open').forEach(item => {
-                if (item !== navItem) item.classList.remove('is-open');
-            });
-            navItem.classList.toggle('is-open');
-        });
-    });
-
-    document.addEventListener('click', (event) => {
-        if (!event.target.closest('.header .nav-item')) {
-            document.querySelectorAll('.header .nav-item.is-open').forEach(item => item.classList.remove('is-open'));
-        }
-    });
-</script>
-
-    <script src="../../js/translations.js?v=mentor28-ua-1"></script>
-    <script src="../../js/i18n.js?v=mentor28-ua-1"></script>
-    <script src="../../js/commerce-modal.js"></script>
+    <script src="../../js/translations.js?v=mentor28-template-ua-1"></script>
+    <script src="../../js/i18n.js?v=mentor28-template-ua-1"></script>
+    <script src="./mentor-star.js?v=5"></script>
     <script src="../../js/testimonials.js?v=1"></script>
-
-    <!-- Booking Modal -->
-    <div class="video-modal" id="bookingMentorModal" aria-hidden="true">
-        <div class="video-modal-backdrop" data-booking-mentor-close></div>
-        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingMentorModalTitle" style="max-width: 480px;">
-            <button class="video-modal-close" type="button" data-booking-mentor-close aria-label="Закрыть окно">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="video-modal-kicker">ЗАЯВКА НА УЧАСТИЕ</div>
-            <h3 id="bookingMentorModalTitle" style="margin-bottom: 8px;">Забронировать место в Mentor 28</h3>
-            <p style="margin-bottom: 20px;">Оставьте ваши контакты, чтобы обсудить участие в программе.</p>
-            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert(i18n.lang === 'uk' ? 'Заявку на участь у програмі Mentor 28 надіслано!' : 'Заявка на участие в программе Mentor 28 отправлена!'); document.getElementById('bookingMentorModal').classList.remove('is-open'); document.body.style.overflow = '';">
-                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
-                    <label for="mnt-name" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Имя</label>
-                    <input type="text" id="mnt-name" required placeholder="Ваше имя" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
-                </div>
-                <div class="form-group" style="margin-bottom: 12px; text-align: left;">
-                    <label for="mnt-email" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Email</label>
-                    <input type="email" id="mnt-email" required placeholder="Ваш email" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
-                </div>
-                <div class="form-group" style="margin-bottom: 20px; text-align: left;">
-                    <label for="mnt-telegram" style="display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600;">Telegram / Телефон</label>
-                    <input type="text" id="mnt-telegram" required placeholder="@username или номер телефона" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
-                </div>
-                <button type="submit" class="btn-submit" style="width: 100%; padding: 14px; background: var(--color-accent-ui); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Video Modal -->
-    <div class="video-modal" id="videoMentorModal" aria-hidden="true">
-        <div class="video-modal-backdrop" data-video-mentor-close></div>
-        <div class="video-modal-card" role="dialog" aria-modal="true" aria-label="Видеопрезентация Mentor 28">
-            <button class="video-modal-close" type="button" data-video-mentor-close aria-label="Закрыть окно">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="video-aspect-ratio-box">
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: #fff; background: #000; font-family: sans-serif;">
-                    <i class="fa-brands fa-youtube" style="font-size: 64px; color: #ff0000; margin-bottom: 16px;"></i>
-                    <h3 style="margin: 0 0 8px; font-weight: 500; font-size: 18px; color: #fff;">Презентация программы Mentor 28</h3>
-                    <p style="margin: 0; font-size: 14px; color: #aaa;">Смотрите нас на YouTube</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const initMentorModals = () => {
-            const setupModal = (modalId, openAttr, closeAttr) => {
-                const modal = document.getElementById(modalId);
-                const openButtons = Array.from(document.querySelectorAll(`[${openAttr}]`));
-                if (!modal || !openButtons.length) return;
-
-                const closeButtons = Array.from(modal.querySelectorAll(`[${closeAttr}]`));
-                const openModal = () => {
-                    modal.classList.add('is-open');
-                    modal.setAttribute('aria-hidden', 'false');
-                    document.body.style.overflow = 'hidden';
-                };
-                const closeModal = () => {
-                    modal.classList.remove('is-open');
-                    modal.setAttribute('aria-hidden', 'true');
-                    document.body.style.overflow = '';
-                };
-
-                openButtons.forEach(button => {
-                    button.addEventListener('click', openModal);
-                });
-                closeButtons.forEach(button => {
-                    button.addEventListener('click', closeModal);
-                });
-                document.addEventListener('keydown', (event) => {
-                    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
-                        closeModal();
-                    }
-                });
-            };
-
-            setupModal('bookingMentorModal', 'data-booking-mentor-open', 'data-booking-mentor-close');
-            setupModal('videoMentorModal', 'data-video-mentor-open', 'data-video-mentor-close');
-        };
-        initMentorModals();
-    </script>
 </body>
 </html>
