@@ -5968,6 +5968,7 @@
     }
 
     .mentor-template-page .mentor-modules-stage__tabs {
+        padding-top: 6px;
         padding-bottom: 16px;
         scroll-snap-type: x proximity;
     }
