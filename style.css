@@ -371,7 +371,7 @@ button, .btn {
     grid-template-columns: minmax(520px, 42vw) minmax(0, 1fr);
     height: calc(100vh - var(--header-height));
     min-height: 650px;
-    background: url('images/hero_img.jpg') no-repeat center;
+    background: url('images/irina_hero.png') no-repeat center;
     background-size: cover;
     position: relative;
 

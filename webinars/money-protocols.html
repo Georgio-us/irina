@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Денежные протоколы — Zoom-встреча Ирины Ужеловской</title>
+    <link rel="stylesheet" href="../style.css?v=98">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="page-wrapper content-page webinar-page">
+    <header class="header">
+        <a href="../index.html#hero" class="logo" aria-label="Ирина Ужеловская">
+            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
+        <nav class="nav">
+            <a href="../index.html#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
+            <a href="../methodology.html" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
+            <div class="nav-item has-dropdown">
+                <a href="../programs/" class="nav-link nav-link-dropdown active" aria-haspopup="true">ПРОГРАММЫ</a>
+                <div class="nav-dropdown">
+                    <a href="../programs/">Авторские программы</a>
+                    <a href="../programs/mentor-28/">Mentor 28</a>
+                    <a href="../programs/sell-star/">Продавай как звезда</a>
+                    <a href="./index.html">Zoom-встречи</a>
+                    <a href="../book/">Книга</a>
+                    <a href="../meditations/">Медитации</a>
+                </div>
+            </div>
+            <a href="../index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
+            <a href="../index.html#blog" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
+            <a href="../index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
+                <span class="lang-separator">/</span>
+                <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
+            </div>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+        <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+    </header>
+
+    <main>
+        <section class="content-hero content-dark-panel">
+            <nav class="breadcrumb breadcrumb-dark-bg content-breadcrumb" aria-label="Навигация">
+                <a href="../index.html#hero">Главная</a>
+                <span>/</span>
+                <a href="./index.html">Zoom-встречи</a>
+                <span>/</span>
+                <span>Денежные протоколы</span>
+            </nav>
+
+            <div class="content-hero-grid">
+                <article class="video-preview" aria-label="Предварительный просмотр Zoom-встречи «Денежные протоколы»">
+                    <img src="../images/webinar_money.png" alt="Zoom-встреча «Денежные протоколы»">
+                    <button class="video-preview-play" type="button" data-webinar-video-open aria-label="Смотреть фрагмент Zoom-встречи «Денежные протоколы»">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <div class="video-preview-caption">
+                        <span>Предварительный просмотр</span>
+                        <strong>Скоро</strong>
+                    </div>
+                </article>
+
+                <div class="content-hero-copy">
+                    <div class="content-kicker">Zoom-встреча</div>
+                    <h1>Денежные<br>протоколы</h1>
+                    <p>
+                        Практическая Zoom-встреча о финансовых сценариях, внутренних ограничениях, цене, проявленности и способности получать и удерживать деньги.
+                    </p>
+                    <div class="content-meta">
+                        <span><i class="fa-solid fa-video"></i> Запись Zoom-встречи</span>
+                        <span><i class="fa-solid fa-list-check"></i> Практический формат</span>
+                    </div>
+                    <div class="content-actions">
+                        <button class="btn btn-primary" type="button" data-webinar-buy-open>
+                            Купить Zoom-встречу
+                        </button>
+                        <button class="btn btn-secondary" onclick="document.querySelector('.content-intro').scrollIntoView({behavior: 'smooth'})">Подробнее <i class="fa-solid fa-arrow-down-long"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-intro">
+            <div class="content-intro-copy">
+                <div class="content-kicker">О Zoom-встрече</div>
+                <h2>Деньги — это не только цифры, но и привычный <span>сценарий</span></h2>
+                <p>
+                    Внутренняя финансовая планка влияет на то, какую цену мы называем, насколько позволяем себе быть заметными и какие денежные решения повторяем.
+                </p>
+                <p>
+                    На встрече рассматриваем связь между финансовым сценарием, проявленностью, получением денег и способностью удерживать новый уровень.
+                </p>
+            </div>
+
+            <blockquote class="content-quote-card">
+                <span>“</span>
+                <p>Изменение денежного результата начинается с позиции, из которой вы принимаете решения.</p>
+                <cite>— Ирина Ужеловская</cite>
+            </blockquote>
+        </section>
+
+        <section class="content-timeline content-dark-panel">
+            <div class="content-section-side">
+                <div class="content-kicker">Структура Zoom-встречи</div>
+                <h2>О чем<br>мы поговорим</h2>
+                <button class="btn btn-secondary" type="button" data-webinar-program-open>
+                    <i class="fa-solid fa-comment-dots"></i>
+                    Задать вопрос
+                </button>
+            </div>
+
+            <ol class="content-timeline-list">
+                <li>
+                    <time>01</time>
+                    <div>
+                        <h3>Финансовый сценарий</h3>
+                        <p>Как формируется привычная денежная реальность</p>
+                    </div>
+                </li>
+                <li>
+                    <time>02</time>
+                    <div>
+                        <h3>Внутренняя финансовая планка</h3>
+                        <p>Что ограничивает переход к следующему уровню</p>
+                    </div>
+                </li>
+                <li>
+                    <time>03</time>
+                    <div>
+                        <h3>Цена и получение денег</h3>
+                        <p>Как самоценность и проявленность влияют на финансовые решения</p>
+                    </div>
+                </li>
+                <li>
+                    <time>04</time>
+                    <div>
+                        <h3>Удержание и рост</h3>
+                        <p>Почему новый результат важно закрепить действиями</p>
+                    </div>
+                </li>
+                <li>
+                    <time>05</time>
+                    <div>
+                        <h3>Новая финансовая позиция</h3>
+                        <p>Система конкретных денежных действий</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="content-results">
+            <div class="content-results-head">
+                <div class="content-kicker">Для кого эта Zoom-встреча</div>
+                <h2>Эта Zoom-встреча для вас, если вы</h2>
+            </div>
+            <div class="content-results-grid">
+                <article><span>01</span><h3>Снова упираетесь в привычный финансовый потолок</h3></article>
+                <article><span>02</span><h3>Испытываете напряжение, когда нужно назвать цену</h3></article>
+                <article><span>03</span><h3>Обесцениваете свою работу и экспертность</h3></article>
+                <article><span>04</span><h3>Боитесь проявляться и занимать больше пространства</h3></article>
+                <article><span>05</span><h3>Получаете деньги, но не удерживаете новый уровень</h3></article>
+                <article><span>06</span><h3>Хотите перейти от абстрактного желания к системе действий</h3></article>
+            </div>
+        </section>
+
+        <section class="content-related content-dark-panel">
+            <div class="content-related-head">
+                <div>
+                    <div class="content-kicker">Другие Zoom-встречи</div>
+                    <h2>Продолжить изучение</h2>
+                </div>
+                <div class="content-related-arrows" aria-hidden="true">
+                    <button type="button"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button type="button"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="content-webinar-shelf">
+                <article class="webinar-card">
+                    <a href="./youth-code.html" aria-label="Код молодости">
+                        <img src="../images/webinar_1.png" alt="Код молодости">
+                        <span class="webinar-card-duration">58:24</span>
+                        <span class="webinar-card-title">Код молодости</span>
+                    </a>
+                    <div class="webinar-card-meta-row" style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+                        <span><i class="fa-solid fa-user-group"></i> 1 820 участников</span>
+                        <a href="./youth-code.html" class="webinar-card-more-link" style="color:var(--color-accent-ui);font-size:11px;font-weight:800;text-transform:uppercase;text-decoration:none;">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="webinar-card">
+                    <a href="./self-esteem.html" aria-label="Самооценка и вера в себя">
+                        <img src="../images/webinar_2.png" alt="Самооценка и вера в себя">
+                        <span class="webinar-card-duration">1:05:18</span>
+                        <span class="webinar-card-title">Самооценка и вера в себя</span>
+                    </a>
+                    <div class="webinar-card-meta-row" style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+                        <span><i class="fa-solid fa-user-group"></i> 2 310 участников</span>
+                        <a href="./self-esteem.html" class="webinar-card-more-link" style="color:var(--color-accent-ui);font-size:11px;font-weight:800;text-transform:uppercase;text-decoration:none;">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="webinar-card">
+                    <a href="./relationship-code.html" aria-label="Код отношений">
+                        <img src="../images/webinar_3.png" alt="Код отношений">
+                        <span class="webinar-card-duration">47:36</span>
+                        <span class="webinar-card-title">Код отношений</span>
+                    </a>
+                    <div class="webinar-card-meta-row" style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+                        <span><i class="fa-solid fa-user-group"></i> 1 950 участников</span>
+                        <a href="./relationship-code.html" class="webinar-card-more-link" style="color:var(--color-accent-ui);font-size:11px;font-weight:800;text-transform:uppercase;text-decoration:none;">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="webinar-card">
+                    <a href="./choosing-oneself.html" aria-label="Выбор себя">
+                        <img src="../images/webinar_4.png" alt="Выбор себя">
+                        <span class="webinar-card-duration">1:03:42</span>
+                        <span class="webinar-card-title">Выбор себя</span>
+                    </a>
+                    <div class="webinar-card-meta-row" style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+                        <span><i class="fa-solid fa-user-group"></i> 1 760 участников</span>
+                        <a href="./choosing-oneself.html" class="webinar-card-more-link" style="color:var(--color-accent-ui);font-size:11px;font-weight:800;text-transform:uppercase;text-decoration:none;">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="content-footer-v2">
+        <div class="content-footer-brand">
+            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+            <p>психолог · ментор · автор психотехнологий формирования событий</p>
+            <div class="content-footer-socials">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <nav class="content-footer-column" aria-label="Навигация">
+            <h3>Навигация</h3>
+            <a href="../index.html#hero">Главная</a><a href="../methodology.html">Методология</a>
+            <a href="../programs/">Программы</a><a href="./index.html">Zoom-встречи</a>
+            <a href="../book/">Книга</a><a href="../meditations/">Медитации</a>
+            <a href="../index.html#blog">Материалы</a><a href="../index.html#blog">Блог</a>
+            <a href="../index.html#about">Обо мне</a>
+        </nav>
+        <nav class="content-footer-column" aria-label="Программы">
+            <h3>Программы</h3>
+            <a href="../programs/mentor-28/">Mentor 28</a>
+            <a href="../programs/sell-star/">Продавай как звезда</a>
+            <a href="../index.html#courses">Библиотека знаний</a>
+            <a href="../index.html#about-club">LUX CLUB</a>
+        </nav>
+        <div class="content-footer-column">
+            <h3>Контакты</h3>
+            <span>Instagram</span><a href="https://instagram.com/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
+            <span>Telegram</span><a href="https://t.me/irina_uzhelovskaya" target="_blank">@irina_uzhelovskaya</a>
+            <span>Email</span><a href="mailto:hello@irina-uzhelovskaya.com">hello@irina-uzhelovskaya.com</a>
+        </div>
+        <div class="content-footer-bottom">
+            <span>© 2026 Ирина Ужеловская. Все права защищены</span>
+            <div><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.querySelectorAll('.header .nav-link-dropdown').forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            const navItem = link.closest('.nav-item');
+            document.querySelectorAll('.header .nav-item.is-open').forEach(item => {
+                if (item !== navItem) item.classList.remove('is-open');
+            });
+            navItem.classList.toggle('is-open');
+        });
+    });
+    document.addEventListener('click', event => {
+        if (!event.target.closest('.header .nav-item')) {
+            document.querySelectorAll('.header .nav-item.is-open').forEach(item => item.classList.remove('is-open'));
+        }
+    });
+</script>
+
+<div class="video-modal" id="webinarVideoModal" aria-hidden="true">
+    <div class="video-modal-backdrop" data-webinar-video-close></div>
+    <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="webinarVideoModalTitle">
+        <button class="video-modal-close" type="button" data-webinar-video-close aria-label="Закрыть окно"><i class="fa-solid fa-xmark"></i></button>
+        <div class="video-modal-kicker">ПРЕВЬЮ ZOOM-ВСТРЕЧИ</div>
+        <h3 id="webinarVideoModalTitle">Видео-превью Zoom-встречи</h3>
+        <p>Здесь будет размещено видео-превью Zoom-встречи «Денежные протоколы».</p>
+        <div class="video-modal-actions"><button class="btn btn-primary" type="button" data-webinar-video-close>Понятно</button></div>
+    </div>
+</div>
+
+<div class="video-modal" id="webinarProgramModal" aria-hidden="true">
+    <div class="video-modal-backdrop" data-webinar-program-close></div>
+    <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="webinarProgramModalTitle" style="max-width:480px;">
+        <button class="video-modal-close" type="button" data-webinar-program-close aria-label="Закрыть окно"><i class="fa-solid fa-xmark"></i></button>
+        <div class="video-modal-kicker">О ZOOM-ВСТРЕЧЕ</div>
+        <h3 id="webinarProgramModalTitle" style="margin-bottom:8px;">Уточнить детали Zoom-встречи</h3>
+        <p style="margin-bottom:20px;">Если у вас остались вопросы о формате Zoom-встречи, оставьте email — команда свяжется с вами и уточнит детали.</p>
+        <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Запрос отправлен!'); document.getElementById('webinarProgramModal').classList.remove('is-open'); document.body.style.overflow='';">
+            <div class="form-group" style="margin-bottom:12px;text-align:left;">
+                <label for="money-protocols-question-email" style="display:block;margin-bottom:6px;font-size:12px;font-weight:600;">Ваш Email</label>
+                <input type="email" id="money-protocols-question-email" required placeholder="example@email.com" style="width:100%;padding:12px;border:1px solid rgba(0,0,0,.1);border-radius:8px;">
+            </div>
+            <button type="submit" class="btn-submit" style="width:100%;padding:14px;background:var(--color-accent-ui);color:#fff;border:0;border-radius:8px;font-weight:600;cursor:pointer;">ОТПРАВИТЬ ЗАПРОС</button>
+        </form>
+    </div>
+</div>
+
+<div class="video-modal" id="webinarBuyModal" aria-hidden="true">
+    <div class="video-modal-backdrop" data-webinar-buy-close></div>
+    <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="webinarBuyModalTitle" style="max-width:480px;">
+        <button class="video-modal-close" type="button" data-webinar-buy-close aria-label="Закрыть окно"><i class="fa-solid fa-xmark"></i></button>
+        <div class="video-modal-kicker">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+        <h3 id="webinarBuyModalTitle" style="margin-bottom:8px;">Купить Zoom-встречу «Денежные протоколы»</h3>
+        <p style="margin-bottom:20px;">Оставьте ваши контакты, чтобы получить доступ к Zoom-встрече.</p>
+        <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Заявка на Zoom-встречу отправлена!'); document.getElementById('webinarBuyModal').classList.remove('is-open'); document.body.style.overflow='';">
+            <div class="form-group" style="margin-bottom:12px;text-align:left;">
+                <label for="money-protocols-buy-name" style="display:block;margin-bottom:6px;font-size:12px;font-weight:600;">Имя</label>
+                <input type="text" id="money-protocols-buy-name" required placeholder="Ваше имя" style="width:100%;padding:12px;border:1px solid rgba(0,0,0,.1);border-radius:8px;">
+            </div>
+            <div class="form-group" style="margin-bottom:12px;text-align:left;">
+                <label for="money-protocols-buy-email" style="display:block;margin-bottom:6px;font-size:12px;font-weight:600;">Email</label>
+                <input type="email" id="money-protocols-buy-email" required placeholder="Ваш email" style="width:100%;padding:12px;border:1px solid rgba(0,0,0,.1);border-radius:8px;">
+            </div>
+            <div class="form-group" style="margin-bottom:20px;text-align:left;">
+                <label for="money-protocols-buy-telegram" style="display:block;margin-bottom:6px;font-size:12px;font-weight:600;">Telegram / Телефон</label>
+                <input type="text" id="money-protocols-buy-telegram" required placeholder="@username или номер телефона" style="width:100%;padding:12px;border:1px solid rgba(0,0,0,.1);border-radius:8px;">
+            </div>
+            <button type="submit" class="btn-submit" style="width:100%;padding:14px;background:var(--color-accent-ui);color:#fff;border:0;border-radius:8px;font-weight:600;cursor:pointer;">ОТПРАВИТЬ ЗАЯВКУ</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    const initWebinarModals = () => {
+        const setupModal = (modalId, openAttr, closeAttr) => {
+            const modal = document.getElementById(modalId);
+            const openButtons = Array.from(document.querySelectorAll(`[${openAttr}]`));
+            if (!modal || !openButtons.length) return;
+            const closeButtons = Array.from(modal.querySelectorAll(`[${closeAttr}]`));
+            const openModal = () => {
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            };
+            const closeModal = () => {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            };
+            openButtons.forEach(button => button.addEventListener('click', openModal));
+            closeButtons.forEach(button => button.addEventListener('click', closeModal));
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+            });
+        };
+        setupModal('webinarVideoModal', 'data-webinar-video-open', 'data-webinar-video-close');
+        setupModal('webinarProgramModal', 'data-webinar-program-open', 'data-webinar-program-close');
+        setupModal('webinarBuyModal', 'data-webinar-buy-open', 'data-webinar-buy-close');
+    };
+    initWebinarModals();
+</script>
+
+<script src="../js/translations.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/commerce-modal.js"></script>
+</body>
+</html>

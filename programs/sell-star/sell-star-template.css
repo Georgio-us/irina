@@ -1,0 +1,199 @@
+.sell-star-template-page {
+    --mentor-night: #160a14;
+    --mentor-night-soft: #2f1728;
+    --mentor-paper: #f7f1ed;
+    --mentor-paper-alt: #efe4e5;
+    --mentor-ink: #2f252c;
+    --mentor-muted: #786d73;
+    --mentor-accent: #6b294f;
+    --mentor-accent-deep: #3a182e;
+    --mentor-line-dark: rgba(255, 255, 255, .15);
+    --mentor-line-light: rgba(58, 24, 46, .15);
+    --star-gold: #d5ae73;
+    overflow-x: hidden;
+}
+
+.sell-star-template-page .mentor-template-header__cta,
+.sell-star-template-page .mentor-template-header__cta:hover {
+    color: #26131e;
+}
+
+.sell-star-template-page .mentor-new-hero__visual::after {
+    background: linear-gradient(180deg, transparent 45%, rgba(22, 6, 18, .78) 100%);
+}
+
+.sell-star-template-page .mentor-new-hero__visual > img:first-child {
+    object-position: 72% center;
+}
+
+.sell-star-template-page .mentor-new-hero__button,
+.sell-star-template-page .mentor-program-system__action a,
+.sell-star-template-page .mentor-live-message__primary,
+.sell-star-template-page .mentor-plan > a {
+    background: #54203f;
+}
+
+.sell-star-template-page .mentor-recognition-scene,
+.sell-star-template-page .mentor-modules-stage {
+    --module-accent-strong: #d5ae73;
+    background:
+        radial-gradient(circle at 85% 18%, rgba(142, 64, 99, .22), transparent 28%),
+        #160a14;
+}
+
+.sell-star-template-page .mentor-recognition-scene__media img,
+.sell-star-template-page .mentor-live-message__media img {
+    object-position: 50% 20%;
+}
+
+.sell-star-template-page .mentor-program-system__result {
+    background: linear-gradient(90deg, rgba(213, 174, 115, .13), rgba(189, 121, 152, .14));
+}
+
+.sell-star-template-page .mentor-modules-stage__tabs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.sell-star-template-page .mentor-modules-stage__panels article[data-module-theme="1"] {
+    --module-accent: #d7a0b9;
+    --module-panel: #2f1d2e;
+    --module-visual: #4c263f;
+}
+
+.sell-star-template-page .mentor-modules-stage__panels article[data-module-theme="3"] {
+    --module-accent: #d5ae73;
+    --module-panel: #31251f;
+    --module-visual: #553c29;
+}
+
+.sell-star-template-page .mentor-modules-stage__panels article[data-module-theme="5"] {
+    --module-accent: #e5a0bb;
+    --module-panel: #37202e;
+    --module-visual: #652c49;
+}
+
+.sell-star-template-page .mentor-modules-stage__panels article[data-module-theme="7"] {
+    --module-accent: #d9b6dc;
+    --module-panel: #2c2036;
+    --module-visual: #4a315f;
+}
+
+.sell-star-template-page .mentor-live-message {
+    background: #f7f1ed;
+}
+
+.sell-star-template-page .mentor-testimonials-block {
+    background: linear-gradient(135deg, #f2e8e8 0%, #f7f1ed 55%, #eadde2 100%);
+}
+
+.sell-star-template-page .sell-star-participation {
+    background:
+        radial-gradient(circle at 92% 10%, rgba(132, 65, 96, .14), transparent 30%),
+        #f4eeea;
+}
+
+.sell-star-template-page .sell-star-participation .mentor-participation-block__plans {
+    display: block;
+}
+
+.sell-star-template-page .mentor-plan--star {
+    --participation-ink: #fff8f3;
+    --participation-muted: #cbbbc2;
+    --participation-accent: #d5ae73;
+    --participation-line: rgba(255, 255, 255, .18);
+    width: 100%;
+    max-width: none;
+    background:
+        radial-gradient(circle at 88% 20%, rgba(213, 174, 115, .16), transparent 30%),
+        linear-gradient(135deg, #321827, #1a0c17);
+    color: #fff8f3;
+}
+
+.sell-star-template-page .mentor-plan--star .mentor-plan__head,
+.sell-star-template-page .mentor-plan--star li {
+    border-color: rgba(255,255,255,.18);
+}
+
+.sell-star-template-page .mentor-plan--star .mentor-plan__head span,
+.sell-star-template-page .mentor-plan--star .mentor-plan__head small {
+    color: #d7a0b9;
+}
+
+.sell-star-template-page .mentor-plan--star > a {
+    background: #d5ae73;
+    color: #25131e;
+}
+
+@media (max-width: 760px) {
+    .sell-star-template-page .mentor-new-hero__author {
+        gap: 12px;
+    }
+
+    .sell-star-template-page .mentor-new-hero__author span {
+        flex: 0 0 auto;
+    }
+
+    .sell-star-template-page .mentor-new-hero__author strong {
+        max-width: 52%;
+        font-size: 17px;
+        line-height: 1.05;
+        text-align: right;
+    }
+
+    .sell-star-template-page .mentor-new-hero h1 {
+        max-width: 100%;
+        font-size: clamp(48px, 14.5vw, 62px);
+        overflow-wrap: anywhere;
+    }
+
+    .sell-star-template-page .mentor-modules-stage__tabs {
+        display: flex;
+    }
+
+    .sell-star-template-page .mentor-modules-stage__panels article {
+        overflow: hidden;
+    }
+
+    .sell-star-template-page .mentor-modules-stage__visual {
+        display: block;
+        position: relative;
+        min-height: 172px;
+        border-top: 1px solid color-mix(in srgb, var(--module-accent) 35%, transparent);
+        background:
+            radial-gradient(circle at 52% 115%, transparent 0 32%, color-mix(in srgb, var(--module-accent) 18%, transparent) 33% 34%, transparent 35%),
+            linear-gradient(135deg, color-mix(in srgb, var(--module-visual) 88%, #000), var(--module-visual));
+    }
+
+    .sell-star-template-page .mentor-modules-stage__visual span {
+        position: absolute;
+        top: 22px;
+        right: 24px;
+        font-size: clamp(4rem, 24vw, 6.5rem);
+        line-height: .8;
+        color: color-mix(in srgb, var(--module-accent) 48%, transparent);
+    }
+
+    .sell-star-template-page .mentor-modules-stage__visual strong {
+        position: absolute;
+        left: 24px;
+        bottom: 22px;
+        color: var(--module-accent);
+        font-size: .72rem;
+        letter-spacing: .16em;
+        text-transform: uppercase;
+    }
+
+    .sell-star-template-page .mentor-plan--star {
+        min-width: calc(100vw - 48px);
+    }
+
+    .sell-star-template-page .sell-star-participation .mentor-participation-block__plans {
+        width: 100%;
+        padding-right: 0;
+        overflow: visible;
+    }
+
+    .sell-star-template-page .sell-star-participation .mentor-plan--star {
+        min-width: 0;
+    }
+}
