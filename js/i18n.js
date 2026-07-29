@@ -18,7 +18,20 @@
             const normalized = trimmed.replace(/\s+/g, ' ');
             return dict[normalized] || '';
         },
+        updateLogotypes: function() {
+            const logoFile = this.lang === 'uk' ? 'logotype-uk.svg' : 'logotype.svg';
+            const logos = document.querySelectorAll('img[src$="logotype.svg"], img[src$="logotype-uk.svg"]');
+
+            logos.forEach(img => {
+                const src = img.getAttribute('src');
+                if (src) {
+                    img.setAttribute('src', src.replace(/logotype(?:-uk)?\.svg$/, logoFile));
+                }
+            });
+        },
         translateDOM: function() {
+            this.updateLogotypes();
+
             if (this.lang !== 'uk') {
                 this.updateActiveToggle();
                 return; // Default language is Russian, no translation needed
