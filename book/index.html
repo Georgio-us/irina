@@ -111,7 +111,7 @@ mobileTrack.addEventListener('touchstart',event=>{touchStartX=event.changedTouch
 mobileTrack.addEventListener('touchend',event=>{const delta=event.changedTouches[0].clientX-touchStartX;if(Math.abs(delta)<48)return;if(delta<0&&mobileIndex<mobilePages.length-1)mobileIndex++;if(delta>0&&mobileIndex>0)mobileIndex--;renderMobilePage();},{passive:true});
 renderDesktopSpread();
 renderMobilePage();
-</script><script src="../js/translations.js"></script><script src="../js/i18n.js"></script>
+</script><script src="../js/translations.js"></script><script src="../js/i18n.js?v=logo-switch-1"></script>
 
     <div class="video-modal" id="bookBuyModal" aria-hidden="true">
         <div class="video-modal-backdrop" data-book-buy-close></div>
