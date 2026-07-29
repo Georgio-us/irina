@@ -371,7 +371,9 @@ button, .btn {
     grid-template-columns: minmax(520px, 42vw) minmax(0, 1fr);
     height: calc(100vh - var(--header-height));
     min-height: 650px;
-    background: #f4f3f2 url('images/IMG_7507.PNG') no-repeat center;
+    background:
+        linear-gradient(90deg, rgba(244, 243, 242, 0.99) 0%, rgba(244, 243, 242, 0.96) 38%, rgba(244, 243, 242, 0.38) 56%, rgba(18, 10, 26, 0.08) 100%),
+        url('images/IMG_7513.PNG') no-repeat 58% center;
     background-size: cover;
     position: relative;
 
@@ -515,6 +517,7 @@ button, .btn {
     font-weight: 500;
     position: relative;
     z-index: 1;
+    text-shadow: 0 2px 16px rgba(9, 4, 14, 0.72);
 }
 
 .hero-quote-text .rose-highlight {
