@@ -12,121 +12,223 @@
 
 <div class="page-wrapper">
 
-    <!-- Header -->
-    <header class="header">
-        <a href="#hero" class="logo" aria-label="Ирина Ужеловская">
-            <img src="images/logotype.svg" alt="Ирина Ужеловская">
-        </a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
-        <nav class="nav">
-            <a href="#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
-            <a href="methodology.html" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
-            <div class="nav-item has-dropdown">
-                <a href="#courses" class="nav-link nav-link-dropdown" aria-haspopup="true">ПРОГРАММЫ</a>
-                <div class="nav-dropdown">
-                    <a href="programs/">Авторские программы</a>
-                    <a href="#courses" data-course-target="grid-webinars">Zoom-встречи</a>
-                    <a href="book/">Книга</a>
-                    <a href="meditations/">Медитации</a>
-                    <a href="#courses" data-course-target="grid-science">Научная база</a>
+    <!-- Hero Section with Integrated Non-Sticky Capsule Header -->
+    <section class="hero hero-v2" id="hero">
+        <!-- Embedded Non-Sticky Header Bar -->
+        <header class="header header-v2">
+            <a href="#hero" class="logo" aria-label="Ирина Ужеловская">
+                <img src="images/new_logo_update.svg" alt="Ирина Ужеловская">
+            </a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
+            
+            <!-- Capsule Nav -->
+            <nav class="nav nav-capsule">
+                <a href="methodology.html" class="nav-link active" onclick="document.getElementById('nav-toggle').checked = false;">Мой метод</a>
+                <div class="nav-item has-dropdown">
+                    <a href="#courses" class="nav-link nav-link-dropdown" aria-haspopup="true">Программы</a>
+                    <div class="nav-dropdown">
+                        <a href="programs/">Авторские программы</a>
+                        <a href="#courses" data-course-target="grid-webinars">Zoom-встречи</a>
+                        <a href="book/">Книга</a>
+                        <a href="meditations/">Медитации</a>
+                        <a href="#courses" data-course-target="grid-science">Научная база</a>
+                    </div>
+                </div>
+                <a href="#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Трансформации</a>
+                <a href="#blog" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Библиотека</a>
+                <a href="#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Обо мне</a>
+                <a href="#contact" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Контакты</a>
+            </nav>
+
+            <!-- Social Media Capsule Icons & Language Switcher -->
+            <div class="header-socials-v2">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <div class="lang-switcher-v2">
+                    <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
+                    <span class="lang-separator">/</span>
+                    <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
                 </div>
             </div>
-            <a href="#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
-            <a href="#blog" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
-            <a href="#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
-            <div class="lang-switcher">
-                <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
-                <span class="lang-separator">/</span>
-                <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
-            </div>
-        </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-        </label>
-        <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-left">
-            <div class="hero-tag">
-                психолог • ментор • автор психотехнологий<br>формирования событий
-            </div>
-            <div class="hero-divider"></div>
-            <div class="hero-label">я помогаю</div>
-            <h1 class="hero-title">
-                ЛЮДЯМ СОЗДАВАТЬ<br>
-                <span>НОВУЮ РЕАЛЬНОСТЬ</span>
-            </h1>
-            <p class="hero-subtitle">
-                Через работу с мышлением, эмоциональным состоянием и поведенческие механизмы.
-            </p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">МОИ ПРОГРАММЫ</button>
-                <button class="btn btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">ОБО МНЕ</button>
-            </div>
+            <!-- Mobile Burger Trigger Button -->
+            <label for="nav-toggle" class="mobile-burger-trigger" aria-label="Открыть меню">
+                <i class="fa-solid fa-bars"></i>
+            </label>
 
-            <div class="hero-socials">
-                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://t.me" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-                <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://vk.com" target="_blank"><i class="fa-brands fa-vk"></i></a>
+            <!-- Fullscreen Mobile Navigation Menu Overlay -->
+            <div class="mobile-fullscreen-menu">
+                <div class="mobile-menu-container">
+                    <!-- Top Bar Inside Mobile Menu -->
+                    <div class="mobile-menu-header">
+                        <a href="#hero" class="mobile-menu-logo" onclick="document.getElementById('nav-toggle').checked = false;">
+                            <img src="images/new_logo_update.svg" alt="Ирина Ужеловская">
+                        </a>
+                        <div class="mobile-menu-header-right">
+                            <div class="lang-switcher-v2">
+                                <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
+                                <span class="lang-separator">/</span>
+                                <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
+                            </div>
+                            <label for="nav-toggle" class="mobile-menu-close-btn" aria-label="Закрыть меню">
+                                <i class="fa-solid fa-xmark"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mobile-menu-divider"></div>
+
+                    <!-- Large Numbered Navigation Items -->
+                    <nav class="mobile-menu-nav">
+                        <a href="methodology.html" class="mobile-nav-item" onclick="document.getElementById('nav-toggle').checked = false;">
+                            <span class="nav-num">01</span>
+                            <span class="nav-label">Мой метод</span>
+                        </a>
+                        <a href="#courses" class="mobile-nav-item" onclick="document.getElementById('nav-toggle').checked = false;">
+                            <span class="nav-num">02</span>
+                            <span class="nav-label">Программы</span>
+                        </a>
+                        <a href="#testimonials" class="mobile-nav-item" onclick="document.getElementById('nav-toggle').checked = false;">
+                            <span class="nav-num">03</span>
+                            <span class="nav-label">Трансформации</span>
+                        </a>
+                        <a href="#blog" class="mobile-nav-item" onclick="document.getElementById('nav-toggle').checked = false;">
+                            <span class="nav-num">04</span>
+                            <span class="nav-label">Библиотека</span>
+                        </a>
+                        <a href="#about" class="mobile-nav-item" onclick="document.getElementById('nav-toggle').checked = false;">
+                            <span class="nav-num">05</span>
+                            <span class="nav-label">Обо мне</span>
+                        </a>
+                        <a href="#contact" class="mobile-nav-item" onclick="document.getElementById('nav-toggle').checked = false;">
+                            <span class="nav-num">06</span>
+                            <span class="nav-label">Контакты</span>
+                        </a>
+                    </nav>
+
+                    <!-- Footer Inside Mobile Menu -->
+                    <div class="mobile-menu-footer">
+                        <div class="mobile-footer-info">
+                            <a href="mailto:contact@uzhelovskaya.com" class="mobile-contact-email">contact@uzhelovskaya.com</a>
+                            <div class="mobile-footer-socials">
+                                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mobile-footer-action">
+                            <button class="mobile-cta-btn" onclick="document.getElementById('nav-toggle').checked = false; document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">
+                                <span>Записаться</span>
+                                <span class="btn-arrow-circle"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="hero-right">
-            <div class="hero-bg-line"></div>
-            <!-- Testimonial quote card overlay -->
-            <div class="hero-quote-card">
-                <p class="hero-quote-text">
-                    Когда меняется<br>
-                    внутреннее состояние —<br>
-                    меняется<br>
-                    <span class="rose-highlight">и внешняя реальность.</span>
+        </header>
+
+        <!-- Main Hero Container Grid -->
+        <div class="hero-v2-container">
+            <!-- Hero Left Side: Content & Action & Stats -->
+            <div class="hero-v2-left">
+                <!-- Top Proof Badge on Mobile (300+ Projects) -->
+                <div class="hero-mobile-proof">
+                    <div class="hero-proof-avatars">
+                        <img src="images/irina_about.png" alt="avatar 1">
+                        <img src="images/new_what_if.png" alt="avatar 2">
+                        <img src="images/irina_hero.png" alt="avatar 3">
+                    </div>
+                    <span class="hero-proof-text">10 000+ Успешных<br>трансформаций</span>
+                </div>
+
+                <!-- Mid Floating Social Icons on Mobile -->
+                <div class="hero-mobile-socials">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+
+                <div class="hero-v2-tag">
+                    <span class="tag-dot"></span> КОУЧ ICF • МЕНТОР • ПСИХОТЕХНОЛОГ • ПИСАТЕЛЬ
+                </div>
+
+                <h1 class="hero-v2-title">
+                    Помогаю создавать<br>
+                    <span class="title-accent">фундаментальные изменения</span> в жизни
+                </h1>
+
+                <p class="hero-v2-subtitle">
+                    Изменения начинаются не с обстоятельств, а с внутренних механизмов, которые создают эти обстоятельства.
                 </p>
-            </div>
-        </div>
 
-        <!-- Stats Benefits Glassmorphism Banner -->
-        <div class="hero-stats-banner">
-            <div class="hero-banner-item brand-item">
-                <svg class="hero-banner-cambridge-logo" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#4C224C" stroke-width="1.5">
-                    <path d="M12 2L4 5v7c0 4.5 3.5 8.5 8 10 4.5-1.5 8-5.5 8-10V5l-8-3z" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9 10h6v4H9z" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 10v4" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9 12h6" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div class="brand-text">
-                    <span class="brand-title">CAMBRIDGE INTERNATIONAL</span>
-                    <span class="brand-desc">Behavioural Science Graduate Program</span>
+                <div class="hero-v2-cta-wrap">
+                    <button class="btn-pill-cta" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">
+                        <span>Мои программы</span>
+                        <span class="btn-arrow-circle"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </button>
+                    <button class="btn-pill-cta btn-pill-secondary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+                        <span>Обо мне</span>
+                        <span class="btn-arrow-circle"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </button>
+                </div>
+
+                <!-- Bottom Glassmorphic & Light Stat Cards -->
+                <div class="hero-v2-bottom-cards">
+                    <div class="stat-card-solid">
+                        <span class="stat-card-icon"><i class="fa-solid fa-globe"></i></span>
+                        <h3 class="stat-card-num">15+ лет</h3>
+                        <div class="stat-card-desc">практики</div>
+                        <h4 class="stat-card-sub">10 000+ клиентов</h4>
+                    </div>
+
+                    <div class="stat-card-glass">
+                        <!-- Mobile-only 15+ Years Item inside Glass Card -->
+                        <div class="stat-card-item stat-card-item-mobile">
+                            <span class="stat-card-icon"><i class="fa-solid fa-globe"></i></span>
+                            <h3 class="stat-card-num">15+ лет</h3>
+                            <div class="stat-card-desc">практики</div>
+                            <h4 class="stat-card-sub">10 000+ клиентов</h4>
+                        </div>
+
+                        <div class="stat-card-divider-mobile"></div>
+
+                        <!-- Author Item -->
+                        <div class="stat-card-item">
+                            <span class="stat-card-icon"><i class="fa-solid fa-book-open"></i></span>
+                            <h3 class="stat-card-num">Автор</h3>
+                            <div class="stat-card-desc">психотехнологий</div>
+                            <h4 class="stat-card-sub">Работаю с клиентами из 30+ стран</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="banner-separator"></div>
+            <!-- Hero Right Side: Floating Profile Highlight Card -->
+            <div class="hero-v2-right">
+                <div class="profile-float-card">
+                    <div class="profile-card-header">
+                        <span class="profile-logo-mark"><img src="images/new_logo_update.svg" alt="logo"></span>
+                        <span class="profile-status-badge"><i class="fa-solid fa-check"></i> Доступна для записи</span>
+                    </div>
+                    
+                    <div class="profile-card-img-wrapper">
+                        <img src="images/neue1.PNG" alt="Ирина Ужеловская">
+                    </div>
 
-            <div class="hero-banner-item stat-item-hero">
-                <div class="banner-icon-circle"><i class="fa-solid fa-calendar-days"></i></div>
-                <div class="stat-info-hero">
-                    <span class="banner-stat-number">15+</span>
-                    <span class="banner-stat-text">лет практики</span>
+                    <div class="profile-card-info">
+                        <div class="profile-card-email">contact@uzhelovskaya.com</div>
+                        <div class="profile-card-role">Ирина Ужеловская — Психолог & Ментор</div>
+                        <p class="profile-card-quote">«Ты можешь всё изменить»</p>
+                    </div>
+
+                    <button class="profile-card-btn" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">
+                        <span>Записаться</span>
+                        <span class="btn-arrow-circle-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </button>
                 </div>
-            </div>
-
-            <div class="banner-separator"></div>
-
-            <div class="hero-banner-item stat-item-hero">
-                <div class="banner-icon-circle"><i class="fa-solid fa-users"></i></div>
-                <div class="stat-info-hero">
-                    <span class="banner-stat-number">10 000+</span>
-                    <span class="banner-stat-text">клиентских кейсов</span>
-                </div>
-            </div>
-
-            <div class="banner-separator"></div>
-
-            <div class="hero-banner-item action-item">
-                <button class="btn btn-primary btn-banner-action" onclick="window.location.href='methodology.html'">
-                    ИЗУЧИТЬ МЕТОДОЛОГИЮ <i class="fa-solid fa-arrow-right-long"></i>
-                </button>
             </div>
         </div>
     </section>
@@ -135,16 +237,15 @@
         <!-- Upper Composition: Photo + Text -->
         <div class="methodology-intro">
             <div class="methodology-img-wrapper">
-                <img src="images/new_what_if.png" alt="Ирина Ужеловская">
+                <img src="images/neue3.png" alt="Ирина Ужеловская">
             </div>
             <div class="methodology-intro-text">
                 <h2 class="methodology-title">Что если проблема<br><span class="highlight-italic">не в целях?</span></h2>
                 <div class="methodology-divider-line"></div>
                 <div class="methodology-paragraphs">
-                    <p class="methodology-lead-text">Вы уже ставили цели. Пытались начать с понедельника. Покупали курсы. Меняли окружение. Искали мотивацию.</p>
-                    <p class="methodology-bold-text">Но спустя время снова возвращались в ту же точку.</p>
-                    <p class="methodology-quote-purple">
-                        Потому что проблема не в целях. Проблема <span class="highlight-italic">в состоянии</span> человека, который эти цели ставит.
+                    <div class="methodology-quote-icon" aria-hidden="true">“</div>
+                    <p class="methodology-combined-text">
+                        Вы уже ставили цели, пытались начать с понедельника, покупали курсы, меняли окружение и искали мотивацию. Но спустя время снова возвращались в ту же точку. Потому что проблема не в целях — проблема <span class="highlight-italic">в состоянии</span> человека, который эти цели ставит.
                     </p>
                 </div>
             </div>
@@ -234,6 +335,13 @@
         </div>
     </section>
 
+    <!-- Section Separator Divider -->
+    <div class="selector-separator container">
+        <span class="separator-line"></span>
+        <span class="separator-mark" aria-hidden="true"></span>
+        <span class="separator-line"></span>
+    </div>
+
     <!-- EQ Test Section -->
     <section class="eq-test-section">
         <div class="eq-test-card">
@@ -255,7 +363,7 @@
             <!-- Row 1: Mentor 28 -->
             <div class="selector-row row-mentor">
                 <div class="selector-image-wrapper">
-                    <img src="images/new_mentor_try.png" alt="MENTOR 28">
+                    <img src="images/neue4.PNG" alt="MENTOR 28">
                     <!-- Text Overlay -->
                     <div class="card-text-overlay">
                         <h4 class="overlay-title">MENTOR 28</h4>
@@ -297,8 +405,11 @@
                         </div>
                     </div>
                     <div class="selector-buttons">
-                        <button class="btn btn-selector-primary" type="button" data-commerce-modal="telegram">ЗАБРОНИРОВАТЬ МЕСТО</button>
-                        <a href="programs/mentor-28/" class="btn-selector-link"><span class="selector-link-text">СМОТРЕТЬ ПРОГРАММУ</span><i class="fa-solid fa-arrow-right-long"></i></a>
+                        <button class="btn btn-selector-primary" type="button" data-commerce-modal="telegram">
+                            <span>Забронировать место</span>
+                            <span class="btn-arrow-circle-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        </button>
+                        <a href="programs/mentor-28/" class="btn-selector-link"><span class="selector-link-text">Смотреть программу</span><i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
                 </div>
             </div>
@@ -338,12 +449,15 @@
                         </div>
                     </div>
                     <div class="selector-buttons">
-                        <button class="btn btn-selector-primary" type="button" data-commerce-modal="telegram">ЗАБРОНИРОВАТЬ МЕСТО</button>
-                        <a href="programs/sell-star/" class="btn-selector-link"><span class="selector-link-text">СМОТРЕТЬ ПРОГРАММУ</span><i class="fa-solid fa-arrow-right-long"></i></a>
+                        <button class="btn btn-selector-primary" type="button" data-commerce-modal="telegram">
+                            <span>Забронировать место</span>
+                            <span class="btn-arrow-circle-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        </button>
+                        <a href="programs/sell-star/" class="btn-selector-link"><span class="selector-link-text">Смотреть программу</span><i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
                 </div>
                 <div class="selector-image-wrapper">
-                    <img src="images/new_irina_sellstar.png" alt="Ирина Ужеловская на сцене — программа «Продавай как звезда»">
+                    <img src="images/neue7.PNG" alt="Ирина Ужеловская на сцене — программа «Продавай как звезда»">
                     <!-- Text Overlay -->
                     <div class="card-text-overlay">
                         <h4 class="overlay-title">ПРОДАВАЙ<br>КАК ЗВЕЗДА</h4>
@@ -397,7 +511,7 @@
             <!-- Program Card 1: MENTOR 28 -->
             <div class="program-card-wrapper">
                 <div class="program-card-left">
-                    <img src="images/new_mentor_try.png" alt="MENTOR 28 — 28-дневная программа перезагрузки" class="program-card-img">
+                    <img src="images/neue4.PNG" alt="MENTOR 28 — 28-дневная программа перезагрузки" class="program-card-img">
                 </div>
                 <div class="program-card-right">
                     <div class="program-details-content">
@@ -428,10 +542,11 @@
                     </div>
                     <div class="program-buttons-stack">
                         <button class="btn btn-primary btn-lib-action btn-program-action" type="button" data-commerce-modal="telegram">
-                            ЗАБРОНИРОВАТЬ МЕСТО
+                            <span>Забронировать место</span>
+                            <span class="btn-arrow-circle-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                         </button>
                         <a href="programs/mentor-28/" class="btn-program-link">
-                            СМОТРЕТЬ ПРОГРАММУ <i class="fa-solid fa-arrow-right-long"></i>
+                            <span>Смотреть программу</span> <i class="fa-solid fa-arrow-right-long"></i>
                         </a>
                     </div>
                 </div>
@@ -440,7 +555,7 @@
             <!-- Program Card 2: ПРОДАВАЙ КАК ЗВЕЗДА -->
             <div class="program-card-wrapper">
                 <div class="program-card-left">
-                    <img src="images/program_sell_star.png" alt="ПРОДАВАЙ КАК ЗВЕЗДА — 28-дневная программа" class="program-card-img">
+                    <img src="images/neue7.PNG" alt="ПРОДАВАЙ КАК ЗВЕЗДА — 28-дневная программа" class="program-card-img">
                 </div>
                 <div class="program-card-right">
                     <div class="program-details-content">
@@ -471,10 +586,11 @@
                     </div>
                     <div class="program-buttons-stack">
                         <button class="btn btn-primary btn-lib-action btn-program-action" type="button" data-commerce-modal="telegram">
-                            ЗАБРОНИРОВАТЬ МЕСТО
+                            <span>Забронировать место</span>
+                            <span class="btn-arrow-circle-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                         </button>
                         <a href="programs/sell-star/" class="btn-program-link">
-                            СМОТРЕТЬ ПРОГРАММУ <i class="fa-solid fa-arrow-right-long"></i>
+                            <span>Смотреть программу</span> <i class="fa-solid fa-arrow-right-long"></i>
                         </a>
                     </div>
                 </div>
@@ -1539,7 +1655,10 @@
                 <p class="not-alone-text">
                     Закрытое сообщество женщин, которые проходят этот путь вместе. Поддержка, вдохновение и рост в окружении единомышленниц.
                 </p>
-                <button class="btn btn-primary btn-club" type="button" data-lux-modal-open>Присоединиться к LUX CLUB</button>
+                <button class="btn-pill-cta btn-club" type="button" data-lux-modal-open>
+                    <span>Присоединиться к LUX CLUB</span>
+                    <span class="btn-arrow-circle"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </button>
                 <div class="not-alone-footnote">
                     <svg class="lock-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
@@ -1741,7 +1860,10 @@
                         <label for="message">Сообщение</label>
                         <textarea id="message" required placeholder="Напишите здесь ваш вопрос"></textarea>
                     </div>
-                    <button type="submit" class="btn-submit">ОТПРАВИТЬ СООБЩЕНИЕ</button>
+                    <button type="submit" class="btn-pill-cta btn-submit">
+                        <span>ОТПРАВИТЬ СООБЩЕНИЕ</span>
+                        <span class="btn-arrow-circle"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </button>
                 </form>
                 <div class="contact-form-safe">
                     <svg class="lock-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -1756,7 +1878,7 @@
 
     <footer class="content-footer-v2">
         <div class="content-footer-brand">
-            <img src="images/logotype.svg" alt="Ирина Ужеловская">
+            <img src="images/new_logo_update.svg" alt="Ирина Ужеловская">
             <p>психолог · ментор · автор психотехнологий формирования событий</p>
             <div class="content-footer-socials">
                 <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -2218,6 +2340,47 @@
                 }
             });
         });
+
+        // Hero Version Switcher (V1 Dark / V2 Light with Plum Accent)
+        window.setHeroVersion = function(version) {
+            const heroEl = document.getElementById('hero');
+            if (!heroEl) return;
+            
+            const allV1 = document.querySelectorAll('.version-btn[data-version="v1"]');
+            const allV2 = document.querySelectorAll('.version-btn[data-version="v2"]');
+
+            if (version === 'v2') {
+                heroEl.classList.add('hero-theme-v2');
+                allV1.forEach(b => b.classList.remove('active'));
+                allV2.forEach(b => b.classList.add('active'));
+                try { localStorage.setItem('hero_version', 'v2'); } catch(e){}
+            } else {
+                heroEl.classList.remove('hero-theme-v2');
+                allV1.forEach(b => b.classList.add('active'));
+                allV2.forEach(b => b.classList.remove('active'));
+                try { localStorage.setItem('hero_version', 'v1'); } catch(e){}
+            }
+        };
+
+        // Delegated click handler for robust event handling
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest('.version-btn');
+            if (btn) {
+                e.preventDefault();
+                e.stopPropagation();
+                const ver = btn.getAttribute('data-version');
+                if (ver) {
+                    setHeroVersion(ver);
+                }
+            }
+        });
+
+        try {
+            const savedVersion = localStorage.getItem('hero_version');
+            if (savedVersion === 'v2') {
+                setHeroVersion('v2');
+            }
+        } catch(e){}
     </script>
 
     <script src="js/translations.js"></script>
