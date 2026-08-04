@@ -5315,32 +5315,32 @@ button, .btn {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    padding: 8px 8px 8px 22px;
+    gap: 8px;
+    padding: 6px 6px 6px 18px;
     background: #2D124D;
     color: #ffffff;
     border: 1px solid #2D124D;
     border-radius: 100px;
-    font-size: 14.5px;
+    font-size: 13.5px;
     font-weight: 600;
     line-height: 1;
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 10px 25px rgba(45, 18, 77, 0.25);
+    box-shadow: 0 6px 16px rgba(45, 18, 77, 0.18);
     text-decoration: none;
     white-space: nowrap;
 }
 
 .btn-program-action .btn-arrow-circle-sm {
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.18);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 11px;
     flex-shrink: 0;
     transition: transform 0.35s ease, background-color 0.35s ease, color 0.35s ease;
 }
@@ -5350,7 +5350,7 @@ button, .btn {
     border-color: #4F1D65;
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 15px 35px rgba(45, 18, 77, 0.35);
+    box-shadow: 0 10px 24px rgba(45, 18, 77, 0.28);
 }
 
 .btn-program-action:hover .btn-arrow-circle-sm {
@@ -5360,16 +5360,16 @@ button, .btn {
 }
 
 .btn-program-link {
-    font-size: 13.5px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
     color: #46125F;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding-top: 2px;
+    gap: 6px;
+    padding: 6px 14px;
     transition: all 0.3s ease;
     text-transform: uppercase;
 }
@@ -5651,32 +5651,32 @@ button, .btn {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    gap: 14px;
-    padding: 10px 10px 10px 28px;
+    gap: 10px;
+    padding: 6px 6px 6px 20px;
     background: #2D124D;
     color: #ffffff;
     border: 1px solid #2D124D;
     border-radius: 100px;
-    font-size: 15px;
+    font-size: 13.5px;
     font-weight: 600;
     line-height: 1;
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     white-space: nowrap;
 }
 
 .btn-science-cta .btn-arrow-circle-sm {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.18);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 11px;
     flex-shrink: 0;
     transition: transform 0.35s ease, background-color 0.35s ease, color 0.35s ease;
 }
@@ -7382,8 +7382,8 @@ button, .btn {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 12px;
-        margin-top: 16px;
+        gap: 8px;
+        margin-top: 12px;
         width: 100%;
     }
     .btn-program-action {
@@ -7391,24 +7391,29 @@ button, .btn {
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 10px 10px 24px;
-        font-size: 15px !important;
+        padding: 6px 6px 6px 18px;
+        font-size: 13.5px !important;
         font-weight: 600 !important;
         border-radius: 100px;
-        box-shadow: 0 10px 25px rgba(45, 18, 77, 0.25);
+        box-shadow: 0 6px 16px rgba(45, 18, 77, 0.2);
+    }
+    .btn-program-action .btn-arrow-circle-sm {
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
     }
     .btn-program-link {
         width: 100%;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        padding: 13px 24px;
-        border: 1px solid #2D124D;
+        gap: 8px;
+        padding: 9px 18px;
+        border: 1px solid rgba(45, 18, 77, 0.3);
         border-radius: 100px;
         color: #2D124D !important;
         background: transparent;
-        font-size: 15px !important;
+        font-size: 13px !important;
         font-weight: 600 !important;
         text-align: center;
         text-decoration: none;
