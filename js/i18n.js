@@ -131,7 +131,7 @@
 
         updateActiveToggle: function() {
             // Wait for DOM to finish parsing active toggle styling
-            const toggles = document.querySelectorAll('.lang-switcher .lang-btn');
+            const toggles = document.querySelectorAll('.lang-switcher .lang-btn, .lang-switcher-v2 .lang-btn');
             toggles.forEach(btn => {
                 const lang = btn.getAttribute('data-lang');
                 if (lang === this.lang) {
