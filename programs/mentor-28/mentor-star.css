@@ -5843,7 +5843,7 @@
     .mentor-template-page .mentor-live-message__note p {
         position: relative;
         padding-left: 30px;
-        font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+        font-family: var(--font-serif);
     }
 
     .mentor-template-page .mentor-live-message__note p::before {
@@ -5852,7 +5852,7 @@
         left: 0;
         color: #7c416f;
         content: "«";
-        font-family: Georgia, "Times New Roman", serif;
+        font-family: var(--font-serif);
         font-size: 40px;
         line-height: 1;
     }
@@ -5862,7 +5862,7 @@
         margin-left: 6px;
         color: #7c416f;
         content: "»";
-        font-family: Georgia, "Times New Roman", serif;
+        font-family: var(--font-serif);
         font-size: 40px;
         line-height: 0;
         vertical-align: -9px;
