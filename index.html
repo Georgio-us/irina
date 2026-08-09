@@ -155,10 +155,11 @@
                     <span class="tag-dot"></span> КОУЧ ICF • МЕНТОР • ПСИХОТЕХНОЛОГ • ПИСАТЕЛЬ
                 </div>
 
-                <h1 class="hero-v2-title" data-hero-font-switcher role="button" tabindex="0" title="Нажмите, чтобы сменить шрифт заголовка">
+                <h1 class="hero-v2-title" data-hero-font-switcher data-font-variant="racama" role="button" tabindex="0" title="Нажмите, чтобы сменить шрифт заголовка">
                     Помогаю создавать<br>
                     <span class="title-accent">фундаментальные изменения</span> в жизни
                 </h1>
+                <div class="hero-font-preview-notice" data-hero-font-notice aria-live="polite" aria-atomic="true"></div>
 
                 <p class="hero-v2-subtitle">
                     Изменения начинаются не с обстоятельств, а с внутренних механизмов, которые создают эти обстоятельства.
@@ -348,6 +349,7 @@
                     <img src="images/neue4.PNG" alt="MENTOR 28">
                     <!-- Text Overlay -->
                     <div class="card-text-overlay">
+                        <div class="overlay-kicker"><span></span>Программа</div>
                         <h4 class="overlay-title">MENTOR 28</h4>
                         <div class="overlay-badge">28-дневная программа глубокой перезагрузки</div>
                         <p class="overlay-desc">Системная работа над мышлением, эмоциональным состоянием и поведенческими стратегиями для создания новой реальности.</p>
@@ -448,6 +450,7 @@
                     <img src="images/neue7.PNG" alt="Ирина Ужеловская на сцене — программа «Продавай как звезда»">
                     <!-- Text Overlay -->
                     <div class="card-text-overlay">
+                        <div class="overlay-kicker"><span></span>Программа</div>
                         <h4 class="overlay-title">ПРОДАВАЙ<br>КАК ЗВЕЗДА</h4>
                         <div class="overlay-badge">Система продаж через состояние, самооценность и личный бренд</div>
                         <p class="overlay-desc">Для экспертов и предпринимателей, которые хотят продавать легко, дорого и в удовольствие.</p>
@@ -2580,14 +2583,31 @@
         // Hidden hero title font preview: click the title to cycle through the options.
         (() => {
             const title = document.querySelector('[data-hero-font-switcher]');
+            const notice = document.querySelector('[data-hero-font-notice]');
             if (!title) return;
 
-            const variants = ['onest', 'prata', 'cormorant', 'playfair', 'forum', 'yeseva', 'lora', 'merriweather'];
+            const variants = ['racama', 'forum', 'yeseva', 'lora', 'merriweather'];
+            const variantNames = {
+                forum: 'Forum',
+                yeseva: 'Yeseva One',
+                lora: 'Lora',
+                merriweather: 'Merriweather',
+                racama: 'Racama'
+            };
             let currentIndex = 0;
+            let noticeTimer;
 
             const switchFont = () => {
                 currentIndex = (currentIndex + 1) % variants.length;
-                title.dataset.fontVariant = variants[currentIndex];
+                const variant = variants[currentIndex];
+                title.dataset.fontVariant = variant;
+
+                if (notice) {
+                    notice.textContent = `Шрифт: ${variantNames[variant]}`;
+                    notice.classList.add('is-visible');
+                    window.clearTimeout(noticeTimer);
+                    noticeTimer = window.setTimeout(() => notice.classList.remove('is-visible'), 2500);
+                }
             };
 
             title.addEventListener('click', switchFont);
