@@ -482,7 +482,7 @@ button, .btn {
     grid-template-columns: minmax(520px, 42vw) minmax(0, 1fr);
     height: calc(100vh - var(--header-height));
     min-height: 650px;
-    background: #f4f3f2 url('images/new_irina_hero.png') no-repeat center;
+    background: #f4f3f2 url('images/neue7.PNG') no-repeat center;
     background-size: cover;
     position: relative;
 
@@ -5522,6 +5522,175 @@ button, .btn {
     background: #ffffff;
     color: #2D124D;
     transform: rotate(45deg);
+}
+
+/* Program cards use the same primary CTA language as the main page. */
+.program-buttons-stack .btn-program-action {
+    min-height: 54px;
+    padding: 8px 8px 8px 20px;
+    background: #2D124D;
+    border-color: #2D124D;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.program-buttons-stack .btn-program-action .btn-arrow-circle-sm {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+}
+
+.program-buttons-stack .btn-program-action:hover {
+    background: #4F1D65;
+    border-color: #4F1D65;
+}
+
+/* Final cascade: keep blog topics and the About text consistent after responsive rules. */
+.blog-hub-page .blog-hub-card-kicker,
+.blog-hub-page--editorial .blog-hub-card-kicker {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(70, 18, 95, 0.08);
+    color: var(--color-accent-text);
+    font-size: 11px;
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.blog-hub-page--editorial .blog-hub-card-kicker::before {
+    display: none;
+}
+
+.blog-hub-page--editorial .blog-hub-card:first-child .blog-hub-card-kicker {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+}
+
+.about-text p,
+.about-text .about-lead,
+.about-text .about-questions {
+    font-size: clamp(16px, 1.12vw, 19px);
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+    .about-text p,
+    .about-text .about-lead,
+    .about-text .about-questions {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+/* The methodology header is absolute, so reserve its space before breadcrumbs. */
+.method-v2-page .method-v2-prehero {
+    padding-top: clamp(118px, 9vw, 148px);
+}
+
+@media (max-width: 768px) {
+    .method-v2-page .method-v2-prehero {
+        padding-top: 132px;
+    }
+}
+
+/* Final cascade: visual system overrides for blog categories and About copy. */
+.blog-hub-page .blog-hub-card-kicker,
+.blog-hub-page--editorial .blog-hub-card-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(70, 18, 95, 0.08);
+    color: var(--color-accent-text);
+    font-size: 11px;
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.blog-hub-page--editorial .blog-hub-card-kicker::before {
+    display: none;
+}
+
+.blog-hub-page--editorial .blog-hub-card:first-child .blog-hub-card-kicker {
+    color: #fff;
+    background: rgba(255,255,255,0.14);
+}
+
+.about-text p,
+.about-text .about-lead,
+.about-text .about-questions {
+    font-size: clamp(16px, 1.12vw, 19px);
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+    .about-text p,
+    .about-text .about-lead,
+    .about-text .about-questions {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+/* Article themes are categories, so they use the shared soft badge treatment. */
+.blog-hub-page .blog-hub-card-kicker {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(70, 18, 95, 0.08);
+    color: var(--color-accent-text);
+    font-size: 11px;
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.blog-hub-page--editorial .blog-hub-card-kicker {
+    gap: 0;
+    color: var(--color-accent-text);
+}
+
+.blog-hub-page--editorial .blog-hub-card-kicker::before {
+    display: none;
+}
+
+.blog-hub-page--editorial .blog-hub-card:first-child .blog-hub-card-kicker {
+    color: #fff;
+    background: rgba(255,255,255,0.14);
+}
+
+/* The About narrative is one continuous text block, not a lead plus smaller copy. */
+.about-text p,
+.about-text .about-lead,
+.about-text .about-questions {
+    font-size: clamp(16px, 1.12vw, 19px);
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+    .about-text p,
+    .about-text .about-lead,
+    .about-text .about-questions {
+        font-size: 16px;
+        line-height: 1.6;
+    }
 }
 
 .btn-program-link {
@@ -16851,7 +17020,7 @@ body.testimonial-modal-open {
 .mentor-page--editorial .product-faq > * { width: min(1280px, calc(100% - var(--container-x) * 2)); }
 
 .mentor-page--editorial .mentor-audience { padding-left: 0; padding-right: 0; align-items: stretch; }
-.mentor-page--editorial .mentor-audience .product-section-head { width: 100%; padding-left: max(var(--container-x), calc((100vw - 1280px) / 2)); border-radius: 0; color: #fff; background: linear-gradient(90deg, rgba(42,24,44,.92) 0%, rgba(42,24,44,.68) 52%, rgba(42,24,44,.18) 100%), url("images/new_irina_hero.png") center 36% / cover no-repeat; }
+.mentor-page--editorial .mentor-audience .product-section-head { width: 100%; padding-left: max(var(--container-x), calc((100vw - 1280px) / 2)); border-radius: 0; color: #fff; background: linear-gradient(90deg, rgba(42,24,44,.92) 0%, rgba(42,24,44,.68) 52%, rgba(42,24,44,.18) 100%), url("images/neue7.PNG") center 36% / cover no-repeat; }
 .mentor-page--editorial .mentor-audience .product-section-head::before { left: auto; right: -100px; bottom: -155px; border-color: rgba(255,255,255,.3); box-shadow: 0 0 0 52px rgba(255,255,255,.05), 0 0 0 104px rgba(255,255,255,.035); }
 .mentor-page--editorial .mentor-audience .product-section-head .product-kicker,
 .mentor-page--editorial .mentor-audience .product-section-head h2,
@@ -16887,7 +17056,7 @@ body.testimonial-modal-open {
 .mentor-page--editorial .mentor-editorial-module-list article:nth-child(even) { background: rgba(255,255,255,.38); }
 .mentor-page--editorial .mentor-editorial-module-list article:hover { background: rgba(255,255,255,.72); }
 
-.mentor-page--editorial .mentor-editorial-coffee { position: relative; overflow: hidden; background: linear-gradient(100deg, rgba(27,15,32,.96), rgba(54,29,58,.82)), url("images/new_irina_sellstar.png") center / cover no-repeat; }
+.mentor-page--editorial .mentor-editorial-coffee { position: relative; overflow: hidden; background: linear-gradient(100deg, rgba(27,15,32,.96), rgba(54,29,58,.82)), url("images/neue7.PNG") center / cover no-repeat; }
 .mentor-page--editorial .mentor-editorial-coffee::after { content: ""; position: absolute; right: -18vw; top: -22vw; width: 60vw; height: 60vw; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; }
 .mentor-page--editorial .mentor-editorial-coffee .mentor-editorial-wrap { position: relative; z-index: 1; }
 .mentor-page--editorial .mentor-editorial-coffee-grid { background: rgba(25,13,29,.45); backdrop-filter: blur(4px); }
@@ -16899,7 +17068,7 @@ body.testimonial-modal-open {
 .mentor-page--editorial .product-value-card::before { opacity: .25; }
 
 .mentor-page--editorial .mentor-editorial-system { background: #f8f3f0; }
-.mentor-page--editorial .mentor-editorial-team { position: relative; overflow: hidden; padding-left: 0; padding-right: 0; background: linear-gradient(90deg, #f8f3f0 0%, #f8f3f0 51%, transparent 51%), url("images/new_irina_sellstar.png") right center / 50% auto no-repeat; }
+.mentor-page--editorial .mentor-editorial-team { position: relative; overflow: hidden; padding-left: 0; padding-right: 0; background: linear-gradient(90deg, #f8f3f0 0%, #f8f3f0 51%, transparent 51%), url("images/neue7.PNG") right center / 50% auto no-repeat; }
 .mentor-page--editorial .mentor-editorial-team .mentor-editorial-wrap { padding-right: 52%; }
 .mentor-page--editorial .mentor-editorial-team-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
 .mentor-page--editorial .mentor-editorial-team-grid article { border-color: rgba(82,35,106,.24); }
@@ -16999,7 +17168,7 @@ body.testimonial-modal-open {
 
 .mentor-page--editorial .mentor-audience .product-section-head { min-height: 620px; padding: 36px max(28px, var(--container-x)) 280px; background: #301d36; }
 .mentor-page--editorial .mentor-audience .product-section-head::before { content: "01"; width: auto; height: auto; left: 34px; right: auto; bottom: 222px; border: 0; border-radius: 0; box-shadow: none; color: rgba(255,255,255,.22); font-family: var(--font-serif); font-size: 90px; line-height: .8; }
-.mentor-page--editorial .mentor-audience .product-section-head::after { content: ""; position: absolute; z-index: 0; right: 0; bottom: 0; left: 0; height: 255px; background: url("images/new_irina_hero.png") center 38% / cover no-repeat; }
+.mentor-page--editorial .mentor-audience .product-section-head::after { content: ""; position: absolute; z-index: 0; right: 0; bottom: 0; left: 0; height: 255px; background: url("images/neue7.PNG") center 38% / cover no-repeat; }
 .mentor-page--editorial .mentor-audience .product-section-head > * { z-index: 1; }
 .mentor-page--editorial .mentor-audience .product-section-head h2 { max-width: 475px; }
 .mentor-page--editorial .mentor-audience .product-section-head > p { max-width: 430px; }
@@ -21097,5 +21266,108 @@ input.eq-form-input {
     }
     .eq-pill-divider {
         margin: 0 6px;
+    }
+}
+
+/* The methodology header is absolute, so reserve its space before breadcrumbs. */
+.method-v2-page .method-v2-prehero {
+    padding-top: clamp(118px, 9vw, 148px);
+}
+
+@media (max-width: 768px) {
+    .method-v2-page .method-v2-prehero {
+        padding-top: 132px;
+    }
+}
+
+/* Light meditation rhythm section must never inherit the white heading colour. */
+.meditation-page .meditation-rhythm h2 {
+    color: var(--color-text-main);
+}
+
+/* The book title sits on a plain light background, so it needs no decorative shadow. */
+.book-page .book-hero h1,
+.book-page .book-hero h1 em {
+    text-shadow: none;
+}
+
+/* Meditation facts: context stays together on the left, duration remains visible on the right. */
+.meditation-detail-cover .meditation-detail-meta {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    column-gap: 18px;
+    row-gap: 6px;
+}
+
+.meditation-detail-cover .meditation-detail-meta span:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+    white-space: nowrap;
+}
+
+.meditation-detail-cover .meditation-detail-meta span:nth-child(2) { grid-column: 1; grid-row: 1; }
+.meditation-detail-cover .meditation-detail-meta span:nth-child(3) { grid-column: 1; grid-row: 2; }
+
+/* Final program-card CTA alignment: readable label, consistent primary colour. */
+.program-buttons-stack .btn-program-action {
+    min-height: 54px;
+    padding: 8px 8px 8px 20px;
+    background: #2D124D;
+    border-color: #2D124D;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.program-buttons-stack .btn-program-action .btn-arrow-circle-sm {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+}
+
+.program-buttons-stack .btn-program-action:hover {
+    background: #4F1D65;
+    border-color: #4F1D65;
+}
+
+/* Final cascade: keep blog topics and the About text consistent after responsive rules. */
+.blog-hub-page .blog-hub-card-kicker,
+.blog-hub-page--editorial .blog-hub-card-kicker {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(70, 18, 95, 0.08);
+    color: var(--color-accent-text);
+    font-size: 11px;
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.blog-hub-page--editorial .blog-hub-card-kicker::before { display: none; }
+
+.blog-hub-page--editorial .blog-hub-card:first-child .blog-hub-card-kicker {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+}
+
+.about-text p,
+.about-text .about-lead,
+.about-text .about-questions {
+    font-size: clamp(16px, 1.12vw, 19px);
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+    .about-text p,
+    .about-text .about-lead,
+    .about-text .about-questions {
+        font-size: 16px;
+        line-height: 1.6;
     }
 }

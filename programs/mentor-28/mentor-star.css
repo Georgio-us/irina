@@ -1122,6 +1122,25 @@
     padding: 12px 22px;
 }
 
+.mentor-template-breadcrumb {
+    position: relative;
+    z-index: 3;
+    width: min(1660px, calc(100% - 2 * var(--container-x)));
+    margin: 0 auto;
+    padding: 20px 0;
+    color: #746a70;
+    font-size: 13px;
+}
+
+.mentor-template-breadcrumb a {
+    color: inherit;
+}
+
+.mentor-template-breadcrumb span:last-child {
+    color: #382d35;
+    font-weight: 650;
+}
+
 @media (max-width: 760px) {
     .mentor-template-page .mentor-new-hero__eyebrow,
     .mentor-template-page .mentor-recognition-scene__eyebrow,
@@ -1139,6 +1158,12 @@
     .mentor-template-page .mentor-recognition-scene__list li {
         font-size: 15px;
         line-height: 1.5;
+    }
+
+    .mentor-template-breadcrumb {
+        width: calc(100% - 40px);
+        padding: 16px 0;
+        font-size: 12px;
     }
 }
 
@@ -6112,4 +6137,51 @@
     .mentor-template-page .mentor-testimonials-block .reviews-component__footer a i {
         font-size: 19px;
     }
+}
+
+/* Shared primary CTA: colour, type scale and hover match the home page. */
+.mentor-template-page .mentor-new-hero__button,
+.mentor-template-page .mentor-program-system__action a,
+.mentor-template-page .mentor-live-message__primary,
+.mentor-template-page .mentor-plan > a,
+.mentor-template-page .mentor-participation-block__support a {
+    min-height: 58px;
+    padding: 8px 8px 8px 24px;
+    background: #2D124D;
+    border-color: #2D124D;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.mentor-template-page .mentor-new-hero__button:hover,
+.mentor-template-page .mentor-program-system__action a:hover,
+.mentor-template-page .mentor-live-message__primary:hover,
+.mentor-template-page .mentor-plan > a:hover,
+.mentor-template-page .mentor-participation-block__support a:hover {
+    background: #4F1D65;
+    border-color: #4F1D65;
+    box-shadow: 0 12px 28px rgba(45, 18, 77, 0.26);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.mentor-template-page .mentor-new-hero__button-icon,
+.mentor-template-page .mentor-live-message__primary span:last-child,
+.mentor-template-page .mentor-participation-block__support a span:last-child {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+}
+
+.mentor-template-page .mentor-new-hero__button:hover .mentor-new-hero__button-icon,
+.mentor-template-page .mentor-live-message__primary:hover span:last-child,
+.mentor-template-page .mentor-participation-block__support a:hover span:last-child {
+    background: #fff;
+    color: #2D124D;
 }
