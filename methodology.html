@@ -4,44 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Методология — Ирина Ужеловская</title>
-    <link rel="stylesheet" href="style.css?v=98">
+    <link rel="stylesheet" href="style.css?v=106">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <div class="page-wrapper methodology-page method-v2-page">
-    <header class="header">
-        <a href="index.html#hero" class="logo" aria-label="Ирина Ужеловская">
-            <img src="images/new_logo_update.svg" alt="Ирина Ужеловская">
-        </a>
+    <header class="header header-v2">
+        <a href="index.html#hero" class="logo" aria-label="Ирина Ужеловская"><img src="images/new_logo_update.svg" alt="Ирина Ужеловская"></a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
-        <nav class="nav">
-            <a href="index.html#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
-            <a href="methodology.html" class="nav-link active" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
-            <div class="nav-item has-dropdown">
-                <a href="programs/" class="nav-link nav-link-dropdown" aria-haspopup="true">ПРОГРАММЫ</a>
-                <div class="nav-dropdown">
-                    <a href="programs/">Авторские программы</a>
-                    <a href="programs/mentor-28/">Mentor 28</a>
-                    <a href="programs/sell-star/">Продавай как звезда</a>
-                    <a href="webinars/index.html">Zoom-встречи</a>
-                    <a href="book/">Книга</a>
-                    <a href="meditations/">Медитации</a>
-                </div>
-            </div>
-            <a href="index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
-            <a href="index.html#blog" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
-            <a href="index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
-            <div class="lang-switcher">
-                <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
-                <span class="lang-separator">/</span>
-                <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
-            </div>
+        <nav class="nav nav-capsule">
+            <a href="methodology.html" class="nav-link active" onclick="document.getElementById('nav-toggle').checked = false;">Мой метод</a>
+            <div class="nav-item has-dropdown"><a href="programs/" class="nav-link nav-link-dropdown" aria-haspopup="true">Программы</a><div class="nav-dropdown"><a href="programs/">Авторские программы</a><a href="webinars/">Zoom-встречи</a><a href="book/">Книга</a><a href="meditations/">Медитации</a><a href="index.html#courses" data-course-target="grid-science">Научная база</a></div></div>
+            <a href="index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Трансформации</a>
+            <a href="index.html#blog" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Библиотека</a>
+            <a href="index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Обо мне</a>
+            <a href="index.html#contact" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Контакты</a>
         </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-        </label>
-        <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+        <div class="header-socials-v2"><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a><a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><div class="lang-switcher-v2"><button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button><span class="lang-separator">/</span><button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button></div></div>
+        <label for="nav-toggle" class="mobile-burger-trigger" aria-label="Открыть меню"><i class="fa-solid fa-bars"></i></label>
+        <div class="mobile-fullscreen-menu"><div class="mobile-menu-container"><div class="mobile-menu-header"><a href="index.html#hero" class="mobile-menu-logo"><img src="images/new_logo_update.svg" alt="Ирина Ужеловская"></a><div class="mobile-menu-header-right"><div class="lang-switcher-v2"><button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button><span class="lang-separator">/</span><button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button></div><label for="nav-toggle" class="mobile-menu-close-btn" aria-label="Закрыть меню"><i class="fa-solid fa-xmark"></i></label></div></div><div class="mobile-menu-divider"></div><nav class="mobile-menu-nav"><a href="methodology.html" class="mobile-nav-item"><span class="nav-num">01</span><span class="nav-label">Мой метод</span></a><a href="programs/" class="mobile-nav-item"><span class="nav-num">02</span><span class="nav-label">Программы</span></a><a href="index.html#testimonials" class="mobile-nav-item"><span class="nav-num">03</span><span class="nav-label">Трансформации</span></a><a href="index.html#blog" class="mobile-nav-item"><span class="nav-num">04</span><span class="nav-label">Библиотека</span></a><a href="index.html#about" class="mobile-nav-item"><span class="nav-num">05</span><span class="nav-label">Обо мне</span></a><a href="index.html#contact" class="mobile-nav-item"><span class="nav-num">06</span><span class="nav-label">Контакты</span></a></nav></div></div>
     </header>
 
     <main>
@@ -54,7 +36,7 @@
 
             <div class="method-v2-prehero-grid method-v2-prehero-grid-compact">
                 <div class="method-v2-prehero-copy">
-                    <div class="method-v2-kicker">Авторская методология Ирины Ужеловской</div>
+                    <div class="method-v2-kicker section-kicker-pill"><span class="hero-v2-tag-dot"></span>Авторская методология Ирины Ужеловской</div>
                     <h1>Изменения начинаются не с цели, а с внутреннего состояния</h1>
                     <p>
                         Методология переносит внимание глубже — к внутреннему состоянию, эмоциональным реакциям, убеждениям и автоматическим моделям поведения, из которых рождаются решения, действия и жизненные результаты.
@@ -84,7 +66,7 @@
                 <img src="images/science_main.png" alt="Научная база методики">
             </div>
             <div class="method-v2-evidence-copy">
-                <div class="method-v2-kicker">Почему работает</div>
+                <div class="method-v2-kicker section-kicker-pill"><span class="hero-v2-tag-dot"></span>Почему работает</div>
                 <h2>Методология основана не только на практике</h2>
                 <p>
                     Она соединяет научный подход, психологию и практические инструменты, которые проверены в реальной работе с людьми.
@@ -119,7 +101,7 @@
 
         <section class="method-v2-foundation">
             <div class="method-v2-foundation-title">
-                <div class="method-v2-kicker">На чем построена методология</div>
+                <div class="method-v2-kicker section-kicker-pill"><span class="hero-v2-tag-dot"></span>На чем построена методология</div>
             </div>
 
             <div class="method-v2-foundation-list">
@@ -214,7 +196,7 @@
 
         <section class="method-v2-areas">
             <div class="method-v2-section-head centered">
-                <div class="method-v2-kicker">Где помогает</div>
+                <div class="method-v2-kicker section-kicker-pill"><span class="hero-v2-tag-dot"></span>Где помогает</div>
                 <h2>Методология применяется в разных жизненных задачах</h2>
             </div>
             <div class="method-v2-chip-grid">
@@ -233,7 +215,7 @@
 
         <section class="method-v2-change">
             <div class="method-v2-section-head">
-                <div class="method-v2-kicker">После работы</div>
+                <div class="method-v2-kicker section-kicker-pill"><span class="hero-v2-tag-dot"></span>После работы</div>
                 <h2>Что меняется после работы</h2>
             </div>
             <div class="method-v2-change-grid">
@@ -248,12 +230,12 @@
 
         <section class="method-v2-products">
             <div class="method-v2-section-head">
-                <div class="method-v2-kicker">Применение</div>
+                <div class="method-v2-kicker section-kicker-pill"><span class="hero-v2-tag-dot"></span>Применение</div>
                 <h2>Одна методология. Несколько способов применения.</h2>
             </div>
             <div class="method-v2-product-grid">
                 <a class="method-v2-product-card featured" href="programs/mentor-28/">
-                    <img src="images/new_mentor_try.png" alt="Mentor 28">
+                    <img src="images/neue4.PNG" alt="Mentor 28">
                     <div>
                         <span>Программа</span>
                         <h3>Mentor 28</h3>
@@ -262,7 +244,7 @@
                     </div>
                 </a>
                 <a class="method-v2-product-card featured" href="programs/sell-star/">
-                    <img src="images/program_sell_star.png" alt="Продавай как звезда">
+                    <img src="images/neue7.PNG" alt="Продавай как звезда">
                     <div>
                         <span>Программа</span>
                         <h3>Продавай как звезда</h3>
@@ -297,13 +279,13 @@
 
         <section class="method-v2-final">
             <div>
-                <div class="method-v2-kicker">Следующий шаг</div>
+                <div class="method-v2-kicker section-kicker-pill"><span class="hero-v2-tag-dot"></span>Следующий шаг</div>
                 <h2>Любые изменения начинаются с понимания себя</h2>
                 <p>Если Вы хотите разобраться, какой формат работы подойдёт именно Вам, начните знакомство с программами или свяжитесь со мной.</p>
             </div>
             <div class="method-v2-actions">
-                <a class="btn btn-primary" href="index.html#courses">Подобрать программу</a>
-                <a class="btn btn-secondary" href="index.html#contact">Обсудить запрос</a>
+                <a class="btn-pill-cta method-v2-action-primary" href="index.html#courses"><span>Подобрать программу</span><span class="btn-arrow-circle"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+                <a class="btn-pill-cta btn-pill-secondary method-v2-action-secondary" href="index.html#contact"><span>Обсудить запрос</span><span class="btn-arrow-circle"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
             </div>
         </section>
     </main>
@@ -360,8 +342,8 @@
     </footer>
 </div>
 
-    <script src="js/translations.js"></script>
-    <script src="js/i18n.js?v=logo-switch-1"></script>
+    <script src="js/translations.js?v=2"></script>
+    <script src="js/i18n.js?v=2"></script>
 
     <script>
         const initDynamicBreadcrumbs = () => {

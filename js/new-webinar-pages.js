@@ -257,36 +257,31 @@
     document.title = documentTitle;
     document.body.insertAdjacentHTML("afterbegin", `
         <div class="page-wrapper content-page webinar-page">
-            <header class="header">
+            <header class="header header-v2">
                 <a href="../index.html#hero" class="logo" aria-label="Ирина Ужеловская">
-                    <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+                    <img src="../images/new_logo_update.svg" alt="Ирина Ужеловская">
                 </a>
                 <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display:none;">
-                <nav class="nav">
-                    <a href="../index.html#methodology" class="nav-link">О ТЕБЕ</a>
-                    <a href="../methodology.html" class="nav-link">МЕТОДОЛОГИЯ</a>
+                <nav class="nav nav-capsule">
+                    <a href="../methodology.html" class="nav-link">Мой метод</a>
                     <div class="nav-item has-dropdown">
-                        <a href="../programs/" class="nav-link nav-link-dropdown active" aria-haspopup="true">ПРОГРАММЫ</a>
+                        <a href="../programs/" class="nav-link nav-link-dropdown" aria-haspopup="true">Программы</a>
                         <div class="nav-dropdown">
                             <a href="../programs/">Авторские программы</a>
-                            <a href="../programs/mentor-28/">Mentor 28</a>
-                            <a href="../programs/sell-star/">Продавай как звезда</a>
                             <a href="./index.html">Zoom-встречи</a>
                             <a href="../book/">Книга</a>
                             <a href="../meditations/">Медитации</a>
+                            <a href="../index.html#courses">Научная база</a>
                         </div>
                     </div>
-                    <a href="../index.html#testimonials" class="nav-link">РЕЗУЛЬТАТЫ</a>
-                    <a href="../index.html#blog" class="nav-link">БЛОГ</a>
-                    <a href="../index.html#about" class="nav-link">ОБО МНЕ</a>
-                    <div class="lang-switcher">
-                        <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
-                        <span class="lang-separator">/</span>
-                        <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
-                    </div>
+                    <a href="../index.html#testimonials" class="nav-link">Трансформации</a>
+                    <a href="../index.html#blog" class="nav-link">Библиотека</a>
+                    <a href="../index.html#about" class="nav-link">Обо мне</a>
+                    <a href="../index.html#contact" class="nav-link">Контакты</a>
                 </nav>
-                <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-                <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+                <div class="header-socials-v2"><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a><a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><div class="lang-switcher-v2"><button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button><span class="lang-separator">/</span><button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button></div></div>
+                <label for="nav-toggle" class="mobile-burger-trigger" aria-label="Открыть меню"><i class="fa-solid fa-bars"></i></label>
+                <div class="mobile-fullscreen-menu"><div class="mobile-menu-container"><div class="mobile-menu-header"><a href="../index.html#hero" class="mobile-menu-logo"><img src="../images/new_logo_update.svg" alt="Ирина Ужеловская"></a><div class="mobile-menu-header-right"><div class="lang-switcher-v2"><button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button><span class="lang-separator">/</span><button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button></div><label for="nav-toggle" class="mobile-menu-close-btn" aria-label="Закрыть меню"><i class="fa-solid fa-xmark"></i></label></div></div><div class="mobile-menu-divider"></div><nav class="mobile-menu-nav"><a href="../methodology.html" class="mobile-nav-item"><span class="nav-num">01</span><span class="nav-label">Мой метод</span></a><a href="../programs/" class="mobile-nav-item"><span class="nav-num">02</span><span class="nav-label">Программы</span></a><a href="../index.html#testimonials" class="mobile-nav-item"><span class="nav-num">03</span><span class="nav-label">Трансформации</span></a><a href="../index.html#blog" class="mobile-nav-item"><span class="nav-num">04</span><span class="nav-label">Библиотека</span></a><a href="../index.html#about" class="mobile-nav-item"><span class="nav-num">05</span><span class="nav-label">Обо мне</span></a><a href="../index.html#contact" class="mobile-nav-item"><span class="nav-num">06</span><span class="nav-label">Контакты</span></a></nav></div></div>
             </header>
 
             <main>
@@ -408,7 +403,7 @@
         return `
             <footer class="content-footer-v2">
                 <div class="content-footer-brand">
-                    <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+                    <img src="../images/new_logo_update.svg" alt="Ирина Ужеловская">
                     <p>психолог · ментор · автор психотехнологий формирования событий</p>
                     <div class="content-footer-socials">
                         <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>

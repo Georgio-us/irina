@@ -32,20 +32,25 @@
         translateDOM: function() {
             this.updateLogotypes();
 
-            if (this.lang !== 'uk') {
-                this.updateActiveToggle();
-                return; // Default language is Russian, no translation needed
-            }
-
-            const dict = window.translations && window.translations.uk;
-            if (!dict) {
-                console.warn('Ukrainian translations dictionary not loaded.');
+            const ukrainianDict = window.translations && window.translations.uk;
+            if (!ukrainianDict) {
+                console.warn('Translations dictionary not loaded.');
                 this.updateActiveToggle();
                 return;
             }
 
+            // Most templates are authored in Russian, but several older detail pages
+            // contain Ukrainian source copy. Build the reverse map for RU so a language
+            // switch always produces one language instead of leaving mixed content.
+            const dict = this.lang === 'uk'
+                ? ukrainianDict
+                : Object.entries(ukrainianDict).reduce((reverseDict, [russian, ukrainian]) => {
+                    if (ukrainian && !reverseDict[ukrainian]) reverseDict[ukrainian] = russian;
+                    return reverseDict;
+                }, {});
+
             // Update HTML lang attribute
-            document.documentElement.setAttribute('lang', 'uk');
+            document.documentElement.setAttribute('lang', this.lang);
 
             // Translate document title
             const trimmedTitle = document.title ? document.title.trim() : '';
@@ -145,10 +150,22 @@
 
     window.i18n = i18n;
 
+    const placeMeditationFactsInCover = () => {
+        document.querySelectorAll('.meditation-detail-page').forEach(page => {
+            const facts = page.querySelector('.meditation-detail-copy > .meditation-detail-meta');
+            const cover = page.querySelector('.meditation-detail-cover');
+            if (facts && cover) cover.appendChild(facts);
+        });
+    };
+
     // Run translation when DOM is loaded
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => i18n.translateDOM());
+        document.addEventListener('DOMContentLoaded', () => {
+            i18n.translateDOM();
+            placeMeditationFactsInCover();
+        });
     } else {
         i18n.translateDOM();
+        placeMeditationFactsInCover();
     }
 })();

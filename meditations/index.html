@@ -4,42 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Медитации — Ирина Ужеловская</title>
-    <link rel="stylesheet" href="../style.css?v=98">
+    <link rel="stylesheet" href="../style.css?v=106">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <div class="page-wrapper content-page meditation-page">
-    <header class="header">
-        <a href="../index.html#hero" class="logo" aria-label="Ирина Ужеловская">
-            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
-        </a>
+    <header class="header header-v2">
+        <a href="../index.html#hero" class="logo" aria-label="Ирина Ужеловская"><img src="../images/new_logo_update.svg" alt="Ирина Ужеловская"></a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
-        <nav class="nav">
-            <a href="../index.html#methodology" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">О ТЕБЕ</a>
-            <a href="../methodology.html" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">МЕТОДОЛОГИЯ</a>
-            <div class="nav-item has-dropdown">
-                <a href="../programs/" class="nav-link nav-link-dropdown active" aria-haspopup="true">ПРОГРАММЫ</a>
-                <div class="nav-dropdown">
-                    <a href="../programs/">Авторские программы</a>
-                    <a href="../programs/mentor-28/">Mentor 28</a>
-                    <a href="../programs/sell-star/">Продавай как звезда</a>
-                    <a href="../webinars/">Zoom-встречи</a>
-                    <a href="../book/">Книга</a>
-                    <a href="./index.html">Медитации</a>
-                </div>
-            </div>
-            <a href="../index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">РЕЗУЛЬТАТЫ</a>
-            <a href="../blog/" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">БЛОГ</a>
-            <a href="../index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">ОБО МНЕ</a>
-            <div class="lang-switcher">
-                <button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button>
-                <span class="lang-separator">/</span>
-                <button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button>
-            </div>
+        <nav class="nav nav-capsule">
+            <a href="../methodology.html" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Мой метод</a>
+            <div class="nav-item has-dropdown"><a href="../programs/" class="nav-link nav-link-dropdown" aria-haspopup="true">Программы</a><div class="nav-dropdown"><a href="../programs/">Авторские программы</a><a href="../webinars/">Zoom-встречи</a><a href="../book/">Книга</a><a href="../meditations/">Медитации</a><a href="../index.html#courses" data-course-target="grid-science">Научная база</a></div></div>
+            <a href="../index.html#testimonials" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Трансформации</a>
+            <a href="../index.html#blog" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Библиотека</a>
+            <a href="../index.html#about" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Обо мне</a>
+            <a href="../index.html#contact" class="nav-link" onclick="document.getElementById('nav-toggle').checked = false;">Контакты</a>
         </nav>
-        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-        <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+        <div class="header-socials-v2"><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a><a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><div class="lang-switcher-v2"><button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button><span class="lang-separator">/</span><button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button></div></div>
+        <label for="nav-toggle" class="mobile-burger-trigger" aria-label="Открыть меню"><i class="fa-solid fa-bars"></i></label>
+        <div class="mobile-fullscreen-menu"><div class="mobile-menu-container"><div class="mobile-menu-header"><a href="../index.html#hero" class="mobile-menu-logo"><img src="../images/new_logo_update.svg" alt="Ирина Ужеловская"></a><div class="mobile-menu-header-right"><div class="lang-switcher-v2"><button class="lang-btn" data-lang="ru" onclick="i18n.setLanguage('ru')">RU</button><span class="lang-separator">/</span><button class="lang-btn" data-lang="uk" onclick="i18n.setLanguage('uk')">UA</button></div><label for="nav-toggle" class="mobile-menu-close-btn" aria-label="Закрыть меню"><i class="fa-solid fa-xmark"></i></label></div></div><div class="mobile-menu-divider"></div><nav class="mobile-menu-nav"><a href="../methodology.html" class="mobile-nav-item"><span class="nav-num">01</span><span class="nav-label">Мой метод</span></a><a href="../programs/" class="mobile-nav-item"><span class="nav-num">02</span><span class="nav-label">Программы</span></a><a href="../index.html#testimonials" class="mobile-nav-item"><span class="nav-num">03</span><span class="nav-label">Трансформации</span></a><a href="../index.html#blog" class="mobile-nav-item"><span class="nav-num">04</span><span class="nav-label">Библиотека</span></a><a href="../index.html#about" class="mobile-nav-item"><span class="nav-num">05</span><span class="nav-label">Обо мне</span></a><a href="../index.html#contact" class="mobile-nav-item"><span class="nav-num">06</span><span class="nav-label">Контакты</span></a></nav></div></div>
     </header>
 
     <main>
@@ -52,6 +36,7 @@
                 </nav>
 
                 <div class="meditation-hero-heading">
+                    <div class="meditation-eyebrow section-kicker-pill"><span class="hero-v2-tag-dot"></span>АУДИОПРАКТИКИ ДЛЯ СОСТОЯНИЯ</div>
                     <h1>Медитации</h1>
                     <p>Авторские медитации Ирины Ужеловской для восстановления внутренней опоры, ясности и спокойствия. Практики, которые помогают замедлиться и снова услышать себя.</p>
                 </div>
@@ -65,7 +50,7 @@
                     </a>
 
                     <div class="meditation-featured-copy">
-                        <div class="meditation-number">01 / 05</div>
+                        <div class="meditation-number section-kicker-pill"><span class="hero-v2-tag-dot"></span>01 / 05 · РЕКОМЕНДОВАНО</div>
                         <h2>Возвращение<br>к себе</h2>
                         <p>Медитативная практика глубокого расслабления и сонастройки. Помогает снять ментальное напряжение, восстановить контакт с телом и вернуться в состояние внутренней гармонии.</p>
                         <ul class="meditation-benefits">
@@ -74,8 +59,8 @@
                             <li>Почувствовать устойчивость и опору</li>
                         </ul>
                         <div class="meditation-actions">
-                            <a class="btn btn-primary" href="return-to-self.html">Подробнее о медитации</a>
-                            <button class="btn btn-secondary" onclick="document.querySelector('#meditation-collection').scrollIntoView({behavior: 'smooth'})">Смотреть все практики <i class="fa-solid fa-arrow-down-long"></i></button>
+                            <a class="btn-pill-cta meditation-action-primary" href="return-to-self.html"><span>Подробнее о медитации</span><span class="btn-arrow-circle"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+                            <button class="btn-pill-cta btn-pill-secondary meditation-action-secondary" onclick="document.querySelector('#meditation-collection').scrollIntoView({behavior: 'smooth'})"><span>Смотреть все практики</span><span class="btn-arrow-circle"><i class="fa-solid fa-arrow-down-long"></i></span></button>
                         </div>
                     </div>
                 </div>
@@ -86,7 +71,7 @@
             <div class="meditation-container">
                 <div class="meditation-section-head">
                     <div>
-                        <div class="meditation-eyebrow">КОЛЛЕКЦИЯ</div>
+                        <div class="meditation-eyebrow section-kicker-pill"><span class="hero-v2-tag-dot"></span>КОЛЛЕКЦИЯ</div>
                         <h2>Выберите практику<br>под своё состояние</h2>
                     </div>
                     <p>Не нужно делать всё сразу. Выберите медитацию, которая отвечает Вашему состоянию сегодня, и позвольте практике стать тихой точкой опоры.</p>
@@ -151,7 +136,7 @@
         <section class="meditation-rhythm">
             <div class="meditation-container meditation-rhythm-layout">
                 <div class="meditation-rhythm-copy">
-                    <div class="meditation-eyebrow">МАЛЕНЬКИЙ РИТУАЛ</div>
+                    <div class="meditation-eyebrow section-kicker-pill"><span class="hero-v2-tag-dot"></span>МАЛЕНЬКИЙ РИТУАЛ</div>
                     <h2>Несколько минут тишины могут изменить качество целого дня</h2>
                     <p>Медитация не требует идеальной концентрации или специальной подготовки. Достаточно выбрать удобное место, позволить себе остановиться и следовать за голосом практики.</p>
                 </div>
@@ -165,17 +150,17 @@
 
         <section class="meditation-final">
             <div class="meditation-container meditation-final-inner">
-                <div class="meditation-eyebrow">КОЛЛЕКЦИЯ МЕДИТАЦИЙ</div>
+                <div class="meditation-eyebrow section-kicker-pill"><span class="hero-v2-tag-dot"></span>КОЛЛЕКЦИЯ МЕДИТАЦИЙ</div>
                 <h2>Возвращайтесь к себе<br>столько раз, сколько нужно</h2>
                 <p>Пять практик для разных состояний и моментов дня — от утренней настройки до глубокого вечернего расслабления.</p>
-                <a class="btn btn-primary" href="#meditation-collection">Выбрать практику</a>
+                <a class="btn-pill-cta meditation-final-action" href="#meditation-collection"><span>Выбрать практику</span><span class="btn-arrow-circle"><i class="fa-solid fa-arrow-down-long"></i></span></a>
             </div>
         </section>
     </main>
 
     <footer class="content-footer-v2">
         <div class="content-footer-brand">
-            <img src="../images/logotype.svg" alt="Ирина Ужеловская">
+            <img src="../images/new_logo_update.svg" alt="Ирина Ужеловская">
             <p>психолог · ментор · автор психотехнологий формирования событий</p>
             <div class="content-footer-socials">
                 <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -231,7 +216,7 @@
         }
     });
 </script>
-<script src="../js/translations.js"></script>
-<script src="../js/i18n.js?v=logo-switch-1"></script>
+<script src="../js/translations.js?v=2"></script>
+<script src="../js/i18n.js?v=2"></script>
 </body>
 </html>
