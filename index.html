@@ -155,7 +155,7 @@
                     <span class="tag-dot"></span> КОУЧ ICF • МЕНТОР • ПСИХОТЕХНОЛОГ • ПИСАТЕЛЬ
                 </div>
 
-                <h1 class="hero-v2-title">
+                <h1 class="hero-v2-title" data-hero-font-switcher role="button" tabindex="0" title="Нажмите, чтобы сменить шрифт заголовка">
                     Помогаю создавать<br>
                     <span class="title-accent">фундаментальные изменения</span> в жизни
                 </h1>
@@ -2576,6 +2576,28 @@
                 setHeroVersion('v2');
             }
         } catch(e){}
+
+        // Hidden hero title font preview: click the title to cycle through the options.
+        (() => {
+            const title = document.querySelector('[data-hero-font-switcher]');
+            if (!title) return;
+
+            const variants = ['onest', 'prata', 'cormorant', 'playfair', 'forum', 'yeseva', 'lora', 'merriweather'];
+            let currentIndex = 0;
+
+            const switchFont = () => {
+                currentIndex = (currentIndex + 1) % variants.length;
+                title.dataset.fontVariant = variants[currentIndex];
+            };
+
+            title.addEventListener('click', switchFont);
+            title.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    switchFont();
+                }
+            });
+        })();
     </script>
 
     <script src="js/translations.js?v=2"></script>

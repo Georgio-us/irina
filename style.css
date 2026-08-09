@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Forum&family=Lora:wght@400;500&family=Merriweather:wght@400;700&family=Onest:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500&family=Prata&family=Yeseva+One&display=swap');
 
 /* CSS Variables */
 :root {
@@ -18107,7 +18107,8 @@ body.testimonial-modal-open {
 }
 
 .hero-v2-title {
-    font-family: var(--font-serif);
+    --hero-title-font: var(--font-serif);
+    font-family: var(--hero-title-font);
     font-size: var(--font-size-h1);
     line-height: var(--line-height-h1);
     font-weight: var(--font-weight-h1);
@@ -18117,12 +18118,64 @@ body.testimonial-modal-open {
 }
 
 .hero-v2-title .title-accent {
-    font-family: var(--font-serif);
+    font-family: var(--hero-title-font);
     font-style: normal;
-    font-weight: var(--font-weight-h1);
+    font-weight: inherit;
     background: linear-gradient(135deg, #ffffff 0%, #ebd3ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* Preview fonts for the hero H1. Click the heading to cycle through them. */
+.hero-v2-title[data-font-variant="prata"] {
+    --hero-title-font: 'Prata', serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.hero-v2-title[data-font-variant="cormorant"] {
+    --hero-title-font: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.hero-v2-title[data-font-variant="playfair"] {
+    --hero-title-font: 'Playfair Display', serif;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.hero-v2-title[data-font-variant="forum"] {
+    --hero-title-font: 'Forum', serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+}
+
+.hero-v2-title[data-font-variant="yeseva"] {
+    --hero-title-font: 'Yeseva One', serif;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.hero-v2-title[data-font-variant="lora"] {
+    --hero-title-font: 'Lora', serif;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.hero-v2-title[data-font-variant="merriweather"] {
+    --hero-title-font: 'Merriweather', serif;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.hero-v2-title[data-hero-font-switcher] {
+    cursor: pointer;
+}
+
+.hero-v2-title[data-hero-font-switcher]:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 8px;
 }
 
 .hero-v2-subtitle {
