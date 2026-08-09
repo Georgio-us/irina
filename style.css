@@ -9998,6 +9998,72 @@ button, .btn {
     gap: 28px;
 }
 
+/* Related Zoom-meetings carousel. Keeps every available meeting reachable without
+   duplicating the card markup on each detail page. */
+.content-webinar-carousel {
+    max-width: 1480px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.content-webinar-carousel .content-webinar-shelf {
+    max-width: none;
+    margin: 0;
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+}
+
+.content-webinar-carousel .content-webinar-shelf::-webkit-scrollbar { display: none; }
+
+.content-webinar-carousel .webinar-card {
+    flex: 0 0 calc((100% - 84px) / 4);
+    scroll-snap-align: start;
+}
+
+.content-page .webinar-card-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin-top: 13px;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 13px;
+}
+
+.content-page .webinar-card-meta-row > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+}
+
+.content-page .webinar-card-more-link {
+    flex: 0 0 auto;
+    color: var(--color-white);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.content-page .webinar-card-more-link:hover { color: var(--color-white); text-decoration: underline; }
+
+@media (max-width: 1024px) {
+    .content-webinar-carousel .webinar-card { flex-basis: calc((100% - 28px) / 2); }
+}
+
+@media (max-width: 640px) {
+    .content-webinar-carousel { margin-right: calc(var(--container-x) * -1); }
+    .content-webinar-carousel .content-webinar-shelf { padding-right: var(--container-x); }
+    .content-webinar-carousel .webinar-card { flex-basis: min(82vw, 340px); }
+    .content-page .webinar-card-meta-row { font-size: 12px; }
+}
+
 .content-page .webinar-card {
     min-width: 0;
 }
@@ -12610,6 +12676,28 @@ button, .btn {
 
 .featured-action-btn .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.12);
+}
+
+.featured-kicker-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--color-white);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+.featured-kicker-label::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #d67bec;
 }
 
 .webinars-grid-section {

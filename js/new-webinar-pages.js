@@ -13,7 +13,7 @@
                 bi("Формирование", "Формування"),
                 bi("событий", "подій")
             ],
-            image: "../images/webinar_main.png",
+            image: "../images/webinar_change.png",
             description: bi(
                 "Практическая Zoom-встреча о том, как внимание, внутреннее состояние и ежедневные решения складываются в события и повторяющиеся жизненные сценарии.",
                 "Практична Zoom-зустріч про те, як увага, внутрішній стан і щоденні рішення складаються в події та повторювані життєві сценарії."
@@ -63,7 +63,7 @@
                 bi("Управление", "Управління"),
                 bi("тенденциями", "тенденціями")
             ],
-            image: "../images/webinar_main.png",
+            image: "../images/webinar_influence.png",
             description: bi(
                 "Практическая Zoom-встреча о внутренних и поведенческих тенденциях, которые постепенно определяют направление решений, действий и будущих результатов.",
                 "Практична Zoom-зустріч про внутрішні та поведінкові тенденції, які поступово визначають напрям рішень, дій і майбутніх результатів."
@@ -113,7 +113,7 @@
                 bi("Квантовая", "Квантова"),
                 bi("психология", "психологія")
             ],
-            image: "../images/webinar_main.png",
+            image: "../images/webinar_edge.png",
             description: bi(
                 "Zoom-встреча о восприятии, внимании и внутренних моделях, через которые человек интерпретирует происходящее и выбирает способ действовать.",
                 "Zoom-зустріч про сприйняття, увагу та внутрішні моделі, через які людина інтерпретує те, що відбувається, і обирає спосіб діяти."
@@ -354,12 +354,7 @@
                             <button type="button"><i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                     </div>
-                    <div class="content-webinar-shelf">
-                        ${relatedCard("youth-code.html", "../images/webinar_1.png", "Код молодости", "58:24", "1 820 участников")}
-                        ${relatedCard("self-esteem.html", "../images/webinar_2.png", "Самооценка и вера в себя", "1:05:18", "2 310 участников")}
-                        ${relatedCard("relationship-code.html", "../images/webinar_3.png", "Код отношений", "47:36", "1 950 участников")}
-                        ${relatedCard("choosing-oneself.html", "../images/webinar_4.png", "Выбор себя", "1:03:42", "1 760 участников")}
-                    </div>
+                    <div class="content-webinar-shelf"></div>
                 </section>
             </main>
 
@@ -382,22 +377,7 @@
     }
 
     initInteractions();
-
-    function relatedCard(href, image, cardTitle, duration, participants) {
-        return `
-            <article class="webinar-card">
-                <a href="./${href}" aria-label="${cardTitle}">
-                    <img src="${image}" alt="${cardTitle}">
-                    <span class="webinar-card-duration">${duration}</span>
-                    <span class="webinar-card-title">${cardTitle}</span>
-                </a>
-                <div class="webinar-card-meta-row" style="display:flex;justify-content:space-between;align-items:center;width:100%;">
-                    <span><i class="fa-solid fa-user-group"></i> ${participants}</span>
-                    <a href="./${href}" class="webinar-card-more-link" style="color:var(--color-accent-ui);font-size:11px;font-weight:800;text-transform:uppercase;text-decoration:none;">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </article>
-        `;
-    }
+    window.initWebinarCarousel?.();
 
     function footerHtml() {
         return `
