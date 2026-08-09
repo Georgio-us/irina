@@ -133,6 +133,7 @@
     font-family: var(--font-serif);
     font-size: clamp(58px, 6.4vw, 104px);
     font-weight: 400;
+    text-shadow: none;
     line-height: 0.86;
     letter-spacing: -0.055em;
 }
@@ -1052,6 +1053,92 @@
     .mentor-mechanics__action a {
         width: 100%;
         min-width: 0;
+    }
+}
+
+/* Mentor 28 — shared visual language and readable secondary copy. */
+.mentor-template-page .mentor-new-hero__eyebrow,
+.mentor-template-page .mentor-recognition-scene__eyebrow,
+.mentor-template-page .mentor-program-system__eyebrow,
+.mentor-template-page .mentor-live-message__eyebrow,
+.mentor-template-page .mentor-testimonials-block__heading > div > p,
+.mentor-template-page .mentor-participation-block__heading > div > p,
+.mentor-template-page .mentor-ecosystem__heading > div > p {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    width: fit-content;
+    margin-bottom: 18px;
+    padding: 8px 13px;
+    border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+    border-radius: 999px;
+    background: color-mix(in srgb, currentColor 8%, transparent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+}
+
+.mentor-template-page .mentor-new-hero__eyebrow::before,
+.mentor-template-page .mentor-recognition-scene__eyebrow::before,
+.mentor-template-page .mentor-program-system__eyebrow::before,
+.mentor-template-page .mentor-live-message__eyebrow::before,
+.mentor-template-page .mentor-testimonials-block__heading > div > p::before,
+.mentor-template-page .mentor-participation-block__heading > div > p::before,
+.mentor-template-page .mentor-ecosystem__heading > div > p::before {
+    width: 6px;
+    height: 6px;
+    flex: 0 0 6px;
+    border-radius: 50%;
+    background: currentColor;
+    content: "";
+}
+
+.mentor-template-page .mentor-recognition-scene__list li {
+    font-size: clamp(15px, 1.08vw, 17px);
+    line-height: 1.55;
+}
+
+.mentor-template-page .mentor-live-message__media::after {
+    display: none;
+}
+
+.mentor-template-page .mentor-live-message__video-mark strong {
+    font-size: 13px;
+}
+
+.mentor-template-page .mentor-live-message__video-mark small {
+    font-size: 10px;
+}
+
+.mentor-template-page .mentor-testimonials-block .review-card__bottom button,
+.mentor-template-page .mentor-testimonials-block .reviews-component__footer a {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.mentor-template-page .mentor-testimonials-block .reviews-component__footer a {
+    min-height: 52px;
+    padding: 12px 22px;
+}
+
+@media (max-width: 760px) {
+    .mentor-template-page .mentor-new-hero__eyebrow,
+    .mentor-template-page .mentor-recognition-scene__eyebrow,
+    .mentor-template-page .mentor-program-system__eyebrow,
+    .mentor-template-page .mentor-live-message__eyebrow,
+    .mentor-template-page .mentor-testimonials-block__heading > div > p,
+    .mentor-template-page .mentor-participation-block__heading > div > p,
+    .mentor-template-page .mentor-ecosystem__heading > div > p {
+        gap: 8px;
+        margin-bottom: 14px;
+        padding: 7px 11px;
+        font-size: 10px;
+    }
+
+    .mentor-template-page .mentor-recognition-scene__list li {
+        font-size: 15px;
+        line-height: 1.5;
     }
 }
 

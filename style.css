@@ -8,6 +8,29 @@
     font-display: swap;
 }
 
+/* Keep the related-webinar shelf as a strict four-card layout. */
+.content-page .content-webinar-shelf {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1480px;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+}
+
+.content-page .content-webinar-shelf .webinar-card {
+    min-width: 0;
+}
+
+@media (max-width: 1024px) {
+    .content-page .content-webinar-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+    .content-page .content-webinar-shelf { grid-template-columns: 1fr; }
+}
+
 /* CSS Variables */
 :root {
     --font-serif: 'Onest', sans-serif;
@@ -459,7 +482,7 @@ button, .btn {
     grid-template-columns: minmax(520px, 42vw) minmax(0, 1fr);
     height: calc(100vh - var(--header-height));
     min-height: 650px;
-    background: #f4f3f2 url('images/new_try_hero.png') no-repeat center;
+    background: #f4f3f2 url('images/new_irina_hero.png') no-repeat center;
     background-size: cover;
     position: relative;
 
@@ -16828,7 +16851,7 @@ body.testimonial-modal-open {
 .mentor-page--editorial .product-faq > * { width: min(1280px, calc(100% - var(--container-x) * 2)); }
 
 .mentor-page--editorial .mentor-audience { padding-left: 0; padding-right: 0; align-items: stretch; }
-.mentor-page--editorial .mentor-audience .product-section-head { width: 100%; padding-left: max(var(--container-x), calc((100vw - 1280px) / 2)); border-radius: 0; color: #fff; background: linear-gradient(90deg, rgba(42,24,44,.92) 0%, rgba(42,24,44,.68) 52%, rgba(42,24,44,.18) 100%), url("images/irina_about_new.png") center 36% / cover no-repeat; }
+.mentor-page--editorial .mentor-audience .product-section-head { width: 100%; padding-left: max(var(--container-x), calc((100vw - 1280px) / 2)); border-radius: 0; color: #fff; background: linear-gradient(90deg, rgba(42,24,44,.92) 0%, rgba(42,24,44,.68) 52%, rgba(42,24,44,.18) 100%), url("images/new_irina_hero.png") center 36% / cover no-repeat; }
 .mentor-page--editorial .mentor-audience .product-section-head::before { left: auto; right: -100px; bottom: -155px; border-color: rgba(255,255,255,.3); box-shadow: 0 0 0 52px rgba(255,255,255,.05), 0 0 0 104px rgba(255,255,255,.035); }
 .mentor-page--editorial .mentor-audience .product-section-head .product-kicker,
 .mentor-page--editorial .mentor-audience .product-section-head h2,
@@ -16864,7 +16887,7 @@ body.testimonial-modal-open {
 .mentor-page--editorial .mentor-editorial-module-list article:nth-child(even) { background: rgba(255,255,255,.38); }
 .mentor-page--editorial .mentor-editorial-module-list article:hover { background: rgba(255,255,255,.72); }
 
-.mentor-page--editorial .mentor-editorial-coffee { position: relative; overflow: hidden; background: linear-gradient(100deg, rgba(27,15,32,.96), rgba(54,29,58,.82)), url("images/new_what_if.png") center / cover no-repeat; }
+.mentor-page--editorial .mentor-editorial-coffee { position: relative; overflow: hidden; background: linear-gradient(100deg, rgba(27,15,32,.96), rgba(54,29,58,.82)), url("images/new_irina_sellstar.png") center / cover no-repeat; }
 .mentor-page--editorial .mentor-editorial-coffee::after { content: ""; position: absolute; right: -18vw; top: -22vw; width: 60vw; height: 60vw; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; }
 .mentor-page--editorial .mentor-editorial-coffee .mentor-editorial-wrap { position: relative; z-index: 1; }
 .mentor-page--editorial .mentor-editorial-coffee-grid { background: rgba(25,13,29,.45); backdrop-filter: blur(4px); }
@@ -16876,7 +16899,7 @@ body.testimonial-modal-open {
 .mentor-page--editorial .product-value-card::before { opacity: .25; }
 
 .mentor-page--editorial .mentor-editorial-system { background: #f8f3f0; }
-.mentor-page--editorial .mentor-editorial-team { position: relative; overflow: hidden; padding-left: 0; padding-right: 0; background: linear-gradient(90deg, #f8f3f0 0%, #f8f3f0 51%, transparent 51%), url("images/new_what_if.png") right center / 50% auto no-repeat; }
+.mentor-page--editorial .mentor-editorial-team { position: relative; overflow: hidden; padding-left: 0; padding-right: 0; background: linear-gradient(90deg, #f8f3f0 0%, #f8f3f0 51%, transparent 51%), url("images/new_irina_sellstar.png") right center / 50% auto no-repeat; }
 .mentor-page--editorial .mentor-editorial-team .mentor-editorial-wrap { padding-right: 52%; }
 .mentor-page--editorial .mentor-editorial-team-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
 .mentor-page--editorial .mentor-editorial-team-grid article { border-color: rgba(82,35,106,.24); }
@@ -16976,7 +16999,7 @@ body.testimonial-modal-open {
 
 .mentor-page--editorial .mentor-audience .product-section-head { min-height: 620px; padding: 36px max(28px, var(--container-x)) 280px; background: #301d36; }
 .mentor-page--editorial .mentor-audience .product-section-head::before { content: "01"; width: auto; height: auto; left: 34px; right: auto; bottom: 222px; border: 0; border-radius: 0; box-shadow: none; color: rgba(255,255,255,.22); font-family: var(--font-serif); font-size: 90px; line-height: .8; }
-.mentor-page--editorial .mentor-audience .product-section-head::after { content: ""; position: absolute; z-index: 0; right: 0; bottom: 0; left: 0; height: 255px; background: url("images/irina_about_new.png") center 38% / cover no-repeat; }
+.mentor-page--editorial .mentor-audience .product-section-head::after { content: ""; position: absolute; z-index: 0; right: 0; bottom: 0; left: 0; height: 255px; background: url("images/new_irina_hero.png") center 38% / cover no-repeat; }
 .mentor-page--editorial .mentor-audience .product-section-head > * { z-index: 1; }
 .mentor-page--editorial .mentor-audience .product-section-head h2 { max-width: 475px; }
 .mentor-page--editorial .mentor-audience .product-section-head > p { max-width: 430px; }

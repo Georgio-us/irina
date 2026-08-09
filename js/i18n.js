@@ -19,8 +19,8 @@
             return dict[normalized] || '';
         },
         updateLogotypes: function() {
-            const logoFile = this.lang === 'uk' ? 'logotype-uk.svg' : 'logotype.svg';
-            const logos = document.querySelectorAll('img[src$="logotype.svg"], img[src$="logotype-uk.svg"]');
+            const logoFile = 'new_logo_update.svg';
+            const logos = document.querySelectorAll('img[src$="new_logo_update.svg"]');
 
             logos.forEach(img => {
                 const src = img.getAttribute('src');
