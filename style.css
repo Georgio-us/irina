@@ -5590,6 +5590,90 @@ button, .btn {
     }
 }
 
+/* ========================================================================
+   Site-wide interaction motion
+   ======================================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: opacity 150ms ease;
+}
+
+.motion-ready [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 650ms cubic-bezier(.22, 1, .36, 1) var(--reveal-delay, 0ms),
+                transform 650ms cubic-bezier(.22, 1, .36, 1) var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+}
+
+.motion-ready [data-reveal].is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+    will-change: auto;
+}
+
+html.is-leaving-page body {
+    opacity: 0;
+}
+
+/* Consistent tactile feedback without changing the established design. */
+button,
+.btn,
+[class*="btn"],
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled),
+.btn,
+[class*="btn"] {
+    transition: transform 180ms cubic-bezier(.22, 1, .36, 1),
+                box-shadow 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+@media (hover: hover) {
+    button:not(:disabled):hover,
+    .btn:hover,
+    [class*="btn"]:hover {
+        transform: translateY(-2px);
+    }
+
+    .feature-card,
+    .program-card,
+    .webinar-card,
+    .blog-card,
+    .meditation-card {
+        transition: transform 280ms cubic-bezier(.22, 1, .36, 1), box-shadow 280ms ease;
+    }
+
+    .feature-card:hover,
+    .program-card:hover,
+    .webinar-card:hover,
+    .blog-card:hover,
+    .meditation-card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+button:not(:disabled):active,
+.btn:active,
+[class*="btn"]:active {
+    transform: translateY(0) scale(.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    body, .motion-ready [data-reveal], button, .btn, [class*="btn"],
+    .feature-card, .program-card, .webinar-card, .blog-card, .meditation-card {
+        transition: none !important;
+        animation: none !important;
+    }
+    .motion-ready [data-reveal] { opacity: 1; transform: none; }
+}
+
 /* The methodology header is absolute, so reserve its space before breadcrumbs. */
 .method-v2-page .method-v2-prehero {
     padding-top: clamp(118px, 9vw, 148px);
