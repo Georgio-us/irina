@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ирина Ужеловская — Психолог, ментор, автор психотехнологий</title>
-    <link rel="stylesheet" href="style.css?v=108">
+    <link rel="stylesheet" href="style.css?v=109">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -1355,6 +1355,9 @@
                 <div class="video-review-card">
                     <button class="video-review-thumb" type="button" data-video-review-open="bmZ5hWf11mY" data-video-review-title="Видеоотзыв Галины" aria-label="Смотреть видеоотзыв Галины">
                         <img src="images/video-review-galina.jpg" alt="Видеоотзыв Галины" loading="lazy">
+                        <video class="video-review-hover-preview" muted loop playsinline preload="metadata" aria-hidden="true">
+                            <source src="images/video-preview-galina.mp4" type="video/mp4">
+                        </video>
                         <div class="video-review-play">
                             <svg viewBox="0 0 48 48" class="play-svg">
                                 <circle cx="24" cy="24" r="22" fill="#FFFFFF"></circle>
@@ -1369,6 +1372,9 @@
                 <div class="video-review-card">
                     <button class="video-review-thumb" type="button" data-video-review-open="L96iD3lsVCI" data-video-review-title="Видеоотзыв Татьяны" aria-label="Смотреть видеоотзыв Татьяны">
                         <img src="images/video-review-tetyana.jpg" alt="Видеоотзыв Татьяны" loading="lazy">
+                        <video class="video-review-hover-preview" muted loop playsinline preload="metadata" aria-hidden="true">
+                            <source src="images/video-preview-tetyana.mp4" type="video/mp4">
+                        </video>
                         <div class="video-review-play">
                             <svg viewBox="0 0 48 48" class="play-svg">
                                 <circle cx="24" cy="24" r="22" fill="#FFFFFF"></circle>
@@ -2462,6 +2468,27 @@
         };
 
         initVideoReviewsPlaceholderModal();
+
+        const initVideoReviewHoverPreviews = () => {
+            if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+            document.querySelectorAll('.video-review-card').forEach(card => {
+                const preview = card.querySelector('.video-review-hover-preview');
+                if (!preview) return;
+
+                card.addEventListener('pointerenter', () => {
+                    preview.play().catch(() => {});
+                });
+                preview.addEventListener('playing', () => card.classList.add('is-preview-playing'));
+                card.addEventListener('pointerleave', () => {
+                    card.classList.remove('is-preview-playing');
+                    preview.pause();
+                    preview.currentTime = 0;
+                });
+            });
+        };
+
+        initVideoReviewHoverPreviews();
 
         const initLuxClubModal = () => {
             const modal = document.getElementById('luxClubModal');

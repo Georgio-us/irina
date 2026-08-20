@@ -3619,6 +3619,16 @@ button, .btn {
     object-fit: cover;
 }
 
+.video-review-hover-preview {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.24s ease;
+}
+
 .video-review-player {
     width: min(100%, 360px);
     margin: 0 auto;
@@ -3650,6 +3660,16 @@ button, .btn {
 
 .video-review-card:hover .video-review-play {
     background: linear-gradient(180deg, rgba(14, 8, 17, 0.08) 30%, rgba(14, 8, 17, 0.38) 100%);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .video-review-card.is-preview-playing .video-review-hover-preview {
+        opacity: 1;
+    }
+
+    .video-review-card.is-preview-playing .video-review-play {
+        opacity: 0;
+    }
 }
 
 .play-svg {
