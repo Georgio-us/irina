@@ -97,6 +97,12 @@
                                 node.setAttribute('data-label', translatedLabel);
                             }
                         }
+                        if (node.hasAttribute('data-video-review-title')) {
+                            const translatedVideoTitle = i18n.getTranslation(dict, node.getAttribute('data-video-review-title'));
+                            if (translatedVideoTitle) {
+                                node.setAttribute('data-video-review-title', translatedVideoTitle);
+                            }
+                        }
                         // Recurse children
                         for (let child of node.childNodes) {
                             walk(child);
