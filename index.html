@@ -1341,9 +1341,11 @@
         <div class="video-testimonials-container">
             <div class="video-info-column">
                 <div class="video-subtitle">Результаты клиентов</div>
+                <div class="video-desktop-kicker section-kicker-pill"><span class="hero-v2-tag-dot"></span><span>Результаты клиентов</span></div>
                 <h3 class="video-title">Смотрите реальные отзывы участниц</h3>
-                <button class="btn-video-more btn-video-more-desktop" type="button" data-video-modal-open>
-                    Смотреть все видео
+                <p class="video-info-description">Живые истории женщин, которые прошли путь трансформации вместе с Ириной Ужеловской.</p>
+                <button class="btn-video-more btn-video-more-desktop" type="button" data-video-review-open="bmZ5hWf11mY" data-video-review-title="Видеоотзыв участницы">
+                    Видеоотзывы
                     <span class="play-icon-circle"><i class="fa-solid fa-play"></i></span>
                 </button>
             </div>
@@ -1351,64 +1353,41 @@
             <div class="video-reviews-grid">
                 <!-- Video 1 -->
                 <div class="video-review-card">
-                    <div class="video-review-thumb">
-                        <img src="images/video_review.png" alt="Марина">
+                    <button class="video-review-thumb" type="button" data-video-review-open="bmZ5hWf11mY" data-video-review-title="Видеоотзыв Галины" aria-label="Смотреть видеоотзыв Галины">
+                        <img src="images/video-review-galina.jpg" alt="Видеоотзыв Галины" loading="lazy">
                         <div class="video-review-play">
                             <svg viewBox="0 0 48 48" class="play-svg">
                                 <circle cx="24" cy="24" r="22" fill="#FFFFFF"></circle>
                                 <path d="M19 15l14 9-14 9V15z" fill="var(--color-accent-ui)"></path>
                             </svg>
                         </div>
-                    </div>
-                    <div class="video-review-name">История Марины</div>
+                    </button>
+                    <div class="video-review-name">История Галины</div>
                 </div>
 
                 <!-- Video 2 -->
                 <div class="video-review-card">
-                    <div class="video-review-thumb">
-                        <img src="images/video_review.png" alt="Наталья">
+                    <button class="video-review-thumb" type="button" data-video-review-open="L96iD3lsVCI" data-video-review-title="Видеоотзыв Татьяны" aria-label="Смотреть видеоотзыв Татьяны">
+                        <img src="images/video-review-tetyana.jpg" alt="Видеоотзыв Татьяны" loading="lazy">
                         <div class="video-review-play">
                             <svg viewBox="0 0 48 48" class="play-svg">
                                 <circle cx="24" cy="24" r="22" fill="#FFFFFF"></circle>
                                 <path d="M19 15l14 9-14 9V15z" fill="var(--color-accent-ui)"></path>
                             </svg>
                         </div>
-                    </div>
-                    <div class="video-review-name">История Натальи</div>
-                </div>
-
-                <!-- Video 3 -->
-                <div class="video-review-card">
-                    <div class="video-review-thumb">
-                        <img src="images/video_review.png" alt="Юлия">
-                        <div class="video-review-play">
-                            <svg viewBox="0 0 48 48" class="play-svg">
-                                <circle cx="24" cy="24" r="22" fill="#FFFFFF"></circle>
-                                <path d="M19 15l14 9-14 9V15z" fill="var(--color-accent-ui)"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="video-review-name">История Юлии</div>
-                </div>
-
-                <!-- Video 4 -->
-                <div class="video-review-card">
-                    <div class="video-review-thumb">
-                        <img src="images/video_review.png" alt="Виктория">
-                        <div class="video-review-play">
-                            <svg viewBox="0 0 48 48" class="play-svg">
-                                <circle cx="24" cy="24" r="22" fill="#FFFFFF"></circle>
-                                <path d="M19 15l14 9-14 9V15z" fill="var(--color-accent-ui)"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="video-review-name">История Виктории</div>
+                    </button>
+                    <div class="video-review-name">История Татьяны</div>
                 </div>
             </div>
 
-            <button class="btn-video-more btn-video-more-mobile" type="button" data-video-modal-open>
-                Смотреть все видео
-                <span class="play-icon-circle"><i class="fa-solid fa-play"></i></span>
+            <aside class="testimonial-join-card" aria-label="Приглашение к участию в программах">
+                <h4>Следующая<br>история — ваша</h4>
+                <p>Пройдите авторские программы Ирины и станьте частью сообщества сильных женщин.</p>
+                <a class="testimonial-join-card__link btn-pill-cta" href="#courses"><span>Подробнее</span><span class="btn-arrow-circle"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+            </aside>
+
+            <button class="video-all-reviews-link" type="button" data-video-all-reviews-open>
+                Все видеоотзывы <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </button>
         </div>
     </section>
@@ -1419,14 +1398,19 @@
             <button class="video-modal-close" type="button" data-video-modal-close aria-label="Закрыть окно">
                 <i class="fa-solid fa-xmark"></i>
             </button>
+            <div class="video-modal-kicker">Видеоотзыв</div>
+            <h3 id="videoTestimonialsModalTitle">Видеоотзыв участницы</h3>
+            <div class="video-review-player" id="videoTestimonialsPlayer"></div>
+        </div>
+    </div>
+
+    <div class="video-modal" id="videoReviewsPlaceholderModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-video-all-reviews-close></div>
+        <div class="video-modal-card" role="dialog" aria-modal="true" aria-labelledby="videoReviewsPlaceholderModalTitle">
+            <button class="video-modal-close" type="button" data-video-all-reviews-close aria-label="Закрыть окно"><i class="fa-solid fa-xmark"></i></button>
             <div class="video-modal-kicker">Видеоотзывы</div>
-            <h3 id="videoTestimonialsModalTitle">Все истории участниц собраны на YouTube</h3>
-            <p>
-                На нашем YouTube-канале можно посмотреть больше реальных отзывов участниц программ и выбрать истории, которые ближе к вашему запросу.
-            </p>
-            <div class="video-modal-actions">
-                <a class="btn btn-primary" href="https://youtube.com" target="_blank" rel="noopener">Перейти на YouTube</a>
-            </div>
+            <h3 id="videoReviewsPlaceholderModalTitle">Скоро здесь будет YouTube-канал</h3>
+            <p>Мы собираем больше реальных историй участниц. Скоро все видеоотзывы будут доступны в одном месте.</p>
         </div>
     </div>
 
@@ -2415,11 +2399,18 @@
 
         const initVideoTestimonialsModal = () => {
             const modal = document.getElementById('videoTestimonialsModal');
-            const openButtons = Array.from(document.querySelectorAll('[data-video-modal-open]'));
+            const openButtons = Array.from(document.querySelectorAll('[data-video-review-open]'));
+            const player = document.getElementById('videoTestimonialsPlayer');
+            const title = document.getElementById('videoTestimonialsModalTitle');
             if (!modal || !openButtons.length) return;
 
             const closeButtons = Array.from(modal.querySelectorAll('[data-video-modal-close]'));
-            const openModal = () => {
+            const openModal = (button) => {
+                const videoId = button.dataset.videoReviewOpen;
+                const videoTitle = button.dataset.videoReviewTitle || 'Видеоотзыв участницы';
+                if (!videoId || !player) return;
+                if (title) title.textContent = videoTitle;
+                player.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0" title="${videoTitle}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
                 modal.classList.add('is-open');
                 modal.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
@@ -2428,10 +2419,11 @@
                 modal.classList.remove('is-open');
                 modal.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = '';
+                if (player) player.innerHTML = '';
             };
 
             openButtons.forEach(button => {
-                button.addEventListener('click', openModal);
+                button.addEventListener('click', () => openModal(button));
             });
             closeButtons.forEach(button => {
                 button.addEventListener('click', closeModal);
@@ -2444,6 +2436,32 @@
         };
 
         initVideoTestimonialsModal();
+
+        const initVideoReviewsPlaceholderModal = () => {
+            const modal = document.getElementById('videoReviewsPlaceholderModal');
+            const openButtons = Array.from(document.querySelectorAll('[data-video-all-reviews-open]'));
+            if (!modal || !openButtons.length) return;
+
+            const closeButtons = Array.from(modal.querySelectorAll('[data-video-all-reviews-close]'));
+            const openModal = () => {
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            };
+            const closeModal = () => {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            };
+
+            openButtons.forEach(button => button.addEventListener('click', openModal));
+            closeButtons.forEach(button => button.addEventListener('click', closeModal));
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+            });
+        };
+
+        initVideoReviewsPlaceholderModal();
 
         const initLuxClubModal = () => {
             const modal = document.getElementById('luxClubModal');
